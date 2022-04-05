@@ -1,0 +1,1100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Upperbody
+  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: GEO
+    m_Weight: 0
+  - m_Path: GEO/Body_Geo
+    m_Weight: 0
+  - m_Path: GEO/Ear_L_Geo
+    m_Weight: 0
+  - m_Path: GEO/Ear_R_Geo1
+    m_Weight: 0
+  - m_Path: GEO/Elbow_L_Geo
+    m_Weight: 0
+  - m_Path: GEO/Elbow_R_Geo
+    m_Weight: 0
+  - m_Path: GEO/EyeBrow_L_Geo
+    m_Weight: 0
+  - m_Path: GEO/EyeBrow_R_Geo
+    m_Weight: 0
+  - m_Path: GEO/Foot_L_Geo
+    m_Weight: 0
+  - m_Path: GEO/Foot_R_Geo
+    m_Weight: 0
+  - m_Path: GEO/Head_Geo
+    m_Weight: 0
+  - m_Path: GEO/Knee_L_Geo
+    m_Weight: 0
+  - m_Path: GEO/Knee_R_Geo
+    m_Weight: 0
+  - m_Path: GEO/L
+    m_Weight: 0
+  - m_Path: GEO/L/Eye_Geo1
+    m_Weight: 0
+  - m_Path: GEO/L/EyeClosedNeutral_Geo1
+    m_Weight: 0
+  - m_Path: GEO/L/EyeHappy_Geo1
+    m_Weight: 0
+  - m_Path: GEO/L/EyeSad_Geo1
+    m_Weight: 0
+  - m_Path: GEO/LowerLeg_L_Geo
+    m_Weight: 0
+  - m_Path: GEO/LowerLeg_R_Geo
+    m_Weight: 0
+  - m_Path: GEO/Mouth
+    m_Weight: 0
+  - m_Path: GEO/Mouth/MouseBuildSide_MouseBuild_ShapePlane30
+    m_Weight: 0
+  - m_Path: GEO/Mouth/MouseBuildSide_MouseBuild_ShapePlane31
+    m_Weight: 0
+  - m_Path: GEO/Mouth/MouseBuildSide_MouseBuild_ShapePlane32
+    m_Weight: 0
+  - m_Path: GEO/Mouth/MouseBuildSide_MouseBuild_ShapePlane33
+    m_Weight: 0
+  - m_Path: GEO/Mouth/MouseBuildSide_MouseBuild_ShapePlane34
+    m_Weight: 0
+  - m_Path: GEO/Mouth/MouseBuildSide_MouseBuild_ShapePlane35
+    m_Weight: 0
+  - m_Path: GEO/Mouth/MouseBuildSide_MouseBuild_ShapePlane36
+    m_Weight: 0
+  - m_Path: GEO/quRugSwordShieldGEO_GRP
+    m_Weight: 0
+  - m_Path: GEO/quRugSwordShieldGEO_GRP/Shield_Geo3
+    m_Weight: 0
+  - m_Path: GEO/quRugSwordShieldGEO_GRP/Sword_Geo3
+    m_Weight: 0
+  - m_Path: GEO/R
+    m_Weight: 0
+  - m_Path: GEO/R/Eye_Geo2
+    m_Weight: 0
+  - m_Path: GEO/R/EyeClosedNeutral_Geo2
+    m_Weight: 0
+  - m_Path: GEO/R/EyeHappy_Geo2
+    m_Weight: 0
+  - m_Path: GEO/R/EyeSad_Geo2
+    m_Weight: 0
+  - m_Path: GEO/Shield_Geo
+    m_Weight: 0
+  - m_Path: GEO/Shoulder_L_Geo
+    m_Weight: 0
+  - m_Path: GEO/Shoulder_R_Geo
+    m_Weight: 0
+  - m_Path: GEO/SirMouse_Hands_L_Geo_grp1
+    m_Weight: 0
+  - m_Path: GEO/SirMouse_Hands_L_Geo_grp1/Normal_1
+    m_Weight: 0
+  - m_Path: GEO/SirMouse_Hands_R_Geo_grp10
+    m_Weight: 0
+  - m_Path: GEO/SirMouse_Hands_R_Geo_grp10/Fist_4_B
+    m_Weight: 0
+  - m_Path: GEO/SirMouse_Hands_R_Geo_grp10/Normal_1 1
+    m_Weight: 0
+  - m_Path: GEO/Skirt_Geo
+    m_Weight: 0
+  - m_Path: GEO/Sword_Geo
+    m_Weight: 0
+  - m_Path: GEO/Tail_Geo
+    m_Weight: 0
+  - m_Path: GEO/UpperArm_L_Geo
+    m_Weight: 0
+  - m_Path: GEO/UpperArm_R_Geo
+    m_Weight: 0
+  - m_Path: GEO/UpperLeg_L_Geo
+    m_Weight: 0
+  - m_Path: GEO/UpperLeg_R_Geo
+    m_Weight: 0
+  - m_Path: NewRig
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_IKHip_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_IKHip_jnt1/Skirt_joint1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_IKHip_jnt1/Skirt_joint2
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_IKHip_jnt1/Skirt_joint3
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_IKLowSpine_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_IKLowSpine_jnt1/MouseBuild_IKMidSpine_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_IKLowSpine_jnt1/MouseBuild_IKMidSpine_jnt1/MouseBuild_IKUpSpine_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_IKLowSpine_jnt1/MouseBuild_IKMidSpine_jnt1/MouseBuild_IKUpSpine_jnt1/MouseBuild_IKChest_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_IKLowSpine_jnt1/MouseBuild_IKMidSpine_jnt1/MouseBuild_IKUpSpine_jnt1/MouseBuild_IKChest_jnt1/MouseBuild_Chest_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_IKLowSpine_jnt1/MouseBuild_IKMidSpine_jnt1/MouseBuild_IKUpSpine_jnt1/MouseBuild_IKChest_jnt1/MouseBuild_Chest_jnt1/MouseBuild_IKChestEnd_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_lf_SKUpleg_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_lf_SKUpleg_jnt1/MouseBuild_lf_SKKnee_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_lf_SKUpleg_jnt1/MouseBuild_lf_SKKnee_jnt1/MouseBuild_lf_SKAnkel_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_lf_SKUpleg_jnt1/MouseBuild_lf_SKKnee_jnt1/MouseBuild_lf_SKAnkel_jnt1/MouseBuild_lf_SKBall_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_rt_SKUpleg_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_rt_SKUpleg_jnt1/MouseBuild_rt_SKKnee_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_rt_SKUpleg_jnt1/MouseBuild_rt_SKKnee_jnt1/MouseBuild_rt_SKAnkel_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_rt_SKUpleg_jnt1/MouseBuild_rt_SKKnee_jnt1/MouseBuild_rt_SKAnkel_jnt1/MouseBuild_rt_SKBall_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2/MouseBuild_Tail_Jnt3
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2/MouseBuild_Tail_Jnt3/MouseBuild_Tail_Jnt4
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2/MouseBuild_Tail_Jnt3/MouseBuild_Tail_Jnt4/MouseBuild_Tail_Jnt5
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2/MouseBuild_Tail_Jnt3/MouseBuild_Tail_Jnt4/MouseBuild_Tail_Jnt5/MouseBuild_Tail_Jnt6
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2/MouseBuild_Tail_Jnt3/MouseBuild_Tail_Jnt4/MouseBuild_Tail_Jnt5/MouseBuild_Tail_Jnt6/MouseBuild_Tail_Jnt7
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2/MouseBuild_Tail_Jnt3/MouseBuild_Tail_Jnt4/MouseBuild_Tail_Jnt5/MouseBuild_Tail_Jnt6/MouseBuild_Tail_Jnt7/MouseBuild_Tail_Jnt8
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2/MouseBuild_Tail_Jnt3/MouseBuild_Tail_Jnt4/MouseBuild_Tail_Jnt5/MouseBuild_Tail_Jnt6/MouseBuild_Tail_Jnt7/MouseBuild_Tail_Jnt8/MouseBuild_Tail_Jnt9
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2/MouseBuild_Tail_Jnt3/MouseBuild_Tail_Jnt4/MouseBuild_Tail_Jnt5/MouseBuild_Tail_Jnt6/MouseBuild_Tail_Jnt7/MouseBuild_Tail_Jnt8/MouseBuild_Tail_Jnt9/MouseBuild_Tail_Jnt10
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2/MouseBuild_Tail_Jnt3/MouseBuild_Tail_Jnt4/MouseBuild_Tail_Jnt5/MouseBuild_Tail_Jnt6/MouseBuild_Tail_Jnt7/MouseBuild_Tail_Jnt8/MouseBuild_Tail_Jnt9/MouseBuild_Tail_Jnt10/MouseBuild_Tail_Jnt11
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/MouseBuild_Tail_Jnt2/MouseBuild_Tail_Jnt3/MouseBuild_Tail_Jnt4/MouseBuild_Tail_Jnt5/MouseBuild_Tail_Jnt6/MouseBuild_Tail_Jnt7/MouseBuild_Tail_Jnt8/MouseBuild_Tail_Jnt9/MouseBuild_Tail_Jnt10/MouseBuild_Tail_Jnt11/MouseBuild_Tail_Jnt12
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/joint16
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_HeadEnd_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_lf_Ear_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_lf_Eye_CloNeu_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_lf_Eye_Happy_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_lf_Eye_Norm_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_lf_Eye_Sad_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_lf_EyeBrow_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_lf_EyeBrow_jnt1/MouseBuild_lf_EyeBrow_jnt2
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_lf_EyeBrow_jnt1/MouseBuild_lf_EyeBrow_jnt3
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_rt_Ear_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_rt_Eye_CloNeu_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_rt_Eye_Happy_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_rt_Eye_Norm_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_rt_Eye_Sad_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_rt_EyeBrow_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_rt_EyeBrow_jnt1/MouseBuild_rt_EyeBrow_jnt2
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/MouseBuild_Head_jnt1/MouseBuild_Head_jnt2/MouseBuild_rt_EyeBrow_jnt1/MouseBuild_rt_EyeBrow_jnt3
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/Mouth_01_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/Mouth_02_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/Mouth_03_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/Mouth_04_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/Mouth_05_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/Mouth_06_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_HeadStart_jnt1/Mouth_07_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_lf_SKShoulder_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_lf_SKShoulder_jnt1/MouseBuild_lf_SKElbow_Aim_jnt
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_lf_SKShoulder_jnt1/MouseBuild_lf_SKElbow_Aim_jnt/MouseBuild_lf_SKElbow_jnt2
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_lf_SKShoulder_jnt1/MouseBuild_lf_SKElbow_Aim_jnt/MouseBuild_lf_SKElbow_jnt2/MouseBuild_lf_hand_jnt1
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_lf_SKShoulder_jnt1/MouseBuild_lf_SKElbow_Aim_jnt/MouseBuild_lf_SKElbow_jnt2/MouseBuild_lf_hand_jnt1/ShieldJnt
+    m_Weight: 1
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_rt_SKShoulder_jnt1
+    m_Weight: 1
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_rt_SKShoulder_jnt1/MouseBuild_rt_SKElbow_Aim_Jnt
+    m_Weight: 1
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_rt_SKShoulder_jnt1/MouseBuild_rt_SKElbow_Aim_Jnt/MouseBuild_rt_SKElbow_jnt2
+    m_Weight: 1
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_rt_SKShoulder_jnt1/MouseBuild_rt_SKElbow_Aim_Jnt/MouseBuild_rt_SKElbow_jnt2/MouseBuild_rt_hand_jnt1
+    m_Weight: 1
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_rt_SKShoulder_jnt1/MouseBuild_rt_SKElbow_Aim_Jnt/MouseBuild_rt_SKElbow_jnt3
+    m_Weight: 1
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_rt_SKShoulder_jnt1/MouseBuild_rt_SKElbow_Aim_Jnt/MouseBuild_rt_SKElbow_jnt3/MouseBuild_rt_hand_jnt5
+    m_Weight: 1
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/MouseBuild_rt_SKShoulder_jnt1/MouseBuild_rt_SKElbow_Aim_Jnt/Sword_jnt1
+    m_Weight: 1
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/qu_shieldRoot_JNT
+    m_Weight: 0
+  - m_Path: NewRig/MouseBuild_IKLowHipSpine_jnt1/SpineTop/qu_swordRoot_JNT
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator48
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator48/PreviewLocatorCtrl43
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator48/PreviewLocatorCtrl43/PreviewPlaneCtrl43
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator49
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator49/PreviewLocatorCtrl44
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator49/PreviewLocatorCtrl44/PreviewPlaneCtrl44
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator50
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator50/PreviewLocatorCtrl45
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator50/PreviewLocatorCtrl45/PreviewPlaneCtrl45
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator51
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator51/PreviewLocatorCtrl46
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/lf_EyeShapesCtrls_grp1/PreviewLocator51/PreviewLocatorCtrl46/PreviewPlaneCtrl46
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator1/MouseBuild_PreviewLocatorCtrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator1/MouseBuild_PreviewLocatorCtrl1/MouseBuild_PreviewPlaneCtrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator2/MouseBuild_PreviewLocatorCtrl2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator2/MouseBuild_PreviewLocatorCtrl2/MouseBuild_PreviewPlaneCtrl2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator3
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator3/MouseBuild_PreviewLocatorCtrl3
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator3/MouseBuild_PreviewLocatorCtrl3/MouseBuild_PreviewPlaneCtrl3
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator4
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator4/MouseBuild_PreviewLocatorCtrl4
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator4/MouseBuild_PreviewLocatorCtrl4/MouseBuild_PreviewPlaneCtrl4
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator5
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator5/MouseBuild_PreviewLocatorCtrl5
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator5/MouseBuild_PreviewLocatorCtrl5/MouseBuild_PreviewPlaneCtrl5
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator6
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator6/MouseBuild_PreviewLocatorCtrl6
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/MouseBuild_PreviewLocator6/MouseBuild_PreviewLocatorCtrl6/MouseBuild_PreviewPlaneCtrl6
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/PreviewLocator52
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/PreviewLocator52/PreviewLocatorCtrl47
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/MouthShapesCtrls_grp1/PreviewLocator52/PreviewLocatorCtrl47/PreviewPlaneCtrl47
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator48
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator48
+      1/PreviewLocatorCtrl43 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator48
+      1/PreviewLocatorCtrl43 1/PreviewPlaneCtrl43 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator49
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator49
+      1/PreviewLocatorCtrl44 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator49
+      1/PreviewLocatorCtrl44 1/PreviewPlaneCtrl44 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator50
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator50
+      1/PreviewLocatorCtrl45 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator50
+      1/PreviewLocatorCtrl45 1/PreviewPlaneCtrl45 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator51
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator51
+      1/PreviewLocatorCtrl46 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/MouseBuild_ExtraCtrls_grp1/MouseBuild_ExtraCtrls_placer/rt_EyeShapesCtrls_grp1/PreviewLocator51
+      1/PreviewLocatorCtrl46 1/PreviewPlaneCtrl46 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_IK_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_IK_grp1/MouseBuild_lf_IKArm_ctrl_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_IK_grp1/MouseBuild_lf_IKArm_ctrl_grp1/MouseBuild_lf_IKWrist_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_IK_grp1/MouseBuild_lf_IKArm_ctrl_grp1/MouseBuild_lf_IKWrist_loc1/MouseBuild_lf_IKWrist_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_IK_grp1/MouseBuild_rt_IKArm_ctrl_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_IK_grp1/MouseBuild_rt_IKArm_ctrl_grp1/MouseBuild_rt_IKWrist_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_IK_grp1/MouseBuild_rt_IKArm_ctrl_grp1/MouseBuild_rt_IKWrist_loc1/MouseBuild_rt_IKWrist_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/locator1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/locator1/MouseBuild_lf_SKElbow_jnt2
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/locator1/MouseBuild_lf_SKElbow_jnt2
+      1/MouseBuild_lf_hand_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_FKArm_ctrl_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_FKArm_ctrl_grp1/MouseBuild_lf_FKElbow_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_FKArm_ctrl_grp1/MouseBuild_lf_FKElbow_loc1/MouseBuild_lf_FKElbow_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_FKArm_ctrl_grp1/MouseBuild_lf_FKShoulder_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_FKArm_ctrl_grp1/MouseBuild_lf_FKShoulder_loc1/MouseBuild_lf_FKShoulder_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_FKArm_ctrl_grp1/MouseBuild_lf_FKWrist_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_FKArm_ctrl_grp1/MouseBuild_lf_FKWrist_loc1/MouseBuild_lf_FKWrist_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_IK_FK_switch_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_IK_FK_switch_loc1/MouseBuild_lf_IK_FK_switch_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1/MouseBuild_lf_FKShoulder_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1/MouseBuild_lf_FKShoulder_jnt1/MouseBuild_lf_FKElbow_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1/MouseBuild_lf_IKShoulder_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1/MouseBuild_lf_IKShoulder_jnt1/MouseBuild_lf_IKElbow_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1/MouseBuild_lf_SKShoulder_jnt1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1/MouseBuild_lf_SKShoulder_jnt1
+      1/MouseBuild_lf_SKElbow_Aim_jnt 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1/MouseBuild_lf_SKShoulder_jnt1
+      1/MouseBuild_lf_SKElbow_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1/MouseBuild_lf_SKShoulder_jnt1
+      1/MouseBuild_lf_SKElbow_jnt1/MouseBuild_lf_SKWrist_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1/MouseBuild_lf_SKShoulder_jnt1
+      1/MouseBuild_lf_SKElbow_jnt1/MouseBuild_lf_SKWrist_jnt1/MouseBuild_lf_hand_jnt1
+      2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/MouseBuild_lf_SkSpine1/MouseBuild_lf_SkClavicle1/MouseBuild_lf_SKShoulder_jnt1
+      1/MouseBuild_lf_SKElbow_jnt1/MouseBuild_lf_SKWrist_jnt1/MouseBuild_lf_hand_jnt1
+      2/ShieldJnt 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/Shield_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Arm_All_grp1/Shield_loc1/Shield_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_FKLeg_ctrl_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_FKLeg_ctrl_grp1/MouseBuild_lf_FKBall_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_FKLeg_ctrl_grp1/MouseBuild_lf_FKBall_loc1/MouseBuild_lf_FKBall_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_FKLeg_ctrl_grp1/MouseBuild_lf_FKEnkel_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_FKLeg_ctrl_grp1/MouseBuild_lf_FKEnkel_loc1/MouseBuild_lf_FKEnkel_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_FKLeg_ctrl_grp1/MouseBuild_lf_FKKnee_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_FKLeg_ctrl_grp1/MouseBuild_lf_FKKnee_loc1/MouseBuild_lf_FKKnee_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_FKLeg_ctrl_grp1/MouseBuild_lf_FKUpleg_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_FKLeg_ctrl_grp1/MouseBuild_lf_FKUpleg_loc1/MouseBuild_lf_FKUpleg_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_IK_FK_switch_loc2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_IK_FK_switch_loc2/MouseBuild_lf_IK_FK_switch_ctrl2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_FKUpleg_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_FKUpleg_jnt1/MouseBuild_lf_FKKnee_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_FKUpleg_jnt1/MouseBuild_lf_FKKnee_jnt1/MouseBuild_lf_FKAnkel_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_FKUpleg_jnt1/MouseBuild_lf_FKKnee_jnt1/MouseBuild_lf_FKAnkel_jnt1/MouseBuild_lf_FKBall_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_IKUpleg_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_IKUpleg_jnt1/MouseBuild_lf_IKKnee_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_IKUpleg_jnt1/MouseBuild_lf_IKKnee_jnt1/MouseBuild_lf_IKAnkel_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_IKUpleg_jnt1/MouseBuild_lf_IKKnee_jnt1/MouseBuild_lf_IKAnkel_jnt1/MouseBuild_lf_IKBall_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_SKUpleg_jnt1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_SKUpleg_jnt1
+      1/MouseBuild_lf_SKKnee_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_SKUpleg_jnt1
+      1/MouseBuild_lf_SKKnee_jnt1 1/MouseBuild_lf_SKAnkel_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_lf_Leg_All_grp1/Flip/MouseBuild_lf_SKHip_jnt1/MouseBuild_lf_SKUpleg_jnt1
+      1/MouseBuild_lf_SKKnee_jnt1 1/MouseBuild_lf_SKAnkel_jnt1 1/MouseBuild_lf_SKBall_jnt1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/locator2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/locator2/MouseBuild_rt_SKElbow_jnt2
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/locator2/MouseBuild_rt_SKElbow_jnt2
+      1/MouseBuild_rt_hand_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_FKArm_ctrl_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_FKArm_ctrl_grp1/MouseBuild_rt_FKShoulder_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_FKArm_ctrl_grp1/MouseBuild_rt_FKShoulder_loc1/MouseBuild_rt_FKShoulder_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_FKArm_ctrl_grp1/MouseBuild_rt_FKWrist_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_FKArm_ctrl_grp1/MouseBuild_rt_FKWrist_loc1/MouseBuild_rt_FKWrist_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_IK_FK_switch_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_IK_FK_switch_loc1/MouseBuild_rt_IK_FK_switch_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_SkSpine1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_SkSpine1/MouseBuild_rt_SkClavicle1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_SkSpine1/MouseBuild_rt_SkClavicle1/MouseBuild_rt_FKShoulder_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_SkSpine1/MouseBuild_rt_SkClavicle1/MouseBuild_rt_IKShoulder_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_SkSpine1/MouseBuild_rt_SkClavicle1/MouseBuild_rt_SKShoulder_jnt1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_SkSpine1/MouseBuild_rt_SkClavicle1/MouseBuild_rt_SKShoulder_jnt1
+      1/MouseBuild_rt_SKElbow_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_SkSpine1/MouseBuild_rt_SkClavicle1/MouseBuild_rt_SKShoulder_jnt1
+      1/MouseBuild_rt_SKElbow_jnt1/MouseBuild_rt_SKWrist_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_SkSpine1/MouseBuild_rt_SkClavicle1/MouseBuild_rt_SKShoulder_jnt1
+      1/MouseBuild_rt_SKElbow_jnt1/MouseBuild_rt_SKWrist_jnt1/MouseBuild_rt_hand_jnt1
+      2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/MouseBuild_rt_SkSpine1/MouseBuild_rt_SkClavicle1/MouseBuild_rt_SKShoulder_jnt1
+      1/MouseBuild_rt_SKElbow_jnt1/MouseBuild_rt_SKWrist_jnt1/MouseBuild_rt_hand_jnt1
+      2/Sword_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/Sword_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Arm_All_grp1/Sword_loc1/Sword_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_FKLeg_ctrl_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_FKLeg_ctrl_grp1/MouseBuild_rt_FKBall_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_FKLeg_ctrl_grp1/MouseBuild_rt_FKBall_loc1/MouseBuild_rt_FKBall_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_FKLeg_ctrl_grp1/MouseBuild_rt_FKEnkel_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_FKLeg_ctrl_grp1/MouseBuild_rt_FKEnkel_loc1/MouseBuild_rt_FKEnkel_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_FKLeg_ctrl_grp1/MouseBuild_rt_FKKnee_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_FKLeg_ctrl_grp1/MouseBuild_rt_FKKnee_loc1/MouseBuild_rt_FKKnee_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_FKLeg_ctrl_grp1/MouseBuild_rt_FKUpleg_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_FKLeg_ctrl_grp1/MouseBuild_rt_FKUpleg_loc1/MouseBuild_rt_FKUpleg_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_IK_FK_switch_loc2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_IK_FK_switch_loc2/MouseBuild_rt_IK_FK_switch_ctrl2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_FKUpleg_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_FKUpleg_jnt1/MouseBuild_rt_FKKnee_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_FKUpleg_jnt1/MouseBuild_rt_FKKnee_jnt1/MouseBuild_rt_FKAnkel_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_FKUpleg_jnt1/MouseBuild_rt_FKKnee_jnt1/MouseBuild_rt_FKAnkel_jnt1/MouseBuild_rt_FKBall_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_IKUpleg_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_IKUpleg_jnt1/MouseBuild_rt_IKKnee_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_IKUpleg_jnt1/MouseBuild_rt_IKKnee_jnt1/MouseBuild_rt_IKAnkel_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_IKUpleg_jnt1/MouseBuild_rt_IKKnee_jnt1/MouseBuild_rt_IKAnkel_jnt1/MouseBuild_rt_IKBall_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_SKUpleg_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_SKUpleg_jnt1 1/MouseBuild_rt_SKKnee_jnt1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_SKUpleg_jnt1 1/MouseBuild_rt_SKKnee_jnt1
+      1/MouseBuild_rt_SKAnkel_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_rt_Leg_All_grp1/Flip
+      1/MouseBuild_rt_SKHip_jnt1/MouseBuild_rt_SKUpleg_jnt1 1/MouseBuild_rt_SKKnee_jnt1
+      1/MouseBuild_rt_SKAnkel_jnt1 1/MouseBuild_rt_SKBall_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowHipSpine_jnt1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowHipSpine_jnt1
+      1/MouseBuild_IKHip_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowHipSpine_jnt1
+      1/MouseBuild_IKHip_jnt1 1/Skirt_joint1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowHipSpine_jnt1
+      1/MouseBuild_IKHip_jnt1 1/Skirt_joint2 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowHipSpine_jnt1
+      1/MouseBuild_IKHip_jnt1 1/Skirt_joint3 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/Chin_Ctrl_Grp
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/Chin_Ctrl_Grp/Chin_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/Chin_Ctrl_Grp/Chin_loc1/Chin_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_Head_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_Head_loc1/MouseBuild_Head_ctrl1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_Head_Loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_Head_Loc1/MouseBuild_Head_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_lf_EyeBrow_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_lf_EyeBrow_loc1/MouseBuild_lf_EyeBrow_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_lf_EyeBrow_loc1/MouseBuild_lf_EyeBrow_ctrl1/MouseBuild_lf_EyeBrow_ctrl2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_lf_EyeBrow_loc1/MouseBuild_lf_EyeBrow_ctrl1/MouseBuild_lf_EyeBrow_ctrl3
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_rt_EyeBrow_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_rt_EyeBrow_loc1/MouseBuild_rt_EyeBrow_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_rt_EyeBrow_loc1/MouseBuild_rt_EyeBrow_ctrl1/MouseBuild_rt_EyeBrow_ctrl2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_Head_ctrl_grp1/MouseBuild_rt_EyeBrow_loc1/MouseBuild_rt_EyeBrow_ctrl1/MouseBuild_rt_EyeBrow_ctrl3
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_lf_Ear_Loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_lf_Ear_Loc1/MouseBuild_lf_Ear_Ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_lf_Eye_Loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_lf_Eye_Loc1/MouseBuild_lf_Eye_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_rt_Ear_Loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_rt_Ear_Loc1/MouseBuild_rt_Ear_Ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_rt_Eye_Loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/Flip_Loc/MouseBuild_Head_All_grp1/MouseBuild_rt_Eye_Loc1/MouseBuild_rt_Eye_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/MouseBuild_IKChestEnd_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/MouseBuild_HeadEnd_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform15
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform15/MouseBuild_lf_Ear_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform16
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform16/MouseBuild_rt_Ear_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform17
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform17/MouseBuild_rt_EyeBrow_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform17/MouseBuild_rt_EyeBrow_jnt1 1/MouseBuild_rt_EyeBrow_jnt2
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform17/MouseBuild_rt_EyeBrow_jnt1 1/MouseBuild_rt_EyeBrow_jnt3
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform18
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform18/MouseBuild_rt_Eye_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform19
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform19/MouseBuild_lf_Eye_jnt1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform20
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform20/MouseBuild_lf_EyeBrow_jnt1 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform20/MouseBuild_lf_EyeBrow_jnt1 1/MouseBuild_lf_EyeBrow_jnt2
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform20/MouseBuild_lf_EyeBrow_jnt1 1/MouseBuild_lf_EyeBrow_jnt3
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform24
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_IKLowSpine_jnt1
+      1/MouseBuild_IKMidSpine_jnt1 1/MouseBuild_IKUpSpine_jnt1 1/MouseBuild_IKChest_jnt1
+      1/MouseBuild_Chest_jnt1 1/transform25/MouseBuild_HeadStart_jnt1 1/MouseBuild_Head_jnt1
+      1/MouseBuild_Head_jnt2 1/transform24/joint16 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Chest_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Chest_loc1/MouseBuild_Chest_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Hip_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Hip_loc1/MouseBuild_Hip_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Hip_loc1/MouseBuild_Hip_ctrl1/Skirt_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Hip_loc1/MouseBuild_Hip_ctrl1/Skirt_loc1/Skirt_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Hip_loc1/MouseBuild_Hip_ctrl1/Skirt_loc2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Hip_loc1/MouseBuild_Hip_ctrl1/Skirt_loc2/Skirt_ctrl1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Hip_loc1/MouseBuild_Hip_ctrl1/Skirt_loc3
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Hip_loc1/MouseBuild_Hip_ctrl1/Skirt_loc3/Skirt_ctrl1
+      2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Mainspine_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Spine_All_grp1/MouseBuild_Spine_ctrl_grp1/MouseBuild_Mainspine_loc1/MouseBuild_Mainspine_ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Stretcher_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Stretcher_grp1/MouseBuild_Stretch_Ctrl_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Stretcher_grp1/MouseBuild_Stretch_Ctrl_grp1/MouseBuild_Stretch_Loc1Shape
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Stretcher_grp1/MouseBuild_Stretch_Ctrl_grp1/MouseBuild_Stretch_Loc1Shape/MouseBuild_Char_S_1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Stretcher_grp1/MouseBuild_Stretch_Ctrl_grp1/MouseBuild_Stretch_Loc1Shape/MouseBuild_Char_S_1/MouseBuild_Stretch_Ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Stretcher_grp1/MouseBuild_Stretch_Ctrl_grp1/MouseBuild_stretchCtrlDown1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Stretcher_grp1/MouseBuild_Stretch_Ctrl_grp1/MouseBuild_stretchCtrlUp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4/MouseBuild_Tail_loc6
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4/MouseBuild_Tail_loc6/MouseBuild_Tail_Ctrl1
+      5
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4/MouseBuild_Tail_loc6/MouseBuild_Tail_Ctrl1
+      5/MouseBuild_Tail_loc7
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4/MouseBuild_Tail_loc6/MouseBuild_Tail_Ctrl1
+      5/MouseBuild_Tail_loc7/MouseBuild_Tail_Ctrl1 6
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4/MouseBuild_Tail_loc6/MouseBuild_Tail_Ctrl1
+      5/MouseBuild_Tail_loc7/MouseBuild_Tail_Ctrl1 6/MouseBuild_Tail_loc8
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4/MouseBuild_Tail_loc6/MouseBuild_Tail_Ctrl1
+      5/MouseBuild_Tail_loc7/MouseBuild_Tail_Ctrl1 6/MouseBuild_Tail_loc8/MouseBuild_Tail_Ctrl1
+      7
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4/MouseBuild_Tail_loc6/MouseBuild_Tail_Ctrl1
+      5/MouseBuild_Tail_loc7/MouseBuild_Tail_Ctrl1 6/MouseBuild_Tail_loc8/MouseBuild_Tail_Ctrl1
+      7/MouseBuild_Tail_loc9
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4/MouseBuild_Tail_loc6/MouseBuild_Tail_Ctrl1
+      5/MouseBuild_Tail_loc7/MouseBuild_Tail_Ctrl1 6/MouseBuild_Tail_loc8/MouseBuild_Tail_Ctrl1
+      7/MouseBuild_Tail_loc9/MouseBuild_Tail_Ctrl1 8
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4/MouseBuild_Tail_loc6/MouseBuild_Tail_Ctrl1
+      5/MouseBuild_Tail_loc7/MouseBuild_Tail_Ctrl1 6/MouseBuild_Tail_loc8/MouseBuild_Tail_Ctrl1
+      7/MouseBuild_Tail_loc9/MouseBuild_Tail_Ctrl1 8/MouseBuild_Tail_Jnt_loc10
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Ctrl_grp1/MouseBuild_Tail_loc1/MouseBuild_Tail_Ctrl1/MouseBuild_Tail_loc2/MouseBuild_Tail_Ctrl1
+      1/MouseBuild_Tail_loc3/MouseBuild_Tail_Ctrl1 2/MouseBuild_Tail_loc4/MouseBuild_Tail_Ctrl1
+      3/MouseBuild_Tail_loc5/MouseBuild_Tail_Ctrl1 4/MouseBuild_Tail_loc6/MouseBuild_Tail_Ctrl1
+      5/MouseBuild_Tail_loc7/MouseBuild_Tail_Ctrl1 6/MouseBuild_Tail_loc8/MouseBuild_Tail_Ctrl1
+      7/MouseBuild_Tail_loc9/MouseBuild_Tail_Ctrl1 8/MouseBuild_Tail_Jnt_loc10/MouseBuild_Tail_Jnt_Ctrl1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1/MouseBuild_Tail_Jnt3 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1/MouseBuild_Tail_Jnt3 1/MouseBuild_Tail_Jnt4 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1/MouseBuild_Tail_Jnt3 1/MouseBuild_Tail_Jnt4 1/MouseBuild_Tail_Jnt5 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1/MouseBuild_Tail_Jnt3 1/MouseBuild_Tail_Jnt4 1/MouseBuild_Tail_Jnt5 1/MouseBuild_Tail_Jnt6
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1/MouseBuild_Tail_Jnt3 1/MouseBuild_Tail_Jnt4 1/MouseBuild_Tail_Jnt5 1/MouseBuild_Tail_Jnt6
+      1/MouseBuild_Tail_Jnt7 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1/MouseBuild_Tail_Jnt3 1/MouseBuild_Tail_Jnt4 1/MouseBuild_Tail_Jnt5 1/MouseBuild_Tail_Jnt6
+      1/MouseBuild_Tail_Jnt7 1/MouseBuild_Tail_Jnt8 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1/MouseBuild_Tail_Jnt3 1/MouseBuild_Tail_Jnt4 1/MouseBuild_Tail_Jnt5 1/MouseBuild_Tail_Jnt6
+      1/MouseBuild_Tail_Jnt7 1/MouseBuild_Tail_Jnt8 1/MouseBuild_Tail_Jnt9 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1/MouseBuild_Tail_Jnt3 1/MouseBuild_Tail_Jnt4 1/MouseBuild_Tail_Jnt5 1/MouseBuild_Tail_Jnt6
+      1/MouseBuild_Tail_Jnt7 1/MouseBuild_Tail_Jnt8 1/MouseBuild_Tail_Jnt9 1/MouseBuild_Tail_Jnt10
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1/MouseBuild_Tail_Jnt3 1/MouseBuild_Tail_Jnt4 1/MouseBuild_Tail_Jnt5 1/MouseBuild_Tail_Jnt6
+      1/MouseBuild_Tail_Jnt7 1/MouseBuild_Tail_Jnt8 1/MouseBuild_Tail_Jnt9 1/MouseBuild_Tail_Jnt10
+      1/MouseBuild_Tail_Jnt11 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/MouseBuild_Tail_All_grp1/MouseBuild_Tail_Jnt2
+      1/MouseBuild_Tail_Jnt3 1/MouseBuild_Tail_Jnt4 1/MouseBuild_Tail_Jnt5 1/MouseBuild_Tail_Jnt6
+      1/MouseBuild_Tail_Jnt7 1/MouseBuild_Tail_Jnt8 1/MouseBuild_Tail_Jnt9 1/MouseBuild_Tail_Jnt10
+      1/MouseBuild_Tail_Jnt11 1/MouseBuild_Tail_Jnt12 1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/qu_rugSwordShield_GRP
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/qu_rugSwordShield_GRP/qu_shieldRoot_LOC
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/qu_rugSwordShield_GRP/qu_shieldRoot_LOC/qu_shieldRoot_CTL
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/qu_rugSwordShield_GRP/qu_shieldRoot_LOC/qu_shieldRoot_CTL/qu_shieldRoot_JNT
+      1
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/qu_rugSwordShield_GRP/qu_swordRoot_LOC
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/qu_rugSwordShield_GRP/qu_swordRoot_LOC/qu_swordRoot_CTL
+    m_Weight: 0
+  - m_Path: SirMouse_All_grp1/Root_loc1/Root_ctrl1/Rig_SirMouseBuild1/qu_rugSwordShield_GRP/qu_swordRoot_LOC/qu_swordRoot_CTL/qu_swordRoot_JNT
+      1
+    m_Weight: 0

@@ -1,0 +1,2445 @@
+fileFormatVersion: 2
+guid: 75353b3a59062b5488dc8d3c27496bc9
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -6571465405261533560
+    second: SirMouse_Hybrid_0.2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body7
+    second: {fileID: 2100000, guid: 3e92b34c9e01b084282b6d72db1d55ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EarL7
+    second: {fileID: 2100000, guid: 2fc6bc65745da3644b48ffa80c22eee8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EarR7
+    second: {fileID: 2100000, guid: 8025fa9179108d74ab512536d204f251, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ElbowL7
+    second: {fileID: 2100000, guid: 86e80439bb53e5248a1ca6cc062b1f67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ElbowR7
+    second: {fileID: 2100000, guid: dc27cc7103af5f7459d52b95675a368c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Expression102
+    second: {fileID: 2100000, guid: 5252dd813f7fedf46b4ff118bdbbc0cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Expression104
+    second: {fileID: 2100000, guid: c06d31d0981322148aa4ccab7f9f6166, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye3
+    second: {fileID: 2100000, guid: dd0858c79d804b34a83a64503c72a710, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeBrowL6
+    second: {fileID: 2100000, guid: dd0858c79d804b34a83a64503c72a710, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeBrowR4
+    second: {fileID: 2100000, guid: dd0858c79d804b34a83a64503c72a710, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FootL7
+    second: {fileID: 2100000, guid: 2e0378b23cdff4e4e8284f1fc13a0e81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FootR7
+    second: {fileID: 2100000, guid: a46ed96ea0980c94a86b004250cb6b80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Head7
+    second: {fileID: 2100000, guid: 55f1f5db951b5614899942d3224ef2b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KneeL7
+    second: {fileID: 2100000, guid: df65578e9b57e644ab294ba0cd9330ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KneeR7
+    second: {fileID: 2100000, guid: 1185b4704aa4e9d4c9e664118fd1c679, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shield7
+    second: {fileID: 2100000, guid: a8942c55cadf4674d9bfa47850eed6a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShinL6
+    second: {fileID: 2100000, guid: 7fba893bfd98bf94a8368bc2f0dccdcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShinR6
+    second: {fileID: 2100000, guid: eca1232149fc3ad4baa11fbf71c6b9d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShoulderL7
+    second: {fileID: 2100000, guid: 031fa22aa34428941a97174fcacb51da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShoulderR7
+    second: {fileID: 2100000, guid: 21f9ced44260b14438442ebb584b360d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SirMouse_Hands_SirMouse00_HandSheet_Geo_SHD3
+    second: {fileID: 2100000, guid: 40d5a2c9d87c5374da4e5fc5e54bcd31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skirt7
+    second: {fileID: 2100000, guid: f3c09d28dcc72ae4a905432e7b8cab1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SwordR3
+    second: {fileID: 2100000, guid: 95192cf27a84c024190fb44fc4640a7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tail7
+    second: {fileID: 2100000, guid: dd0858c79d804b34a83a64503c72a710, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UpperArmL7
+    second: {fileID: 2100000, guid: 46220078bd4887f47b6d70f1eb367df0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UpperArmR7
+    second: {fileID: 2100000, guid: 888208b6635aff749912ae6dddfc8cdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UpperLegL7
+    second: {fileID: 2100000, guid: 7362d162b6dd47d47a81fe89186c71f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UpperLegR6
+    second: {fileID: 2100000, guid: 1a9fc461ff0a21d4c9155b6e8c592082, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: MouseBuild_IKLowHipSpine_jnt1
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_lf_SKUpleg_jnt1
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_rt_SKUpleg_jnt1
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_lf_SKKnee_jnt1
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_rt_SKKnee_jnt1
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_lf_SKAnkel_jnt1
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_rt_SKAnkel_jnt1
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SpineTop
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_HeadStart_jnt1
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_lf_SKShoulder_jnt1
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_rt_SKShoulder_jnt1
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_lf_SKElbow_Aim_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_rt_SKElbow_Aim_Jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_lf_hand_jnt1
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_rt_hand_jnt5
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_lf_SKBall_jnt1
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_rt_SKBall_jnt1
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_lf_Eye_Norm_jnt
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MouseBuild_lf_Eye_CloNeu_jnt
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mouth_03_jnt
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: RM_FullRig_Test4(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SirMouse_All_grp1
+      parentName: RM_FullRig_Test4(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_loc1
+      parentName: SirMouse_All_grp1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_ctrl1
+      parentName: Root_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_ExtraCtrls_grp1
+      parentName: Root_ctrl1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_ExtraCtrls_placer
+      parentName: MouseBuild_ExtraCtrls_grp1
+      position: {x: -0, y: -0.036339547, z: 0.11959802}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouthShapesCtrls_grp1
+      parentName: MouseBuild_ExtraCtrls_placer
+      position: {x: -0, y: -0.007846842, z: 0.2562958}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocator6
+      parentName: MouthShapesCtrls_grp1
+      position: {x: -0, y: 0, z: -0.38239712}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocatorCtrl6
+      parentName: MouseBuild_PreviewLocator6
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewPlaneCtrl6
+      parentName: MouseBuild_PreviewLocatorCtrl6
+      position: {x: -0, y: 0, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocator5
+      parentName: MouthShapesCtrls_grp1
+      position: {x: -0, y: 0, z: -0.3550022}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocatorCtrl5
+      parentName: MouseBuild_PreviewLocator5
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewPlaneCtrl5
+      parentName: MouseBuild_PreviewLocatorCtrl5
+      position: {x: -0, y: 0, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocator4
+      parentName: MouthShapesCtrls_grp1
+      position: {x: -0, y: 0, z: -0.33269352}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocatorCtrl4
+      parentName: MouseBuild_PreviewLocator4
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewPlaneCtrl4
+      parentName: MouseBuild_PreviewLocatorCtrl4
+      position: {x: -0, y: 0, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocator3
+      parentName: MouthShapesCtrls_grp1
+      position: {x: -0, y: 0, z: -0.31272164}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocatorCtrl3
+      parentName: MouseBuild_PreviewLocator3
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewPlaneCtrl3
+      parentName: MouseBuild_PreviewLocatorCtrl3
+      position: {x: -0, y: 0, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocator2
+      parentName: MouthShapesCtrls_grp1
+      position: {x: -0, y: 0, z: -0.29834816}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocatorCtrl2
+      parentName: MouseBuild_PreviewLocator2
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewPlaneCtrl2
+      parentName: MouseBuild_PreviewLocatorCtrl2
+      position: {x: -0, y: 0, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocator1
+      parentName: MouthShapesCtrls_grp1
+      position: {x: -0, y: 0, z: -0.28048307}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewLocatorCtrl1
+      parentName: MouseBuild_PreviewLocator1
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_PreviewPlaneCtrl1
+      parentName: MouseBuild_PreviewLocatorCtrl1
+      position: {x: -0, y: 0, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocator52
+      parentName: MouthShapesCtrls_grp1
+      position: {x: -4.9303804e-33, y: -0.14975516, z: -0.3828944}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocatorCtrl47
+      parentName: PreviewLocator52
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewPlaneCtrl47
+      parentName: PreviewLocatorCtrl47
+      position: {x: -0, y: 0, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: lf_EyeShapesCtrls_grp1
+      parentName: MouseBuild_ExtraCtrls_placer
+      position: {x: -8.275226e-17, y: -0.098584384, z: -0.17228106}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.6530453, y: 0.6530453, z: 0.6530453}
+    - name: PreviewLocator48
+      parentName: lf_EyeShapesCtrls_grp1
+      position: {x: -0.16457924, y: -0.05057279, z: -3.6543933e-17}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocatorCtrl43
+      parentName: PreviewLocator48
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewPlaneCtrl43
+      parentName: PreviewLocatorCtrl43
+      position: {x: -0, y: 0, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocator49
+      parentName: lf_EyeShapesCtrls_grp1
+      position: {x: -0.16457924, y: -0.08509399, z: -3.6543933e-17}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocatorCtrl44
+      parentName: PreviewLocator49
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewPlaneCtrl44
+      parentName: PreviewLocatorCtrl44
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocator50
+      parentName: lf_EyeShapesCtrls_grp1
+      position: {x: -0.16457924, y: -0.12357237, z: -3.6543933e-17}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocatorCtrl45
+      parentName: PreviewLocator50
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewPlaneCtrl45
+      parentName: PreviewLocatorCtrl45
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocator51
+      parentName: lf_EyeShapesCtrls_grp1
+      position: {x: -0.16457924, y: -0.15851049, z: -3.6543933e-17}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocatorCtrl46
+      parentName: PreviewLocator51
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewPlaneCtrl46
+      parentName: PreviewLocatorCtrl46
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rt_EyeShapesCtrls_grp1
+      parentName: MouseBuild_ExtraCtrls_placer
+      position: {x: -8.275226e-17, y: 0.019075269, z: -0.17228106}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.6530453, y: 0.6530453, z: 0.6530453}
+    - name: PreviewLocator48 1
+      parentName: rt_EyeShapesCtrls_grp1
+      position: {x: -0.16457924, y: -0.05057279, z: -3.6543933e-17}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocatorCtrl43 1
+      parentName: PreviewLocator48 1
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewPlaneCtrl43 1
+      parentName: PreviewLocatorCtrl43 1
+      position: {x: -0, y: 0, z: 0.01}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocator49 1
+      parentName: rt_EyeShapesCtrls_grp1
+      position: {x: -0.16457924, y: -0.08509399, z: -3.6543933e-17}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocatorCtrl44 1
+      parentName: PreviewLocator49 1
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewPlaneCtrl44 1
+      parentName: PreviewLocatorCtrl44 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocator50 1
+      parentName: rt_EyeShapesCtrls_grp1
+      position: {x: -0.16457924, y: -0.12357237, z: -3.6543933e-17}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocatorCtrl45 1
+      parentName: PreviewLocator50 1
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewPlaneCtrl45 1
+      parentName: PreviewLocatorCtrl45 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocator51 1
+      parentName: rt_EyeShapesCtrls_grp1
+      position: {x: -0.16457924, y: -0.15851049, z: -3.6543933e-17}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewLocatorCtrl46 1
+      parentName: PreviewLocator51 1
+      position: {x: -0, y: -0.02, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PreviewPlaneCtrl46 1
+      parentName: PreviewLocatorCtrl46 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rig_SirMouseBuild1
+      parentName: Root_ctrl1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Stretcher_grp1
+      parentName: Rig_SirMouseBuild1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Stretch_Ctrl_grp1
+      parentName: MouseBuild_Stretcher_grp1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_stretchCtrlUp1
+      parentName: MouseBuild_Stretch_Ctrl_grp1
+      position: {x: -0.0060257725, y: 0.16242793, z: 0.0044960408}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_stretchCtrlDown1
+      parentName: MouseBuild_Stretch_Ctrl_grp1
+      position: {x: -0.0060257725, y: 0.119533144, z: 0.0048707197}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Stretch_Loc1Shape
+      parentName: MouseBuild_Stretch_Ctrl_grp1
+      position: {x: -0.0060257725, y: 0.16242793, z: 0.0044960408}
+      rotation: {x: -2.384204e-14, y: -1.3877788e-17, z: 1.3010426e-18, w: 1}
+      scale: {x: 0.6, y: 0.6, z: 0.6}
+    - name: MouseBuild_Char_S_1
+      parentName: MouseBuild_Stretch_Loc1Shape
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Stretch_Ctrl1
+      parentName: MouseBuild_Char_S_1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IK_grp1
+      parentName: Rig_SirMouseBuild1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IKArm_ctrl_grp1
+      parentName: MouseBuild_IK_grp1
+      position: {x: -0.0060257725, y: 0.16242793, z: 0.0044960408}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IKWrist_loc1
+      parentName: MouseBuild_lf_IKArm_ctrl_grp1
+      position: {x: 0.06077787, y: -0.00837697, z: -0.06409309}
+      rotation: {x: 0, y: 0, z: 1, w: 2.8327693e-16}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IKWrist_ctrl1
+      parentName: MouseBuild_lf_IKWrist_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IKArm_ctrl_grp1
+      parentName: MouseBuild_IK_grp1
+      position: {x: -0.0060257725, y: 0.16242793, z: 0.0044960408}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IKWrist_loc1
+      parentName: MouseBuild_rt_IKArm_ctrl_grp1
+      position: {x: 0.043210972, y: 0.009091492, z: 0.082719535}
+      rotation: {x: 0, y: 0, z: 1, w: 1.1714554e-15}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IKWrist_ctrl1
+      parentName: MouseBuild_rt_IKWrist_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_Arm_All_grp1
+      parentName: Rig_SirMouseBuild1
+      position: {x: -0.0060257725, y: 0.16242793, z: 0.0044960408}
+      rotation: {x: -1.6875392e-14, y: -1.6875392e-14, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shield_loc1
+      parentName: MouseBuild_lf_Arm_All_grp1
+      position: {x: 0.062862925, y: -0.022834107, z: -0.06698417}
+      rotation: {x: 0.49915242, y: -0.49915287, z: 0.50084615, w: 0.5008457}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shield_ctrl1
+      parentName: Shield_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IK_FK_switch_loc1
+      parentName: MouseBuild_lf_Arm_All_grp1
+      position: {x: 0.060777757, y: -0.00837697, z: -0.06409305}
+      rotation: {x: -0.0315097, y: 0.0016924349, z: 0.999502, w: -0.00005335319}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IK_FK_switch_ctrl1
+      parentName: MouseBuild_lf_IK_FK_switch_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKArm_ctrl_grp1
+      parentName: MouseBuild_lf_Arm_All_grp1
+      position: {x: 0.16242793, y: 0.0060257725, z: -0.0044960408}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKShoulder_loc1
+      parentName: MouseBuild_lf_FKArm_ctrl_grp1
+      position: {x: -0.014042065, y: 0.1861216, z: -0.03486618}
+      rotation: {x: 0.21035975, y: -0.20875968, z: 0.6738766, w: 0.6768002}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKShoulder_ctrl1
+      parentName: MouseBuild_lf_FKShoulder_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKElbow_loc1
+      parentName: MouseBuild_lf_FKArm_ctrl_grp1
+      position: {x: -0.01429372, y: 0.14121501, z: -0.065704755}
+      rotation: {x: -0.05281421, y: 0.055379197, z: 0.7039684, w: 0.70609653}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKElbow_ctrl1
+      parentName: MouseBuild_lf_FKElbow_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKWrist_loc1
+      parentName: MouseBuild_lf_FKArm_ctrl_grp1
+      position: {x: -0.0144027425, y: 0.10165017, z: -0.059597015}
+      rotation: {x: 0.0011970137, y: 0.0011976396, z: 0.7071058, w: 0.7071058}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKWrist_ctrl1
+      parentName: MouseBuild_lf_FKWrist_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SkSpine1
+      parentName: MouseBuild_lf_Arm_All_grp1
+      position: {x: -0, y: -3.330669e-18, z: -4.9960034e-18}
+      rotation: {x: 0.070369944, y: -0.31486508, z: 0.20644785, w: 0.92373556}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SkClavicle1
+      parentName: MouseBuild_lf_SkSpine1
+      position: {x: -0.0237807, y: -1.7763568e-17, z: -1.7763568e-17}
+      rotation: {x: -0.18150572, y: -0.31253532, z: -0.120947585, w: 0.9245264}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKShoulder_jnt1 1
+      parentName: MouseBuild_lf_SkClavicle1
+      position: {x: -0.025714118, y: -7.771561e-18, z: 0}
+      rotation: {x: 0.81653136, y: 0.0021561326, z: 0.57729626, w: 0.000951357}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKElbow_jnt1
+      parentName: MouseBuild_lf_SKShoulder_jnt1 1
+      position: {x: -0.054476436, y: 0, z: -1.7763568e-17}
+      rotation: {x: 0, y: 0.368562, z: -0, w: 0.92960316}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKWrist_jnt1
+      parentName: MouseBuild_lf_SKElbow_jnt1
+      position: {x: -0.040033653, y: 3.9968027e-17, z: 0}
+      rotation: {x: -0.00025108707, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_hand_jnt1 2
+      parentName: MouseBuild_lf_SKWrist_jnt1
+      position: {x: -1.7763568e-17, y: -4.440892e-18, z: 0}
+      rotation: {x: 0.0000739903, y: -0.045046695, z: 0.0016182638, w: 0.9989836}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ShieldJnt 1
+      parentName: MouseBuild_lf_hand_jnt1 2
+      position: {x: -0.0018958352, y: 0.014447263, z: -0.003065558}
+      rotation: {x: 0.48399708, y: 0.5155064, z: 0.5155064, w: -0.48399708}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKElbow_Aim_jnt 1
+      parentName: MouseBuild_lf_SKShoulder_jnt1 1
+      position: {x: -0.054476436, y: 0, z: -1.7763568e-17}
+      rotation: {x: 0, y: 0.35779583, z: -0, w: 0.93379986}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IKShoulder_jnt1
+      parentName: MouseBuild_lf_SkClavicle1
+      position: {x: -0.025714118, y: -7.771561e-18, z: 0}
+      rotation: {x: 0.81653136, y: 0.0021561324, z: 0.57729626, w: 0.00095135684}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IKElbow_jnt1
+      parentName: MouseBuild_lf_IKShoulder_jnt1
+      position: {x: -0.054476436, y: 1.11022296e-17, z: 0}
+      rotation: {x: 1.22277685e-17, y: 0.368562, z: -1.9565988e-17, w: 0.92960316}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKShoulder_jnt1
+      parentName: MouseBuild_lf_SkClavicle1
+      position: {x: -0.025714118, y: -1.7763568e-17, z: 3.5527136e-17}
+      rotation: {x: 0.81653136, y: 0.0021561326, z: 0.57729626, w: 0.00095135666}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKElbow_jnt1
+      parentName: MouseBuild_lf_FKShoulder_jnt1
+      position: {x: -0.054476436, y: 2.6645352e-17, z: 1.7763568e-17}
+      rotation: {x: 0, y: 0.368562, z: -0, w: 0.92960316}
+      scale: {x: 1, y: 1, z: 1}
+    - name: locator1
+      parentName: MouseBuild_lf_Arm_All_grp1
+      position: {x: 0.021212913, y: -0.0082679475, z: -0.0702008}
+      rotation: {x: -0.0765043, y: 0.0018137172, z: 0.9970665, w: 0.0015047983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKElbow_jnt2 1
+      parentName: locator1
+      position: {x: 1.7763568e-17, y: 0, z: -1.7763568e-17}
+      rotation: {x: 1.8578252e-17, y: 3.469447e-18, z: -1.3681913e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_hand_jnt1 1
+      parentName: MouseBuild_lf_SKElbow_jnt2 1
+      position: {x: -0.040033653, y: 2.8865798e-17, z: 1.7763568e-17}
+      rotation: {x: -0.0002579167, y: 0.000005494731, z: 0.00025832505, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_Arm_All_grp1
+      parentName: Rig_SirMouseBuild1
+      position: {x: -0.0060257725, y: 0.16242793, z: 0.0044960408}
+      rotation: {x: -2.384204e-14, y: -1.3877788e-17, z: 1.3010426e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SkSpine1
+      parentName: MouseBuild_rt_Arm_All_grp1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.2699168, y: 0.17193836, z: -0.79905957, w: 0.50900495}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SkClavicle1
+      parentName: MouseBuild_rt_SkSpine1
+      position: {x: -0.022260938, y: 2.6645352e-17, z: 5.3290704e-17}
+      rotation: {x: 0.7558804, y: -0.23834206, z: -0.3741604, w: -0.48149958}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKShoulder_jnt1 1
+      parentName: MouseBuild_rt_SkClavicle1
+      position: {x: -0.01674006, y: 0, z: 1.7763568e-17}
+      rotation: {x: -0.58329666, y: -0.40221906, z: 0.41417867, w: 0.57135016}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKElbow_jnt1
+      parentName: MouseBuild_rt_SKShoulder_jnt1 1
+      position: {x: -0.042378582, y: -3.6637358e-17, z: 3.5527136e-17}
+      rotation: {x: 0, y: 0.372923, z: -0, w: 0.9278623}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKWrist_jnt1
+      parentName: MouseBuild_rt_SKElbow_jnt1
+      position: {x: -0.042945053, y: -4.1633363e-17, z: -3.5527136e-17}
+      rotation: {x: 0.011190213, y: -0, z: -0, w: 0.9999374}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_hand_jnt1 2
+      parentName: MouseBuild_rt_SKWrist_jnt1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.003415834, y: -0.26605687, z: -0.0064329617, w: 0.96392983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sword_jnt1 1
+      parentName: MouseBuild_rt_hand_jnt1 2
+      position: {x: -0.00500215, y: -0.018310742, z: 0.020510351}
+      rotation: {x: 0.1973713, y: -0.1973713, z: -0.67900264, w: 0.67900264}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IKShoulder_jnt1
+      parentName: MouseBuild_rt_SkClavicle1
+      position: {x: -0.01674006, y: 0, z: 1.7763568e-17}
+      rotation: {x: -0.58329666, y: -0.40221906, z: 0.41417867, w: 0.57135004}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKShoulder_jnt1
+      parentName: MouseBuild_rt_SkClavicle1
+      position: {x: -0.01674006, y: 7.105427e-17, z: 1.3322676e-17}
+      rotation: {x: -0.58329666, y: -0.40221906, z: 0.41417867, w: 0.57135016}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKArm_ctrl_grp1
+      parentName: MouseBuild_rt_Arm_All_grp1
+      position: {x: 0.0060257725, y: -0.16242793, z: -0.0044960408}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKShoulder_loc1
+      parentName: MouseBuild_rt_FKArm_ctrl_grp1
+      position: {x: 0.0014565258, y: 0.17846988, z: 0.034735}
+      rotation: {x: -0.11958445, y: 0.11959371, z: 0.70532155, w: 0.68841743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKShoulder_ctrl1
+      parentName: MouseBuild_rt_FKShoulder_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKWrist_loc1
+      parentName: MouseBuild_rt_FKArm_ctrl_grp1
+      position: {x: 0.0030657132, y: 0.119216956, z: 0.08721557}
+      rotation: {x: -5.551116e-17, y: 2.4806548e-16, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKWrist_ctrl1
+      parentName: MouseBuild_rt_FKWrist_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IK_FK_switch_loc1
+      parentName: MouseBuild_rt_Arm_All_grp1
+      position: {x: 0.009091486, y: -0.04321097, z: 0.082719535}
+      rotation: {x: -0.1973713, y: 0.1973713, z: 0.67900264, w: 0.67900264}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IK_FK_switch_ctrl1
+      parentName: MouseBuild_rt_IK_FK_switch_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sword_loc1
+      parentName: MouseBuild_rt_Arm_All_grp1
+      position: {x: 0.02740223, y: -0.036438845, z: 0.102715395}
+      rotation: {x: 5.551115e-17, y: 5.2735594e-16, z: -1.3877788e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sword_ctrl1
+      parentName: Sword_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: locator2
+      parentName: MouseBuild_rt_Arm_All_grp1
+      position: {x: 0.008480831, y: -0.023900203, z: 0.044365935}
+      rotation: {x: -0.3739885, y: 0.36769316, z: 0.60984546, w: 0.5941573}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKElbow_jnt2 1
+      parentName: locator2
+      position: {x: -4.440892e-18, y: 0, z: -1.7763568e-17}
+      rotation: {x: -4.0266318e-16, y: 1.700029e-16, z: -3.6456174e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_hand_jnt1 1
+      parentName: MouseBuild_rt_SKElbow_jnt2 1
+      position: {x: -0.042945053, y: -3.8857805e-17, z: 1.4210854e-16}
+      rotation: {x: 0.011190213, y: -0.0000000018625286, z: 2.0842933e-11, w: 0.9999374}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Spine_All_grp1
+      parentName: Rig_SirMouseBuild1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKLowSpine_jnt1 1
+      parentName: MouseBuild_Spine_All_grp1
+      position: {x: -0.0060257725, y: 0.119533144, z: 0.0048707197}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKMidSpine_jnt1 1
+      parentName: MouseBuild_IKLowSpine_jnt1 1
+      position: {x: -0.013255926, y: 3.330669e-18, z: 0}
+      rotation: {x: -0.0000000074505793, y: -0.0006528228, z: -4.864046e-12, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKUpSpine_jnt1 1
+      parentName: MouseBuild_IKMidSpine_jnt1 1
+      position: {x: -0.013010535, y: 0, z: 5.551115e-19}
+      rotation: {x: -7.2879375e-20, y: -0.010100836, z: 3.4046258e-17, w: 0.999949}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKChest_jnt1 1
+      parentName: MouseBuild_IKUpSpine_jnt1 1
+      position: {x: -0.016632183, y: 4.440892e-18, z: 0}
+      rotation: {x: 0, y: -0.05642674, z: -0, w: 0.99840677}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Chest_jnt1 1
+      parentName: MouseBuild_IKChest_jnt1 1
+      position: {x: -0, y: 0, z: 4.440892e-18}
+      rotation: {x: 0, y: 2.384204e-14, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKChestEnd_jnt1 1
+      parentName: MouseBuild_Chest_jnt1 1
+      position: {x: -0.0416213, y: 9.992007e-18, z: -4.440892e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Flip_Loc
+      parentName: MouseBuild_Chest_jnt1 1
+      position: {x: 0.16036014, y: 0.0060257725, z: -0.026223533}
+      rotation: {x: 0.047489267, y: 0.047489267, z: 0.7055103, w: 0.7055103}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Head_All_grp1
+      parentName: Flip_Loc
+      position: {x: -0.0060257725, y: 0.20367377, z: -0.0010819073}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.2, y: 1.2, z: 1.2}
+    - name: Chin_Ctrl_Grp
+      parentName: MouseBuild_Head_All_grp1
+      position: {x: 0.005021477, y: -0.16972815, z: 0.00090158946}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: Chin_loc1
+      parentName: Chin_Ctrl_Grp
+      position: {x: -0.00021307019, y: 0.19049525, z: -1.0058562e-15}
+      rotation: {x: 0.13808106, y: 0.99042094, z: -1.3042113e-16, w: 4.9202603e-16}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Chin_ctrl1
+      parentName: Chin_loc1
+      position: {x: -8.881784e-18, y: -0.0035373196, z: -1.2621774e-31}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Head_ctrl_grp1
+      parentName: MouseBuild_Head_All_grp1
+      position: {x: 0.005021477, y: -0.16972815, z: 0.00090158946}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: MouseBuild_Head_loc1
+      parentName: MouseBuild_Head_ctrl_grp1
+      position: {x: -0.0060257725, y: 0.207726, z: -0.0016623181}
+      rotation: {x: -0.702646, y: 0.702646, z: -0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Head_ctrl1 1
+      parentName: MouseBuild_Head_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_EyeBrow_loc1
+      parentName: MouseBuild_Head_ctrl_grp1
+      position: {x: -0.0112210745, y: 0.26126972, z: 0.029318465}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_EyeBrow_ctrl1
+      parentName: MouseBuild_rt_EyeBrow_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_EyeBrow_ctrl2
+      parentName: MouseBuild_rt_EyeBrow_ctrl1
+      position: {x: 3.3788184e-11, y: -0.0010677236, z: -0.0054913447}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_EyeBrow_ctrl3
+      parentName: MouseBuild_rt_EyeBrow_ctrl1
+      position: {x: 3.3788184e-11, y: -0.0004862493, z: 0.0052112816}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_EyeBrow_loc1
+      parentName: MouseBuild_Head_ctrl_grp1
+      position: {x: -0.0112210745, y: 0.2570723, z: -0.00517914}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_EyeBrow_ctrl1
+      parentName: MouseBuild_lf_EyeBrow_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_EyeBrow_ctrl2
+      parentName: MouseBuild_lf_EyeBrow_ctrl1
+      position: {x: 3.378815e-11, y: -0.0012619474, z: -0.00643382}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_EyeBrow_ctrl3
+      parentName: MouseBuild_lf_EyeBrow_ctrl1
+      position: {x: 3.378815e-11, y: 0.00031039448, z: 0.00551544}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Head_Loc1
+      parentName: MouseBuild_Head_ctrl_grp1
+      position: {x: -0.0058324994, y: 0.2422625, z: 0.000331908}
+      rotation: {x: -0.702646, y: 0.702646, z: -0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Head_ctrl1
+      parentName: MouseBuild_Head_Loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_Ear_Loc1
+      parentName: MouseBuild_Head_All_grp1
+      position: {x: -0.0021011147, y: 0.06916739, z: 0.013047398}
+      rotation: {x: 4.8572257e-17, y: -4.440892e-16, z: 5.551115e-17, w: 1}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: MouseBuild_rt_Ear_Ctrl1
+      parentName: MouseBuild_rt_Ear_Loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_Ear_Loc1
+      parentName: MouseBuild_Head_All_grp1
+      position: {x: -0.0021011147, y: 0.05003625, z: -0.034598175}
+      rotation: {x: 4.8572257e-17, y: -4.440892e-16, z: 5.551115e-17, w: 1}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: MouseBuild_lf_Ear_Ctrl1
+      parentName: MouseBuild_lf_Ear_Loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_Eye_Loc1
+      parentName: MouseBuild_Head_All_grp1
+      position: {x: -0.0059146127, y: 0.035885222, z: 0.027514875}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: MouseBuild_rt_Eye_ctrl1
+      parentName: MouseBuild_rt_Eye_Loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_Eye_Loc1
+      parentName: MouseBuild_Head_All_grp1
+      position: {x: -0.0057781837, y: 0.0312832, z: -0.0009523592}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: MouseBuild_lf_Eye_ctrl1
+      parentName: MouseBuild_lf_Eye_Loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform25
+      parentName: MouseBuild_Chest_jnt1 1
+      position: {x: -0.0416213, y: 1.5543122e-17, z: -8.881784e-18}
+      rotation: {x: 0.047489267, y: 0.047489267, z: 0.7055103, w: 0.7055103}
+      scale: {x: 1.2, y: 1.2, z: 1.2}
+    - name: MouseBuild_HeadStart_jnt1 1
+      parentName: transform25
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7053186, y: 0.7053186, z: -0.050255712, w: -0.050255712}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Head_jnt1 1
+      parentName: MouseBuild_HeadStart_jnt1 1
+      position: {x: -0.0034113277, y: 2.220446e-18, z: -8.881784e-18}
+      rotation: {x: 0, y: 0.041240774, z: -0, w: 0.99914926}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Head_jnt2 1
+      parentName: MouseBuild_Head_jnt1 1
+      position: {x: -0.027686052, y: -0.00016106146, z: -0.008034677}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_HeadEnd_jnt1 1
+      parentName: MouseBuild_Head_jnt2 1
+      position: {x: -0.040154308, y: 0.00016106146, z: 0.008034677}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform15
+      parentName: MouseBuild_Head_jnt2 1
+      position: {x: 0.19674543, y: -0.004860416, z: 0.04526619}
+      rotation: {x: -0.702646, y: 0.702646, z: -0.07930085, w: 0.07930085}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: MouseBuild_lf_Ear_jnt1 1
+      parentName: transform15
+      position: {x: -0.0085471105, y: 0.26371726, z: -0.04259972}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform16
+      parentName: MouseBuild_Head_jnt2 1
+      position: {x: 0.19674543, y: -0.004860416, z: 0.04526619}
+      rotation: {x: -0.702646, y: 0.702646, z: -0.07930085, w: 0.07930085}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: MouseBuild_rt_Ear_jnt1 1
+      parentName: transform16
+      position: {x: -0.0085471105, y: 0.28667462, z: 0.01457497}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform17
+      parentName: MouseBuild_Head_jnt2 1
+      position: {x: 0.19674543, y: -0.004860416, z: 0.04526619}
+      rotation: {x: -0.702646, y: 0.702646, z: -0.07930085, w: 0.07930085}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: MouseBuild_rt_EyeBrow_jnt1 1
+      parentName: transform17
+      position: {x: -0.0112210745, y: 0.26126972, z: 0.029318465}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_EyeBrow_jnt2 1
+      parentName: MouseBuild_rt_EyeBrow_jnt1 1
+      position: {x: -2.220446e-18, y: -0.001067728, z: -0.005491345}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_EyeBrow_jnt3 1
+      parentName: MouseBuild_rt_EyeBrow_jnt1 1
+      position: {x: 2.220446e-18, y: -0.0004862443, z: 0.005211283}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform18
+      parentName: MouseBuild_Head_jnt2 1
+      position: {x: 0.19674543, y: -0.004860416, z: 0.04526619}
+      rotation: {x: -0.702646, y: 0.702646, z: -0.07930085, w: 0.07930085}
+      scale: {x: 2.7777777, y: 2.7777777, z: 2.7777777}
+    - name: MouseBuild_rt_Eye_jnt1
+      parentName: transform18
+      position: {x: -0.0039369925, y: 0.07402081, z: 0.009580783}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform19
+      parentName: MouseBuild_Head_jnt2 1
+      position: {x: 0.19674543, y: -0.004860416, z: 0.04526619}
+      rotation: {x: -0.702646, y: 0.702646, z: -0.07930085, w: 0.07930085}
+      scale: {x: 2.7777777, y: 2.7777777, z: 2.7777777}
+    - name: MouseBuild_lf_Eye_jnt1
+      parentName: transform19
+      position: {x: -0.003887878, y: 0.072364084, z: -0.0006674215}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform20
+      parentName: MouseBuild_Head_jnt2 1
+      position: {x: 0.19674543, y: -0.004860416, z: 0.04526619}
+      rotation: {x: -0.702646, y: 0.702646, z: -0.07930085, w: 0.07930085}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: MouseBuild_lf_EyeBrow_jnt1 1
+      parentName: transform20
+      position: {x: -0.0112210745, y: 0.2570723, z: -0.00517914}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_EyeBrow_jnt2 1
+      parentName: MouseBuild_lf_EyeBrow_jnt1 1
+      position: {x: 4.440892e-18, y: -0.0012619379, z: -0.00643382}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_EyeBrow_jnt3 1
+      parentName: MouseBuild_lf_EyeBrow_jnt1 1
+      position: {x: 4.440892e-18, y: 0.0003103894, z: 0.00551544}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform24
+      parentName: MouseBuild_Head_jnt2 1
+      position: {x: 0.19674543, y: -0.004860416, z: 0.04526619}
+      rotation: {x: -0.5529199, y: 0.44077158, z: 0.44077158, w: 0.5529199}
+      scale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+    - name: joint16 1
+      parentName: transform24
+      position: {x: -0.0011805863, y: 0.18709284, z: -3.0907025e-17}
+      rotation: {x: 0.13808106, y: 0.99042094, z: 7.0449854e-17, w: -9.487713e-16}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Spine_ctrl_grp1
+      parentName: MouseBuild_Spine_All_grp1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Hip_loc1
+      parentName: MouseBuild_Spine_ctrl_grp1
+      position: {x: -0.0060257725, y: 0.119533144, z: 0.0048707197}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Hip_ctrl1
+      parentName: MouseBuild_Hip_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_loc1
+      parentName: MouseBuild_Hip_ctrl1
+      position: {x: 0.024641022, y: 0.0060257725, z: 0.008178436}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_ctrl1
+      parentName: Skirt_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_loc3
+      parentName: MouseBuild_Hip_ctrl1
+      position: {x: 0.004730058, y: 0.0060257725, z: 0.044947304}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_ctrl1 2
+      parentName: Skirt_loc3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_loc2
+      parentName: MouseBuild_Hip_ctrl1
+      position: {x: 0.011165347, y: 0.0060257725, z: -0.048266847}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_ctrl1 1
+      parentName: Skirt_loc2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Mainspine_loc1
+      parentName: MouseBuild_Spine_ctrl_grp1
+      position: {x: -0.0060257725, y: 0.119533144, z: 0.0048707197}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Mainspine_ctrl1
+      parentName: MouseBuild_Mainspine_loc1
+      position: {x: -0, y: -3.9210135e-18, z: -5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Chest_loc1
+      parentName: MouseBuild_Spine_ctrl_grp1
+      position: {x: -0.0060257725, y: 0.16242756, z: 0.004496049}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Chest_ctrl1
+      parentName: MouseBuild_Chest_loc1
+      position: {x: -3.5527136e-17, y: -1.110223e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKLowHipSpine_jnt1 1
+      parentName: MouseBuild_Spine_All_grp1
+      position: {x: -0.0060257725, y: 0.119533144, z: 0.0048707197}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKHip_jnt1 1
+      parentName: MouseBuild_IKLowHipSpine_jnt1 1
+      position: {x: 0.015, y: -2.220446e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_joint2 1
+      parentName: MouseBuild_IKHip_jnt1 1
+      position: {x: -0.0038346543, y: 0.0060257725, z: -0.048266847}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_joint1 1
+      parentName: MouseBuild_IKHip_jnt1 1
+      position: {x: 0.0096410215, y: 0.0060257725, z: 0.008178436}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_joint3 1
+      parentName: MouseBuild_IKHip_jnt1 1
+      position: {x: -0.0102699455, y: 0.0060257725, z: 0.044947304}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_Leg_All_grp1
+      parentName: Rig_SirMouseBuild1
+      position: {x: -0.0060257725, y: 0.104533136, z: 0.0048707197}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Flip
+      parentName: MouseBuild_lf_Leg_All_grp1
+      position: {x: -0.000586206, y: 0.011622047, z: -0.026254749}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKHip_jnt1
+      parentName: Flip
+      position: {x: 0.000586206, y: -0.011622052, z: 0.026254749}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKUpleg_jnt1
+      parentName: MouseBuild_lf_SKHip_jnt1
+      position: {x: -0.0005862062, y: 0.0116220545, z: -0.026254749}
+      rotation: {x: 0.38561338, y: 0.38561338, z: 0.59270763, w: 0.59270763}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKKnee_jnt1
+      parentName: MouseBuild_lf_FKUpleg_jnt1
+      position: {x: -0.046946764, y: 0.009341075, z: 0.004140222}
+      rotation: {x: -0.5422122, y: 0.0896422, z: -0.05832088, w: 0.833408}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKAnkel_jnt1
+      parentName: MouseBuild_lf_FKKnee_jnt1
+      position: {x: -0.036022842, y: -5.2180482e-17, z: -0.025269104}
+      rotation: {x: 0.37028486, y: -3.3449768e-16, z: -0.5524409, w: 0.74679196}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKBall_jnt1
+      parentName: MouseBuild_lf_FKAnkel_jnt1
+      position: {x: -0.027545098, y: 2.6645352e-17, z: 0.041095495}
+      rotation: {x: -0.07421535, y: 0.4157014, z: -0.036292695, w: 0.9057413}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IKUpleg_jnt1
+      parentName: MouseBuild_lf_SKHip_jnt1
+      position: {x: -0.0005862062, y: 0.0116220545, z: -0.026254749}
+      rotation: {x: 0.38561338, y: 0.38561338, z: 0.59270763, w: 0.59270763}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IKKnee_jnt1
+      parentName: MouseBuild_lf_IKUpleg_jnt1
+      position: {x: -0.046946764, y: 0.009341075, z: 0.004140222}
+      rotation: {x: -0.5422122, y: 0.0896422, z: -0.05832088, w: 0.833408}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IKAnkel_jnt1
+      parentName: MouseBuild_lf_IKKnee_jnt1
+      position: {x: -0.036022842, y: -4.3298696e-17, z: -0.025269104}
+      rotation: {x: 0.37028486, y: -1.4866564e-16, z: -0.5524409, w: 0.74679196}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IKBall_jnt1
+      parentName: MouseBuild_lf_IKAnkel_jnt1
+      position: {x: -0.027545098, y: 7.771561e-18, z: 0.041095495}
+      rotation: {x: -0.07421535, y: 0.4157014, z: -0.036292695, w: 0.9057413}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKUpleg_jnt1 1
+      parentName: MouseBuild_lf_SKHip_jnt1
+      position: {x: -0.0005862062, y: 0.0116220545, z: -0.026254749}
+      rotation: {x: 0.38561338, y: 0.38561338, z: 0.59270763, w: 0.59270763}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKKnee_jnt1 1
+      parentName: MouseBuild_lf_SKUpleg_jnt1 1
+      position: {x: -0.046946764, y: 0.009341075, z: 0.004140222}
+      rotation: {x: -0.5422122, y: 0.0896422, z: -0.05832088, w: 0.833408}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKAnkel_jnt1 1
+      parentName: MouseBuild_lf_SKKnee_jnt1 1
+      position: {x: -0.036022842, y: -4.3298696e-17, z: -0.025269104}
+      rotation: {x: 0.37028486, y: -0.000000009938676, z: -0.5524409, w: 0.74679196}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKBall_jnt1 1
+      parentName: MouseBuild_lf_SKAnkel_jnt1 1
+      position: {x: -0.027545098, y: 7.771561e-18, z: 0.041095495}
+      rotation: {x: -0.07421535, y: 0.4157014, z: -0.036292695, w: 0.9057413}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKLeg_ctrl_grp1
+      parentName: Flip
+      position: {x: 0.0066119786, y: -0.11615519, z: 0.021384029}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKUpleg_loc1
+      parentName: MouseBuild_lf_FKLeg_ctrl_grp1
+      position: {x: -0.0066119786, y: 0.11615519, z: -0.021384029}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKUpleg_ctrl1
+      parentName: MouseBuild_lf_FKUpleg_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKKnee_loc1
+      parentName: MouseBuild_lf_FKLeg_ctrl_grp1
+      position: {x: -0.0066119786, y: 0.06920843, z: -0.011166538}
+      rotation: {x: -0.07562093, y: 0.07562093, z: 0.70305157, w: 0.70305157}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKKnee_ctrl1
+      parentName: MouseBuild_lf_FKKnee_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKEnkel_loc1
+      parentName: MouseBuild_lf_FKLeg_ctrl_grp1
+      position: {x: -0.0066119786, y: 0.02863581, z: -0.028196957}
+      rotation: {x: -0.07562093, y: 0.07562093, z: 0.70305157, w: 0.70305157}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKEnkel_ctrl1
+      parentName: MouseBuild_lf_FKEnkel_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKBall_loc1
+      parentName: MouseBuild_lf_FKLeg_ctrl_grp1
+      position: {x: -0.0066119786, y: 0.010460215, z: 0.0178163}
+      rotation: {x: -0.39768562, y: 0.39768562, z: 0.5846761, w: 0.5846761}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_FKBall_ctrl1
+      parentName: MouseBuild_lf_FKBall_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IK_FK_switch_loc2
+      parentName: Flip
+      position: {x: -2.0499168e-10, y: -0.10569498, z: 0.03920033}
+      rotation: {x: -0.000000008573445, y: 0.14639375, z: -0.6146588, w: 0.7750893}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_IK_FK_switch_ctrl2
+      parentName: MouseBuild_lf_IK_FK_switch_loc2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_Leg_All_grp1
+      parentName: Rig_SirMouseBuild1
+      position: {x: -0.0060257725, y: 0.104533136, z: 0.0048707197}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Flip 1
+      parentName: MouseBuild_rt_Leg_All_grp1
+      position: {x: 0.01600308, y: 0.014493093, z: 0.02487084}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKHip_jnt1
+      parentName: Flip 1
+      position: {x: -0.01600308, y: -0.014493098, z: -0.02487084}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKUpleg_jnt1
+      parentName: MouseBuild_rt_SKHip_jnt1
+      position: {x: 0.01600308, y: 0.0144931, z: 0.02487084}
+      rotation: {x: -0.29344928, y: -0.29344928, z: 0.6433409, w: 0.6433409}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKKnee_jnt1
+      parentName: MouseBuild_rt_FKUpleg_jnt1
+      position: {x: -0.041182764, y: -0.015347804, z: 0.013323487}
+      rotation: {x: 0.40414506, y: 0.20672898, z: 0.09429599, w: 0.8860238}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKAnkel_jnt1
+      parentName: MouseBuild_rt_FKKnee_jnt1
+      position: {x: -0.030999808, y: 2.7755576e-17, z: -0.038791947}
+      rotation: {x: 0.46610564, y: 2.0230438e-16, z: -0.46189654, w: 0.7545841}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKBall_jnt1
+      parentName: MouseBuild_rt_FKAnkel_jnt1
+      position: {x: -0.035992764, y: -3.5527136e-17, z: 0.035667736}
+      rotation: {x: -0.051470388, y: 0.33949077, z: -0.03264719, w: 0.93863255}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IKUpleg_jnt1
+      parentName: MouseBuild_rt_SKHip_jnt1
+      position: {x: 0.01600308, y: 0.0144931, z: 0.02487084}
+      rotation: {x: -0.29344928, y: -0.29344928, z: 0.6433409, w: 0.6433409}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IKKnee_jnt1
+      parentName: MouseBuild_rt_IKUpleg_jnt1
+      position: {x: -0.041182764, y: -0.015347804, z: 0.013323487}
+      rotation: {x: 0.40414506, y: 0.20672898, z: 0.09429599, w: 0.8860238}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IKAnkel_jnt1
+      parentName: MouseBuild_rt_IKKnee_jnt1
+      position: {x: -0.030999808, y: 3.6637358e-17, z: -0.038791947}
+      rotation: {x: 0.46610564, y: 2.0230438e-16, z: -0.46189654, w: 0.7545841}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IKBall_jnt1
+      parentName: MouseBuild_rt_IKAnkel_jnt1
+      position: {x: -0.035992764, y: -1.7763568e-17, z: 0.035667736}
+      rotation: {x: -0.051470388, y: 0.33949077, z: -0.03264719, w: 0.93863255}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKUpleg_jnt1 1
+      parentName: MouseBuild_rt_SKHip_jnt1
+      position: {x: 0.01600308, y: 0.0144931, z: 0.02487084}
+      rotation: {x: -0.29344928, y: -0.29344928, z: 0.6433409, w: 0.6433409}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKKnee_jnt1 1
+      parentName: MouseBuild_rt_SKUpleg_jnt1 1
+      position: {x: -0.041182764, y: -0.015347804, z: 0.013323487}
+      rotation: {x: 0.40414506, y: 0.20672898, z: 0.09429599, w: 0.8860238}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKAnkel_jnt1 1
+      parentName: MouseBuild_rt_SKKnee_jnt1 1
+      position: {x: -0.030999808, y: 3.6637358e-17, z: -0.038791947}
+      rotation: {x: 0.46610564, y: 0.000000007502297, z: -0.46189654, w: 0.7545841}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKBall_jnt1 1
+      parentName: MouseBuild_rt_SKAnkel_jnt1 1
+      position: {x: -0.035992764, y: -1.7763568e-17, z: 0.035667736}
+      rotation: {x: -0.051470388, y: 0.33949077, z: -0.03264719, w: 0.93863255}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKLeg_ctrl_grp1
+      parentName: Flip 1
+      position: {x: -0.009977306, y: -0.119026236, z: -0.029741561}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKUpleg_loc1
+      parentName: MouseBuild_rt_FKLeg_ctrl_grp1
+      position: {x: 0.009977306, y: 0.119026236, z: 0.029741561}
+      rotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKUpleg_ctrl1
+      parentName: MouseBuild_rt_FKUpleg_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKKnee_loc1
+      parentName: MouseBuild_rt_FKLeg_ctrl_grp1
+      position: {x: 0.009977306, y: 0.07784348, z: 0.050065693}
+      rotation: {x: -0.1606683, y: 0.1606683, z: 0.68861145, w: 0.68861145}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKKnee_ctrl1
+      parentName: MouseBuild_rt_FKKnee_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKEnkel_loc1
+      parentName: MouseBuild_rt_FKLeg_ctrl_grp1
+      position: {x: 0.009977306, y: 0.032877162, z: 0.028998325}
+      rotation: {x: -0.1606683, y: 0.1606683, z: 0.68861145, w: 0.68861145}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKEnkel_ctrl1
+      parentName: MouseBuild_rt_FKEnkel_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKBall_loc1
+      parentName: MouseBuild_rt_FKLeg_ctrl_grp1
+      position: {x: 0.009977306, y: 0.016385742, z: 0.076911785}
+      rotation: {x: -0.41065395, y: 0.41065395, z: 0.5756417, w: 0.5756417}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_FKBall_ctrl1
+      parentName: MouseBuild_rt_FKBall_loc1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IK_FK_switch_loc2
+      parentName: Flip 1
+      position: {x: 9.828707e-10, y: -0.102640495, z: 0.04717022}
+      rotation: {x: -0.0000000062444125, y: 0.14195067, z: -0.6151167, w: 0.77555233}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_IK_FK_switch_ctrl2
+      parentName: MouseBuild_rt_IK_FK_switch_loc2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_All_grp1
+      parentName: Rig_SirMouseBuild1
+      position: {x: -1.2325951e-34, y: 0, z: -5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt2 1
+      parentName: MouseBuild_Tail_All_grp1
+      position: {x: 0.024397973, y: 0.12579642, z: -0.015140704}
+      rotation: {x: -0.039103277, y: -0.70602477, z: 0.039103277, w: 0.70602477}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt3 1
+      parentName: MouseBuild_Tail_Jnt2 1
+      position: {x: -0.030110568, y: -0.0006618654, z: 0}
+      rotation: {x: 0, y: 0, z: 0.25431195, w: 0.96712226}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt4 1
+      parentName: MouseBuild_Tail_Jnt3 1
+      position: {x: -0.02963076, y: -1.7763568e-17, z: 1.3322676e-17}
+      rotation: {x: 0, y: 0, z: 0.07155326, w: 0.9974368}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt5 1
+      parentName: MouseBuild_Tail_Jnt4 1
+      position: {x: -0.027315656, y: 1.0658141e-16, z: 2.2204459e-17}
+      rotation: {x: 0, y: 0, z: 0.10193213, w: 0.9947914}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt6 1
+      parentName: MouseBuild_Tail_Jnt5 1
+      position: {x: -0.02659797, y: -7.105427e-17, z: 2.2204459e-17}
+      rotation: {x: 0, y: 0, z: -0.022539198, w: 0.99974597}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt7 1
+      parentName: MouseBuild_Tail_Jnt6 1
+      position: {x: -0.02663754, y: 5.3290704e-17, z: 2.2204459e-17}
+      rotation: {x: 0, y: 0, z: -0.14142138, w: 0.9899495}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt8 1
+      parentName: MouseBuild_Tail_Jnt7 1
+      position: {x: -0.024972694, y: 0, z: 8.881784e-18}
+      rotation: {x: 0, y: 0, z: -0.35240197, w: 0.9358487}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt9 1
+      parentName: MouseBuild_Tail_Jnt8 1
+      position: {x: -0.021706939, y: -2.220446e-18, z: -4.440892e-18}
+      rotation: {x: 0, y: 0, z: -0.33650583, w: 0.9416814}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt10 1
+      parentName: MouseBuild_Tail_Jnt9 1
+      position: {x: -0.021195263, y: -1.7763568e-17, z: -8.881784e-18}
+      rotation: {x: 0, y: 0, z: -0.33797306, w: 0.94115585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt11 1
+      parentName: MouseBuild_Tail_Jnt10 1
+      position: {x: -0.019782968, y: -3.5527136e-17, z: 8.881784e-18}
+      rotation: {x: 0, y: 0, z: -0.25364012, w: 0.9672987}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt12 1
+      parentName: MouseBuild_Tail_Jnt11 1
+      position: {x: -0.021643, y: -1.2212453e-17, z: 3.884333e-18}
+      rotation: {x: 0.39223227, y: -0.5883484, z: 0.39223227, w: 0.5883484}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Ctrl_grp1
+      parentName: MouseBuild_Tail_All_grp1
+      position: {x: 0.024397973, y: 0, z: -5.4174383e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_loc1
+      parentName: MouseBuild_Tail_Ctrl_grp1
+      position: {x: -5.28058e-18, y: 0.11398669, z: -0.008781618}
+      rotation: {x: -0.039103277, y: -0.70602477, z: 0.039103277, w: 0.70602477}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Ctrl1
+      parentName: MouseBuild_Tail_loc1
+      position: {x: -0.005016024, y: 0.01243974, z: 1.8909262e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_loc2
+      parentName: MouseBuild_Tail_Ctrl1
+      position: {x: -0.030110572, y: -0.000661865, z: 5.0518718e-20}
+      rotation: {x: 0, y: 0, z: 0.25431195, w: 0.96712226}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Ctrl1 1
+      parentName: MouseBuild_Tail_loc2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_loc3
+      parentName: MouseBuild_Tail_Ctrl1 1
+      position: {x: -0.02963076, y: -7.0162188e-12, z: 6.5793503e-18}
+      rotation: {x: 0, y: 0, z: 0.07155326, w: 0.9974368}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Ctrl1 2
+      parentName: MouseBuild_Tail_loc3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_loc4
+      parentName: MouseBuild_Tail_Ctrl1 2
+      position: {x: -0.027315654, y: -0.0000000047662456, z: 7.889036e-18}
+      rotation: {x: 0, y: 0, z: 0.10193213, w: 0.9947914}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Ctrl1 3
+      parentName: MouseBuild_Tail_loc4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_loc5
+      parentName: MouseBuild_Tail_Ctrl1 3
+      position: {x: -0.026597967, y: 0.0000000025071194, z: -2.087083e-18}
+      rotation: {x: 0, y: -0, z: -0.022539198, w: 0.99974597}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Ctrl1 4
+      parentName: MouseBuild_Tail_loc5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_loc6
+      parentName: MouseBuild_Tail_Ctrl1 4
+      position: {x: -0.02663754, y: -0.0000000019073485, z: -2.0232648e-17}
+      rotation: {x: 0, y: -0, z: -0.14142138, w: 0.9899495}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Ctrl1 5
+      parentName: MouseBuild_Tail_loc6
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_loc7
+      parentName: MouseBuild_Tail_Ctrl1 5
+      position: {x: -0.024972698, y: 0.0000000038146974, z: -2.1950432e-17}
+      rotation: {x: 0, y: -0, z: -0.35240197, w: 0.9358487}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Ctrl1 6
+      parentName: MouseBuild_Tail_loc7
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_loc8
+      parentName: MouseBuild_Tail_Ctrl1 6
+      position: {x: -0.021706939, y: 0.0000000010057228, z: -3.578746e-17}
+      rotation: {x: 0, y: -0, z: -0.33650583, w: 0.9416814}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Ctrl1 7
+      parentName: MouseBuild_Tail_loc8
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_loc9
+      parentName: MouseBuild_Tail_Ctrl1 7
+      position: {x: -0.02119526, y: 0.0000000022098225, z: 5.4159498e-18}
+      rotation: {x: 0, y: -0, z: -0.33797306, w: 0.94115585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Ctrl1 8
+      parentName: MouseBuild_Tail_loc9
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt_loc10
+      parentName: MouseBuild_Tail_Ctrl1 8
+      position: {x: -0.019782968, y: 0.0000000046549036, z: -8.881784e-18}
+      rotation: {x: 0, y: -0, z: -0.25364012, w: 0.9672987}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt_Ctrl1
+      parentName: MouseBuild_Tail_Jnt_loc10
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: qu_rugSwordShield_GRP
+      parentName: Rig_SirMouseBuild1
+      position: {x: -2.220446e-18, y: 3.5527136e-17, z: 4.9303805e-34}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: qu_swordRoot_LOC
+      parentName: qu_rugSwordShield_GRP
+      position: {x: 0.038651884, y: 0.22532378, z: -0.0160367}
+      rotation: {x: 0.6316195, y: 0.31789428, z: 0.31789428, w: 0.6316195}
+      scale: {x: 1, y: 1, z: 1}
+    - name: qu_swordRoot_CTL
+      parentName: qu_swordRoot_LOC
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: qu_swordRoot_JNT 1
+      parentName: qu_swordRoot_CTL
+      position: {x: -0, y: -2.220446e-18, z: 1.7763568e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: qu_shieldRoot_LOC
+      parentName: qu_rugSwordShield_GRP
+      position: {x: -0.0054639922, y: 0.16772532, z: -0.021619227}
+      rotation: {x: 0.5320418, y: 0.46575916, z: 0.46575916, w: 0.5320418}
+      scale: {x: 1, y: 1, z: 1}
+    - name: qu_shieldRoot_CTL
+      parentName: qu_shieldRoot_LOC
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: qu_shieldRoot_JNT 1
+      parentName: qu_shieldRoot_CTL
+      position: {x: 3.5527136e-17, y: 4.440892e-18, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: NewRig
+      parentName: RM_FullRig_Test4(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKLowHipSpine_jnt1
+      parentName: NewRig
+      position: {x: -0.0010802192, y: 0.119533144, z: 0.0060257725}
+      rotation: {x: -0.43834946, y: 0.42207134, z: -0.60736054, w: 0.5107041}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SpineTop
+      parentName: MouseBuild_IKLowHipSpine_jnt1
+      position: {x: -0.042894788, y: 0, z: -0.00037467893}
+      rotation: {x: 0.070369944, y: -0.31486508, z: 0.20644785, w: 0.92373556}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_HeadStart_jnt1
+      parentName: SpineTop
+      position: {x: -0.03295854, y: 0.0175592, z: 0.01837775}
+      rotation: {x: 0.94377774, y: -0.20092443, z: -0.24841681, w: 0.08486472}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Head_jnt1
+      parentName: MouseBuild_HeadStart_jnt1
+      position: {x: -0.0040935935, y: 1.3322676e-17, z: -2.2204459e-17}
+      rotation: {x: -1.1990683e-19, y: 0.041240774, z: 1.8715109e-17, w: 0.99914926}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Head_jnt2
+      parentName: MouseBuild_Head_jnt1
+      position: {x: -0.033223264, y: -0.00019327375, z: -0.009641613}
+      rotation: {x: 9.8607613e-32, y: 5.7820833e-32, z: 1.731481e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_HeadEnd_jnt1
+      parentName: MouseBuild_Head_jnt2
+      position: {x: -0.048185166, y: 0.00019327375, z: 0.009641613}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_Ear_jnt1
+      parentName: MouseBuild_Head_jnt2
+      position: {x: -0.040120456, y: 0.0027146116, z: -0.023783438}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_EyeBrow_jnt1
+      parentName: MouseBuild_Head_jnt2
+      position: {x: -0.015665585, y: 0.0053885756, z: 0.002071586}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_EyeBrow_jnt2
+      parentName: MouseBuild_lf_EyeBrow_jnt1
+      position: {x: -0, y: -0.0012619379, z: -0.00643382}
+      rotation: {x: 1.2490009e-16, y: 7.771561e-16, z: 9.706687e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_EyeBrow_jnt3
+      parentName: MouseBuild_lf_EyeBrow_jnt1
+      position: {x: 4.440892e-18, y: 0.0003103894, z: 0.00551544}
+      rotation: {x: 1.2490009e-16, y: 7.771561e-16, z: 9.706687e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_Ear_jnt1
+      parentName: MouseBuild_Head_jnt2
+      position: {x: -0.030483767, y: 0.0027146116, z: 0.037069824}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_EyeBrow_jnt1
+      parentName: MouseBuild_Head_jnt2
+      position: {x: -0.012068544, y: 0.0053885756, z: -0.032493778}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_EyeBrow_jnt2
+      parentName: MouseBuild_rt_EyeBrow_jnt1
+      position: {x: -4.440892e-18, y: -0.001067728, z: -0.005491345}
+      rotation: {x: 1.2490009e-16, y: 7.771561e-16, z: 9.706687e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_EyeBrow_jnt3
+      parentName: MouseBuild_rt_EyeBrow_jnt1
+      position: {x: 2.220446e-18, y: -0.0004862443, z: 0.005211283}
+      rotation: {x: 1.2490009e-16, y: 7.771561e-16, z: 9.706687e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_Eye_Norm_jnt
+      parentName: MouseBuild_Head_jnt2
+      position: {x: 0.00045267536, y: 0.007127094, z: 0.0027261134}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_Eye_Happy_jnt
+      parentName: MouseBuild_Head_jnt2
+      position: {x: 0.00045267536, y: 0.007127094, z: 0.0027261134}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_Eye_Sad_jnt
+      parentName: MouseBuild_Head_jnt2
+      position: {x: 0.00045267536, y: 0.007127094, z: 0.0027261134}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_Eye_CloNeu_jnt
+      parentName: MouseBuild_Head_jnt2
+      position: {x: 0.00045267536, y: 0.007127094, z: 0.0027261134}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_Eye_CloNeu_jnt
+      parentName: MouseBuild_Head_jnt2
+      position: {x: 0.0026829534, y: 0.007290809, z: -0.03180612}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_Eye_Sad_jnt
+      parentName: MouseBuild_Head_jnt2
+      position: {x: 0.0026829534, y: 0.007290809, z: -0.03180612}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_Eye_Happy_jnt
+      parentName: MouseBuild_Head_jnt2
+      position: {x: 0.0026829534, y: 0.007290809, z: -0.03180612}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_Eye_Norm_jnt
+      parentName: MouseBuild_Head_jnt2
+      position: {x: 0.0026829534, y: 0.007290809, z: -0.03180612}
+      rotation: {x: 0.702646, y: -0.702646, z: 0.07930085, w: -0.07930085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint16
+      parentName: MouseBuild_HeadStart_jnt1
+      position: {x: 0.016399438, y: -0.0060257725, z: 0.002448613}
+      rotation: {x: -0.3849896, y: 0.593113, z: -0.593113, w: -0.3849896}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouth_03_jnt
+      parentName: MouseBuild_HeadStart_jnt1
+      position: {x: 0.011585841, y: 0.007944116, z: -0.0097936}
+      rotation: {x: -0.5342717, y: 0.4631994, z: 0.4631994, w: 0.5342717}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouth_07_jnt
+      parentName: MouseBuild_HeadStart_jnt1
+      position: {x: 0.011585841, y: 0.007944116, z: -0.0097936}
+      rotation: {x: -0.5342717, y: 0.4631994, z: 0.4631994, w: 0.5342717}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouth_06_jnt
+      parentName: MouseBuild_HeadStart_jnt1
+      position: {x: 0.011585841, y: 0.007944116, z: -0.0097936}
+      rotation: {x: -0.5342717, y: 0.4631994, z: 0.4631994, w: 0.5342717}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouth_05_jnt
+      parentName: MouseBuild_HeadStart_jnt1
+      position: {x: 0.011585841, y: 0.007944116, z: -0.0097936}
+      rotation: {x: -0.5342717, y: 0.4631994, z: 0.4631994, w: 0.5342717}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouth_04_jnt
+      parentName: MouseBuild_HeadStart_jnt1
+      position: {x: 0.011585841, y: 0.007944116, z: -0.0097936}
+      rotation: {x: -0.5342717, y: 0.4631994, z: 0.4631994, w: 0.5342717}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouth_01_jnt
+      parentName: MouseBuild_HeadStart_jnt1
+      position: {x: 0.011585841, y: 0.007944116, z: -0.0097936}
+      rotation: {x: -0.5342717, y: 0.4631994, z: 0.4631994, w: 0.5342717}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouth_02_jnt
+      parentName: MouseBuild_HeadStart_jnt1
+      position: {x: 0.011585841, y: 0.007944116, z: -0.0097936}
+      rotation: {x: -0.5342717, y: 0.4631994, z: 0.4631994, w: 0.5342717}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKShoulder_jnt1
+      parentName: SpineTop
+      position: {x: -0.043719087, y: 0.0028332993, z: -0.01598903}
+      rotation: {x: 0.83183694, y: -0.004105434, z: 0.462997, w: 0.30604598}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKElbow_Aim_jnt
+      parentName: MouseBuild_lf_SKShoulder_jnt1
+      position: {x: -0.054476436, y: 3.5527136e-17, z: -8.8817837e-17}
+      rotation: {x: -0.0025989718, y: -0.007918088, z: -0.0063404394, w: 0.9999452}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKElbow_jnt2
+      parentName: MouseBuild_lf_SKElbow_Aim_jnt
+      position: {x: 1.7763568e-17, y: -4.440892e-18, z: 8.881784e-18}
+      rotation: {x: 0, y: 0.011555019, z: -0, w: 0.99993324}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_hand_jnt1
+      parentName: MouseBuild_lf_SKElbow_jnt2
+      position: {x: -0.040033653, y: 3.330669e-17, z: 8.881784e-18}
+      rotation: {x: -0.00006873348, y: 0.55510724, z: 0.14286937, w: 0.81941706}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ShieldJnt
+      parentName: MouseBuild_lf_hand_jnt1
+      position: {x: -0.0016515373, y: 0.014442869, z: -0.0032235372}
+      rotation: {x: 0.45954603, y: 0.53741014, z: 0.53616506, w: -0.46101505}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKShoulder_jnt1
+      parentName: SpineTop
+      position: {x: 0.009497246, y: 0.01359978, z: 0.030863766}
+      rotation: {x: -0.43005866, y: 0.16183546, z: 0.8856831, w: -0.066515125}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKElbow_Aim_Jnt
+      parentName: MouseBuild_rt_SKShoulder_jnt1
+      position: {x: -0.042378582, y: -4.3298696e-17, z: 1.7763568e-17}
+      rotation: {x: 0.0009718314, y: 0.044471044, z: 0.002485536, w: 0.9990071}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sword_jnt1
+      parentName: MouseBuild_rt_SKElbow_Aim_Jnt
+      position: {x: -0.058284726, y: -0.018383943, z: 0.013594788}
+      rotation: {x: 0.37971666, y: -0.37327382, z: -0.6062954, w: 0.59066725}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKElbow_jnt3
+      parentName: MouseBuild_rt_SKElbow_Aim_Jnt
+      position: {x: 2.6645352e-17, y: -2.220446e-18, z: -1.7763568e-17}
+      rotation: {x: 1.279862e-16, y: -0.009420013, z: -4.1296926e-17, w: 0.99995565}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_hand_jnt5
+      parentName: MouseBuild_rt_SKElbow_jnt3
+      position: {x: -0.042945053, y: -5.1070257e-17, z: 5.3290704e-17}
+      rotation: {x: 0.009011439, y: -0.26605073, z: -0.003467458, w: 0.9639107}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKElbow_jnt2
+      parentName: MouseBuild_rt_SKElbow_Aim_Jnt
+      position: {x: 1.7763568e-17, y: 1.4432899e-17, z: -3.5527136e-17}
+      rotation: {x: 0, y: -0.009420013, z: -0, w: 0.99995565}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_hand_jnt1
+      parentName: MouseBuild_rt_SKElbow_jnt2
+      position: {x: -0.042945053, y: -5.1070257e-17, z: 1.9539925e-16}
+      rotation: {x: 0.011190213, y: 0, z: -0, w: 0.9999374}
+      scale: {x: 1, y: 1, z: 1}
+    - name: qu_swordRoot_JNT
+      parentName: SpineTop
+      position: {x: -0.016765436, y: 0.046739392, z: 0.056067932}
+      rotation: {x: 0.5887679, y: 0.002049336, z: 0.7783185, w: 0.21810195}
+      scale: {x: 1, y: 1, z: 1}
+    - name: qu_shieldRoot_JNT
+      parentName: SpineTop
+      position: {x: -0.00055974827, y: 0.027269922, z: -0.012146964}
+      rotation: {x: 0.37540027, y: 0.05653129, z: 0.9008341, w: 0.21065815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt2
+      parentName: MouseBuild_IKLowHipSpine_jnt1
+      position: {x: -0.006263276, y: 0.030423746, z: -0.020011421}
+      rotation: {x: 0.47158468, y: -0.5268851, z: 0.5268851, w: 0.47158468}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt3
+      parentName: MouseBuild_Tail_Jnt2
+      position: {x: -0.030110568, y: -0.0006618654, z: 4.440892e-18}
+      rotation: {x: 0, y: 0, z: 0.25431195, w: 0.96712226}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt4
+      parentName: MouseBuild_Tail_Jnt3
+      position: {x: -0.02963076, y: 0, z: 1.3322676e-17}
+      rotation: {x: 0, y: 0, z: 0.07155326, w: 0.9974368}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt5
+      parentName: MouseBuild_Tail_Jnt4
+      position: {x: -0.027315656, y: 7.105427e-17, z: 1.7763568e-17}
+      rotation: {x: 0, y: 0, z: 0.10193213, w: 0.9947914}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt6
+      parentName: MouseBuild_Tail_Jnt5
+      position: {x: -0.02659797, y: -3.5527136e-17, z: 1.7763568e-17}
+      rotation: {x: 0, y: 0, z: -0.022539198, w: 0.99974597}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt7
+      parentName: MouseBuild_Tail_Jnt6
+      position: {x: -0.02663754, y: 5.3290704e-17, z: 1.3322676e-17}
+      rotation: {x: 0, y: 0, z: -0.14142138, w: 0.9899495}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt8
+      parentName: MouseBuild_Tail_Jnt7
+      position: {x: -0.024972694, y: -1.7763568e-17, z: 1.7763568e-17}
+      rotation: {x: 0, y: 0, z: -0.35240197, w: 0.9358487}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt9
+      parentName: MouseBuild_Tail_Jnt8
+      position: {x: -0.021706939, y: 1.5543122e-17, z: -4.440892e-18}
+      rotation: {x: 0, y: 0, z: -0.33650583, w: 0.9416814}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt10
+      parentName: MouseBuild_Tail_Jnt9
+      position: {x: -0.021195263, y: -1.7763568e-17, z: -4.440892e-18}
+      rotation: {x: 0, y: 0, z: -0.33797306, w: 0.94115585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt11
+      parentName: MouseBuild_Tail_Jnt10
+      position: {x: -0.019782968, y: -7.105427e-17, z: 1.3322676e-17}
+      rotation: {x: 0, y: 0, z: -0.25364012, w: 0.9672987}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Tail_Jnt12
+      parentName: MouseBuild_Tail_Jnt11
+      position: {x: -0.021643, y: 0, z: 4.440892e-18}
+      rotation: {x: 0.39223227, y: -0.5883484, z: 0.39223227, w: 0.5883484}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKHip_jnt1
+      parentName: MouseBuild_IKLowHipSpine_jnt1
+      position: {x: 0.015, y: -3.330669e-18, z: 0}
+      rotation: {x: 0, y: 0, z: -1.110223e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_joint2
+      parentName: MouseBuild_IKHip_jnt1
+      position: {x: -0.0038346543, y: 0.0060257725, z: -0.048266847}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_joint1
+      parentName: MouseBuild_IKHip_jnt1
+      position: {x: 0.0096410215, y: 0.0060257725, z: 0.008178436}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skirt_joint3
+      parentName: MouseBuild_IKHip_jnt1
+      position: {x: -0.0102699455, y: 0.0060257725, z: 0.044947304}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKLowSpine_jnt1
+      parentName: MouseBuild_IKLowHipSpine_jnt1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: -1.110223e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKMidSpine_jnt1
+      parentName: MouseBuild_IKLowSpine_jnt1
+      position: {x: -0.013255926, y: 0, z: 2.7755574e-18}
+      rotation: {x: 0, y: -0.0006528228, z: -0, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKUpSpine_jnt1
+      parentName: MouseBuild_IKMidSpine_jnt1
+      position: {x: -0.013010535, y: -3.330669e-18, z: 3.330669e-18}
+      rotation: {x: 0, y: -0.010100836, z: -0, w: 0.999949}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKChest_jnt1
+      parentName: MouseBuild_IKUpSpine_jnt1
+      position: {x: -0.016632183, y: 1.110223e-18, z: 3.330669e-18}
+      rotation: {x: 0, y: -0.05642674, z: -0, w: 0.99840677}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_Chest_jnt1
+      parentName: MouseBuild_IKChest_jnt1
+      position: {x: -3.5527136e-17, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_IKChestEnd_jnt1
+      parentName: MouseBuild_Chest_jnt1
+      position: {x: -0.0416213, y: 2.220446e-18, z: 8.881784e-18}
+      rotation: {x: -1.4878877e-17, y: -1.3877788e-17, z: -1.1002077e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKUpleg_jnt1
+      parentName: MouseBuild_IKLowHipSpine_jnt1
+      position: {x: 0.0033779456, y: -0.0005862062, z: -0.026254749}
+      rotation: {x: 1.6999009e-16, y: 0.5453397, z: 0.8382152, w: 2.2735762e-16}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKKnee_jnt1
+      parentName: MouseBuild_lf_SKUpleg_jnt1
+      position: {x: -0.046946764, y: 0.009341075, z: 0.004140222}
+      rotation: {x: -0.5525588, y: 0.14776872, z: -0.05938853, w: 0.8181175}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKAnkel_jnt1
+      parentName: MouseBuild_lf_SKKnee_jnt1
+      position: {x: -0.036022842, y: -5.3290704e-17, z: -0.025269104}
+      rotation: {x: 0.02834132, y: -0.3653522, z: -0.5420049, w: 0.75627065}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_lf_SKBall_jnt1
+      parentName: MouseBuild_lf_SKAnkel_jnt1
+      position: {x: -0.027545098, y: -2.220446e-18, z: 0.041095495}
+      rotation: {x: -0.07421535, y: 0.4157014, z: -0.036292695, w: 0.9057413}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKUpleg_jnt1
+      parentName: MouseBuild_IKLowHipSpine_jnt1
+      position: {x: 0.00050689967, y: 0.01600308, z: 0.02487084}
+      rotation: {x: 0.061457783, y: -0.4047972, z: 0.9123249, w: 0.0050453097}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKKnee_jnt1
+      parentName: MouseBuild_rt_SKUpleg_jnt1
+      position: {x: -0.041182764, y: -0.015347804, z: 0.013323487}
+      rotation: {x: 0.3451243, y: 0.32714579, z: 0.206265, w: 0.8551723}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKAnkel_jnt1
+      parentName: MouseBuild_rt_SKKnee_jnt1
+      position: {x: -0.030999808, y: 4.6629366e-17, z: -0.038791947}
+      rotation: {x: 0.21269667, y: -0.36796534, z: -0.5632421, w: 0.70860434}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuild_rt_SKBall_jnt1
+      parentName: MouseBuild_rt_SKAnkel_jnt1
+      position: {x: -0.035992764, y: -4.440892e-18, z: 0.035667736}
+      rotation: {x: -0.051470384, y: 0.33949077, z: -0.03264719, w: 0.93863255}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GEO
+      parentName: RM_FullRig_Test4(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_Geo
+      parentName: GEO
+      position: {x: 0.230265, y: -0.54627836, z: 0.4420026}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Ear_R_Geo1
+      parentName: GEO
+      position: {x: 0.23896272, y: -0.65518934, z: 0.4425138}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: EyeBrow_L_Geo
+      parentName: GEO
+      position: {x: 0.20833336, y: -0.6047145, z: 0.4294017}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: EyeBrow_R_Geo
+      parentName: GEO
+      position: {x: 0.24249032, y: -0.5975447, z: 0.45741314}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Ear_L_Geo
+      parentName: GEO
+      position: {x: 0.29752272, y: -0.61104465, z: 0.492836}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Foot_R_Geo
+      parentName: GEO
+      position: {x: 0.19735374, y: -0.1657237, z: 0.40228984}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Foot_L_Geo
+      parentName: GEO
+      position: {x: 0.24470058, y: -0.1567502, z: 0.4482123}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: LowerLeg_R_Geo
+      parentName: GEO
+      position: {x: 0.22557738, y: -0.2258001, z: 0.42067766}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Sword_Geo
+      parentName: GEO
+      position: {x: 0.11200313, y: -0.40713805, z: 0.3406308}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Knee_R_Geo
+      parentName: GEO
+      position: {x: 0.21195751, y: -0.27060664, z: 0.4142661}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: LowerLeg_L_Geo
+      parentName: GEO
+      position: {x: 0.2721944, y: -0.22106498, z: 0.4676792}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Knee_L_Geo
+      parentName: GEO
+      position: {x: 0.26010418, y: -0.2535763, z: 0.4608445}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: UpperLeg_L_Geo
+      parentName: GEO
+      position: {x: 0.27244854, y: -0.30748415, z: 0.469099}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Elbow_L_Geo
+      parentName: GEO
+      position: {x: 0.29880065, y: -0.38971156, z: 0.5059916}
+      rotation: {x: 1.0755286e-16, y: -0.7071068, z: 1.0755286e-16, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Tail_Geo
+      parentName: GEO
+      position: {x: 0.34650156, y: -0.24849172, z: 0.52726334}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Skirt_Geo
+      parentName: GEO
+      position: {x: 0.23854293, y: -0.3442243, z: 0.4504349}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: UpperLeg_R_Geo
+      parentName: GEO
+      position: {x: 0.22621925, y: -0.32171386, z: 0.42362678}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Elbow_R_Geo
+      parentName: GEO
+      position: {x: 0.22564363, y: -0.3762638, z: 0.4369785}
+      rotation: {x: -1.1666856e-16, y: -0.7071068, z: -1.1666856e-16, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Shoulder_R_Geo
+      parentName: GEO
+      position: {x: 0.23920047, y: -0.46486437, z: 0.4491117}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: UpperArm_R_Geo
+      parentName: GEO
+      position: {x: 0.23399986, y: -0.41682523, z: 0.4418788}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: UpperArm_L_Geo
+      parentName: GEO
+      position: {x: 0.29032573, y: -0.41866302, z: 0.49801013}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Body_Geo
+      parentName: GEO
+      position: {x: 0.24858892, y: -0.4110829, z: 0.45397815}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Shoulder_L_Geo
+      parentName: GEO
+      position: {x: 0.27155492, y: -0.4630484, z: 0.4836479}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Shield_Geo
+      parentName: GEO
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L
+      parentName: GEO
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eye_Geo1
+      parentName: L
+      position: {x: -1.1542347e-10, y: -2.4868996e-16, z: -0.00064865395}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: EyeClosedNeutral_Geo1
+      parentName: L
+      position: {x: -0.00032432817, y: -0.4204182, z: -0.0003243259}
+      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1.9, z: 1}
+    - name: EyeSad_Geo1
+      parentName: L
+      position: {x: -0.0004217274, y: -2.1316282e-16, z: -0.00022692666}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: EyeHappy_Geo1
+      parentName: L
+      position: {x: -0.0004217274, y: -2.1316282e-16, z: -0.00022692666}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R
+      parentName: GEO
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eye_Geo2
+      parentName: R
+      position: {x: 0.000053528387, y: -2.1316282e-16, z: -0.00070218433}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: EyeClosedNeutral_Geo2
+      parentName: R
+      position: {x: 0.0540139, y: -0.4032613, z: -0.0010265125}
+      rotation: {x: -0.09841024, y: 0.7002253, z: 0.09841024, w: 0.7002253}
+      scale: {x: 1, y: 1.9, z: 1}
+    - name: EyeSad_Geo2
+      parentName: R
+      position: {x: 0.00047525569, y: -2.1316282e-16, z: -0.0011239116}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: EyeHappy_Geo2
+      parentName: R
+      position: {x: 0.00047525569, y: -2.1316282e-16, z: -0.0011239116}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mouth
+      parentName: GEO
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MouseBuildSide_MouseBuild_ShapePlane30
+      parentName: Mouth
+      position: {x: 0.009929184, y: 0.20714556, z: 0.01396989}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1.2991376, y: 1.5846314, z: 1.7998401}
+    - name: MouseBuildSide_MouseBuild_ShapePlane31
+      parentName: Mouth
+      position: {x: 0.010255452, y: 0.19359356, z: 0.01396989}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1.5109798, y: 1.5109798, z: 2.1909273}
+    - name: MouseBuildSide_MouseBuild_ShapePlane32
+      parentName: Mouth
+      position: {x: 0.010255452, y: 0.19853026, z: 0.01396989}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1.5109798, y: 1.5109798, z: 2.1909273}
+    - name: MouseBuildSide_MouseBuild_ShapePlane33
+      parentName: Mouth
+      position: {x: 0.010255452, y: 0.19853026, z: 0.01396989}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1.5109798, y: 1.5109798, z: 2.1909273}
+    - name: MouseBuildSide_MouseBuild_ShapePlane34
+      parentName: Mouth
+      position: {x: 0.010255452, y: 0.19853026, z: 0.01396989}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1.5109798, y: 1.5109798, z: 2.1909273}
+    - name: MouseBuildSide_MouseBuild_ShapePlane35
+      parentName: Mouth
+      position: {x: 0.010255452, y: 0.19853026, z: 0.01396989}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1.5109798, y: 1.5109798, z: 2.1909273}
+    - name: MouseBuildSide_MouseBuild_ShapePlane36
+      parentName: Mouth
+      position: {x: 0.010255452, y: 0.19853026, z: 0.01396989}
+      rotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1.5109798, y: 1.5109798, z: 2.1909273}
+    - name: SirMouse_Hands_L_Geo_grp1
+      parentName: GEO
+      position: {x: -0.049156476, y: 0.055036277, z: 0.014347644}
+      rotation: {x: 0, y: 0, z: 0.095580354, w: 0.9954217}
+      scale: {x: 1.3710381, y: 1.3710381, z: 1.3710381}
+    - name: Normal_1
+      parentName: SirMouse_Hands_L_Geo_grp1
+      position: {x: 0.0011034836, y: 0.0014390608, z: -4.0548605e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.020113, y: 1.020113, z: 1.020113}
+    - name: SirMouse_Hands_R_Geo_grp10
+      parentName: GEO
+      position: {x: 0.12684317, y: 0.09964805, z: -0.0030119226}
+      rotation: {x: 0, y: 0, z: 0.5326406, w: 0.8463416}
+      scale: {x: 1.3710381, y: 1.3710381, z: 1.3710381}
+    - name: Normal_1 1
+      parentName: SirMouse_Hands_R_Geo_grp10
+      position: {x: 0.0011034836, y: 0.0014390608, z: -4.0548605e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.020113, y: 1.020113, z: 1.020113}
+    - name: Fist_4_B
+      parentName: SirMouse_Hands_R_Geo_grp10
+      position: {x: 0.0011034836, y: 0.0014390608, z: -4.0548605e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.020113, y: 1.020113, z: 1.020113}
+    - name: quRugSwordShieldGEO_GRP
+      parentName: GEO
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sword_Geo3
+      parentName: quRugSwordShieldGEO_GRP
+      position: {x: 0.35226583, y: 0.3939585, z: 0.61166924}
+      rotation: {x: 0.6935834, y: 0.13763018, z: 0.6935834, w: -0.13763018}
+      scale: {x: 0.28269464, y: 0.28269464, z: 0.28269464}
+    - name: Shield_Geo3
+      parentName: quRugSwordShieldGEO_GRP
+      position: {x: 0.05238913, y: 0.05472771, z: -0.050052356}
+      rotation: {x: 0, y: -0, z: -0.077446565, w: 0.9969965}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
