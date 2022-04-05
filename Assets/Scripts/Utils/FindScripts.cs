@@ -7,7 +7,11 @@ public class FindScripts : MonoBehaviour
     [SerializeField]
     private List<GameObject> _objectsWithScripts = new List<GameObject>();
 
+    [SerializeField]
+    private List<GameObject> _objectsWithAnimators = new List<GameObject>();
+
     private MonoBehaviour[] _scripts;
+    private Animator[] _animators;
 
     void Update()
     {
@@ -20,6 +24,18 @@ public class FindScripts : MonoBehaviour
                 _objectsWithScripts.Add(_scripts[i].gameObject);
 
                 Debug.Log(_scripts[i].gameObject.name + " is an object with a script, counting " + i + " script = " +_scripts[i]);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            _animators = FindObjectsOfType<Animator>();
+
+            for (int i = 0; i <= _animators.Length - 1; i++)
+            {
+                _objectsWithAnimators.Add(_animators[i].gameObject);
+
+                Debug.Log(_animators[i].gameObject.name + " is an object with a script, counting " + i + " script = " + _animators[i]);
             }
         }
     }
