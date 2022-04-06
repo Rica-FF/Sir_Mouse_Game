@@ -12,6 +12,8 @@ public class PlayerReferences : MonoBehaviour
     public GameObject shieldGeo;
     public GameObject attachedObject;
     public GameObject dropPointer;
+
+
     [HideInInspector]
     public List<Vector3> cornPositions = new List<Vector3>();
     [HideInInspector]
@@ -27,10 +29,8 @@ public class PlayerReferences : MonoBehaviour
     public GameObject newShield;
 
     public bool hasGoldenSword = false;
-
     //[HideInInspector]
     public bool madePopcorn = false;
-
     public bool exploded = false;
     public bool onWaterSpot = false;
 
@@ -38,10 +38,14 @@ public class PlayerReferences : MonoBehaviour
 
     public bool mouseControls = false;
 
+
+
+
     private void Update()
     {
         if (pointers.Count > 0)
-        {            
+        {   
+            // bool reset
             bool isEmpty = true;
 
             for (int i = 0; i < pointers.Count; i++)
@@ -51,14 +55,16 @@ public class PlayerReferences : MonoBehaviour
                     isEmpty = false;
                 }
             }
+            // bool check
             if(isEmpty)
             {
                 pointers.Clear();
             }
-            else
+            else // else if there's atleast 1 pointer in the list
             {
                 GameObject closestPointer = null;
 
+                // if there's only 1 pointer available...
                 if (pointers.Count < 2)
                 {
                     if (pointers[0] != null)
@@ -67,7 +73,7 @@ public class PlayerReferences : MonoBehaviour
                         pointers[0].GetComponent<PopUpPointer>().pointer.SetActive(true);
                     }
                 }
-                else
+                else // else if more than 1 pointer
                 {                    
                     if (closestPointer == null)
                     {
@@ -93,14 +99,57 @@ public class PlayerReferences : MonoBehaviour
                             }
                         }
                     }
-
                 }
                 closestPointer.GetComponent<PopUpPointer>().pointer.SetActive(true);
             }
-
-
         }
+
+
+
+        // fresher logic below //
+
+        //only check specific logic if there's more than 2 pointers available //
+        //if (pointers.Count >= 2)
+        //{
+        //    GameObject closestPointer = null;
+
+        //    // first of, give closestPointer a value
+        //    if (closestPointer == null)
+        //    {
+        //        for (int i = 0; i < pointers.Count; i++)
+        //        {
+        //            if (pointers[i] != null)
+        //            {
+        //                closestPointer = pointers[i];
+        //                break;
+        //            }
+        //        }
+        //    }
+
+        //    // calculate the distance between objects to decide closes pointer
+        //    if (closestPointer != null)
+        //    {
+        //        for (int i = 0; i < pointers.Count; i++)
+        //        {
+        //            if (pointers[i] != null)
+        //            {
+        //                if (Vector3.Distance(gameObject.transform.position, closestPointer.transform.position) > Vector3.Distance(gameObject.transform.position, pointers[i].transform.position))
+        //                {
+        //                    closestPointer = pointers[i];
+        //                }
+        //            }
+        //        }
+        //    }
+
+        //    if (closestPointer.activeSelf == false)
+        //    {
+        //        closestPointer.GetComponent<Interactible_Base>().Pointer.SetActive(true);
+        //    }
+        //}
     }
+
+
+
 
     public void DropObject()
     {

@@ -13,27 +13,22 @@ public class Coin : MonoBehaviour
     private bool pressedToThrow = false;
 
 
+    //////////
+
+
+
     private void Start()
     {
         StartCoroutine(SetPlayerRig());
     }
 
-    IEnumerator SetPlayerRig()
-    {
-        for (float t = 0f; t < 0.1f; t += Time.deltaTime)
-        {
-            float normalizedTime = t / 0.1f;
-            yield return null;
-        }
-        playerRig = player.transform.Find("RM_Player").gameObject;
 
-    }
 
     private void Update()
     {
-        if(pressedToPickUp)
+        if (pressedToPickUp)
         {
-            if(player.GetComponent< PlayerTouchControls>().curSpeed < 0.01)
+            if (player.GetComponent<PlayerTouchControls>().curSpeed < 0.01)
             {
                 StartCoroutine(PickUpCoin());
                 pressedToPickUp = false;
@@ -50,11 +45,43 @@ public class Coin : MonoBehaviour
         }
     }
 
+
+
+
+
+
     public void PressedPickUp()
     {
         StartCoroutine(DelayPressedBool_PickUp());
     }
+    public void Drop()
+    {
+        PopUpPointer.disableIrrelevantPointers = false;
+        playerRig.GetComponent<Animator>().SetTrigger("DropCoin");
+        StartCoroutine(DetachCoin());
+        player.GetComponent<PlayerTouchControls>().attachedObject = "";
+        playerRig.GetComponent<PlayerReferences>().attachedObject = null;
+    }
+    public void PressedThrow()
+    {
+        //player.GetComponent<PlayerTouchControls>().TurnOffDropPointer();
+        player.GetComponent<PlayerTouchControls>().attachedObject = "";
+        StartCoroutine(DelayPressedBool_Throw());
+    }
 
+
+
+
+    IEnumerator SetPlayerRig() // assign player object
+    {
+        for (float t = 0f; t < 0.1f; t += Time.deltaTime)
+        {
+            float normalizedTime = t / 0.1f;
+            yield return null;
+        }
+        playerRig = player.transform.Find("RM_Player").gameObject;
+
+    }
     IEnumerator DelayPressedBool_PickUp()
     {
         // Short delay
@@ -65,7 +92,6 @@ public class Coin : MonoBehaviour
         }
         pressedToPickUp = true;
     }
-
     IEnumerator PickUpCoin()
     {
         playerRig.GetComponent<PlayerReferences>().SetSound(0);
@@ -100,16 +126,6 @@ public class Coin : MonoBehaviour
 
         //playerRig.transform.Find("Pointer").transform.GetChild(0).gameObject.SetActive(true);
     }
-
-    public void Drop()
-    {
-        PopUpPointer.disableIrrelevantPointers = false;
-        playerRig.GetComponent<Animator>().SetTrigger("DropCoin");
-        StartCoroutine(DetachCoin());
-        player.GetComponent<PlayerTouchControls>().attachedObject = "";
-        playerRig.GetComponent<PlayerReferences>().attachedObject = null;
-    }
-
     IEnumerator DetachCoin()
     {
         float seconds = 0.4f;
@@ -127,14 +143,6 @@ public class Coin : MonoBehaviour
         playerRig.GetComponent<Animator>().SetLayerWeight(1, 0f);
         transform.GetComponent<SphereCollider>().enabled = true;
     }
-
-    public void PressedThrow()
-    {
-        //player.GetComponent<PlayerTouchControls>().TurnOffDropPointer();
-        player.GetComponent<PlayerTouchControls>().attachedObject = "";
-        StartCoroutine(DelayPressedBool_Throw());
-    }
-
     IEnumerator DelayPressedBool_Throw()
     {
         // Short delay
@@ -145,7 +153,6 @@ public class Coin : MonoBehaviour
         }
         pressedToThrow = true;
     }
-
     IEnumerator ThrowCoinInWell()
     {
         playerRig.transform.localScale = new Vector3(6, 6, 6);
@@ -190,6 +197,9 @@ public class Coin : MonoBehaviour
         SetNewCostume();
         playerRig.GetComponent<PlayerReferences>().attachedObject = null;
     }
+
+
+
 
     private void SetNewCostume()
     {

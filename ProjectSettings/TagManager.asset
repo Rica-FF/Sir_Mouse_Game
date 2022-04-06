@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pointer
+  - UI
+  - GameMusic
+  - Tower
+  - Tomatenplant
+  - Bucket
+  - Soil
+  - AppleTree
+  - RedHead
+  - Destructable
   layers:
   - Default
   - TransparentFX
@@ -13,8 +23,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Interactible
   - 
   - 
   - 
