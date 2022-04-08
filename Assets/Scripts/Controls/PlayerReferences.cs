@@ -39,114 +39,67 @@ public class PlayerReferences : MonoBehaviour
     public bool mouseControls = false;
 
 
+    ////////////
+
+    public PickupType _pickedUpObject;
+
+    private Animator _playerAnimator;
+
+    public Pointer_Base _currentActivePointer;
+    private Pointer_Base _pointerOfPickUpInHands;
+
+
+    private void Awake()
+    {
+        _playerAnimator = GetComponent<Animator>();
+    }
+
 
 
     private void Update()
     {
-        if (pointers.Count > 0)
-        {   
-            // bool reset
-            bool isEmpty = true;
+        //only check specific logic if there's more than 2 pointers ...
+        if (pointers.Count >= 2)
+        {
+            GameObject closestPointer = null;
 
-            for (int i = 0; i < pointers.Count; i++)
+            // first of, give closestPointer a value
+            if (closestPointer == null)
             {
-                if (pointers[i] != null)
+                for (int i = 0; i < pointers.Count; i++)
                 {
-                    isEmpty = false;
-                }
-            }
-            // bool check
-            if(isEmpty)
-            {
-                pointers.Clear();
-            }
-            else // else if there's atleast 1 pointer in the list
-            {
-                GameObject closestPointer = null;
-
-                // if there's only 1 pointer available...
-                if (pointers.Count < 2)
-                {
-                    if (pointers[0] != null)
+                    if (pointers[i] != null)
                     {
-                        closestPointer = pointers[0];
-                        pointers[0].GetComponent<PopUpPointer>().pointer.SetActive(true);
+                        closestPointer = pointers[i];
+                        break;
                     }
                 }
-                else // else if more than 1 pointer
-                {                    
-                    if (closestPointer == null)
+            }
+            // calculate the distance between objects to decide nearest pointer
+            if (closestPointer != null)
+            {
+                for (int i = 0; i < pointers.Count; i++)
+                {
+                    if (pointers[i] != null)
                     {
-                        for (int i = 0; i < pointers.Count; i++)
+                        // update closest pointer
+                        if (Vector3.Distance(gameObject.transform.position, closestPointer.transform.position) > Vector3.Distance(gameObject.transform.position, pointers[i].transform.position))
                         {
-                            if (pointers[i] != null)
-                            {
-                                closestPointer = pointers[i];
-                                break;
-                            }
+                            closestPointer = pointers[i];
                         }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < pointers.Count; i++)
+                        else
                         {
-                            if(pointers[i] != null)
-                            {
-                                if (Vector3.Distance(gameObject.transform.position, closestPointer.transform.position) > Vector3.Distance(gameObject.transform.position, pointers[i].transform.position))
-                                {
-                                    closestPointer = pointers[i];
-                                }
-                            }
+                            pointers[i].SetActive(false);
                         }
                     }
                 }
-                closestPointer.GetComponent<PopUpPointer>().pointer.SetActive(true);
+                closestPointer.SetActive(true);
+                _currentActivePointer = closestPointer.GetComponent<Pointer_Base>();
             }
         }
-
-
-
-        // fresher logic below //
-
-        //only check specific logic if there's more than 2 pointers available //
-        //if (pointers.Count >= 2)
-        //{
-        //    GameObject closestPointer = null;
-
-        //    // first of, give closestPointer a value
-        //    if (closestPointer == null)
-        //    {
-        //        for (int i = 0; i < pointers.Count; i++)
-        //        {
-        //            if (pointers[i] != null)
-        //            {
-        //                closestPointer = pointers[i];
-        //                break;
-        //            }
-        //        }
-        //    }
-
-        //    // calculate the distance between objects to decide closes pointer
-        //    if (closestPointer != null)
-        //    {
-        //        for (int i = 0; i < pointers.Count; i++)
-        //        {
-        //            if (pointers[i] != null)
-        //            {
-        //                if (Vector3.Distance(gameObject.transform.position, closestPointer.transform.position) > Vector3.Distance(gameObject.transform.position, pointers[i].transform.position))
-        //                {
-        //                    closestPointer = pointers[i];
-        //                }
-        //            }
-        //        }
-        //    }
-
-        //    if (closestPointer.activeSelf == false)
-        //    {
-        //        closestPointer.GetComponent<Interactible_Base>().Pointer.SetActive(true);
-        //    }
-        //}
     }
+
+
 
 
 
@@ -179,6 +132,42 @@ public class PlayerReferences : MonoBehaviour
             }
         }
     }
+    public void DropObjectNew()
+    {
+        _playerAnimator.SetTrigger("DropCoin");
+        StartCoroutine(DetachObject());
+    }
+    IEnumerator DetachObject()
+    {
+        yield return new WaitForSeconds(0.4f);
+
+        // cointransform
+        transform.parent = null; 
+        transform.localRotation = Quaternion.Euler(30, 0, 90);
+        transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+        transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        transform.GetComponent<SphereCollider>().enabled = true;
+
+        GetComponent<Animator>().SetLayerWeight(1, 0f);      
+    }
+
+
+
+    // events called on animations on the player
+    private void AttachObjectAnimationEvent()
+    {
+        _currentActivePointer.PickupParentingLogic();
+        _pointerOfPickUpInHands = _currentActivePointer;
+    }
+    private void DetachObjectAnimationEvent()
+    {
+        _pointerOfPickUpInHands.DropPickupParentingLogic();
+        _pointerOfPickUpInHands = null;
+    }
+
+
+
+
 
     public void ClearList()
     {
@@ -191,6 +180,9 @@ public class PlayerReferences : MonoBehaviour
         }
         pointers.Clear();
     }
+
+
+
 
     public void SetSound(int index)
     {

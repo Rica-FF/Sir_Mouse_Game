@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyAway3D : MonoBehaviour
+
+public class FlyAway3D : Interactible_Base
 {
     public GameObject Object1;
     public Vector3 direction1;
@@ -32,61 +33,66 @@ public class FlyAway3D : MonoBehaviour
     public AudioSource animalSounds1;
     public AudioSource animalSounds2;
 
+
+
     void FixedUpdate()
     {
         if (activate1)
         {
             Object1.transform.position += direction1;
         }
-
         if (activate2)
         {
             Object2.transform.position += direction2;
         }
-
         if (activate3)
         {
             Object3.transform.position += direction3;
         }
-
         if (activate4 && Frog)
         {
             Object4.transform.position += direction4;
         }
     }
 
-    void OnTriggerEnter(Collider collider)
+
+
+    public override void ExtraBehaviour()
     {
-        if (collider.tag == "Player")
-        { 
-            if(queue == 0)
-            {
-                animalSounds1.clip = sounds[0];
-                animalSounds1.Play();
-                StartCoroutine(FirstQueue());
-            }
-            else if(queue == 1)
-            {
-                StartCoroutine(SecondQueue());
-            }
-            else if(queue == 2)
-            {
-                animalSounds1.clip = sounds[1];
-                animalSounds1.Play();
-                StartCoroutine(ThirdQueue());
-            }
-            else if (queue == 3)
-            {
-                animalSounds2.clip = sounds[2];
-                animalSounds2.Play();
-                StartCoroutine(FourthQueue());
-            }
+        base.ExtraBehaviour();
+
+        if (queue == 0)
+        {
+            animalSounds1.clip = sounds[0];
+            animalSounds1.Play();
+            StartCoroutine(FirstQueue());
+        }
+        else if (queue == 1)
+        {
+            StartCoroutine(SecondQueue());
+        }
+        else if (queue == 2)
+        {
+            animalSounds1.clip = sounds[1];
+            animalSounds1.Play();
+            StartCoroutine(ThirdQueue());
+        }
+        else if (queue == 3)
+        {
+            animalSounds2.clip = sounds[2];
+            animalSounds2.Play();
+            StartCoroutine(FourthQueue());
         }
     }
 
+
+
+
+
+
     IEnumerator FirstQueue()
     {
-        if(activate1 == false)
+        if (activate1 == false)
         {
             Object1.SetActive(true);
             activate1 = true;
@@ -101,10 +107,9 @@ public class FlyAway3D : MonoBehaviour
             //yield return new WaitForSeconds(liveTime1);
             activate1 = false;
             Object1.SetActive(false);
-            Object1.transform.position = gameObject.transform.position;            
-        }              
+            Object1.transform.position = gameObject.transform.position;
+        }
     }
-
     IEnumerator SecondQueue()
     {
         if (queue == 1 && activate2 == false)
@@ -118,7 +123,6 @@ public class FlyAway3D : MonoBehaviour
             Object2.transform.position = gameObject.transform.position;
         }
     }
-
     IEnumerator ThirdQueue()
     {
         if (queue == 2 && activate3 == false)
@@ -132,7 +136,6 @@ public class FlyAway3D : MonoBehaviour
             Object3.transform.position = gameObject.transform.position;
         }
     }
-
     IEnumerator FourthQueue()
     {
         if (queue == 3 && activate4 == false)
@@ -173,3 +176,4 @@ public class FlyAway3D : MonoBehaviour
         }
     }
 }
+

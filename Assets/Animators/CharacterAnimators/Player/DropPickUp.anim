@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PickupCoin
+  m_Name: DropPickUp
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -40409,7 +40409,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.36
-    functionName: AttachObjectAnimationEvent
+    functionName: DetachObjectAnimationEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

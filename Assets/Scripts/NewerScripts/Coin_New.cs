@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Coin_New : Interactible_Base
 {
-    public GameObject player;
+    private GameObject player;
     public GameObject WishingWell;
     public GameObject CloudFx;
 
@@ -136,12 +136,11 @@ public class Coin : MonoBehaviour
             yield return null;
         }
 
-        // coin transform
         transform.parent = null;
         transform.localRotation = Quaternion.Euler(30, 0, 90);
         transform.position = new Vector3(transform.position.x, 0, transform.position.z);
         transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-        playerRig.GetComponent<Animator>().SetLayerWeight(1, 0f);       
+        playerRig.GetComponent<Animator>().SetLayerWeight(1, 0f);
         transform.GetComponent<SphereCollider>().enabled = true;
     }
     IEnumerator DelayPressedBool_Throw()
@@ -156,7 +155,7 @@ public class Coin : MonoBehaviour
     }
     IEnumerator ThrowCoinInWell()
     {
-        playerRig.transform.localScale = new Vector3(6, 6, 6); 
+        playerRig.transform.localScale = new Vector3(6, 6, 6);
         playerRig.GetComponent<Animator>().SetTrigger("ThrowCoin");
 
         float seconds = 0.3f;

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -48,6 +49,15 @@ public class PlayerTouchControls : MonoBehaviour
 
     public bool zoom = false;
 
+
+    ///////////////
+
+    private PlayerReferences _playerRefs;
+
+
+
+
+
     void Start()
     {
         IgnoreMe = LayerMask.GetMask("UI");
@@ -55,6 +65,8 @@ public class PlayerTouchControls : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         animator = player.GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
+
+        StartCoroutine(GetPlayerReferences());
     }
 
     void Update()
@@ -97,9 +109,79 @@ public class PlayerTouchControls : MonoBehaviour
             Camera.main.orthographicSize = 11.5f;
         }
 
-        // Set Run Animation
         SetRunAimation();
     }
+
+    //IEnumerator SingleMouseClick(Vector2 position)
+    //{
+    //    Ray ray = Camera.main.ScreenPointToRay(position); // Ray that represents finger press
+
+    //    yield return new WaitForSeconds(0.1f);
+
+
+    //    RaycastHit hit; // Object hit by ray
+
+    //    if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~IgnoreMe) && !EventSystem.current.IsPointerOverGameObject())
+    //    {
+    //        if (hit.collider.tag == "Player" && player.GetComponent<PlayerReferences>().attachedObject)
+    //        {
+    //            player.GetComponent<PlayerReferences>().DropObject();
+    //        }
+
+    //        if (hit.collider.tag == "Pointer" && !clickedOnPointer) // If pressed on a pointer-object, do action
+    //        {
+    //            clickedOnPointer = true;
+    //            shortTouch = false;
+    //            StartCoroutine(SetClickedOnPointerBool());
+
+    //            yield return new WaitForSeconds(0.1f);
+
+    //            hit.collider.gameObject.GetComponent<DoAction>().DoTheAction();
+
+    //            if (hit.collider.gameObject.GetComponent<DoAction>().specificDestination)
+    //            {
+    //                agent.SetDestination(hit.collider.gameObject.GetComponent<DoAction>().destination);
+    //            }
+
+    //            yield return new WaitForSeconds(0.5f);
+
+    //            if (hit.collider.gameObject.transform.parent.GetComponent<PopUpPointer>())
+    //            {
+    //                hit.collider.gameObject.transform.parent.GetComponent<PopUpPointer>().DisablePointer();
+    //            }
+    //            else if (hit.collider.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>())
+    //            {
+    //                hit.collider.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>().DisablePointer();
+    //            }
+    //            else if (hit.collider.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>())
+    //            {
+    //                hit.collider.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>().DisablePointer();
+    //            }
+
+    //        }
+    //        else if (hit.collider.tag == "Soil" && player.GetComponent<PlayerReferences>().attachedObject)
+    //        {
+    //            if (hit.collider.GetComponent<Soil>().playerInArea && (player.GetComponent<PlayerReferences>().attachedObject.name == "Corn" || player.GetComponent<PlayerReferences>().attachedObject.name == "Bucket" && player.GetComponent<PlayerReferences>().attachedObject.GetComponent<Bucket>().isFilled))
+    //            {
+    //                hit.collider.GetComponent<Soil>().UseSoil();
+    //                DoAction("");
+    //            }
+    //            else
+    //            {
+    //                target.SetActive(true);
+    //                agent.SetDestination(hit.point);
+    //                target.transform.position = hit.point;
+    //            }
+    //        }
+    //        else if (!clickedOnPointer && hit.collider.tag != "Player") // If not pressed on a pointer, move to pointed location
+    //        {
+    //            target.SetActive(true);
+    //            agent.SetDestination(hit.point);
+    //            target.transform.position = hit.point;
+    //        }
+    //    }
+
+    //}
 
     IEnumerator SingleMouseClick(Vector2 position)
     {
@@ -107,47 +189,44 @@ public class PlayerTouchControls : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
 
-        
+
         RaycastHit hit; // Object hit by ray
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~IgnoreMe) && !EventSystem.current.IsPointerOverGameObject())
         {
+            // player click && has item 
             if (hit.collider.tag == "Player" && player.GetComponent<PlayerReferences>().attachedObject)
-            {
-                player.GetComponent<PlayerReferences>().DropObject();
+            {                
+                //player.GetComponent<PlayerReferences>().DropObject();           
+                DropPickUpWrap();
             }
 
-            if (hit.collider.tag == "Pointer" && !clickedOnPointer) // If pressed on a pointer-object, do action
+            // pointer click
+            if (hit.collider.TryGetComponent(out Pointer_Base pointer) && !clickedOnPointer)
             {
+                // boolean setters
                 clickedOnPointer = true;
                 shortTouch = false;
                 StartCoroutine(SetClickedOnPointerBool());
 
-                yield return new WaitForSeconds(0.1f);
-
-                hit.collider.gameObject.GetComponent<DoAction>().DoTheAction();
-
-                if (hit.collider.gameObject.GetComponent<DoAction>().specificDestination)
+                // set destination if it needs one
+                if (pointer.RequiresDestination == true)
                 {
-                    agent.SetDestination(hit.collider.gameObject.GetComponent<DoAction>().destination);
+                    agent.SetDestination(pointer.DestinationSpot.position);
                 }
+
+                // calculate wait for seconds on the distance needed to walk
+                yield return new WaitForSeconds(0.5f); 
+
+                pointer.ActivateInteractibleAction();
 
                 yield return new WaitForSeconds(0.5f);
 
-                if (hit.collider.gameObject.transform.parent.GetComponent<PopUpPointer>())
-                {
-                    hit.collider.gameObject.transform.parent.GetComponent<PopUpPointer>().DisablePointer();
-                }
-                else if (hit.collider.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>())
-                {
-                    hit.collider.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>().DisablePointer();
-                }
-                else if (hit.collider.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>())
-                {
-                    hit.collider.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>().DisablePointer();
-                }
+                // turns the pointer off (maybe remove it from the list too)      
+                pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();
 
-            }
+
+            } // soil click
             else if (hit.collider.tag == "Soil" && player.GetComponent<PlayerReferences>().attachedObject)
             {
                 if (hit.collider.GetComponent<Soil>().playerInArea && (player.GetComponent<PlayerReferences>().attachedObject.name == "Corn" || player.GetComponent<PlayerReferences>().attachedObject.name == "Bucket" && player.GetComponent<PlayerReferences>().attachedObject.GetComponent<Bucket>().isFilled))
@@ -161,16 +240,20 @@ public class PlayerTouchControls : MonoBehaviour
                     agent.SetDestination(hit.point);
                     target.transform.position = hit.point;
                 }
-            }
-            else if (!clickedOnPointer && hit.collider.tag != "Player") // If not pressed on a pointer, move to pointed location
+
+
+            } // If not pressed on a pointer, move to pointed location
+            else if (!clickedOnPointer && hit.collider.tag != "Player")
             {
                 target.SetActive(true);
                 agent.SetDestination(hit.point);
                 target.transform.position = hit.point;
             }
         }
-        
+
     }
+
+
 
     IEnumerator SingleFinger(Vector2 position)
     {
@@ -281,19 +364,6 @@ public class PlayerTouchControls : MonoBehaviour
             }
         }
     }
-
-    IEnumerator SetNumberClicksZero()
-    {
-        float seconds = 0.25f;
-
-        for (float t = 0f; t < seconds; t += Time.deltaTime)
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
-        clicked = 0;
-    }
-
     IEnumerator ZoomDetection()
     {
         readyToWalk = false;
@@ -330,6 +400,8 @@ public class PlayerTouchControls : MonoBehaviour
         }
     }
 
+
+
     IEnumerator SetReadyToWalk()
     {
         float seconds = 0.1f;
@@ -341,14 +413,60 @@ public class PlayerTouchControls : MonoBehaviour
         }
         readyToWalk = true;
     }
-
     IEnumerator SetClickedOnPointerBool()
     {
         yield return new WaitForSeconds(1.0f);
 
         clickedOnPointer = false;
     }
+    IEnumerator JumpChar()
+    {
+        yield return new WaitForSeconds(1.1f);
+        agent.enabled = true;
+        controller.enabled = true;
+        rigidbody.isKinematic = true;
+        rigidbody.detectCollisions = true;
+        player.GetComponent<Animator>().SetBool("InAir", false);
+    }
+    IEnumerator GetPlayerReferences()
+    {
+        yield return new WaitForSeconds(1f);
 
+        _playerRefs = GetComponentInChildren<PlayerReferences>();
+    }
+    IEnumerator SetActionBool()
+    {
+        float seconds = 3f;
+
+        for (float t = 0f; t < seconds; t += Time.deltaTime)
+        {
+            float normalizedTime = t / seconds;
+            yield return null;
+        }
+        doAction = true;
+    }
+
+
+
+    public void EndTutorial()
+    {
+        GetComponent<NavMeshAgent>().speed = 7;
+    }
+    public void MoveTo(Vector3 position)
+    {
+        agent.SetDestination(position);
+    }
+    public void Jump()
+    {
+        agent.enabled = false;
+        controller.enabled = false;
+        rigidbody.isKinematic = false;
+        rigidbody.detectCollisions = false;
+        rigidbody.AddRelativeForce(new Vector3(0, 20, 0), ForceMode.Impulse);
+        player.GetComponent<Animator>().SetBool("InAir", true);
+
+        StartCoroutine(JumpChar());
+    }
     private void SetRunAimation()
     {
         // Calculate moving speed
@@ -380,13 +498,11 @@ public class PlayerTouchControls : MonoBehaviour
 
         previousPosition = transform.position;
     }
-
     public void Slash(int soundIndex)
     {
         player.GetComponent<PlayerReferences>().SetSound(soundIndex);
         player.GetComponent<Animator>().SetTrigger("Slash");
     }
-
     public void DoAction(string setBool)
     {
         if (doAction)
@@ -420,65 +536,18 @@ public class PlayerTouchControls : MonoBehaviour
                     attachedObject.GetComponent<PuzzlePiece>().CompletePuzzle();
                 }
             }
+
             StartCoroutine(SetActionBool());
         }
     }
 
-    IEnumerator SetActionBool()
+    private void DropPickUpWrap()
     {
-        float seconds = 3f;
+        // plays the item drop animation
+        _playerRefs.GetComponent<Animator>().SetTrigger("DropCoin");
+        _playerRefs.GetComponent<Animator>().SetLayerWeight(1, 0f);
 
-        for (float t = 0f; t < seconds; t += Time.deltaTime)
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
-        doAction = true;
-    }
-
-    public void MoveTo(Vector3 position)
-    {
-        agent.SetDestination(position);
-    }
-
-    public void EndTutorial()
-    {
-        GetComponent<NavMeshAgent>().speed = 7;
-    }
-
-    public void Jump()
-    {       
-        agent.enabled = false;
-        controller.enabled = false;
-        rigidbody.isKinematic = false;
-        rigidbody.detectCollisions = false;
-        rigidbody.AddRelativeForce(new Vector3(0, 20, 0), ForceMode.Impulse);
-        player.GetComponent<Animator>().SetBool("InAir", true);
-
-        StartCoroutine(JumpChar());
-    }
-
-    IEnumerator JumpChar()
-    {
-        yield return new WaitForSeconds(1.1f);
-        agent.enabled = true;
-        controller.enabled = true;
-        rigidbody.isKinematic = true;
-        rigidbody.detectCollisions = true;
-        player.GetComponent<Animator>().SetBool("InAir", false);
-    }
-
-    public void ThrowCorn()
-    {
-        //StartCoroutine(FlipCorn());
-    }
-
-    IEnumerator FlipCorn()
-    {
-        yield return new WaitForSeconds(1f);
-
-        player.GetComponent<PlayerReferences>().attachedObject.transform.parent = null;
-        player.GetComponent<PlayerReferences>().attachedObject.GetComponent<Animator>().enabled = true;
-        //player.GetComponent<PlayerReferences>().attachedObject.GetComponent<Animator>().SetTrigger("CornOnStove");
+        attachedObject = "";
+        _playerRefs.attachedObject = null;      
     }
 }

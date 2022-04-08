@@ -33,6 +33,8 @@ public class SetUpLevel : MonoBehaviour
         //playerRigid.GetComponent<PlayerTouchControls>().dropPointer = player.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject;
         playerRigid.GetComponent<PlayerTouchControls>().enabled = true;
         
+
+        // adding attached objects if present
         if(player.GetComponent<PlayerReferences>().attachedObject)
         {
             if(player.GetComponent<PlayerReferences>().attachedObject.name == "Coin_C")
