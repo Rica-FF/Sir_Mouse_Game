@@ -1074,11 +1074,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f4260590ec25a4dbc3149c416dca91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointerType: 1
-  PickupType: 3
+  TypeOfPointer: 1
+  TypeOfPickup: 3
   RequiresDestination: 1
   DestinationSpot: {fileID: 568705177}
   _soundEffects: []
+  PlayerControls: {fileID: 0}
+  PlayerRefs: {fileID: 0}
+  Interactible: {fileID: 0}
 --- !u!65 &158795172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5493,6 +5496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactibleType: 1
+  _requiredItemType: 0
   _audioClips: []
   Pointer: {fileID: 158795170}
 --- !u!210 &592700073
@@ -13527,11 +13531,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f4260590ec25a4dbc3149c416dca91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointerType: 1
-  PickupType: 3
+  TypeOfPointer: 1
+  TypeOfPickup: 3
   RequiresDestination: 1
   DestinationSpot: {fileID: 71185953}
   _soundEffects: []
+  PlayerControls: {fileID: 0}
+  PlayerRefs: {fileID: 0}
+  Interactible: {fileID: 0}
 --- !u!65 &1479761358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17788,6 +17795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactibleType: 1
+  _requiredItemType: 0
   _audioClips: []
   Pointer: {fileID: 1479761356}
 --- !u!210 &2000895068
@@ -19397,6 +19405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactibleType: 2
+  _requiredItemType: 3
   _audioClips: []
   Pointer: {fileID: 6085749287119946080}
 --- !u!4 &198491686131392369
@@ -20437,6 +20446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactibleType: 0
+  _requiredItemType: 0
   _audioClips:
   - {fileID: 8300000, guid: a37efe7701e44db4680fb76420c6b7ed, type: 3}
   - {fileID: 8300000, guid: e1d82b60aeb1c1b4d8db29f5960ce76b, type: 3}
@@ -20909,8 +20919,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6085749287119946081}
   - component: {fileID: 6085749287119946092}
-  - component: {fileID: 6085749287119946084}
   - component: {fileID: 6085749287119946083}
+  - component: {fileID: 6085749287119946082}
   m_Layer: 0
   m_Name: Pointer
   m_TagString: Pointer
@@ -20934,6 +20944,28 @@ Transform:
   m_Father: {fileID: 6085749286988896011}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &6085749287119946082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6085749287119946080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4286146535ed99141b70d53fe634222d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfPointer: 2
+  TypeOfPickup: 0
+  RequiresDestination: 1
+  DestinationSpot: {fileID: 681974180}
+  _soundEffects: []
+  PlayerControls: {fileID: 0}
+  PlayerRefs: {fileID: 0}
+  Interactible: {fileID: 0}
+  WishingWell: {fileID: 0}
+  CloudFx: {fileID: 3655586866068558944, guid: 8dd8721327b0e5441945f3ac158a6b9c, type: 3}
 --- !u!65 &6085749287119946083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20947,23 +20979,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.364588, y: 5.7783337, z: 0.0893027}
   m_Center: {x: 0.32217836, y: -0.3811505, z: -10}
---- !u!114 &6085749287119946084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6085749287119946080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47f4260590ec25a4dbc3149c416dca91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PointerType: 2
-  PickupType: 0
-  RequiresDestination: 1
-  DestinationSpot: {fileID: 0}
-  _soundEffects: []
 --- !u!212 &6085749287119946092
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25979,6 +25994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactibleType: 0
+  _requiredItemType: 0
   _audioClips:
   - {fileID: 8300000, guid: a37efe7701e44db4680fb76420c6b7ed, type: 3}
   - {fileID: 8300000, guid: e1d82b60aeb1c1b4d8db29f5960ce76b, type: 3}

@@ -62,6 +62,9 @@ public class Coin : MonoBehaviour
         player.GetComponent<PlayerTouchControls>().attachedObject = "";
         playerRig.GetComponent<PlayerReferences>().attachedObject = null;
     }
+
+
+
     public void PressedThrow()
     {
         //player.GetComponent<PlayerTouchControls>().TurnOffDropPointer();

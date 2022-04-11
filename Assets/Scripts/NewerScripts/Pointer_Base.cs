@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Pointer_Base : MonoBehaviour
 {
-    public PointerType PointerType;
-    public PickupType PickupType;
+    public PointerType TypeOfPointer;
+    public PickupType TypeOfPickup;
 
     public bool RequiresDestination;
     public Transform DestinationSpot;
@@ -14,31 +14,35 @@ public class Pointer_Base : MonoBehaviour
     [SerializeField]
     private AudioClip[] _soundEffects;
 
-
-    private PlayerTouchControls _playerControls;
-    private PlayerReferences _playerReferences;
+    [HideInInspector]
+    public PlayerTouchControls PlayerControls;
+    [HideInInspector]
+    public PlayerReferences PlayerRefs;
     private AudioSource _playerAudioSource;
 
-    private GameObject _interactible;
+    [HideInInspector]
+    public GameObject Interactible;
+    private Interactible_Base _interactibleScript;
 
 
     private void Awake()
     {
-        _playerControls = FindObjectOfType<PlayerTouchControls>();
-        _playerReferences = _playerControls.GetComponentInChildren<PlayerReferences>();
-        _playerAudioSource = _playerReferences.GetComponent<AudioSource>();
+        PlayerControls = FindObjectOfType<PlayerTouchControls>();
+        PlayerRefs = PlayerControls.GetComponentInChildren<PlayerReferences>();
+        _playerAudioSource = PlayerRefs.GetComponent<AudioSource>();
 
-        _interactible = GetComponentInParent<Interactible_Base>().gameObject;
+        Interactible = GetComponentInParent<Interactible_Base>().gameObject;
+        _interactibleScript = Interactible.GetComponent<Interactible_Base>();
     }
 
 
     public void ActivateInteractibleAction()
     {
-        if (PointerType == PointerType.Hit) // hit sword
+        if (TypeOfPointer == PointerType.Hit) // hit sword
         {
             HitSword();
         }
-        else if (PointerType == PointerType.Pickup) // Pickup item
+        else if (TypeOfPointer == PointerType.Pickup) // Pickup item
         {
             PickupItemWrap();
         }
@@ -53,20 +57,30 @@ public class Pointer_Base : MonoBehaviour
     {
         throw new NotImplementedException();
     }
-    private void PlayEvent()
+    public virtual void PlayEvent()
     {
         throw new NotImplementedException();
     }
     private void PickupItemWrap()
     {
-        _playerControls.attachedObject = "Coin";
-        _playerReferences.attachedObject = _interactible;
+        PlayerControls.attachedObject = "Coin";
+        PlayerRefs.attachedObject = Interactible;
         //_playerAudioSource.PlayOneShot(_soundEffects[randomsoundSetOnThisObject]);
         //_playerReferences.transform.localScale = new Vector3(6, 6, 6);            // why this ?
 
-        _playerReferences.GetComponent<Animator>().SetTrigger("PickUpCoin");
-        _playerReferences.GetComponent<Animator>().SetLayerWeight(1, 1f);
+        PlayerRefs.GetComponent<Animator>().SetTrigger("PickUpCoin");
+        PlayerRefs.GetComponent<Animator>().SetLayerWeight(1, 1f);
     }
+
+
+
+
+
+  
+
+
+
+
 
 
 
@@ -74,20 +88,20 @@ public class Pointer_Base : MonoBehaviour
 
     public void PickupParentingLogic()
     {
-        _interactible.transform.SetParent(_playerReferences.playerHand.transform);
-        _interactible.transform.localPosition = new Vector3(-0.031f, 0.005f, 0.01f);
-        _interactible.transform.localRotation = Quaternion.Euler(89, 310, -34.5f);
+        Interactible.transform.SetParent(PlayerRefs.playerHand.transform);
+        Interactible.transform.localPosition = new Vector3(-0.031f, 0.005f, 0.01f);
+        Interactible.transform.localRotation = Quaternion.Euler(89, 310, -34.5f);
 
-        _interactible.GetComponent<SphereCollider>().enabled = false;
+        Interactible.GetComponent<SphereCollider>().enabled = false;
     }
     public void DropPickupParentingLogic()
     {
-        _interactible.transform.SetParent(null);
+        Interactible.transform.SetParent(null);
 
-        _interactible.transform.position = new Vector3(_playerControls.transform.position.x, 0, _playerControls.transform.position.z);
-        _interactible.transform.localRotation = Quaternion.Euler(30, 0, 90);
-        _interactible.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        Interactible.transform.position = new Vector3(PlayerControls.transform.position.x, 0, PlayerControls.transform.position.z);
+        Interactible.transform.localRotation = Quaternion.Euler(30, 0, 90);
+        Interactible.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
 
-        _interactible.GetComponent<SphereCollider>().enabled = true;
+        Interactible.GetComponent<SphereCollider>().enabled = true;
     }
 }

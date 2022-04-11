@@ -15,26 +15,8 @@ public class Coin_New : Interactible_Base
 
     //////////
 
-
-
-    private void Start()
-    {
-        StartCoroutine(SetPlayerRig());
-    }
-
-
-
     private void Update()
     {
-        if (pressedToPickUp)
-        {
-            if (player.GetComponent<PlayerTouchControls>().curSpeed < 0.01)
-            {
-                StartCoroutine(PickUpCoin());
-                pressedToPickUp = false;
-            }
-        }
-
         if (pressedToThrow)
         {
             if (player.GetComponent<PlayerTouchControls>().curSpeed < 0.01)
@@ -50,18 +32,8 @@ public class Coin_New : Interactible_Base
 
 
 
-    public void PressedPickUp()
-    {
-        StartCoroutine(DelayPressedBool_PickUp());
-    }
-    public void Drop()
-    {
-        PopUpPointer.disableIrrelevantPointers = false;
-        playerRig.GetComponent<Animator>().SetTrigger("DropCoin");
-        StartCoroutine(DetachCoin());
-        player.GetComponent<PlayerTouchControls>().attachedObject = "";
-        playerRig.GetComponent<PlayerReferences>().attachedObject = null;
-    }
+
+
     public void PressedThrow()
     {
         //player.GetComponent<PlayerTouchControls>().TurnOffDropPointer();
@@ -70,79 +42,6 @@ public class Coin_New : Interactible_Base
     }
 
 
-
-
-    IEnumerator SetPlayerRig() // assign player object
-    {
-        for (float t = 0f; t < 0.1f; t += Time.deltaTime)
-        {
-            float normalizedTime = t / 0.1f;
-            yield return null;
-        }
-        playerRig = player.transform.Find("RM_Player").gameObject;
-
-    }
-    IEnumerator DelayPressedBool_PickUp()
-    {
-        // Short delay
-        for (float t = 0f; t < 0.1f; t += Time.deltaTime)
-        {
-            float normalizedTime = t / 0.1f;
-            yield return null;
-        }
-        pressedToPickUp = true;
-    }
-    IEnumerator PickUpCoin()
-    {
-        playerRig.GetComponent<PlayerReferences>().SetSound(0);
-        PopUpPointer.disableIrrelevantPointers = true;
-        player.GetComponent<PlayerTouchControls>().attachedObject = "Coin";
-        playerRig.GetComponent<PlayerReferences>().attachedObject = gameObject;
-        playerRig.transform.localScale = new Vector3(6, 6, 6);
-        playerRig.GetComponent<Animator>().SetTrigger("PickUpCoin");
-        playerRig.GetComponent<PlayerReferences>().ClearList();
-
-        float seconds = 0.8f;
-
-        for (float t = 0f; t < seconds; t += Time.deltaTime)
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
-
-        transform.parent = playerRig.GetComponent<PlayerReferences>().playerHand.transform;
-        transform.localPosition = new Vector3(-0.031f, 0.005f, 0.01f);
-        transform.localRotation = Quaternion.Euler(89, 310, -34.5f);
-
-        seconds = 0.2f;
-
-        for (float t = 0f; t < seconds; t += Time.deltaTime)
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
-
-        playerRig.GetComponent<Animator>().SetLayerWeight(1, 1f);
-
-        //playerRig.transform.Find("Pointer").transform.GetChild(0).gameObject.SetActive(true);
-    }
-    IEnumerator DetachCoin()
-    {
-        float seconds = 0.4f;
-
-        for (float t = 0f; t < seconds; t += Time.deltaTime)
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
-
-        transform.parent = null;
-        transform.localRotation = Quaternion.Euler(30, 0, 90);
-        transform.position = new Vector3(transform.position.x, 0, transform.position.z);
-        transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-        playerRig.GetComponent<Animator>().SetLayerWeight(1, 0f);
-        transform.GetComponent<SphereCollider>().enabled = true;
-    }
     IEnumerator DelayPressedBool_Throw()
     {
         // Short delay
@@ -197,9 +96,6 @@ public class Coin_New : Interactible_Base
         SetNewCostume();
         playerRig.GetComponent<PlayerReferences>().attachedObject = null;
     }
-
-
-
 
     private void SetNewCostume()
     {

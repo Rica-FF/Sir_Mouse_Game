@@ -7,6 +7,8 @@ public class Interactible_Base : MonoBehaviour
     [SerializeField]
     private InteractibleType _interactibleType;
     [SerializeField]
+    private PickupType _requiredItemType;
+    [SerializeField]
     private AudioClip[] _audioClips;
 
     private Animator _animator;
@@ -155,7 +157,11 @@ public class Interactible_Base : MonoBehaviour
     // interactible that requires an item to be interacted with
     private void RequiresItemBehaviour()
     {
-
+        // if player has required item
+        if (_playerRefs._pickedUpObject == _requiredItemType)
+        {
+            ShowPointerBehaviour();
+        }     
     }
 
 }
