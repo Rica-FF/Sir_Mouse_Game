@@ -5,26 +5,25 @@ using UnityEngine;
 
 public class Pointer_Well : Pointer_Base
 {
-    public GameObject WishingWell;
+    //public GameObject WishingWell;
     public GameObject CloudFx;
 
+    private Vector3 _flickPosition;
 
 
     public override void PlayEvent()
     {
         base.PlayEvent();
 
-        if (TypeOfPickup == PickupType.Coin)
-        {
-            ThrowCoinInWellWrap();
-        }
+        ThrowCoinInWellWrap();
     }
+
+
 
 
 
     private void ThrowCoinInWellWrap()
     {
-        // Throwing the coin in the well
         StartCoroutine(ThrowCoinInWell());
     }
 
@@ -32,48 +31,22 @@ public class Pointer_Well : Pointer_Base
 
     IEnumerator ThrowCoinInWell()
     {
-        //playerRig.transform.localScale = new Vector3(6, 6, 6);
-        PlayerRefs.GetComponent<Animator>().SetTrigger("ThrowCoin");
+        _flickPosition = PlayerRefs.attachedObject.transform.position;
 
-        float seconds = 0.3f;
-        for (float t = 0f; t < seconds; t += Time.deltaTime)
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
+        PlayerRefs.PickedUpObject = PickupType.None;
+        PlayerRefs.attachedObject.transform.parent = null;
+        PlayerRefs.attachedObject.transform.rotation = Quaternion.Euler(30,0,90);
+        PlayerRefs.attachedObject.transform.position = _flickPosition;
+        
+        PlayerRefs.attachedObject.GetComponent<Animator>().enabled = true;
+        PlayerRefs.attachedObject.GetComponent<Animator>().Play("FlipCoin_New");
 
-        //transform.parent = null;
-        Interactible.transform.parent = null;
-        Interactible.GetComponent<Animator>().enabled = true;
-        Interactible.GetComponent<Animator>().SetTrigger("Flip");
-        //playerRig.GetComponent<Animator>().SetLayerWeight(1, 0f);
+        yield return new WaitForSeconds(1f);
+
         PlayerRefs.GetComponent<Animator>().SetLayerWeight(1, 0f);
 
-        seconds = 1f;
-        for (float t = 0f; t < seconds; t += Time.deltaTime)
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
-
-        Interactible.GetComponent<Animator>().SetTrigger("Idle");
-
-        seconds = 0.1f;
-        for (float t = 0f; t < seconds; t += Time.deltaTime)
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
-
-        Interactible.GetComponent<Animator>().enabled = false;
-        Interactible.GetComponent<SphereCollider>().enabled = true;
-        Interactible.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-
-        // respawn a coin
-        //Interactible.GetComponent<RandomSpawn>().SpawnRandomSpot();
-
-        // re-enable pointer
-        //WishingWell.GetComponent<PopUpPointer>().EnablePointer();
+        // respawn a coin     
+        RespawnCoin();
 
         // particle effects
         Instantiate(CloudFx, PlayerControls.transform.position + new Vector3(0f, 2f, -2f), Quaternion.identity);
@@ -82,14 +55,48 @@ public class Pointer_Well : Pointer_Base
         // give a new costume
         SetNewCostume();
 
+        PlayerRefs.attachedObject.GetComponent<Animator>().enabled = false;
+
         // set attached object to null
         PlayerRefs.attachedObject = null;
     }
 
+
+
+    private void RespawnCoin()
+    {
+        if (Interactible.TryGetComponent(out Interactible_Well wellScript))
+        {
+            GenerateRandomSpawn(wellScript);        
+        }
+
+        PlayerRefs.attachedObject.GetComponent<SphereCollider>().enabled = true;
+        PlayerRefs.attachedObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+    }
+    private void GenerateRandomSpawn(Interactible_Well wellScript)
+    {
+        var randomSpot = UnityEngine.Random.Range(0, wellScript.CoinSpawns.Length);
+        PlayerRefs.attachedObject.GetComponentInChildren<Pointer_Coin>(true).AssignedValue = randomSpot; // out of bounds ?
+
+        if (wellScript.TakenSpawns[randomSpot] == null)
+        {
+            Debug.Log(randomSpot + " assigned spot");
+            PlayerRefs.attachedObject.transform.position = wellScript.CoinSpawns[randomSpot].transform.position; // put on position
+            wellScript.TakenSpawns[randomSpot] = PlayerRefs.attachedObject; // put it in taken array
+        }
+        else
+        {
+            GenerateRandomSpawn(wellScript);
+        }
+    }
+
+
+
+
     private void SetNewCostume()
     {
         // play sound effect
-        WishingWell.GetComponent<AudioSource>().Play();
+        //WishingWell.GetComponent<AudioSource>().Play();
 
 
         // Set new costume

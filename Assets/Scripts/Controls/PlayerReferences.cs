@@ -24,6 +24,7 @@ public class PlayerReferences : MonoBehaviour
     public bool rosesHaveWater = false;
 
     public List<GameObject> pointers = new List<GameObject>();
+    public List<GameObject> PointerLords = new List<GameObject>();
     
     public int shieldIndex = 0;
     public GameObject newShield;
@@ -41,12 +42,11 @@ public class PlayerReferences : MonoBehaviour
 
     ////////////
 
-    public PickupType _pickedUpObject;
-
+    public PickupType PickedUpObject;
     private Animator _playerAnimator;
-
     public Pointer_Base _currentActivePointer;
     private Pointer_Base _pointerOfPickUpInHands;
+
 
 
     private void Awake()
@@ -59,44 +59,110 @@ public class PlayerReferences : MonoBehaviour
     private void Update()
     {
         //only check specific logic if there's more than 2 pointers ...
-        if (pointers.Count >= 2)
+        if (PointerLords.Count >= 2)
         {
-            GameObject closestPointer = null;
+            GameObject closestPointerLord = null;
+            Pointer_Lord closestPointerLordScript = null;
+            GameObject closestTrigger = null;
 
             // first of, give closestPointer a value
-            if (closestPointer == null)
+            if (closestPointerLord == null)
             {
-                for (int i = 0; i < pointers.Count; i++)
+                for (int i = 0; i < PointerLords.Count; i++)
                 {
-                    if (pointers[i] != null)
+                    if (PointerLords[i] != null)
                     {
-                        closestPointer = pointers[i];
+                        closestPointerLord = PointerLords[i];
+                        closestPointerLordScript = closestPointerLord.GetComponent<Pointer_Lord>();
+                        closestTrigger = closestPointerLordScript.AvailableTriggerObjects[closestPointerLordScript.CurrentPointerIndex];
                         break;
                     }
                 }
             }
             // calculate the distance between objects to decide nearest pointer
-            if (closestPointer != null)
-            {
-                for (int i = 0; i < pointers.Count; i++)
+            if (closestPointerLord != null)
+            {             
+                for (int i = 0; i < PointerLords.Count; i++)
                 {
-                    if (pointers[i] != null)
-                    {
-                        // update closest pointer
-                        if (Vector3.Distance(gameObject.transform.position, closestPointer.transform.position) > Vector3.Distance(gameObject.transform.position, pointers[i].transform.position))
+                    if (PointerLords[i] != null)
+                    {                       
+                        var distance1 = Vector3.Distance(transform.position, closestPointerLord.GetComponentInParent<Rigidbody>().transform.position);
+                        var distance2 = Vector3.Distance(transform.position, PointerLords[i].GetComponentInParent<Rigidbody>().transform.position);
+
+                        if (distance1 > distance2)
                         {
-                            closestPointer = pointers[i];
+                            // update closest pointer
+                            closestPointerLord = PointerLords[i];
+                            closestPointerLordScript = closestPointerLord.GetComponent<Pointer_Lord>();                           
+                            closestTrigger = closestPointerLordScript.AvailableTriggerObjects[closestPointerLordScript.CurrentPointerIndex].gameObject;
                         }
                         else
                         {
-                            pointers[i].SetActive(false);
+                            PointerLords[i].GetComponent<Pointer_Lord>().AvailableTriggerObjects[PointerLords[i].GetComponent<Pointer_Lord>().CurrentPointerIndex].SetActive(false);
+                            PointerLords[i].GetComponentInParent<Interactible_Base>().PointerNextTriggerObject.SetActive(false);
                         }
                     }
                 }
-                closestPointer.SetActive(true);
-                _currentActivePointer = closestPointer.GetComponent<Pointer_Base>();
+                closestTrigger.SetActive(true);
+
+                // only set Pointer_arrow to true if it has more than 1 available pointer
+                if (closestPointerLordScript.AvailableTriggerObjects.Count > 1)
+                {
+                    closestTrigger.GetComponentInParent<Interactible_Base>().PointerNextTriggerObject.SetActive(true);
+                }
+                
+                _currentActivePointer = closestTrigger.GetComponentInParent<Pointer_Base>();
+
             }
         }
+
+
+        ////////  BELOW IS OLD SINGLE TEXT BUBBLES  /////////
+
+
+        ////only check specific logic if there's more than 2 pointers ...
+        //if (pointers.Count >= 2)
+        //{
+        //    GameObject closestPointer = null;
+
+        //    // first of, give closestPointer a value
+        //    if (closestPointer == null)
+        //    {
+        //        for (int i = 0; i < pointers.Count; i++)
+        //        {
+        //            if (pointers[i] != null)
+        //            {
+        //                closestPointer = pointers[i];
+        //                break;
+        //            }
+        //        }
+        //    }
+        //    // calculate the distance between objects to decide nearest pointer
+        //    if (closestPointer != null)
+        //    {
+        //        for (int i = 0; i < pointers.Count; i++)
+        //        {
+        //            if (pointers[i] != null)
+        //            {
+        //                // update closest pointer
+        //                var distance1 = Vector3.Distance(transform.position, closestPointer.transform.position);
+        //                var distance2 = Vector3.Distance(transform.position, pointers[i].transform.position);
+
+        //                if (distance1 > distance2)
+        //                {
+        //                    closestPointer = pointers[i];
+        //                }
+        //                else
+        //                {
+        //                    //pointers[i].SetActive(false);
+        //                    pointers[i].GetComponentInChildren<BoxCollider>(true).gameObject.SetActive(false); // nullerror  // trigger
+        //                }
+        //            }
+        //        }
+        //        closestPointer.GetComponentInChildren<BoxCollider>(true).gameObject.SetActive(true); // nullerror            // trigger  
+        //        _currentActivePointer = closestPointer.GetComponent<Pointer_Base>();
+        //    }
+        //}
     }
 
 
@@ -153,7 +219,7 @@ public class PlayerReferences : MonoBehaviour
 
 
 
-    // events called on animations on the player
+    // EVENTS called on ANIMATIONS on the player
     private void AttachObjectAnimationEvent()
     {
         _currentActivePointer.PickupParentingLogic();
@@ -164,7 +230,6 @@ public class PlayerReferences : MonoBehaviour
         _pointerOfPickUpInHands.DropPickupParentingLogic();
         _pointerOfPickUpInHands = null;
     }
-
 
 
 
@@ -180,6 +245,7 @@ public class PlayerReferences : MonoBehaviour
         }
         pointers.Clear();
     }
+
 
 
 
