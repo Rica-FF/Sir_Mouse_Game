@@ -21,6 +21,18 @@ EditorBuildSettings:
     path: Assets/Scenes/PrinceTower_C.unity
     guid: e0e365b44f3ade04aa0f3cbe3cccddb7
   - enabled: 1
+    path: Assets/Scenes/Castle_Basement_Stairs.unity
+    guid: a91e2f0d44a47744c82cfe63c9f8fa2a
+  - enabled: 1
+    path: Assets/Scenes/Castle_BedroomKing.unity
+    guid: bb6e50e2c0b305842805270a2b967b6d
+  - enabled: 1
+    path: Assets/Scenes/Castle_Basement_Treasury.unity
+    guid: f2afce292a0827c41baf5c72ab7559d0
+  - enabled: 1
+    path: Assets/Scenes/MisterWitch_Int.unity
+    guid: e41604b5fd8b55847b39c15a024fe1c2
+  - enabled: 1
     path: Assets/Scenes/OpenWorld_C_TEST.unity
     guid: 0e9e850afa58adf498b1ba2860ab3986
   - enabled: 1
