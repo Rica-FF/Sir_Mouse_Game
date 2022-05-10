@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PrinceTower_C.unity
     guid: e0e365b44f3ade04aa0f3cbe3cccddb7
   - enabled: 1
+    path: Assets/Scenes/Castle_GateFront.unity
+    guid: 1bcff481f4142e7419a2f2cbe60af0a8
+  - enabled: 1
     path: Assets/Scenes/Castle_Basement_Oubilette.unity
     guid: 38e229c811f991d4f8e057aec4d030cf
   - enabled: 1
