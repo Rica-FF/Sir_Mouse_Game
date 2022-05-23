@@ -201,9 +201,13 @@ public class PlayerTouchControls : MonoBehaviour
                 DropPickUpWrap();
             }
 
-            // pointer click
-            if (hit.collider.TryGetComponent(out Pointer_Base pointer) && !clickedOnPointer)
+            // pointer click // split this up in pointer lcick, and next pointer click
+            if (hit.collider.gameObject.CompareTag("Pointer") && !clickedOnPointer)
             {
+                var pointer = hit.collider.GetComponentInParent<Pointer_Base>();
+                float distance = 0f;
+                float travelTime = 0f;
+
                 // boolean setters
                 clickedOnPointer = true;
                 shortTouch = false;
@@ -213,10 +217,26 @@ public class PlayerTouchControls : MonoBehaviour
                 if (pointer.RequiresDestination == true)
                 {
                     agent.SetDestination(pointer.DestinationSpot.position);
+                    distance = Vector3.Distance(transform.position, pointer.DestinationSpot.position);
                 }
 
+                travelTime = distance;
+
                 // calculate wait for seconds on the distance needed to walk
-                yield return new WaitForSeconds(0.5f); 
+                yield return new WaitForSeconds(travelTime / 4f);
+
+                if (pointer.OrientationLookingRight == true)
+                {
+                    // -6
+                    _playerRefs.gameObject.transform.localScale = new Vector3(-6, _playerRefs.gameObject.transform.localScale.y, _playerRefs.gameObject.transform.localScale.z);
+                }
+                else
+                {
+                    // 6
+                    _playerRefs.gameObject.transform.localScale = new Vector3(6, _playerRefs.gameObject.transform.localScale.y, _playerRefs.gameObject.transform.localScale.z);
+                }
+
+                yield return new WaitForSeconds(0.1f);
 
                 pointer.ActivateInteractibleAction();
 
@@ -226,7 +246,24 @@ public class PlayerTouchControls : MonoBehaviour
                 pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();
 
 
-            } // soil click
+            }
+            else if (hit.collider.gameObject.CompareTag("PointerNext") && !clickedOnPointer)
+            {
+                var pointerLord = hit.collider.GetComponentInParent<Pointer_Lord>();
+
+                // boolean setters
+                clickedOnPointer = true;
+                shortTouch = false;
+                StartCoroutine(SetClickedOnPointerBool());
+
+                // swap the pointer
+                pointerLord.SwapActivePointer();
+                //pointer.ActivateInteractibleAction();
+
+                // turns the pointer off (maybe remove it from the list too)      
+                //pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();               
+
+            }// soil click
             else if (hit.collider.tag == "Soil" && player.GetComponent<PlayerReferences>().attachedObject)
             {
                 if (hit.collider.GetComponent<Soil>().playerInArea && (player.GetComponent<PlayerReferences>().attachedObject.name == "Corn" || player.GetComponent<PlayerReferences>().attachedObject.name == "Bucket" && player.GetComponent<PlayerReferences>().attachedObject.GetComponent<Bucket>().isFilled))
@@ -548,6 +585,7 @@ public class PlayerTouchControls : MonoBehaviour
         _playerRefs.GetComponent<Animator>().SetLayerWeight(1, 0f);
 
         attachedObject = "";
-        _playerRefs.attachedObject = null;      
+        _playerRefs.attachedObject = null;
+        _playerRefs.PickedUpObject = PickupType.None;        
     }
 }

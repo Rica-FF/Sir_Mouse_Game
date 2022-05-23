@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 2455e219c2836154bad8b1616b52f343
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 364417141504734601
+    second: Castle_Gates_Ext_Objects_0
+  - first:
+      213: -3637988309191668777
+    second: Castle_Gates_Ext_Objects_1
+  - first:
+      213: 6379423158366199158
+    second: Castle_Gates_Ext_Objects_2
+  - first:
+      213: -7689495610565033233
+    second: Castle_Gates_Ext_Objects_3
+  - first:
+      213: -5917078570861182453
+    second: Castle_Gates_Ext_Objects_4
+  - first:
+      213: -3116989373125330053
+    second: Castle_Gates_Ext_Objects_5
+  - first:
+      213: -5559769747033472416
+    second: Castle_Gates_Ext_Objects_6
+  - first:
+      213: -409340156875804732
+    second: Castle_Gates_Ext_Objects_7
+  - first:
+      213: 7933065444065877141
+    second: Castle_Gates_Ext_Objects_8
+  - first:
+      213: -1129747847677142457
+    second: Castle_Gates_Ext_Objects_9
+  - first:
+      213: -5472462711506403970
+    second: Castle_Gates_Ext_Objects_10
+  - first:
+      213: -2631649584110390433
+    second: Castle_Gates_Ext_Objects_11
+  - first:
+      213: -716087111343604211
+    second: Castle_Gates_Ext_Objects_12
+  - first:
+      213: -2241576719067572742
+    second: Castle_Gates_Ext_Objects_13
+  - first:
+      213: -7184005023993799274
+    second: Castle_Gates_Ext_Objects_14
+  - first:
+      213: 8681811706380693727
+    second: Castle_Gates_Ext_Objects_15
+  - first:
+      213: -7909479036966436587
+    second: Castle_Gates_Ext_Objects_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2521
+        width: 4096
+        height: 1575
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985f37d957bae0500800000000000000
+      internalID: 364417141504734601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1376
+        width: 2156
+        height: 1107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db4b9d58e4438dc0800000000000000
+      internalID: -3637988309191668777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_2
+      rect:
+        serializedVersion: 2
+        x: 2173
+        y: 968
+        width: 970
+        height: 1527
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d515a1093488850800000000000000
+      internalID: 6379423158366199158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_3
+      rect:
+        serializedVersion: 2
+        x: 3228
+        y: 1756
+        width: 559
+        height: 731
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2885e9b7c694590800000000000000
+      internalID: -7689495610565033233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_4
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 218
+        width: 438
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b024ebbc36052eda0800000000000000
+      internalID: -5917078570861182453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_5
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 234
+        width: 451
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b723efdaa3eb4d0800000000000000
+      internalID: -3116989373125330053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_6
+      rect:
+        serializedVersion: 2
+        x: 3335
+        y: 1165
+        width: 533
+        height: 559
+      alignment: 9
+      pivot: {x: 0.35272044, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0624b1b3fdab7d2b0800000000000000
+      internalID: -5559769747033472416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_7
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 28
+        width: 991
+        height: 1196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf6d1dcb4bb15af0800000000000000
+      internalID: -409340156875804732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_8
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 20
+        width: 445
+        height: 910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c197d7df8e71e60800000000000000
+      internalID: 7933065444065877141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_9
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 640
+        width: 338
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a117571545250f0800000000000000
+      internalID: -1129747847677142457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_10
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 646
+        width: 297
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7df6128828ed04b0800000000000000
+      internalID: -5472462711506403970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_11
+      rect:
+        serializedVersion: 2
+        x: 3265
+        y: 649
+        width: 646
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53bbc575a08a7bd0800000000000000
+      internalID: -2631649584110390433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_12
+      rect:
+        serializedVersion: 2
+        x: 2471
+        y: 409
+        width: 233
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ef024f092ff06f0800000000000000
+      internalID: -716087111343604211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_13
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 454
+        width: 174
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af51133b9d154e0e0800000000000000
+      internalID: -2241576719067572742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_14
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 430
+        width: 165
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d5a304e794d4c90800000000000000
+      internalID: -7184005023993799274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_15
+      rect:
+        serializedVersion: 2
+        x: 3290
+        y: 2
+        width: 786
+        height: 595
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd036adafbdfb7870800000000000000
+      internalID: 8681811706380693727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Gates_Ext_Objects_16
+      rect:
+        serializedVersion: 2
+        x: 2525
+        y: 163
+        width: 104
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511873bd8b2eb3290800000000000000
+      internalID: -7909479036966436587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
