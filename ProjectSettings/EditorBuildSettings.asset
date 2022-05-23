@@ -21,6 +21,18 @@ EditorBuildSettings:
     path: Assets/Scenes/PrinceTower_C.unity
     guid: e0e365b44f3ade04aa0f3cbe3cccddb7
   - enabled: 1
+    path: Assets/Scenes/Castle_ThroneRoom.unity
+    guid: a8950890063a84c47bdd90fb2f7c5510
+  - enabled: 1
+    path: Assets/Scenes/Castle_Basement_2.unity
+    guid: 112f75ca7e80ed34da9f359dd561ae7a
+  - enabled: 1
+    path: Assets/Scenes/Castle_Kitchen.unity
+    guid: 34c7bdccc0d71924b99dc0d3ad892b78
+  - enabled: 1
+    path: Assets/Scenes/NavMeshes/Castle_BathHouse.unity
+    guid: b17c66ae651e51f4f8837285dd548f37
+  - enabled: 1
     path: Assets/Scenes/OpenWorld_C_TEST.unity
     guid: 0e9e850afa58adf498b1ba2860ab3986
   - enabled: 1
