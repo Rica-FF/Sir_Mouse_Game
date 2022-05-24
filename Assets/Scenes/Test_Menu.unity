@@ -4119,7 +4119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc760600df1c9e4aaac51bb84ceea6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 5
+  levelIndex: 10
 --- !u!114 &530664290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15498,8 +15498,10 @@ MonoBehaviour:
   costumeIndex: 0
   rosesHaveWater: 0
   pointers: []
+  PointerLords: []
   shieldIndex: 0
   newShield: {fileID: 0}
+  ShieldSprite: {fileID: 0}
   hasGoldenSword: 0
   madePopcorn: 0
   exploded: 0
@@ -15513,7 +15515,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 24a6f39cac0b1204f91f728ee3c2fe39, type: 3}
   - {fileID: 8300000, guid: 7d573405a00bff5418d554e6c25f59fd, type: 3}
   mouseControls: 0
-  _pickedUpObject: 0
+  PickedUpObject: 0
   _currentActivePointer: {fileID: 0}
 --- !u!1 &1577937140 stripped
 GameObject:

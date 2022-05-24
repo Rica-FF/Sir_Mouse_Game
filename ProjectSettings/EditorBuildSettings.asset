@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Test_Menu.unity
     guid: b6c456a22a3cccb4ebfa3ddc08c732a8
   - enabled: 1
-    path: Assets/Scenes/TestingNewScriptsArea.unity
-    guid: 3f76eebd4eea568479fbb6bf759b586b
-  - enabled: 1
     path: Assets/Scenes/Cave_Living_C_TEST.unity
     guid: 17f4f6f02b453204e998dd23655b8651
   - enabled: 1
@@ -20,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PrinceTower_C.unity
     guid: e0e365b44f3ade04aa0f3cbe3cccddb7
+  - enabled: 1
+    path: Assets/Scenes/OpenWorld_C_TEST.unity
+    guid: 0e9e850afa58adf498b1ba2860ab3986
   - enabled: 1
     path: Assets/Scenes/Castle_ThroneRoom.unity
     guid: a8950890063a84c47bdd90fb2f7c5510
@@ -33,8 +33,8 @@ EditorBuildSettings:
     path: Assets/Scenes/NavMeshes/Castle_BathHouse.unity
     guid: b17c66ae651e51f4f8837285dd548f37
   - enabled: 1
-    path: Assets/Scenes/OpenWorld_C_TEST.unity
-    guid: 0e9e850afa58adf498b1ba2860ab3986
+    path: Assets/Scenes/TestingNewScriptsArea.unity
+    guid: 3f76eebd4eea568479fbb6bf759b586b
   - enabled: 1
     path: Assets/Scenes/LoadingScreen.unity
     guid: 396e6e3e80c84e640a422757fd8de1d1
