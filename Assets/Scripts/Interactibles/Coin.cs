@@ -59,7 +59,7 @@ public class Coin : MonoBehaviour
         PopUpPointer.disableIrrelevantPointers = false;
         playerRig.GetComponent<Animator>().SetTrigger("DropCoin");
         StartCoroutine(DetachCoin());
-        player.GetComponent<PlayerTouchControls>().attachedObject = "";
+        player.GetComponent<PlayerTouchControls>().AttachedObjectString = "";
         playerRig.GetComponent<PlayerReferences>().attachedObject = null;
     }
 
@@ -68,7 +68,7 @@ public class Coin : MonoBehaviour
     public void PressedThrow()
     {
         //player.GetComponent<PlayerTouchControls>().TurnOffDropPointer();
-        player.GetComponent<PlayerTouchControls>().attachedObject = "";
+        player.GetComponent<PlayerTouchControls>().AttachedObjectString = "";
         StartCoroutine(DelayPressedBool_Throw());
     }
 
@@ -99,7 +99,7 @@ public class Coin : MonoBehaviour
     {
         playerRig.GetComponent<PlayerReferences>().SetSound(0);
         PopUpPointer.disableIrrelevantPointers = true;
-        player.GetComponent<PlayerTouchControls>().attachedObject = "Coin";
+        player.GetComponent<PlayerTouchControls>().AttachedObjectString = "Coin";
         playerRig.GetComponent<PlayerReferences>().attachedObject = gameObject;
         playerRig.transform.localScale = new Vector3(6, 6, 6);
         playerRig.GetComponent<Animator>().SetTrigger("PickUpCoin");

@@ -59,7 +59,7 @@ public class Key : MonoBehaviour
     IEnumerator PickUpPuzzle()
     {
         PopUpPointer.disableIrrelevantPointers = true;
-        player.GetComponent<PlayerTouchControls>().attachedObject = "PuzzlePiece";
+        player.GetComponent<PlayerTouchControls>().AttachedObjectString = "PuzzlePiece";
         playerRig.GetComponent<PlayerReferences>().attachedObject = gameObject;
         playerRig.transform.localScale = new Vector3(6, 6, 6);
         playerRig.GetComponent<Animator>().SetTrigger("PickUpCoin");
@@ -96,7 +96,7 @@ public class Key : MonoBehaviour
         PopUpPointer.disableIrrelevantPointers = false;
         playerRig.GetComponent<Animator>().SetTrigger("DropCoin");
         StartCoroutine(DetachPuzzlePiece());
-        player.GetComponent<PlayerTouchControls>().attachedObject = "";
+        player.GetComponent<PlayerTouchControls>().AttachedObjectString = "";
         playerRig.GetComponent<PlayerReferences>().attachedObject = null;
     }
 
@@ -123,7 +123,7 @@ public class Key : MonoBehaviour
         PopUpPointer.disableIrrelevantPointers = false;
         player = playerRig.transform.parent.gameObject;
         playerRig.GetComponent<Animator>().SetLayerWeight(1, 0f);
-        player.GetComponent<PlayerTouchControls>().attachedObject = "";
+        player.GetComponent<PlayerTouchControls>().AttachedObjectString = "";
         playerRig.GetComponent<PlayerReferences>().attachedObject = null;
         StartCoroutine(DestroyPuzzle());
     }

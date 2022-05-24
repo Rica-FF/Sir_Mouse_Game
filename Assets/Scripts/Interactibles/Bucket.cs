@@ -110,7 +110,7 @@ public class Bucket : MonoBehaviour
             StartCoroutine(DetachBucket());
         }
         
-        player.GetComponent<PlayerTouchControls>().attachedObject = "";
+        player.GetComponent<PlayerTouchControls>().AttachedObjectString = "";
         playerRig.GetComponent<PlayerReferences>().attachedObject = null;
     }
 

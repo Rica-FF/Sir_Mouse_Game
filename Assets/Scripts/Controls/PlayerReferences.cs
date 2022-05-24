@@ -28,6 +28,7 @@ public class PlayerReferences : MonoBehaviour
     
     public int shieldIndex = 0;
     public GameObject newShield;
+    public GameObject ShieldSprite;
 
     public bool hasGoldenSword = false;
     //[HideInInspector]
@@ -79,15 +80,17 @@ public class PlayerReferences : MonoBehaviour
                     }
                 }
             }
-            // calculate the distance between objects to decide nearest pointer
+            // calculate the distance between the interactible objects to decide nearest pointer
             if (closestPointerLord != null)
             {             
                 for (int i = 0; i < PointerLords.Count; i++)
                 {
                     if (PointerLords[i] != null)
-                    {                       
-                        var distance1 = Vector3.Distance(transform.position, closestPointerLord.GetComponentInParent<Rigidbody>().transform.position);
-                        var distance2 = Vector3.Distance(transform.position, PointerLords[i].GetComponentInParent<Rigidbody>().transform.position);
+                    {
+                        //var distance1 = Vector3.Distance(transform.position, closestPointerLord.GetComponentInParent<Rigidbody>().transform.position);
+                        //var distance2 = Vector3.Distance(transform.position, PointerLords[i].GetComponentInParent<Rigidbody>().transform.position);
+                        var distance1 = Vector3.Distance(transform.position, closestPointerLord.GetComponentInParent<Interactible_Base>().transform.position);
+                        var distance2 = Vector3.Distance(transform.position, PointerLords[i].GetComponentInParent<Interactible_Base>().transform.position);
 
                         if (distance1 > distance2)
                         {
@@ -115,54 +118,6 @@ public class PlayerReferences : MonoBehaviour
 
             }
         }
-
-
-        ////////  BELOW IS OLD SINGLE TEXT BUBBLES  /////////
-
-
-        ////only check specific logic if there's more than 2 pointers ...
-        //if (pointers.Count >= 2)
-        //{
-        //    GameObject closestPointer = null;
-
-        //    // first of, give closestPointer a value
-        //    if (closestPointer == null)
-        //    {
-        //        for (int i = 0; i < pointers.Count; i++)
-        //        {
-        //            if (pointers[i] != null)
-        //            {
-        //                closestPointer = pointers[i];
-        //                break;
-        //            }
-        //        }
-        //    }
-        //    // calculate the distance between objects to decide nearest pointer
-        //    if (closestPointer != null)
-        //    {
-        //        for (int i = 0; i < pointers.Count; i++)
-        //        {
-        //            if (pointers[i] != null)
-        //            {
-        //                // update closest pointer
-        //                var distance1 = Vector3.Distance(transform.position, closestPointer.transform.position);
-        //                var distance2 = Vector3.Distance(transform.position, pointers[i].transform.position);
-
-        //                if (distance1 > distance2)
-        //                {
-        //                    closestPointer = pointers[i];
-        //                }
-        //                else
-        //                {
-        //                    //pointers[i].SetActive(false);
-        //                    pointers[i].GetComponentInChildren<BoxCollider>(true).gameObject.SetActive(false); // nullerror  // trigger
-        //                }
-        //            }
-        //        }
-        //        closestPointer.GetComponentInChildren<BoxCollider>(true).gameObject.SetActive(true); // nullerror            // trigger  
-        //        _currentActivePointer = closestPointer.GetComponent<Pointer_Base>();
-        //    }
-        //}
     }
 
 
@@ -222,14 +177,31 @@ public class PlayerReferences : MonoBehaviour
     // EVENTS called on ANIMATIONS on the player
     private void AttachObjectAnimationEvent()
     {
-        _currentActivePointer.PickupParentingLogic();
-        _pointerOfPickUpInHands = _currentActivePointer;
+        // if this pointer is type infinite -> Interactibleparent = _pickupFromInfiniteSupplyObject
+        // SpriteObject. rotation (hardcode / ignore)
+        if (_currentActivePointer.TypeOfPointer == PointerType.PickupInfinite)
+        {
+            _currentActivePointer.PickupInfiniteParentingLogic();
+            _pointerOfPickUpInHands = attachedObject.GetComponentInChildren<Pointer_Base>();    // wrong here!
+        }
+        else
+        {
+            _currentActivePointer.PickupParentingLogic();
+            _pointerOfPickUpInHands = _currentActivePointer;
+        }        
+
+        // re-establish what possible pointerlords are in the vicinity and which one should be active
+        // -- pointer lord is still in list, might have to do with requirement
+        // -- pointer lord well not being removed properly ?
     }
     private void DetachObjectAnimationEvent()
     {
+        Debug.Log(_pointerOfPickUpInHands + "keke");
+
         _pointerOfPickUpInHands.DropPickupParentingLogic();
         _pointerOfPickUpInHands = null;
     }
+    /////////////////////////
 
 
 

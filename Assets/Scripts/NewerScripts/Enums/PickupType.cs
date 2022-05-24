@@ -7,6 +7,7 @@ public enum PickupType
     None,
     Corn,
     Bucket,
+    BucketWater,
     Coin,
     Puzzle,
     Key

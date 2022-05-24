@@ -118,7 +118,7 @@ public class Corn : MonoBehaviour
         PopUpPointer.disableIrrelevantPointers = false;
         playerRig.GetComponent<Animator>().SetTrigger("DropCoin");
         StartCoroutine(DetachCorn());
-        player.GetComponent<PlayerTouchControls>().attachedObject = "";
+        player.GetComponent<PlayerTouchControls>().AttachedObjectString = "";
         playerRig.GetComponent<PlayerReferences>().attachedObject = null;
     }
 
@@ -156,7 +156,7 @@ public class Corn : MonoBehaviour
         }
         growPhase = 1;
         pressedToPlant = true;
-        player.GetComponent<PlayerTouchControls>().attachedObject = "";
+        player.GetComponent<PlayerTouchControls>().AttachedObjectString = "";
         playerRig.GetComponent<PlayerReferences>().attachedObject = null;
     }
 

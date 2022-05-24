@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class OrthoPhysics : MonoBehaviour
 {
-    public GameObject geometry;
-    void Update()
+    [SerializeField]
+    private GameObject _sprite; // sprite object to update
+
+    void FixedUpdate()
     {
-        geometry.transform.position = transform.position;
-        geometry.transform.localEulerAngles = new Vector3(30, 0, transform.localEulerAngles.z);
+        //Debug.Log("111");
+
+        // updates the sprite transform  with this rigidbody one
+        _sprite.transform.position = transform.position;
+        _sprite.transform.localEulerAngles = new Vector3(30, 0, transform.localEulerAngles.z);
     }
 }

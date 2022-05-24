@@ -27,7 +27,7 @@ public class PlayerTouchControls : MonoBehaviour
     public bool readyToWalk = true;
 
     [HideInInspector]
-    public string attachedObject;
+    public string AttachedObjectString;
 
 
     private TouchPhase touchPhase = TouchPhase.Ended;
@@ -53,7 +53,9 @@ public class PlayerTouchControls : MonoBehaviour
     ///////////////
 
     private PlayerReferences _playerRefs;
+    public bool GettingToDestination;
 
+    private AudioSource _audioSource;
 
 
 
@@ -65,18 +67,22 @@ public class PlayerTouchControls : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         animator = player.GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
+        _audioSource = GetComponent<AudioSource>();
 
         StartCoroutine(GetPlayerReferences());
     }
 
     void Update()
     {
-        if(Input.touchCount == 0 && !clickedOnPointer)
+        // touchCount 0 -> 0 fingers  // touchCount 1 -> 1 finger  // touchCount 2 -> 2 fingers
+
+        // Controls //
+        if(Input.touchCount == 0 && !clickedOnPointer) 
         {
             StartCoroutine(SetReadyToWalk());
             start = true;
         }
-        else if (Input.touchCount == 1 && readyToWalk && walkingEnabled)
+        else if (Input.touchCount == 1 && readyToWalk && walkingEnabled) 
         {
             touch = Input.GetTouch(0);
             StartCoroutine(SingleFinger(Input.GetTouch(0).position));
@@ -86,21 +92,19 @@ public class PlayerTouchControls : MonoBehaviour
             StartCoroutine(ZoomDetection());
         }
 
-        if (!Input.GetMouseButton(0) && !clickedOnPointer)
-        {
-            StartCoroutine(SetReadyToWalk());
-            start = true;
-        }
-        else if (Input.GetMouseButton(0) && readyToWalk && walkingEnabled)
-        {
-            StartCoroutine(SingleMouseClick(Input.mousePosition));
-        }
+        MovementLogic();
+        ZoomLogic();
 
+        SetRunAimation();
+    }
+
+    private void ZoomLogic()
+    {
         if (Camera.main.orthographicSize > 5 && Camera.main.orthographicSize < 12)
         {
-            Camera.main.orthographicSize += Input.mouseScrollDelta.y / 10;       
+            Camera.main.orthographicSize += Input.mouseScrollDelta.y / 10;
         }
-        else if(Camera.main.orthographicSize < 5)
+        else if (Camera.main.orthographicSize < 5)
         {
             Camera.main.orthographicSize = 6.5f;
         }
@@ -108,9 +112,20 @@ public class PlayerTouchControls : MonoBehaviour
         {
             Camera.main.orthographicSize = 11.5f;
         }
-
-        SetRunAimation();
     }
+    private void MovementLogic()
+    {
+        if (!Input.GetMouseButton(0) && !clickedOnPointer) // if not left clicked && not pointerClicked
+        {
+            StartCoroutine(SetReadyToWalk());
+            start = true;
+        }
+        else if (Input.GetMouseButton(0) && readyToWalk && walkingEnabled) // if clicked && rdy to walk && walking enabled
+        {
+            StartCoroutine(SingleMouseClick(Input.mousePosition));
+        }
+    }
+
 
     //IEnumerator SingleMouseClick(Vector2 position)
     //{
@@ -189,7 +204,6 @@ public class PlayerTouchControls : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
 
-
         RaycastHit hit; // Object hit by ray
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~IgnoreMe) && !EventSystem.current.IsPointerOverGameObject())
@@ -205,6 +219,7 @@ public class PlayerTouchControls : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Pointer") && !clickedOnPointer)
             {
                 var pointer = hit.collider.GetComponentInParent<Pointer_Base>();
+                var InteractibleScript = pointer.GetComponentInParent<Interactible_Base>();
                 float distance = 0f;
                 float travelTime = 0f;
 
@@ -216,6 +231,7 @@ public class PlayerTouchControls : MonoBehaviour
                 // set destination if it needs one
                 if (pointer.RequiresDestination == true)
                 {
+                    GettingToDestination = true;
                     agent.SetDestination(pointer.DestinationSpot.position);
                     distance = Vector3.Distance(transform.position, pointer.DestinationSpot.position);
                 }
@@ -225,27 +241,36 @@ public class PlayerTouchControls : MonoBehaviour
                 // calculate wait for seconds on the distance needed to walk
                 yield return new WaitForSeconds(travelTime / 4f);
 
-                if (pointer.OrientationLookingRight == true)
+                // only start the next logic after the player has arrived at the destination
+
+                // this is getting overwritten by movement (semi fixed)
+                switch (pointer.OrientationPlayer)
                 {
-                    // -6
-                    _playerRefs.gameObject.transform.localScale = new Vector3(-6, _playerRefs.gameObject.transform.localScale.y, _playerRefs.gameObject.transform.localScale.z);
-                }
-                else
-                {
-                    // 6
-                    _playerRefs.gameObject.transform.localScale = new Vector3(6, _playerRefs.gameObject.transform.localScale.y, _playerRefs.gameObject.transform.localScale.z);
+                    case OrientationType.None:
+                        break;
+                    case OrientationType.Right:
+                        _playerRefs.gameObject.transform.localScale = new Vector3(-6, _playerRefs.gameObject.transform.localScale.y, _playerRefs.gameObject.transform.localScale.z);
+                        break;
+                    case OrientationType.Left:
+                        _playerRefs.gameObject.transform.localScale = new Vector3(6, _playerRefs.gameObject.transform.localScale.y, _playerRefs.gameObject.transform.localScale.z);
+                        break;
                 }
 
-                yield return new WaitForSeconds(0.1f);
 
+
+                yield return new WaitForSeconds(0.2f);
+
+                GettingToDestination = false;
                 pointer.ActivateInteractibleAction();
 
+                // turns the pointer off
                 yield return new WaitForSeconds(0.5f);
-
-                // turns the pointer off (maybe remove it from the list too)      
-                pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();
-
-
+            
+                if (InteractibleScript.PointerStaysActiveAfterUse == false)
+                {
+                    pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();
+                }    
+                
             }
             else if (hit.collider.gameObject.CompareTag("PointerNext") && !clickedOnPointer)
             {
@@ -282,6 +307,8 @@ public class PlayerTouchControls : MonoBehaviour
             } // If not pressed on a pointer, move to pointed location
             else if (!clickedOnPointer && hit.collider.tag != "Player")
             {
+                Debug.Log("moving shmoving");
+
                 target.SetActive(true);
                 agent.SetDestination(hit.point);
                 target.transform.position = hit.point;
@@ -304,17 +331,14 @@ public class PlayerTouchControls : MonoBehaviour
         {
             shortTouch = false;
         }
-        
-        float seconds = 0.1f;
+         
         
         // Short delay to avoid walking while zooming
-        for (float t = 0f; t < seconds; t += Time.deltaTime) 
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
+        yield return new WaitForSeconds(0.1f);
 
-        if (Input.touchCount != 2) // Second check to avoid walking while zooming
+
+        // Second check to avoid walking while zooming
+        if (Input.touchCount != 2) 
         {
             RaycastHit hit; // Object hit by ray
 
@@ -342,13 +366,10 @@ public class PlayerTouchControls : MonoBehaviour
                     clickedOnPointer = true;
                     shortTouch = false;
                     StartCoroutine(SetClickedOnPointerBool());
-                    seconds = 0.1f;
+    
+                    yield return new WaitForSeconds(0.1f);
 
-                    for (float t = 0f; t < seconds; t += Time.deltaTime)
-                    {
-                        float normalizedTime = t / seconds;
-                        yield return null;
-                    }
+
                     hit.collider.gameObject.GetComponent<DoAction>().DoTheAction();
 
                     if(hit.collider.gameObject.GetComponent<DoAction>().specificDestination)
@@ -356,15 +377,9 @@ public class PlayerTouchControls : MonoBehaviour
                         agent.SetDestination(hit.collider.gameObject.GetComponent<DoAction>().destination);
                     }
                     
-                    seconds = 0.5f;
+                    yield return new WaitForSeconds(0.5f);
 
-                    for (float t = 0f; t < seconds; t += Time.deltaTime)
-                    {
-                        float normalizedTime = t / seconds;
-                        yield return null;
-                    }
-
-                    if(hit.collider.gameObject.transform.parent.GetComponent<PopUpPointer>())
+                    if (hit.collider.gameObject.transform.parent.GetComponent<PopUpPointer>())
                     {
                         hit.collider.gameObject.transform.parent.GetComponent<PopUpPointer>().DisablePointer();
                     }
@@ -397,6 +412,8 @@ public class PlayerTouchControls : MonoBehaviour
                     target.SetActive(true);
                     agent.SetDestination(hit.point);
                     target.transform.position = hit.point;
+
+                    Debug.Log("moving shmoving");
                 }
             }
         }
@@ -441,13 +458,7 @@ public class PlayerTouchControls : MonoBehaviour
 
     IEnumerator SetReadyToWalk()
     {
-        float seconds = 0.1f;
-
-        for (float t = 0f; t < seconds; t += Time.deltaTime)
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
+        yield return new WaitForSeconds(0.1f);
         readyToWalk = true;
     }
     IEnumerator SetClickedOnPointerBool()
@@ -473,13 +484,8 @@ public class PlayerTouchControls : MonoBehaviour
     }
     IEnumerator SetActionBool()
     {
-        float seconds = 3f;
+        yield return new WaitForSeconds(3f);
 
-        for (float t = 0f; t < seconds; t += Time.deltaTime)
-        {
-            float normalizedTime = t / seconds;
-            yield return null;
-        }
         doAction = true;
     }
 
@@ -489,10 +495,14 @@ public class PlayerTouchControls : MonoBehaviour
     {
         GetComponent<NavMeshAgent>().speed = 7;
     }
-    public void MoveTo(Vector3 position)
+
+    // only used in tutorial and bucket
+    public void MoveTo(Vector3 position) 
     {
         agent.SetDestination(position);
     }
+
+
     public void Jump()
     {
         agent.enabled = false;
@@ -518,13 +528,16 @@ public class PlayerTouchControls : MonoBehaviour
         {
             animator.SetFloat("Speed", 1);
 
-            if (previousPosition.x < transform.position.x)
+            if (GettingToDestination == false)
             {
-                player.GetComponent<Transform>().localScale = new Vector3(-6, 6, 6);
-            }
-            if (previousPosition.x > transform.position.x)
-            {
-                player.GetComponent<Transform>().localScale = new Vector3(6, 6, 6);
+                if (previousPosition.x < transform.position.x)
+                {
+                    player.GetComponent<Transform>().localScale = new Vector3(-6, 6, 6);
+                }
+                if (previousPosition.x > transform.position.x)
+                {
+                    player.GetComponent<Transform>().localScale = new Vector3(6, 6, 6);
+                }
             }
         }
         else
@@ -537,7 +550,8 @@ public class PlayerTouchControls : MonoBehaviour
     }
     public void Slash(int soundIndex)
     {
-        player.GetComponent<PlayerReferences>().SetSound(soundIndex);
+        _playerRefs.SetSound(soundIndex);
+        // player.GetComponent<PlayerReferences>().SetSound(soundIndex);
         player.GetComponent<Animator>().SetTrigger("Slash");
     }
     public void DoAction(string setBool)
@@ -580,12 +594,20 @@ public class PlayerTouchControls : MonoBehaviour
 
     private void DropPickUpWrap()
     {
+        // get the pointer lord -> to get the sparkle objects -> disable all sparkle objects
+        foreach (var sparkle in _playerRefs.attachedObject.GetComponentInChildren<Pointer_Lord>().SparkleObjectsAll)
+        {
+            sparkle.SetActive(false);
+        }
+
         // plays the item drop animation
         _playerRefs.GetComponent<Animator>().SetTrigger("DropCoin");
         _playerRefs.GetComponent<Animator>().SetLayerWeight(1, 0f);
 
-        attachedObject = "";
+        AttachedObjectString = "";
         _playerRefs.attachedObject = null;
-        _playerRefs.PickedUpObject = PickupType.None;        
+        _playerRefs.PickedUpObject = PickupType.None;     
+        
+
     }
 }

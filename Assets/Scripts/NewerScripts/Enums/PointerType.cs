@@ -6,5 +6,6 @@ public enum PointerType
 {
     Hit,
     Pickup,
-    Event
+    Event,
+    PickupInfinite
 };

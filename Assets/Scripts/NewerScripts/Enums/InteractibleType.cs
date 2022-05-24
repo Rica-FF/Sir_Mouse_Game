@@ -6,5 +6,6 @@ public enum InteractibleType
 {
     Generic,
     ShowsPointer,
-    RequiresItem
+    RequiresItem,
+    InfinitePickups
 };
