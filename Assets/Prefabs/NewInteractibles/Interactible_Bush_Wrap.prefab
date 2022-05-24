@@ -50,8 +50,10 @@ MonoBehaviour:
   InteractibleType: 0
   _requiredItemType: 0
   ExtraPickupInteractions: 
+  InteractibleHasBeenUsedToActivateEventNone: 0
   OneTimeUse: 0
   HasACooldown: 0
+  PointerStaysActiveAfterUse: 0
   _cooldownLength: 0
   OnCooldown: 0
   UsedSuccesfully: 0
@@ -63,8 +65,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3032887c361442348ab16d480c78a7e3, type: 3}
   - {fileID: 8300000, guid: 67a03d35b009d5847bdbad0576c076d6, type: 3}
   PlayerRefs: {fileID: 0}
-  _pointerLord: {fileID: 0}
+  PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 0}
+  _infinitelyRespawnablePickupPrefab: {fileID: 0}
 --- !u!95 &1196805436870061843
 Animator:
   serializedVersion: 3
@@ -219,7 +222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5941136320188781070}
   m_LocalRotation: {x: -0.2588191, y: -0, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: -0.8097337, z: 0.46750012}
+  m_LocalPosition: {x: 0, y: -0.902, z: 0.308}
   m_LocalScale: {x: 1.7713512, y: 0.21656998, z: 1}
   m_Children: []
   m_Father: {fileID: 7474183443103640967}

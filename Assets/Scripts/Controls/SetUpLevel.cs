@@ -54,7 +54,10 @@ public class SetUpLevel : MonoBehaviour
                 player.GetComponent<PlayerReferences>().attachedObject.GetComponent<Bucket>().player = playerRigid;
             }
             //player.GetComponent<PlayerReferences>().dropPointer.SetActive(true);
-        }        
+        }  
+        
+        // additionally activate the sparkles on other objects
+        //---
     }
 
     public void NextLevel(int _playerStartIndex)
