@@ -83,6 +83,7 @@ MonoBehaviour:
   InteractibleType: 1
   _requiredItemType: 0
   ExtraPickupInteractions: 
+  InteractibleHasBeenUsedToActivateEventNone: 0
   OneTimeUse: 0
   HasACooldown: 0
   PointerStaysActiveAfterUse: 0
@@ -91,7 +92,7 @@ MonoBehaviour:
   UsedSuccesfully: 0
   _audioClipsGeneric: []
   PlayerRefs: {fileID: 0}
-  _pointerLord: {fileID: 7606347341790194361}
+  PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 7606347340174234867}
   _infinitelyRespawnablePickupPrefab: {fileID: 0}
 --- !u!95 &3559478516993570430
@@ -203,6 +204,7 @@ MonoBehaviour:
   TypeOfPointer: 2
   TypeOfPickup: 0
   RequiredItemExtraInteraction: 0
+  RequiresUseBeforeEventNone: 0
   RequiresDestination: 0
   DestinationSpot: {fileID: 0}
   OrientationPlayer: 0
@@ -364,7 +366,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 3429782931415231357, guid: c6bf8a68ecd319343b54fe7ca7189595,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 3550d25c6817fe9439cc8267b3420467, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -644,7 +646,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 3429782931415231357, guid: c6bf8a68ecd319343b54fe7ca7189595,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: f436e7cee1849334a87dd767710cd164, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1021,6 +1023,7 @@ MonoBehaviour:
   TypeOfPointer: 2
   TypeOfPickup: 0
   RequiredItemExtraInteraction: 2
+  RequiresUseBeforeEventNone: 0
   RequiresDestination: 1
   DestinationSpot: {fileID: 3559478517524568375}
   OrientationPlayer: 1
@@ -1250,18 +1253,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3559478516534684601}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7606347341790194361 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6407182190333591808, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 3559478516534684601}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c631d131871c7e3488c8d4c639f9329d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &7606347340178752341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6407182188725971180, guid: ec17b8b5c385c944e862ac4eeca1000e,
