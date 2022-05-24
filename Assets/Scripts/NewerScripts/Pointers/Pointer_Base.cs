@@ -75,23 +75,24 @@ public class Pointer_Base : MonoBehaviour
 
     public void ActivateInteractibleAction()
     {
-        if (TypeOfPointer == PointerType.Hit) // hit sword (also uses PlayEvent())
+        switch (TypeOfPointer)
         {
-            HitSword();
+            case PointerType.Hit:
+                HitSword(); // hit sword (also uses PlayEvent())
+                break;
+            case PointerType.Pickup:
+                PickupItemWrap(TypeOfPickup);
+                break;
+            case PointerType.PickupInfinite:
+                PickupItemInfiniteWrap(TypeOfPickup);
+                break;
+            case PointerType.Event:  // plays specific event
+                PlayEvent();
+                break;
+            case PointerType.ChangeLevel:
+                ChangeLevel();
+                break;
         }
-        else if (TypeOfPointer == PointerType.Pickup) // Pickup item
-        {
-            PickupItemWrap(TypeOfPickup);
-        }
-        else if (TypeOfPointer == PointerType.Event) // plays specific event
-        {
-            PlayEvent();
-        }
-        else
-        {
-            PickupItemInfiniteWrap(TypeOfPickup);
-        }
-
     }
 
 
@@ -172,6 +173,19 @@ public class Pointer_Base : MonoBehaviour
         PlayerRefs.PickedUpObject = pickup;
 
         StartCoroutine(GetSparkleRefsInfiniteSpawner(_pickupFromInfiniteSupplyObject));
+    }
+
+    public void ChangeLevel()
+    {
+        // get the additional script on this objects parent (Interactible_Level_Changer) and read what index it is to then apply the needed logic,
+        Interactible_LevelChanger interactibleScript = null;
+        interactibleScript = GetComponentInParent<Interactible_LevelChanger>();
+
+        // --setupLevel.NextLevel
+        // --LoadLevel
+        // --SetupLevel.RightDirection
+        interactibleScript.LoadLevelSlow();
+        // --Crossfade animator.setTrigger "Fast"
     }
 
 

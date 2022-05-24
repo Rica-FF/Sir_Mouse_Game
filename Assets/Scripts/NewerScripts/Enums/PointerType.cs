@@ -7,5 +7,6 @@ public enum PointerType
     Hit,
     Pickup,
     Event,
-    PickupInfinite
+    PickupInfinite,
+    ChangeLevel
 };

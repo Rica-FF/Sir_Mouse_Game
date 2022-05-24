@@ -393,7 +393,6 @@ GameObject:
   - component: {fileID: 79860784}
   - component: {fileID: 79860788}
   - component: {fileID: 79860787}
-  - component: {fileID: 79860786}
   - component: {fileID: 79860785}
   m_Layer: 5
   m_Name: Fabrique_Logo
@@ -432,19 +431,6 @@ SortingGroup:
   m_SortingLayerID: -2048143263
   m_SortingLayer: 0
   m_SortingOrder: 4
---- !u!114 &79860786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79860783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc760600df1c9e4aaac51bb84ceea6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelIndex: 1
 --- !u!114 &79860787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15509,11 +15495,12 @@ MonoBehaviour:
   playerSounds:
   - {fileID: 8300000, guid: 46938a3f0ecb5a54ea40657e3cab0d2e, type: 3}
   - {fileID: 8300000, guid: 8e6a0d94ac69326429ebe0863979051d, type: 3}
-  - {fileID: 8300000, guid: 29e434342aed0f74f980ab0dad3a0405, type: 3}
+  - {fileID: 8300000, guid: 358c6394577d3644c93f4267935371e4, type: 3}
   - {fileID: 8300000, guid: d84c184b24f92b44588e4c4099e86287, type: 3}
   - {fileID: 8300000, guid: a66c157b704c90048b781253da70aa2a, type: 3}
   - {fileID: 8300000, guid: 24a6f39cac0b1204f91f728ee3c2fe39, type: 3}
   - {fileID: 8300000, guid: 7d573405a00bff5418d554e6c25f59fd, type: 3}
+  - {fileID: 8300000, guid: 29e434342aed0f74f980ab0dad3a0405, type: 3}
   mouseControls: 0
   PickedUpObject: 0
   _currentActivePointer: {fileID: 0}
@@ -15547,7 +15534,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 4920232872348216596, guid: c6bf8a68ecd319343b54fe7ca7189595,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5f415353cc9122e43a78faaa9c5e7b6a, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -16836,7 +16823,6 @@ GameObject:
   - component: {fileID: 1757335936}
   - component: {fileID: 1757335941}
   - component: {fileID: 1757335940}
-  - component: {fileID: 1757335938}
   - component: {fileID: 1757335937}
   m_Layer: 5
   m_Name: BG
@@ -16875,19 +16861,6 @@ SortingGroup:
   m_SortingLayerID: -2048143263
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!114 &1757335938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757335935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc760600df1c9e4aaac51bb84ceea6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelIndex: 1
 --- !u!114 &1757335940
 MonoBehaviour:
   m_ObjectHideFlags: 0
