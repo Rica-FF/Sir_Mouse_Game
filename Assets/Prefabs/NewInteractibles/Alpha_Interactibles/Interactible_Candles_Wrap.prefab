@@ -1112,6 +1112,7 @@ MonoBehaviour:
   InteractibleType: 1
   _requiredItemType: 0
   ExtraPickupInteractions: 
+  InteractibleHasBeenUsedToActivateEventNone: 0
   OneTimeUse: 0
   HasACooldown: 0
   PointerStaysActiveAfterUse: 0
@@ -1120,8 +1121,9 @@ MonoBehaviour:
   UsedSuccesfully: 0
   _audioClipsGeneric: []
   PlayerRefs: {fileID: 0}
-  _pointerLord: {fileID: 7307432054920308989}
+  PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 7307432054371997367}
+  _infinitelyRespawnablePickupPrefab: {fileID: 0}
 --- !u!95 &4432620643829085242
 Animator:
   serializedVersion: 3
@@ -1326,6 +1328,7 @@ MonoBehaviour:
   TypeOfPointer: 2
   TypeOfPickup: 0
   RequiredItemExtraInteraction: 0
+  RequiresUseBeforeEventNone: 0
   RequiresDestination: 0
   DestinationSpot: {fileID: 0}
   OrientationPlayer: 0
@@ -1338,6 +1341,7 @@ MonoBehaviour:
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
+  PointerLord: {fileID: 0}
   _background: {fileID: 0}
   _setActiveCollection: {fileID: 1749477060982899820}
   _setFalseCollection: {fileID: 1749477060812360475}
@@ -1397,22 +1401,22 @@ PrefabInstance:
     - target: {fileID: 3451815859098469555, guid: b519145b3eff6aa408d8f2e78c2637a6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9659258
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3451815859098469555, guid: b519145b3eff6aa408d8f2e78c2637a6,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2588191
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451815859098469555, guid: b519145b3eff6aa408d8f2e78c2637a6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451815859098469555, guid: b519145b3eff6aa408d8f2e78c2637a6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451815859098469555, guid: b519145b3eff6aa408d8f2e78c2637a6,
         type: 3}
@@ -1568,18 +1572,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4432620644304742909}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7307432054920308989 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6407182190333591808, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 4432620644304742909}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c631d131871c7e3488c8d4c639f9329d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7307432054731090643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6407182190522942254, guid: ec17b8b5c385c944e862ac4eeca1000e,

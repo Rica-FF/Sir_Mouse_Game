@@ -208,15 +208,12 @@ public class PlayerTouchControls : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~IgnoreMe) && !EventSystem.current.IsPointerOverGameObject())
         {
-            // player click && has item 
-            if (hit.collider.tag == "Player" && player.GetComponent<PlayerReferences>().attachedObject)
-            {                
-                //player.GetComponent<PlayerReferences>().DropObject();           
+            if (hit.collider.tag == "Player" && player.GetComponent<PlayerReferences>().attachedObject) // PLAYER CLICK
+            {                        
                 DropPickUpWrap();
             }
 
-            // pointer click // split this up in pointer lcick, and next pointer click
-            if (hit.collider.gameObject.CompareTag("Pointer") && !clickedOnPointer)
+            if (hit.collider.gameObject.CompareTag("Pointer") && !clickedOnPointer) // POINTER ACTIVATE
             {
                 var pointer = hit.collider.GetComponentInParent<Pointer_Base>();
                 var InteractibleScript = pointer.GetComponentInParent<Interactible_Base>();
@@ -241,8 +238,6 @@ public class PlayerTouchControls : MonoBehaviour
                 // calculate wait for seconds on the distance needed to walk
                 yield return new WaitForSeconds(travelTime / 4f);
 
-                // only start the next logic after the player has arrived at the destination
-
                 // this is getting overwritten by movement (semi fixed)
                 switch (pointer.OrientationPlayer)
                 {
@@ -255,7 +250,6 @@ public class PlayerTouchControls : MonoBehaviour
                         _playerRefs.gameObject.transform.localScale = new Vector3(6, _playerRefs.gameObject.transform.localScale.y, _playerRefs.gameObject.transform.localScale.z);
                         break;
                 }
-
 
 
                 yield return new WaitForSeconds(0.2f);
@@ -272,7 +266,7 @@ public class PlayerTouchControls : MonoBehaviour
                 }    
                 
             }
-            else if (hit.collider.gameObject.CompareTag("PointerNext") && !clickedOnPointer)
+            else if (hit.collider.gameObject.CompareTag("PointerNext") && !clickedOnPointer)  // SWAP POINTER
             {
                 var pointerLord = hit.collider.GetComponentInParent<Pointer_Lord>();
 
@@ -283,32 +277,14 @@ public class PlayerTouchControls : MonoBehaviour
 
                 // swap the pointer
                 pointerLord.SwapActivePointer();
-                //pointer.ActivateInteractibleAction();
 
                 // turns the pointer off (maybe remove it from the list too)      
                 //pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();               
 
-            }// soil click
-            else if (hit.collider.tag == "Soil" && player.GetComponent<PlayerReferences>().attachedObject)
-            {
-                if (hit.collider.GetComponent<Soil>().playerInArea && (player.GetComponent<PlayerReferences>().attachedObject.name == "Corn" || player.GetComponent<PlayerReferences>().attachedObject.name == "Bucket" && player.GetComponent<PlayerReferences>().attachedObject.GetComponent<Bucket>().isFilled))
-                {
-                    hit.collider.GetComponent<Soil>().UseSoil();
-                    DoAction("");
-                }
-                else
-                {
-                    target.SetActive(true);
-                    agent.SetDestination(hit.point);
-                    target.transform.position = hit.point;
-                }
-
-
-            } // If not pressed on a pointer, move to pointed location
+            }
+            // If not pressed on a pointer, move to pointed location
             else if (!clickedOnPointer && hit.collider.tag != "Player")
             {
-                Debug.Log("moving shmoving");
-
                 target.SetActive(true);
                 agent.SetDestination(hit.point);
                 target.transform.position = hit.point;
