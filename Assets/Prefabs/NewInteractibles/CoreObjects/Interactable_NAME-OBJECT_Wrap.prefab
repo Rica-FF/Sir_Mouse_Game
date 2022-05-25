@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3643995866239352412}
   m_Layer: 0
-  m_Name: Interactible_NAME-OBJECT_Wrap
+  m_Name: Interactable_NAME-OBJECT_Wrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3643995867031817531}
   - component: {fileID: 3643995867031817524}
   m_Layer: 0
-  m_Name: Interactible_Object ----- adjustable
+  m_Name: Interactable_Object ----- adjustable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,6 +84,7 @@ MonoBehaviour:
   InteractibleType: 1
   _requiredItemType: 0
   ExtraPickupInteractions: 
+  InteractibleHasBeenUsedToActivateEventNone: 0
   OneTimeUse: 0
   HasACooldown: 0
   PointerStaysActiveAfterUse: 0
@@ -92,7 +93,7 @@ MonoBehaviour:
   UsedSuccesfully: 0
   _audioClipsGeneric: []
   PlayerRefs: {fileID: 0}
-  _pointerLord: {fileID: 7672146597215556092}
+  PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 7672146595595939766}
   _infinitelyRespawnablePickupPrefab: {fileID: 0}
 --- !u!95 &3643995867031817531
@@ -263,7 +264,7 @@ GameObject:
   - component: {fileID: 3643995868116311683}
   - component: {fileID: 3643995868116311681}
   m_Layer: 10
-  m_Name: Ineractible_Rigid ------- adjustable
+  m_Name: Interactable_Rigid ------- adjustable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -479,18 +480,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3643995866433999100}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7672146597215556092 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6407182190333591808, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 3643995866433999100}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c631d131871c7e3488c8d4c639f9329d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7672146595595939766 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6407182188738887498, guid: ec17b8b5c385c944e862ac4eeca1000e,
