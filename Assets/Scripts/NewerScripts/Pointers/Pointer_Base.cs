@@ -78,7 +78,7 @@ public class Pointer_Base : MonoBehaviour
         switch (TypeOfPointer)
         {
             case PointerType.Hit:
-                HitSword(); // hit sword (also uses PlayEvent())
+                HitSword();     // hit sword (also uses PlayEvent())
                 break;
             case PointerType.Pickup:
                 PickupItemWrap(TypeOfPickup);
@@ -128,12 +128,6 @@ public class Pointer_Base : MonoBehaviour
         PlayerRefs.PickedUpObject = pickup;
 
         StartCoroutine(GetSparkleRefs());
-
-        //_playerAudioSource.PlayOneShot(_soundEffects[randomsoundSetOnThisObject]);
-        //_playerReferences.transform.localScale = new Vector3(6, 6, 6);            // why this ?
-
-        //PlayerRefs.attachedObject.GetComponent<SphereCollider>().enabled = false;
-        //PlayerRefs.attachedObject.GetComponentInChildren<SphereCollider>().enabled = false; //
     }
 
     public virtual void PickupItemInfiniteWrap(PickupType pickup)
@@ -181,12 +175,10 @@ public class Pointer_Base : MonoBehaviour
         Interactible_LevelChanger interactibleScript = null;
         interactibleScript = GetComponentInParent<Interactible_LevelChanger>();
 
-        // --setupLevel.NextLevel
-        // --LoadLevel
-        // --SetupLevel.RightDirection
         interactibleScript.LoadLevelSlow();
-        // --Crossfade animator.setTrigger "Fast"
     }
+
+
 
 
 
@@ -196,6 +188,7 @@ public class Pointer_Base : MonoBehaviour
         PlayerRefs = PlayerControls.GetComponentInChildren<PlayerReferences>();
         _playerAudioSource = PlayerRefs.GetComponent<AudioSource>();
     }
+
     public IEnumerator GetSparkleRefs()
     {
         DeActivateSparkles();
@@ -245,6 +238,7 @@ public class Pointer_Base : MonoBehaviour
         // activate the found sparkle objects
         ActivateSparkles();
     }
+
     public IEnumerator GetSparkleRefsInfiniteSpawner(GameObject pickupInMountain)
     {
         DeActivateSparkles();
@@ -366,9 +360,6 @@ public class Pointer_Base : MonoBehaviour
         _pickupFromInfiniteSupplyObject.transform.SetParent(PlayerRefs.playerHand.transform);
         _pickupFromInfiniteSupplyObject.transform.localPosition = new Vector3(-0.03f, 0.02f, 0.02f);
         _pickupFromInfiniteSupplyObject.GetComponentInChildren<Rigidbody>().isKinematic = true;
-
-        // set sprite transform to 0,0,0
-        //SpriteObject.transform.rotation = _spriteOriginalRotation;
 
         // play the sound effect thats attached on the player // get audiosource - source.play(sounds[0])
         PlayerRefs.GetComponent<AudioSource>().PlayOneShot(PlayerRefs.playerSounds[0]);

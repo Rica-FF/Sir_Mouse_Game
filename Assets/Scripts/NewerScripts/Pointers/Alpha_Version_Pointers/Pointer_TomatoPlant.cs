@@ -34,9 +34,6 @@ public class Pointer_TomatoPlant : Pointer_Base
         // play sound
         PlayerRefs.GetComponent<AudioSource>().PlayOneShot(PlayerRefs.playerSounds[7]);
 
-
-
         // activate a cooldown
-
     }
 }

@@ -65,9 +65,11 @@ public class Interactible_Base : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        // checks player layer
         if (collider.gameObject.layer == 8)
         {
-            if (OneTimeUse == false || OneTimeUse == true && UsedSuccesfully == false) // check use count
+            // check one time use count
+            if (OneTimeUse == false || OneTimeUse == true && UsedSuccesfully == false) 
             {
                 // get player refs
                 PlayerRefs = collider.GetComponentInChildren<PlayerReferences>();
@@ -76,37 +78,26 @@ public class Interactible_Base : MonoBehaviour
                 if (OnCooldown == false)
                 {
                     // check what type behaviour
-                    if (InteractibleType == InteractibleType.Generic)
+                    switch (InteractibleType)
                     {
-                        GenericBehaviour();
-                        if (HasACooldown == true)
-                        {
-                            StartCoroutine(ActivateCooldown());
-                        }
+                        case InteractibleType.Generic:
+                            GenericBehaviour();
+                            break;
+                        case InteractibleType.ShowsPointer:
+                            ShowPointerBehaviour();
+                            break;
+                        case InteractibleType.RequiresItem:
+                            RequiresItemBehaviour();
+                            break;
+                        case InteractibleType.InfinitePickups:
+                            ShowPointerBehaviourInfinitePickup();
+                            break;
                     }
-                    else if (InteractibleType == InteractibleType.ShowsPointer)
+
+                    // if cooldown is present
+                    if (HasACooldown == true)
                     {
-                        ShowPointerBehaviour();
-                        if (HasACooldown == true)
-                        {
-                            StartCoroutine(ActivateCooldown());
-                        }
-                    }
-                    else if (InteractibleType == InteractibleType.RequiresItem)
-                    {
-                        RequiresItemBehaviour();
-                        if (HasACooldown == true)
-                        {
-                            StartCoroutine(ActivateCooldown());
-                        }
-                    }
-                    else if (InteractibleType == InteractibleType.InfinitePickups)
-                    {
-                        ShowPointerBehaviourInfinitePickup();
-                        if (HasACooldown == true)
-                        {
-                            StartCoroutine(ActivateCooldown());
-                        }
+                        StartCoroutine(ActivateCooldown());
                     }
                 }
             }
@@ -117,19 +108,17 @@ public class Interactible_Base : MonoBehaviour
     {
         if (collider.gameObject.layer == 8)
         {
-            if (InteractibleType == InteractibleType.ShowsPointer) // if it usually shows a pointer...
+            switch (InteractibleType)
             {
-                HidePointerBehaviour();
-                //Debug.Log(" Exiting ");
-            }
-            else if (InteractibleType == InteractibleType.RequiresItem) // also if it's showing a pointer
-            {
-                HidePointerBehaviour();
-                //Debug.Log(" Exiting ");
-            }
-            else if (InteractibleType == InteractibleType.InfinitePickups) // also this one
-            {
-                HidePointerBehaviour();
+                case InteractibleType.ShowsPointer:
+                    HidePointerBehaviour();
+                    break;
+                case InteractibleType.RequiresItem:
+                    HidePointerBehaviour();
+                    break;
+                case InteractibleType.InfinitePickups:
+                    HidePointerBehaviour();
+                    break;
             }
         }
     }
@@ -261,13 +250,5 @@ public class Interactible_Base : MonoBehaviour
         OnCooldown = false;
     }
 
-
-
-    //private void GetRidOfObject()
-    //{
-    //    var parentInteractible = GetComponentInParent<Rigidbody>();
-
-    //    Destroy(parentInteractible);
-    //}
 
 }

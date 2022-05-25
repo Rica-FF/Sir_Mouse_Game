@@ -36,19 +36,8 @@ public class Pointer_Lord : MonoBehaviour
 
         CurrentPointerIndex = 0;
 
-        UpdatePointerBases();
-
-
-        //// if there are extra pickup behaviours...
-        //foreach (var pickupType in _interactibleScriptOnThisParent.ExtraPickupInteractions)
-        //{
-        //    // remove the TriggerObjects that need requireded items
-        //    if (pickupType != PickupType.None)
-        //    {
-        //        _availablePointerIndexLimit -= 1;
-        //        AvailableTriggerObjects.RemoveAt(AvailableTriggerObjects.Count - 1);           
-        //    }            
-        //}
+        // steps 1 & 2
+        UpdatePointerBases(); 
 
         // 3) if there are extra pickup behaviours, remove them at start
         foreach (var pickupType in _interactibleScriptOnThisParent.ExtraPickupInteractions)
@@ -69,12 +58,6 @@ public class Pointer_Lord : MonoBehaviour
         // 1) get every pointer that has an extra pickup interaction      
         foreach (var pointer in PointerBases)
         {
-            //// add it to the list if it's != none , or if this type has alrdy been added
-            //if (pointer.RequiredItemExtraInteraction != PickupType.None && _interactibleScriptOnThisParent.ExtraPickupInteractions.Contains(pointer.RequiredItemExtraInteraction) == false)
-            //{
-            //    _interactibleScriptOnThisParent.ExtraPickupInteractions.Add(pointer.RequiredItemExtraInteraction);
-            //}
-
             // add it to the list if it's != none 
             if (pointer.RequiredItemExtraInteraction != PickupType.None)
             {
@@ -88,7 +71,6 @@ public class Pointer_Lord : MonoBehaviour
             var pointerTrigger = pointer.transform.GetChild(0).gameObject;
             PointerTriggerObjects.Add(pointerTrigger);
             _pointerIndexLimit += 1;
-
 
             // separate list for when the arrow should be shown
             AvailableTriggerObjects.Add(pointerTrigger);
@@ -115,13 +97,10 @@ public class Pointer_Lord : MonoBehaviour
 
         if (CurrentPointerIndex != 0)
         {
-            //PointerTriggerObjects[CurrentPointerIndex - 1].SetActive(false);
             AvailableTriggerObjects[CurrentPointerIndex - 1].SetActive(false);
         }
         
-        //PointerTriggerObjects[CurrentPointerIndex].SetActive(true);
         AvailableTriggerObjects[CurrentPointerIndex].SetActive(true);            
-        //_currentActivePointerTrigger = PointerTriggerObjects[CurrentPointerIndex];
         _currentActivePointerTrigger = AvailableTriggerObjects[CurrentPointerIndex];
     }
 
@@ -175,8 +154,7 @@ public class Pointer_Lord : MonoBehaviour
             foreach (var pointer in PointerBases)
             {
                 // remove said pointer trigger from available triggers
-
-                //  if i am a pickup pointer OR pickupInfinite OR event which is not part of requiredItem behaviour (! but allow item type none !) OR a hit pointer
+                // -- if i am a pickup pointer OR pickupInfinite OR event which is not part of requiredItem behaviour (! but allow item type none !) OR a hit pointer
                 if (pointer.TypeOfPointer == PointerType.Pickup 
                     || pointer.TypeOfPointer == PointerType.PickupInfinite
                     || _interactibleScriptOnThisParent.InteractibleType != InteractibleType.RequiresItem && pointer.TypeOfPointer == PointerType.Event 
