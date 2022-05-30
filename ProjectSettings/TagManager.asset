@@ -16,6 +16,8 @@ TagManager:
   - Destructable
   - PointerNext
   - Tomatoes
+  - Apples
+  - Onions
   layers:
   - Default
   - TransparentFX

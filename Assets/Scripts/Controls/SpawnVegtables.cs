@@ -6,10 +6,13 @@ using UnityEngine;
 public class SpawnVegtables : MonoBehaviour
 {
     public GameObject _tomatoeKitchen;
+    public GameObject _appleKitchen;
+    public GameObject _onionKitchen;
 
     private GameObject _tomatoeClone;
     private bool pickedUp = false;
     private Ray _ray;
+    private float offset;
 
     private void Update()
     {
@@ -26,13 +29,20 @@ public class SpawnVegtables : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             pickedUp = false;
-            _tomatoeClone.GetComponent<Rigidbody>().useGravity = true;
+
+            if(_tomatoeClone)
+            {
+                _tomatoeClone.transform.GetChild(0).GetComponent<Rigidbody>().useGravity = true;
+                _tomatoeClone.transform.GetChild(0).GetComponent<SphereCollider>().enabled = true;
+            }
             _tomatoeClone = null;
         }
 
         if (pickedUp)
         {
-            _tomatoeClone.transform.position = _ray.origin;
+            offset = Mathf.Clamp((_ray.origin.y - 7) / 2, -1, 2.7f);
+            print(offset);
+            _tomatoeClone.transform.position = _ray.origin + _tomatoeClone.transform.GetChild(0).forward * (12f + offset);
         }
     }
 
@@ -54,7 +64,17 @@ public class SpawnVegtables : MonoBehaviour
         {
             if (hit.collider.tag == "Tomatoes")
             {
-                _tomatoeClone = Instantiate(_tomatoeKitchen, hit.collider.transform.GetChild(0).transform.position, Quaternion.Euler(30, 0, 0));
+                _tomatoeClone = Instantiate(_tomatoeKitchen, hit.collider.transform.position, Quaternion.Euler(0, 0, 0));
+                pickedUp = true;
+            }
+            else if (hit.collider.tag == "Onions")
+            {
+                _tomatoeClone = Instantiate(_onionKitchen, hit.collider.transform.position, Quaternion.Euler(0, 0, 0));
+                pickedUp = true;
+            }
+            else if (hit.collider.tag == "Apples")
+            {
+                _tomatoeClone = Instantiate(_appleKitchen, hit.collider.transform.position, Quaternion.Euler(0, 0, 0));
                 pickedUp = true;
             }
         }
