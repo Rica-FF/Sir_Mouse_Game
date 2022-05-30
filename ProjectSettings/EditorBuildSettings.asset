@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Test_Menu.unity
     guid: b6c456a22a3cccb4ebfa3ddc08c732a8
   - enabled: 1
+    path: Assets/Scenes/Castle_Kitchen.unity
+    guid: 34c7bdccc0d71924b99dc0d3ad892b78
+  - enabled: 1
     path: Assets/Scenes/Cave_Living_C_TEST.unity
     guid: 17f4f6f02b453204e998dd23655b8651
   - enabled: 1
@@ -26,9 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Castle_Basement_2.unity
     guid: 112f75ca7e80ed34da9f359dd561ae7a
-  - enabled: 1
-    path: Assets/Scenes/Castle_Kitchen.unity
-    guid: 34c7bdccc0d71924b99dc0d3ad892b78
   - enabled: 1
     path: Assets/Scenes/NavMeshes/Castle_BathHouse.unity
     guid: b17c66ae651e51f4f8837285dd548f37
