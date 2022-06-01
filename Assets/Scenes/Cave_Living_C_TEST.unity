@@ -11610,6 +11610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9d0fbbae8c316409bf35bcc41ce344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  borders: 1
   target: {fileID: 1721445371}
   offset: {x: 0, y: 0, z: 0}
   smoothFactor: 3.36
@@ -15715,6 +15716,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5518421886121579093, guid: 23c2c59817ab77441a3021636d936cd7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518421886121579093, guid: 23c2c59817ab77441a3021636d936cd7,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518421886121579093, guid: 23c2c59817ab77441a3021636d936cd7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518421886121579093, guid: 23c2c59817ab77441a3021636d936cd7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518421886818162380, guid: 23c2c59817ab77441a3021636d936cd7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518421886818162380, guid: 23c2c59817ab77441a3021636d936cd7,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518421886818162380, guid: 23c2c59817ab77441a3021636d936cd7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518421886818162380, guid: 23c2c59817ab77441a3021636d936cd7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5518421886869743474, guid: 23c2c59817ab77441a3021636d936cd7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -15933,6 +15974,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2191629220408709261, guid: 463c37f48f25b0448acdb115ce3452ad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191629220408709261, guid: 463c37f48f25b0448acdb115ce3452ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191629220408709261, guid: 463c37f48f25b0448acdb115ce3452ad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191629222009667832, guid: 463c37f48f25b0448acdb115ce3452ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5080299434292395732, guid: 463c37f48f25b0448acdb115ce3452ad,
         type: 3}
       propertyPath: m_Name

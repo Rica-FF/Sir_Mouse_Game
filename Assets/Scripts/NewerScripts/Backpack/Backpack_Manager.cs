@@ -5,7 +5,7 @@ using UnityEngine;
 public class Backpack_Manager : MonoBehaviour
 {
     // assign the buttons in inspector
-    public List<GameObject> Pickup_Buttons;
+    public List<GameObject> Backpack_Pickups;
     public List<GameObject> Pickup_Prefabs;
 
     private GameObject _playerReferencesObject;
@@ -33,11 +33,11 @@ public class Backpack_Manager : MonoBehaviour
             Debug.Log(i + " is I");
             if (Backpack_Inventory.ItemsInBackpack[i] == true)
             {
-                Pickup_Buttons[i].SetActive(true);
+                Backpack_Pickups[i].transform.GetChild(0).gameObject.SetActive(true);
             }
             else
             {
-                Pickup_Buttons[i].SetActive(false);
+                Backpack_Pickups[i].transform.GetChild(0).gameObject.SetActive(false);
             }
         }
     }

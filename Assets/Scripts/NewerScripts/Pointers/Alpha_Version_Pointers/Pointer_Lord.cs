@@ -154,11 +154,12 @@ public class Pointer_Lord : MonoBehaviour
             foreach (var pointer in PointerBases)
             {
                 // remove said pointer trigger from available triggers
-                // -- if i am a pickup pointer OR pickupInfinite OR event which is not part of requiredItem behaviour (! but allow item type none !) OR a hit pointer
+                // -- if i am a pickup pointer --OR-- pickupInfinite --OR-- event which is not part of requiredItem behaviour (! but allow item type none !) --OR-- a hit pointer --OR-- type putinbag
                 if (pointer.TypeOfPointer == PointerType.Pickup 
                     || pointer.TypeOfPointer == PointerType.PickupInfinite
                     || _interactibleScriptOnThisParent.InteractibleType != InteractibleType.RequiresItem && pointer.TypeOfPointer == PointerType.Event 
-                    || pointer.TypeOfPointer == PointerType.Hit)
+                    || pointer.TypeOfPointer == PointerType.Hit
+                    || pointer.TypeOfPointer == PointerType.PutInBackpack)
                 {
                     var pointerTriggerOfPickup = pointer.transform.GetChild(0).gameObject;
 
@@ -191,6 +192,12 @@ public class Pointer_Lord : MonoBehaviour
         }
 
 
+        foreach (var obje in AvailableTriggerObjects)
+        {
+            Debug.Log(obje.transform.parent + " these are the pointers");
+        }
+
+        
         // 6) checking for soil plantations
         if (_interactibleScriptOnThisParent.TryGetComponent(out Interactible_Soil soilScript))
         {

@@ -195,14 +195,14 @@ public class Pointer_Base : MonoBehaviour
 
 
 
-    IEnumerator ForceObjectInBag()
+    IEnumerator ForceObjectInBag() // CAM NEED TO BE CHILD OF PLAYER !!!
     {
         // get camera
         Camera camera = PlayerControls.GetComponentInChildren<Camera>();
         // get the world to screen pos of the interactible
         Vector2 screenPosition = camera.WorldToScreenPoint(InteractibleParent.transform.position);
 
-        // make a copy image on an overlay canvas as ui component, on the screen position of the Interactible // CANT COPY SPRITE OBJECT (create according prefabs and add them to list in the canvas, access the list for correct object)      
+        // instantiate a copy image on an overlay canvas    
         _panelUiIcons = FindObjectOfType<BackPack_Minimap_Manager>().transform;
         var canvasToUse = _panelUiIcons.transform.parent;
         Panel_Pickups_Chugger panelPickups = canvasToUse.GetComponentInChildren<Panel_Pickups_Chugger>();
@@ -211,13 +211,7 @@ public class Pointer_Base : MonoBehaviour
         uiCopy.transform.position = screenPosition;
         _uiImageForBag = uiCopy;
 
-        //var targetPosition = canvasToUse.transform.GetChild(0).transform.GetChild(1).GetComponent<RectTransform>().anchoredPosition;
         var targetPosition = canvasToUse.transform.GetChild(0).transform.GetChild(1).transform.position;
-
-        //var im1 = Instantiate(ImageExample, canvasToUse);
-        //im1.transform.position = screenPosition;
-        //var im2 = Instantiate(ImageExample, canvasToUse);
-        //im2.transform.position = targetPosition;
 
         // Calculate distance to target
         float target_Distance = Vector2.Distance(targetPosition, screenPosition);
@@ -239,13 +233,14 @@ public class Pointer_Base : MonoBehaviour
     {
         GetComponent<Interactible_Chugger>().enabled = false;
 
-        // sets bool true, activates animation bag, destroy image object
-        Debug.Log((int)TypeOfPickup);
-        Backpack_Inventory.ItemsInBackpack[((int)TypeOfPickup)] = true;
-
+        // sets bool true
+        Backpack_Inventory.ItemsInBackpack[((int)TypeOfPickup - 1)] = true;
+        // activates animation bag
         _panelUiIcons.GetComponent<Animator>().Play("Popout_Backpack");
-
+        // destroy the UI image
         Destroy(_uiImageForBag);
+
+        // destroy the interactible parent (make sure to have this bug-less)
     }
 
 

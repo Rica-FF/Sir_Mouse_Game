@@ -15501,6 +15501,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 24a6f39cac0b1204f91f728ee3c2fe39, type: 3}
   - {fileID: 8300000, guid: 7d573405a00bff5418d554e6c25f59fd, type: 3}
   - {fileID: 8300000, guid: 29e434342aed0f74f980ab0dad3a0405, type: 3}
+  - {fileID: 8300000, guid: 24a6f39cac0b1204f91f728ee3c2fe39, type: 3}
   mouseControls: 0
   PickedUpObject: 0
   _currentActivePointer: {fileID: 0}

@@ -27,8 +27,6 @@ public class Interactible_Chugger : MonoBehaviour
         // Then add a vertical arc in excess of this.
         nextPos.y += parabola * _arcHeight;
 
-        Debug.Log(nextPos + " NEXT position");
-
         // Continue as before.
         _objectToMove.transform.position = nextPos;
 

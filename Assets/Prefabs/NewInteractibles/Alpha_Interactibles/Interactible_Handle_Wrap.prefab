@@ -19,6 +19,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5080299435068019072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2191629220353708717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c8cc24732cb71479a384a4fb17ad10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfPointer: 2
+  TypeOfPickup: 0
+  RequiredItemExtraInteraction: 0
+  RequiresUseBeforeEventNone: 0
+  RequiresDestination: 0
+  DestinationSpot: {fileID: 0}
+  OrientationPlayer: 0
+  SoundEffects:
+  - {fileID: 8300000, guid: 3550d25c6817fe9439cc8267b3420467, type: 3}
+  - {fileID: 8300000, guid: 7d573405a00bff5418d554e6c25f59fd, type: 3}
+  PlayerControls: {fileID: 0}
+  PlayerRefs: {fileID: 0}
+  Interactible: {fileID: 0}
+  InteractibleParent: {fileID: 0}
+  InteractibleScript: {fileID: 0}
+  InteractibleRigid: {fileID: 0}
+  SpriteObject: {fileID: 0}
+  SparkleObjects: []
+  PointerLord: {fileID: 0}
+  _handleAnimator: {fileID: 5080299435145595077}
 --- !u!1 &5080299433714660971
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,35 +745,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5080299435068019072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2191629220353708717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c8cc24732cb71479a384a4fb17ad10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeOfPointer: 2
-  TypeOfPickup: 0
-  RequiredItemExtraInteraction: 0
-  RequiresDestination: 0
-  DestinationSpot: {fileID: 0}
-  OrientationPlayer: 0
-  SoundEffects:
-  - {fileID: 8300000, guid: 3550d25c6817fe9439cc8267b3420467, type: 3}
-  - {fileID: 8300000, guid: 7d573405a00bff5418d554e6c25f59fd, type: 3}
-  PlayerControls: {fileID: 0}
-  PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
-  InteractibleRigid: {fileID: 0}
-  SparkleObjects: []
-  _handleAnimator: {fileID: 5080299435145595077}
 --- !u!1 &5080299435145595079
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,15 +798,18 @@ MonoBehaviour:
   InteractibleType: 1
   _requiredItemType: 0
   ExtraPickupInteractions: 
+  InteractibleHasBeenUsedToActivateEventNone: 0
   OneTimeUse: 0
   HasACooldown: 0
+  PointerStaysActiveAfterUse: 0
   _cooldownLength: 0
   OnCooldown: 0
   UsedSuccesfully: 0
   _audioClipsGeneric: []
   PlayerRefs: {fileID: 0}
-  _pointerLord: {fileID: 2191629220408709251}
+  PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 2191629222007893705}
+  _infinitelyRespawnablePickupPrefab: {fileID: 0}
   suspicious: {fileID: 0}
 --- !u!135 &5080299435145595076
 SphereCollider:
@@ -1036,6 +1042,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5080299435145595083}
     m_Modifications:
+    - target: {fileID: 579959282899587074, guid: d40cbf162c743d74e97bdb6069234a0f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 891525579368492533, guid: d40cbf162c743d74e97bdb6069234a0f,
         type: 3}
       propertyPath: m_RootOrder
@@ -1150,6 +1161,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905302174006159087, guid: d40cbf162c743d74e97bdb6069234a0f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905302174006159087, guid: d40cbf162c743d74e97bdb6069234a0f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d40cbf162c743d74e97bdb6069234a0f, type: 3}
@@ -1385,18 +1406,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5080299435068019075}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2191629220408709251 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6407182190333591808, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 5080299435068019075}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c631d131871c7e3488c8d4c639f9329d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2191629220408709261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6407182190333591822, guid: ec17b8b5c385c944e862ac4eeca1000e,
