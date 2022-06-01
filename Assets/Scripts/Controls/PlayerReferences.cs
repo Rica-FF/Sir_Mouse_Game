@@ -87,8 +87,6 @@ public class PlayerReferences : MonoBehaviour
                 {
                     if (PointerLords[i] != null)
                     {
-                        //var distance1 = Vector3.Distance(transform.position, closestPointerLord.GetComponentInParent<Rigidbody>().transform.position);
-                        //var distance2 = Vector3.Distance(transform.position, PointerLords[i].GetComponentInParent<Rigidbody>().transform.position);
                         var distance1 = Vector3.Distance(transform.position, closestPointerLord.GetComponentInParent<Interactible_Base>().transform.position);
                         var distance2 = Vector3.Distance(transform.position, PointerLords[i].GetComponentInParent<Interactible_Base>().transform.position);
 
@@ -108,6 +106,7 @@ public class PlayerReferences : MonoBehaviour
                 }
                 closestTrigger.SetActive(true);
 
+
                 // only set Pointer_arrow to true if it has more than 1 available pointer
                 if (closestPointerLordScript.AvailableTriggerObjects.Count > 1)
                 {
@@ -121,7 +120,17 @@ public class PlayerReferences : MonoBehaviour
     }
 
 
-
+    // start this method on start of touchcontrols
+    public void SearchReferencesForObjectInHand()
+    {
+        if (attachedObject != null)
+        {
+            // update available pointer
+            attachedObject.GetComponentInChildren<Pointer_Lord>().UpdateAvailablePointers();
+            // update sparkles
+            StartCoroutine(attachedObject.GetComponentInChildren<Pointer_Lord>().GetComponentInChildren<Pointer_Base>().GetSparkleRefs(true));
+        }
+    }
 
 
 
@@ -182,7 +191,7 @@ public class PlayerReferences : MonoBehaviour
         if (_currentActivePointer.TypeOfPointer == PointerType.PickupInfinite)
         {
             _currentActivePointer.PickupInfiniteParentingLogic();
-            _pointerOfPickUpInHands = attachedObject.GetComponentInChildren<Pointer_Base>();    // wrong here!
+            _pointerOfPickUpInHands = attachedObject.GetComponentInChildren<Pointer_Base>();   
         }
         else
         {
@@ -196,8 +205,6 @@ public class PlayerReferences : MonoBehaviour
     }
     private void DetachObjectAnimationEvent()
     {
-        Debug.Log(_pointerOfPickUpInHands + "keke");
-
         _pointerOfPickUpInHands.DropPickupParentingLogic();
         _pointerOfPickUpInHands = null;
     }

@@ -134,7 +134,7 @@ public class Pointer_Base : MonoBehaviour
 
         PlayerRefs.PickedUpObject = pickup;
 
-        StartCoroutine(GetSparkleRefs());
+        StartCoroutine(GetSparkleRefs(false));
     }
 
     public virtual void PickupItemInfiniteWrap(PickupType pickup)
@@ -252,9 +252,9 @@ public class Pointer_Base : MonoBehaviour
         _playerAudioSource = PlayerRefs.GetComponent<AudioSource>();
     }
 
-    public IEnumerator GetSparkleRefs()
+    public IEnumerator GetSparkleRefs(bool isChangingLevel)
     {
-        DeActivateSparkles();
+        DeActivateSparkles(isChangingLevel);
 
         yield return new WaitForSeconds(1f);
 
@@ -304,7 +304,7 @@ public class Pointer_Base : MonoBehaviour
 
     public IEnumerator GetSparkleRefsInfiniteSpawner(GameObject pickupInMountain)
     {
-        DeActivateSparkles();
+        DeActivateSparkles(false);
 
         // getting the pointer_base which is of type pickup, in the infinite spawner
         var bases = pickupInMountain.GetComponentsInChildren<Pointer_Base>();
@@ -370,16 +370,24 @@ public class Pointer_Base : MonoBehaviour
             sparkle.SetActive(true);
         }
     }
-    public void DeActivateSparkles()
+    public void DeActivateSparkles(bool isChangingLevel)
     {
-        // also call this when a pickup is thrown 
-        foreach (var sparkle in SparkleObjects)
+        if (isChangingLevel == true)
         {
-            sparkle.SetActive(false);
+            SparkleObjects.Clear();
+            PointerLord.SparkleObjectsAll.Clear();
         }
+        else
+        {
+            // also call this when a pickup is thrown 
+            foreach (var sparkle in SparkleObjects)
+            {
+                sparkle.SetActive(false);
+            }
 
-        SparkleObjects.Clear();
-        PointerLord.SparkleObjectsAll.Clear();
+            SparkleObjects.Clear();
+            PointerLord.SparkleObjectsAll.Clear();
+        }
     }
     public void ActivateSparklesInfinite(Pointer_Base pickupPointerInMountain)
     {
@@ -450,6 +458,10 @@ public class Pointer_Base : MonoBehaviour
         PlayerRefs.GetComponent<AudioSource>().PlayOneShot(PlayerRefs.playerSounds[1]);
 
         // re-search the PlayerControls when entering a new scene !!!!!
+        if (PlayerControls == null)
+        {
+            PlayerControls = PlayerRefs.GetComponentInParent<PlayerTouchControls>();
+        }
 
         InteractibleParent.transform.position = new Vector3(PlayerControls.transform.position.x, 0, PlayerControls.transform.position.z);
         InteractibleParent.transform.localRotation = Quaternion.Euler(0, 0, 0);

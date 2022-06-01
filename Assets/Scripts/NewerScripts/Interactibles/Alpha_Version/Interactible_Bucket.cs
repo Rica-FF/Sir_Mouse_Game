@@ -89,7 +89,7 @@ public class Interactible_Bucket : Interactible_Base
             // set type
             foreach (var pointerBase in PointerLord.PointerBases)
             {
-                if (pointerBase.TypeOfPickup == PickupType.Bucket)
+                if (pointerBase.TypeOfPickup == PickupType.Bucket && pointerBase.TypeOfPointer == PointerType.Pickup)
                 {
                     pointerBase.TypeOfPickup = PickupType.BucketWater;
                     PlayerRefs.PickedUpObject = PickupType.BucketWater;
@@ -104,7 +104,7 @@ public class Interactible_Bucket : Interactible_Base
             // set type
             foreach (var pointerBase in PointerLord.PointerBases)
             {
-                if (pointerBase.TypeOfPickup == PickupType.BucketWater)
+                if (pointerBase.TypeOfPickup == PickupType.BucketWater && pointerBase.TypeOfPointer == PointerType.Pickup)
                 {
                     pointerBase.TypeOfPickup = PickupType.Bucket;
                     PlayerRefs.PickedUpObject = PickupType.Bucket;
@@ -116,6 +116,6 @@ public class Interactible_Bucket : Interactible_Base
         // update available pointer
         PointerLord.UpdateAvailablePointers();
         // update sparkles
-        StartCoroutine(bucketPointer.GetSparkleRefs());
+        StartCoroutine(bucketPointer.GetSparkleRefs(false));  
     }
 }

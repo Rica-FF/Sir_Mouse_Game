@@ -457,6 +457,7 @@ public class PlayerTouchControls : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         _playerRefs = GetComponentInChildren<PlayerReferences>();
+        _playerRefs.SearchReferencesForObjectInHand();
     }
     IEnumerator SetActionBool()
     {
