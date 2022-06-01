@@ -10,5 +10,6 @@ public enum PickupType
     BucketWater,
     Coin,
     Puzzle,
-    Key
+    Key,
+    TutorialPickup
 };

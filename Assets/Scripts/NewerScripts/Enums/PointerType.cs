@@ -8,5 +8,6 @@ public enum PointerType
     Pickup,
     Event,
     PickupInfinite,
-    ChangeLevel
+    ChangeLevel,
+    PutInBackpack
 };

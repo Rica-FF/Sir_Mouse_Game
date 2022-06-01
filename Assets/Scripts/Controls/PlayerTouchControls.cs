@@ -570,11 +570,13 @@ public class PlayerTouchControls : MonoBehaviour
 
     private void DropPickUpWrap()
     {
+        // sparkles need to be re-invigorated when entering new area !!!!
+
         // get the pointer lord -> to get the sparkle objects -> disable all sparkle objects
-        foreach (var sparkle in _playerRefs.attachedObject.GetComponentInChildren<Pointer_Lord>().SparkleObjectsAll)
-        {
-            sparkle.SetActive(false);
-        }
+        //foreach (var sparkle in _playerRefs.attachedObject.GetComponentInChildren<Pointer_Lord>().SparkleObjectsAll)
+        //{
+        //    sparkle.SetActive(false);
+        //}
 
         // plays the item drop animation
         _playerRefs.GetComponent<Animator>().SetTrigger("DropCoin");

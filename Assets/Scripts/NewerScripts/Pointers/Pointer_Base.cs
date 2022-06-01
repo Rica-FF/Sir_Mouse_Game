@@ -49,6 +49,9 @@ public class Pointer_Base : MonoBehaviour
     private Interactible_Base _pickupFromInfiniteSupply;
     private GameObject _pickupFromInfiniteSupplyObject;
 
+    //public GameObject ImageExample;
+    private GameObject _uiImageForBag;
+    private Transform _panelUiIcons;
 
     private void Awake()
     {
@@ -92,8 +95,12 @@ public class Pointer_Base : MonoBehaviour
             case PointerType.ChangeLevel:
                 ChangeLevel();
                 break;
+            case PointerType.PutInBackpack:
+                PutItemInBackpack();
+                break;
         }
     }
+
 
 
     private void HitSword()
@@ -178,7 +185,68 @@ public class Pointer_Base : MonoBehaviour
         interactibleScript.LoadLevelSlow();
     }
 
+    private void PutItemInBackpack()
+    {
+        // (play animation on the interactible that flings it into the backpack)
+        StartCoroutine(ForceObjectInBag());
+        // after entering the backpack, set corresponding bool to true on the static inventory class
+    }
 
+
+
+
+    IEnumerator ForceObjectInBag()
+    {
+        // get camera
+        Camera camera = PlayerControls.GetComponentInChildren<Camera>();
+        // get the world to screen pos of the interactible
+        Vector2 screenPosition = camera.WorldToScreenPoint(InteractibleParent.transform.position);
+
+        // make a copy image on an overlay canvas as ui component, on the screen position of the Interactible // CANT COPY SPRITE OBJECT (create according prefabs and add them to list in the canvas, access the list for correct object)      
+        _panelUiIcons = FindObjectOfType<BackPack_Minimap_Manager>().transform;
+        var canvasToUse = _panelUiIcons.transform.parent;
+        Panel_Pickups_Chugger panelPickups = canvasToUse.GetComponentInChildren<Panel_Pickups_Chugger>();
+
+        GameObject uiCopy = Instantiate(panelPickups.PickupImagePrefabs[((int)TypeOfPickup) - 1], panelPickups.transform);
+        uiCopy.transform.position = screenPosition;
+        _uiImageForBag = uiCopy;
+
+        //var targetPosition = canvasToUse.transform.GetChild(0).transform.GetChild(1).GetComponent<RectTransform>().anchoredPosition;
+        var targetPosition = canvasToUse.transform.GetChild(0).transform.GetChild(1).transform.position;
+
+        //var im1 = Instantiate(ImageExample, canvasToUse);
+        //im1.transform.position = screenPosition;
+        //var im2 = Instantiate(ImageExample, canvasToUse);
+        //im2.transform.position = targetPosition;
+
+        // Calculate distance to target
+        float target_Distance = Vector2.Distance(targetPosition, screenPosition);
+        float speed = 400f;
+        float arcHeight = 0.5f;
+        float _stepScale = 0f;
+        float _progress = 0f;
+        _stepScale = speed / target_Distance;
+        arcHeight = arcHeight * target_Distance;
+
+        Interactible_Chugger chuggScript = GetComponent<Interactible_Chugger>();
+        chuggScript.AllocateValues(speed, arcHeight, _stepScale, _progress, screenPosition, targetPosition, uiCopy);
+        chuggScript.enabled = true;
+
+        yield return null;
+    }
+
+    public void ImageArrivedInBag()
+    {
+        GetComponent<Interactible_Chugger>().enabled = false;
+
+        // sets bool true, activates animation bag, destroy image object
+        Debug.Log((int)TypeOfPickup);
+        Backpack_Inventory.ItemsInBackpack[((int)TypeOfPickup)] = true;
+
+        _panelUiIcons.GetComponent<Animator>().Play("Popout_Backpack");
+
+        Destroy(_uiImageForBag);
+    }
 
 
 
@@ -385,6 +453,8 @@ public class Pointer_Base : MonoBehaviour
 
         // play the sound effect thats attached on the player // get audiosource - source.play(sounds[1])
         PlayerRefs.GetComponent<AudioSource>().PlayOneShot(PlayerRefs.playerSounds[1]);
+
+        // re-search the PlayerControls when entering a new scene !!!!!
 
         InteractibleParent.transform.position = new Vector3(PlayerControls.transform.position.x, 0, PlayerControls.transform.position.z);
         InteractibleParent.transform.localRotation = Quaternion.Euler(0, 0, 0);
