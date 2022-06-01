@@ -56,6 +56,7 @@ public class PlayerTouchControls : MonoBehaviour
     public bool GettingToDestination;
 
     private AudioSource _audioSource;
+    private bool _clickedOnTapable;
 
 
 
@@ -96,6 +97,13 @@ public class PlayerTouchControls : MonoBehaviour
         ZoomLogic();
 
         SetRunAimation();
+
+        // the moment i let go of the mousclick, enable walking (only when i clicked on tap-able)
+        if (_clickedOnTapable == true && walkingEnabled == false && Input.GetMouseButtonUp(0))
+        {
+            walkingEnabled = true;
+            _clickedOnTapable = false;
+        }
     }
 
     private void ZoomLogic()
@@ -209,11 +217,10 @@ public class PlayerTouchControls : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~IgnoreMe) && !EventSystem.current.IsPointerOverGameObject())
         {
             if (hit.collider.tag == "Player" && player.GetComponent<PlayerReferences>().attachedObject) // PLAYER CLICK
-            {                        
+            {
                 DropPickUpWrap();
             }
-
-            if (hit.collider.gameObject.CompareTag("Pointer") && !clickedOnPointer) // POINTER ACTIVATE
+            else if (hit.collider.gameObject.CompareTag("Pointer") && !clickedOnPointer) // POINTER ACTIVATE
             {
                 var pointer = hit.collider.GetComponentInParent<Pointer_Base>();
                 var InteractibleScript = pointer.GetComponentInParent<Interactible_Base>();
@@ -259,12 +266,12 @@ public class PlayerTouchControls : MonoBehaviour
 
                 // turns the pointer off
                 yield return new WaitForSeconds(0.5f);
-            
+
                 if (InteractibleScript.PointerStaysActiveAfterUse == false)
                 {
                     pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();
-                }    
-                
+                }
+
             }
             else if (hit.collider.gameObject.CompareTag("PointerNext") && !clickedOnPointer)  // SWAP POINTER
             {
@@ -281,6 +288,13 @@ public class PlayerTouchControls : MonoBehaviour
                 // turns the pointer off (maybe remove it from the list too)      
                 //pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();               
 
+            }
+            else if (hit.collider.gameObject.layer == 11)  // TAP-ABLE CLICK 
+            {
+                var tapableScript = hit.collider.GetComponentInParent<Tapable_Base>();
+                tapableScript.PlayTapEvent();
+
+                _clickedOnTapable = true;
             }
             // If not pressed on a pointer, move to pointed location
             else if (!clickedOnPointer && hit.collider.tag != "Player")

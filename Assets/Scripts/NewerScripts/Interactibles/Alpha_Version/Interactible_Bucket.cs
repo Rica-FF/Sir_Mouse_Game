@@ -95,6 +95,11 @@ public class Interactible_Bucket : Interactible_Base
                     PlayerRefs.PickedUpObject = PickupType.BucketWater;
                     bucketPointer = pointerBase;
                 }
+
+                if (pointerBase.TypeOfPointer == PointerType.PutInBackpack)
+                {
+                    pointerBase.TypeOfPickup = PickupType.BucketWater;
+                }
             }
         }
         else
@@ -109,6 +114,11 @@ public class Interactible_Bucket : Interactible_Base
                     pointerBase.TypeOfPickup = PickupType.Bucket;
                     PlayerRefs.PickedUpObject = PickupType.Bucket;
                     bucketPointer = pointerBase;
+                }
+
+                if (pointerBase.TypeOfPointer == PointerType.PutInBackpack)
+                {
+                    pointerBase.TypeOfPickup = PickupType.BucketWater;
                 }
             }
         }

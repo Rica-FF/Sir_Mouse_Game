@@ -195,12 +195,10 @@ public class Pointer_Base : MonoBehaviour
 
 
 
-    IEnumerator ForceObjectInBag() // CAM NEED TO BE CHILD OF PLAYER !!!
+    IEnumerator ForceObjectInBag() 
     {
-        // get camera
-        Camera camera = PlayerControls.GetComponentInChildren<Camera>();
         // get the world to screen pos of the interactible
-        Vector2 screenPosition = camera.WorldToScreenPoint(InteractibleParent.transform.position);
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(InteractibleParent.transform.position); 
 
         // instantiate a copy image on an overlay canvas    
         _panelUiIcons = FindObjectOfType<BackPack_Minimap_Manager>().transform;
