@@ -18,6 +18,9 @@ TagManager:
   - Tomatoes
   - Apples
   - Onions
+  - Floor
+  - ingredient
+  - Milk
   layers:
   - Default
   - TransparentFX
