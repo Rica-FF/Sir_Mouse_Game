@@ -10,9 +10,14 @@ public class Pointer_Cooking : Pointer_Base
     public GameObject camDestination;
     public GameObject mainCamera;
     public GameObject scroll;
-    public List<Sprite> vegtables = new List<Sprite>();
+    public List<Sprite> ingredients = new List<Sprite>();
+    public Sprite milkVase;
 
+    // PRIVATE
+    private int _dishState = 0;
     private Animator _scrollAnim;
+    private int _ingredientIndex;
+    private int _amount;
 
     private void Start()
     {
@@ -40,7 +45,7 @@ public class Pointer_Cooking : Pointer_Base
     IEnumerator FirstRecipe()
     {
         yield return new WaitForSeconds(1);
-        ShowRecipe();
+        ShowInstruction();
     }
 
     public void AttachChefHat()
@@ -55,27 +60,86 @@ public class Pointer_Cooking : Pointer_Base
         chefHat.transform.SetParent(null);
         chefHat.transform.SetParent(PlayerRefs.playerHead.transform);
     }
-
-    public void ShowRecipe()
+    IEnumerator ResetScroll()
     {
-        Sprite temp = vegtables[Random.Range(0, vegtables.Count)];
-        scroll.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = temp;
-        scroll.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = temp;
-        scroll.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = temp;
+        _scrollAnim.SetTrigger("Close");
+        yield return new WaitForSeconds(1);
+        ShowInstruction();
+    }
 
-        int tempIndex = Random.Range(0, 3);
-
-        switch(tempIndex)
+    public void ShowInstruction()
+    {
+        if (_dishState < 3 || _dishState > 3 && _dishState < 6)
         {
-            case 0:
+            ShowIngredient();
+        }
+        else if (_dishState == 3)
+        {
+            scroll.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = milkVase;
+            _scrollAnim.SetTrigger("1-Item");
+        }
+
+        _dishState++;
+    }
+
+    private void ShowIngredient()
+    {
+        _ingredientIndex = Random.Range(0, ingredients.Count);
+        Sprite tempSprite = ingredients[_ingredientIndex];
+        scroll.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = tempSprite;
+        scroll.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = tempSprite;
+        scroll.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = tempSprite;
+
+        _amount = Random.Range(1, 4);
+
+        switch(_amount)
+        {
+            case 1:
             _scrollAnim.SetTrigger("1-Item");
                 break;
-            case 1:
+            case 2:
                 _scrollAnim.SetTrigger("2-Items");
                 break;
-            case 2:
+            case 3:
                 _scrollAnim.SetTrigger("3-Items");
                 break;
         }
+
     }
+
+    public void CheckIngredients(KettleContainer kettleContainer)
+    {
+
+        int amountFound = 0;
+        for (int i = 0; i < kettleContainer.contaminants.Count; i++)
+        {
+            switch (_ingredientIndex)
+            {
+                case 0:
+                    if (kettleContainer.contaminants[i] == "Tom")
+                    {
+                        amountFound++;
+                    }
+                    break;
+                case 1:
+                    if (kettleContainer.contaminants[i] == "App")
+                    {
+                        amountFound++;
+                    }
+                    break;
+                case 2:
+                    if (kettleContainer.contaminants[i] == "Oni")
+                    {
+                        amountFound++;
+                    }
+                    break;
+            }
+            if (amountFound == _amount)
+            {
+                kettleContainer.contaminants.Clear();
+                StartCoroutine(ResetScroll());
+            }
+        }
+    }
+
 }

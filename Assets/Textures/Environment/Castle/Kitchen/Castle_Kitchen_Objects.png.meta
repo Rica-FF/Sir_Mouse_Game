@@ -26,6 +26,12 @@ TextureImporter:
   - first:
       213: 3822762076894786988
     second: Castle_Kitchen_Objects_7
+  - first:
+      213: -5145624066091234644
+    second: Castle_Kitchen_Objects_8
+  - first:
+      213: -7856595632241302612
+    second: Castle_Kitchen_Objects_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -155,7 +161,7 @@ TextureImporter:
         width: 728
         height: 628
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,7 +182,7 @@ TextureImporter:
         width: 258
         height: 344
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,7 +203,7 @@ TextureImporter:
         width: 152
         height: 227
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,7 +224,7 @@ TextureImporter:
         width: 186
         height: 266
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,12 +240,12 @@ TextureImporter:
       name: Castle_Kitchen_Objects_4
       rect:
         serializedVersion: 2
-        x: 269
-        y: 125
-        width: 205
-        height: 187
+        x: 237
+        y: 163
+        width: 218
+        height: 193
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,7 +266,7 @@ TextureImporter:
         width: 154
         height: 208
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,7 +287,7 @@ TextureImporter:
         width: 144
         height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,7 +308,7 @@ TextureImporter:
         width: 112
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -310,6 +316,48 @@ TextureImporter:
       bones: []
       spriteID: ca5f526eadd2d0530800000000000000
       internalID: 3822762076894786988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Kitchen_Objects_8
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 33
+        width: 57
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa4ee0bc221798b0800000000000000
+      internalID: -5145624066091234644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_Kitchen_Objects_9
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 3
+        width: 132
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca32f5406e3c7f290800000000000000
+      internalID: -7856595632241302612
       vertices: []
       indices: 
       edges: []

@@ -41,7 +41,6 @@ public class SpawnVegtables : MonoBehaviour
         if (pickedUp)
         {
             offset = Mathf.Clamp((_ray.origin.y - 7) / 2, -1, 2.7f);
-            print(offset);
             _tomatoeClone.transform.position = _ray.origin + _tomatoeClone.transform.GetChild(0).forward * (12f + offset);
         }
     }
