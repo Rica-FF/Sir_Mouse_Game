@@ -100,18 +100,18 @@ public class PlayerTouchControls : MonoBehaviour
 
     private void ZoomLogic()
     {
-        if (Camera.main.orthographicSize > 5 && Camera.main.orthographicSize < 12)
-        {
-            Camera.main.orthographicSize += Input.mouseScrollDelta.y / 10;
-        }
-        else if (Camera.main.orthographicSize < 5)
-        {
-            Camera.main.orthographicSize = 6.5f;
-        }
-        else if (Camera.main.orthographicSize > 12)
-        {
-            Camera.main.orthographicSize = 11.5f;
-        }
+        //if (Camera.main.orthographicSize > 5 && Camera.main.orthographicSize < 12)
+        //{
+        //    Camera.main.orthographicSize += Input.mouseScrollDelta.y / 10;
+        //}
+        //else if (Camera.main.orthographicSize < 5)
+        //{
+        //    Camera.main.orthographicSize = 5f;
+        //}
+        //else if (Camera.main.orthographicSize > 12)
+        //{
+        //    Camera.main.orthographicSize = 11.5f;
+        //}
     }
     private void MovementLogic()
     {

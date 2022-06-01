@@ -14,6 +14,10 @@ TagManager:
   - AppleTree
   - RedHead
   - Destructable
+  - PointerNext
+  - Tomatoes
+  - Apples
+  - Onions
   layers:
   - Default
   - TransparentFX
