@@ -9,7 +9,7 @@ public class KettleContainer : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.tag == "ingredient")
+        if (collider.tag == "Vegetable")
         {
             contaminants.Add(collider.transform.parent.name.Remove(3));
             pointer_Cooking.CheckIngredients(GetComponent<KettleContainer>());

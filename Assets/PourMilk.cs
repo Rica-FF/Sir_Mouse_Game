@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PourMilk : MonoBehaviour
 {
+    public Pointer_Cooking pointer_Cooking;
+
     private bool pickedUp = false;
     private Ray _ray;
     private float _offset;
@@ -62,6 +64,17 @@ public class PourMilk : MonoBehaviour
 
     private void PouringMilk()
     {
-
+        if (pointer_Cooking.dishState == 4)
+        {
+            if (pointer_Cooking.milkVolume < 1)
+            {
+                pointer_Cooking.milkVolume += 0.1f;
+            }
+            else
+            {
+                pointer_Cooking.ShowInstruction();
+                pointer_Cooking.milkVolume = 0;
+            }
+        }
     }
 }

@@ -21,6 +21,9 @@ TagManager:
   - Floor
   - ingredient
   - Milk
+  - StirringArea
+  - Ingredients
+  - Vegetable
   layers:
   - Default
   - TransparentFX
