@@ -60504,7 +60504,7 @@ MonoBehaviour:
   CanBeMoved: 1
   _layersToCastOn:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4096
 --- !u!1 &6033315987454134816
 GameObject:
   m_ObjectHideFlags: 0

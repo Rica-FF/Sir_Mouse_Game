@@ -194,12 +194,9 @@ public class Pointer_Base : MonoBehaviour
     {
         // (play animation on the interactible that flings it into the backpack)
         StartCoroutine(ForceObjectInBag());
-        // after entering the backpack, set corresponding bool to true on the static inventory class
+        // disable the interactible sprite
+        Interactible.transform.GetChild(0).gameObject.SetActive(false);
     }
-
-
-
-
     IEnumerator ForceObjectInBag() 
     {
         // get the world to screen pos of the interactible
@@ -214,6 +211,7 @@ public class Pointer_Base : MonoBehaviour
         uiCopy.transform.position = screenPosition;
         _uiImageForBag = uiCopy;
 
+        // the position of the bag
         var targetPosition = canvasToUse.transform.GetChild(0).transform.GetChild(1).transform.position;
 
         // Calculate distance to target
@@ -231,7 +229,6 @@ public class Pointer_Base : MonoBehaviour
 
         yield return null;
     }
-
     public void ImageArrivedInBag()
     {
         GetComponent<Interactible_Chugger>().enabled = false;
@@ -242,8 +239,8 @@ public class Pointer_Base : MonoBehaviour
         _panelUiIcons.GetComponent<Animator>().Play("Popout_Backpack");
         // destroy the UI image
         Destroy(_uiImageForBag);
-
-        // destroy the interactible parent (make sure to have this bug-less)
+        // destroys the interactible
+        Destroy(InteractibleParent);
     }
 
 

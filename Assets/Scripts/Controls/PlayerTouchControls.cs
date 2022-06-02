@@ -269,11 +269,11 @@ public class PlayerTouchControls : MonoBehaviour
                 pointer.ActivateInteractibleAction();
 
                 // turns the pointer off
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.1f);
 
                 if (InteractibleScript.PointerStaysActiveAfterUse == false)
                 {
-                    pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();
+                   pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();            
                 }
 
             }

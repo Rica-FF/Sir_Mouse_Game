@@ -64,6 +64,68 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!1 &2145825756407970383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6164646263942700403}
+  - component: {fileID: 250295796629297831}
+  m_Layer: 5
+  m_Name: BackpackManager_Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6164646263942700403
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145825756407970383}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5518421886869743474}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &250295796629297831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145825756407970383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7a6748c40a39042aec1c294aca3268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Backpack_Pickups:
+  - {fileID: 5518421886692359463}
+  - {fileID: 5518421887185665349}
+  - {fileID: 5897309504730717137}
+  - {fileID: 5518421887263410234}
+  - {fileID: 2490490545983900981}
+  - {fileID: 6961345680371441167}
+  Pickup_Prefabs:
+  - {fileID: 5736038821047274251, guid: f5da182b31bdba844802243eef01ee7e, type: 3}
+  - {fileID: 97468616556675796, guid: 5fe2c00d612828a47b9399be8e904bfa, type: 3}
+  - {fileID: 97468616556675796, guid: 1bcf9b7cef08c1e47969614fcdf8dff8, type: 3}
+  - {fileID: 3568739134389685665, guid: ae1cd3d03aeb32648b1fb652485c160b, type: 3}
+  - {fileID: 5343379494654586468, guid: d40cbf162c743d74e97bdb6069234a0f, type: 3}
+  - {fileID: 3451815859098469554, guid: b519145b3eff6aa408d8f2e78c2637a6, type: 3}
 --- !u!1 &2167804148592046512
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,8 +138,9 @@ GameObject:
   - component: {fileID: 3668409994065205096}
   - component: {fileID: 6738209834017354437}
   - component: {fileID: 5675126563790816173}
+  - component: {fileID: 2078605644659894356}
   m_Layer: 5
-  m_Name: Backpack_Pickup_5_Button
+  m_Name: Backpack_Pickup_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +245,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5518421886985686899}
+      - m_Target: {fileID: 250295796629297831}
         m_MethodName: DropPickup
         m_Mode: 3
         m_Arguments:
@@ -193,6 +256,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!111 &2078605644659894356
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2167804148592046512}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  - {fileID: 7400000, guid: 886bba5bd38c29045a60e0c75658a33f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2490490545983900981
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +348,153 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2885426500921201617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3850359361189367754}
+  - component: {fileID: 8832822748476404617}
+  - component: {fileID: 544298780234519337}
+  m_Layer: 5
+  m_Name: AudioSource_Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3850359361189367754
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885426500921201617}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5518421886869743474}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &8832822748476404617
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885426500921201617}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &544298780234519337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885426500921201617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dadb2c62d7cc30e4a85989e0f81fcd62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundEffectsUI:
+  - {fileID: 8300000, guid: 46938a3f0ecb5a54ea40657e3cab0d2e, type: 3}
 --- !u!1 &3039205065727697810
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,8 +764,9 @@ GameObject:
   - component: {fileID: 526313165504579963}
   - component: {fileID: 5638723549719265740}
   - component: {fileID: 2178024430582628291}
+  - component: {fileID: 8476812313267480905}
   m_Layer: 5
-  m_Name: Backpack_Pickup_6_Button
+  m_Name: Backpack_Pickup_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -643,7 +871,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5518421886985686899}
+      - m_Target: {fileID: 250295796629297831}
         m_MethodName: DropPickup
         m_Mode: 3
         m_Arguments:
@@ -654,6 +882,75 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!111 &8476812313267480905
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4248371954124575130}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  - {fileID: 7400000, guid: 886bba5bd38c29045a60e0c75658a33f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &4455909206942688616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7456414280659979345}
+  - component: {fileID: 4232691973172961134}
+  m_Layer: 5
+  m_Name: MinimapManager_Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7456414280659979345
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4455909206942688616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5518421886869743474}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4232691973172961134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4455909206942688616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be4d2017cb0c4b4d9e243d3edcb7628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Minimap_Buttons:
+  - {fileID: 5518421885596889120}
+  - {fileID: 5518421886141963148}
+  - {fileID: 5518421886126388670}
 --- !u!1 &5518421885596889120
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,7 +1213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel_Minimap: {fileID: 5518421886719303073}
   Panel_Backpack: {fileID: 5518421886985686911}
-  BackpackManagerScript: {fileID: 5518421886985686899}
+  BackpackManagerScript: {fileID: 250295796629297831}
 --- !u!95 &2220911086493850238
 Animator:
   serializedVersion: 3
@@ -1793,7 +2090,6 @@ GameObject:
   - component: {fileID: 5518421886719303074}
   - component: {fileID: 5518421886719303076}
   - component: {fileID: 5518421886719303075}
-  - component: {fileID: 5518421886719303077}
   m_Layer: 5
   m_Name: Panel_Open_Minimap
   m_TagString: Untagged
@@ -1861,22 +2157,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5518421886719303077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5518421886719303073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be4d2017cb0c4b4d9e243d3edcb7628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Minimap_Buttons:
-  - {fileID: 5518421885596889120}
-  - {fileID: 5518421886141963148}
-  - {fileID: 5518421886126388670}
 --- !u!1 &5518421886818162379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,6 +2237,9 @@ RectTransform:
   - {fileID: 5518421886985686896}
   - {fileID: 5966284725859092359}
   - {fileID: 1889425554160161185}
+  - {fileID: 7456414280659979345}
+  - {fileID: 6164646263942700403}
+  - {fileID: 3850359361189367754}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2101,8 +2384,9 @@ GameObject:
   - component: {fileID: 5518421886916542580}
   - component: {fileID: 5518421886916542579}
   - component: {fileID: 5518421886916542578}
+  - component: {fileID: 7097645855595872107}
   m_Layer: 5
-  m_Name: Backpack_Pickup_2_Button
+  m_Name: Backpack_Pickup_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2207,7 +2491,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5518421886985686899}
+      - m_Target: {fileID: 250295796629297831}
         m_MethodName: DropPickup
         m_Mode: 3
         m_Arguments:
@@ -2218,6 +2502,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!111 &7097645855595872107
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518421886916542576}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  - {fileID: 7400000, guid: 886bba5bd38c29045a60e0c75658a33f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5518421886985686911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,7 +2530,6 @@ GameObject:
   - component: {fileID: 5518421886985686896}
   - component: {fileID: 5518421886985686898}
   - component: {fileID: 5518421886985686897}
-  - component: {fileID: 5518421886985686899}
   m_Layer: 5
   m_Name: Panel_Open_Backpack
   m_TagString: Untagged
@@ -2296,33 +2596,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5518421886985686899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5518421886985686911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad7a6748c40a39042aec1c294aca3268, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Backpack_Pickups:
-  - {fileID: 5518421886692359463}
-  - {fileID: 5518421887185665349}
-  - {fileID: 5897309504730717137}
-  - {fileID: 5518421887263410234}
-  - {fileID: 2490490545983900981}
-  - {fileID: 6961345680371441167}
-  Pickup_Prefabs:
-  - {fileID: 5736038821047274251, guid: f5da182b31bdba844802243eef01ee7e, type: 3}
-  - {fileID: 97468616556675796, guid: 5fe2c00d612828a47b9399be8e904bfa, type: 3}
-  - {fileID: 97468616556675796, guid: 1bcf9b7cef08c1e47969614fcdf8dff8, type: 3}
-  - {fileID: 3568739134389685665, guid: ae1cd3d03aeb32648b1fb652485c160b, type: 3}
-  - {fileID: 5343379494654586468, guid: d40cbf162c743d74e97bdb6069234a0f, type: 3}
-  - {fileID: 3451815859098469554, guid: b519145b3eff6aa408d8f2e78c2637a6, type: 3}
-  _bmManager: {fileID: 5518421885704791828}
 --- !u!1 &5518421887055304012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,8 +2608,9 @@ GameObject:
   - component: {fileID: 5518421887055304000}
   - component: {fileID: 5518421887055304015}
   - component: {fileID: 5518421887055304014}
+  - component: {fileID: 4990905663780343883}
   m_Layer: 5
-  m_Name: Backpack_Pickup_4_Button
+  m_Name: Backpack_Pickup_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2441,7 +2715,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5518421886985686899}
+      - m_Target: {fileID: 250295796629297831}
         m_MethodName: DropPickup
         m_Mode: 3
         m_Arguments:
@@ -2452,6 +2726,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!111 &4990905663780343883
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518421887055304012}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  - {fileID: 7400000, guid: 886bba5bd38c29045a60e0c75658a33f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5518421887185665349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,8 +2830,9 @@ GameObject:
   - component: {fileID: 5518421887253955054}
   - component: {fileID: 5518421887253955053}
   - component: {fileID: 5518421887253955052}
+  - component: {fileID: 5007089898628849267}
   m_Layer: 5
-  m_Name: Backpack_Pickup_1_Button
+  m_Name: Backpack_Pickup_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2645,7 +2937,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5518421886985686899}
+      - m_Target: {fileID: 250295796629297831}
         m_MethodName: DropPickup
         m_Mode: 3
         m_Arguments:
@@ -2656,6 +2948,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!111 &5007089898628849267
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518421887253955050}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  - {fileID: 7400000, guid: 886bba5bd38c29045a60e0c75658a33f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5518421887263410234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,8 +3276,9 @@ GameObject:
   - component: {fileID: 7759037075901302484}
   - component: {fileID: 3905154968447037138}
   - component: {fileID: 6417844327627273977}
+  - component: {fileID: 2287945061585199409}
   m_Layer: 5
-  m_Name: Backpack_Pickup_3_Button
+  m_Name: Backpack_Pickup_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3075,7 +3385,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5518421886985686899}
+      - m_Target: {fileID: 250295796629297831}
         m_MethodName: DropPickup
         m_Mode: 3
         m_Arguments:
@@ -3086,6 +3396,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!111 &2287945061585199409
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7778031502143380521}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e03bf4ca67bdbac45984d50f0b8d806f, type: 2}
+  - {fileID: 7400000, guid: 886bba5bd38c29045a60e0c75658a33f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8360661813969524538
 GameObject:
   m_ObjectHideFlags: 0

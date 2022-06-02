@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Test_Menu.unity
     guid: b6c456a22a3cccb4ebfa3ddc08c732a8
   - enabled: 1
-    path: Assets/Scenes/Castle_Kitchen.unity
-    guid: 34c7bdccc0d71924b99dc0d3ad892b78
-  - enabled: 1
     path: Assets/Scenes/Cave_Living_C_TEST.unity
     guid: 17f4f6f02b453204e998dd23655b8651
   - enabled: 1
@@ -35,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestingNewScriptsArea.unity
     guid: 3f76eebd4eea568479fbb6bf759b586b
+  - enabled: 1
+    path: Assets/Scenes/Castle_Kitchen.unity
+    guid: 34c7bdccc0d71924b99dc0d3ad892b78
   - enabled: 1
     path: Assets/Scenes/LoadingScreen.unity
     guid: 396e6e3e80c84e640a422757fd8de1d1
