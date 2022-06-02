@@ -77,11 +77,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfa79f776489764dbb94914256775de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ParentTransform: {fileID: 0}
   OneTimeUse: 0
   HasACooldown: 0
   _cooldownLength: 0
   _audioClipsToPlay:
-  - {fileID: 8300000, guid: 3550d25c6817fe9439cc8267b3420467, type: 3}
+  - {fileID: 8300000, guid: 503f4fb02883d0a428408b48264aa647, type: 3}
+  CanBeMoved: 0
+  _layersToCastOn:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!82 &2644167884302518409
 AudioSource:
   m_ObjectHideFlags: 0

@@ -4221,7 +4221,7 @@ GameObject:
   - component: {fileID: 1138040881}
   - component: {fileID: 1138040880}
   - component: {fileID: 1138040879}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5050,6 +5050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9d0fbbae8c316409bf35bcc41ce344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  borders: 1
   target: {fileID: 1914203174}
   offset: {x: 0, y: 0, z: 0}
   smoothFactor: 3.36
