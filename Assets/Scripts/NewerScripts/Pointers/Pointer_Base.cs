@@ -125,8 +125,8 @@ public class Pointer_Base : MonoBehaviour
     {
         // generic pickup animation
         PlayerRefs.GetComponent<Animator>().SetTrigger("PickUpCoin");
-        // lock the arm
-        PlayerRefs.GetComponent<Animator>().SetLayerWeight(1, 1f);       
+        // lock the arm after x seconds
+        StartCoroutine(SetRigWeights());
 
         PlayerRefs.attachedObject = InteractibleParent;
 
@@ -135,6 +135,11 @@ public class Pointer_Base : MonoBehaviour
         PlayerRefs.PickedUpObject = pickup;
 
         StartCoroutine(GetSparkleRefs(false));
+    }
+    private IEnumerator SetRigWeights()
+    {
+        yield return new WaitForSeconds(0.9f);
+        PlayerRefs.GetComponent<Animator>().SetLayerWeight(1, 1f);
     }
 
     public virtual void PickupItemInfiniteWrap(PickupType pickup)

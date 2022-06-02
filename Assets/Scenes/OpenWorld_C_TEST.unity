@@ -60495,11 +60495,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee2f3bb8b71f914286647126cddd234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ParentTransform: {fileID: 0}
   OneTimeUse: 0
   HasACooldown: 1
   _cooldownLength: 0.5
   _audioClipsToPlay:
   - {fileID: 8300000, guid: 45cf6b71b5dba614998f4fbf5735363d, type: 3}
+  CanBeMoved: 1
+  _layersToCastOn:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &6033315987454134816
 GameObject:
   m_ObjectHideFlags: 0

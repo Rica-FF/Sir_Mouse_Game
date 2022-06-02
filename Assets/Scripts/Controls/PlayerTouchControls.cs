@@ -94,14 +94,18 @@ public class PlayerTouchControls : MonoBehaviour
         }
 
         MovementLogic();
+        
         ZoomLogic();
 
         SetRunAimation();
 
-        // the moment i let go of the mousclick, enable walking (only when i clicked on tap-able)
-        if (_clickedOnTapable == true && walkingEnabled == false && Input.GetMouseButtonUp(0))
+
+
+        if (Input.GetMouseButtonUp(0) && _clickedOnTapable == true)
         {
+            StartCoroutine(SetReadyToWalk());
             walkingEnabled = true;
+
             _clickedOnTapable = false;
         }
     }
@@ -210,7 +214,7 @@ public class PlayerTouchControls : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(position); // Ray that represents finger press
 
-        yield return new WaitForSeconds(0.1f);
+        //yield return new WaitForSeconds(0.1f); // this delay can cause issues for tap-able
 
         RaycastHit hit; // Object hit by ray
 
@@ -291,10 +295,13 @@ public class PlayerTouchControls : MonoBehaviour
             }
             else if (hit.collider.gameObject.layer == 11)  // TAP-ABLE CLICK 
             {
-                var tapableScript = hit.collider.GetComponentInParent<Tapable_Base>();
-                tapableScript.PlayTapEvent();
-
                 _clickedOnTapable = true;
+
+                walkingEnabled = false;
+                readyToWalk = false;
+
+                var tapableScript = hit.collider.GetComponentInParent<Tapable_Base>();
+                tapableScript.PlayTapEvent();         
             }
             // If not pressed on a pointer, move to pointed location
             else if (!clickedOnPointer && hit.collider.tag != "Player")
