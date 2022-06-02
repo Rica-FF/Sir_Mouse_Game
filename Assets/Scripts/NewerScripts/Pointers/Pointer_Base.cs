@@ -125,8 +125,8 @@ public class Pointer_Base : MonoBehaviour
     {
         // generic pickup animation
         PlayerRefs.GetComponent<Animator>().SetTrigger("PickUpCoin");
-        // lock the arm
-        PlayerRefs.GetComponent<Animator>().SetLayerWeight(1, 1f);       
+        // lock the arm after x seconds
+        StartCoroutine(SetRigWeights());
 
         PlayerRefs.attachedObject = InteractibleParent;
 
@@ -135,6 +135,11 @@ public class Pointer_Base : MonoBehaviour
         PlayerRefs.PickedUpObject = pickup;
 
         StartCoroutine(GetSparkleRefs(false));
+    }
+    private IEnumerator SetRigWeights()
+    {
+        yield return new WaitForSeconds(0.9f);
+        PlayerRefs.GetComponent<Animator>().SetLayerWeight(1, 1f);
     }
 
     public virtual void PickupItemInfiniteWrap(PickupType pickup)
@@ -195,12 +200,10 @@ public class Pointer_Base : MonoBehaviour
 
 
 
-    IEnumerator ForceObjectInBag() // CAM NEED TO BE CHILD OF PLAYER !!!
+    IEnumerator ForceObjectInBag() 
     {
-        // get camera
-        Camera camera = PlayerControls.GetComponentInChildren<Camera>();
         // get the world to screen pos of the interactible
-        Vector2 screenPosition = camera.WorldToScreenPoint(InteractibleParent.transform.position);
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(InteractibleParent.transform.position); 
 
         // instantiate a copy image on an overlay canvas    
         _panelUiIcons = FindObjectOfType<BackPack_Minimap_Manager>().transform;

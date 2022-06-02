@@ -43,6 +43,8 @@ public class BackPack_Minimap_Manager : MonoBehaviour
             OpenMap();
             PlayMinimapButtonAnimation(); 
         }
+
+        // disable movement for 0.2 seconds;
     }
 
     public void BackpackIconClick() // BACKPACK CLICK
@@ -63,6 +65,8 @@ public class BackPack_Minimap_Manager : MonoBehaviour
             OpenBackpack();
             PlayBagButtonAnimation();
         }
+
+        // disable movemetn for 0.2 seconds;
     }
 
 
