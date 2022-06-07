@@ -80,7 +80,7 @@ public class Backpack_Manager : MonoBehaviour
     }
     private IEnumerator CloseBackpackDelay(int _index)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         // close backpack panel
         _bmManager.CloseBackpack();  
