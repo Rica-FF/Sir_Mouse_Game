@@ -126,6 +126,8 @@ MonoBehaviour:
   - {fileID: 3568739134389685665, guid: ae1cd3d03aeb32648b1fb652485c160b, type: 3}
   - {fileID: 5343379494654586468, guid: d40cbf162c743d74e97bdb6069234a0f, type: 3}
   - {fileID: 3451815859098469554, guid: b519145b3eff6aa408d8f2e78c2637a6, type: 3}
+  _cloudParticlePrefab: {fileID: 3655586866068558944, guid: 3dff0815e8b60044ca77be9c6c49046c,
+    type: 3}
 --- !u!1 &2167804148592046512
 GameObject:
   m_ObjectHideFlags: 0

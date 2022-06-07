@@ -15,6 +15,9 @@ public class Backpack_Manager : MonoBehaviour
     private BackPack_Minimap_Manager _bmManager;
     private SoundsOfUI _soundEffectsUI;
 
+    [SerializeField]
+    private GameObject _cloudParticlePrefab;
+
 
     private void Start()
     {
@@ -80,8 +83,7 @@ public class Backpack_Manager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         // close backpack panel
-        _bmManager.CloseBackpack();  // this will end the code that runs afterwards..
-        // make close backpack, only the parent of sprite, not the script
+        _bmManager.CloseBackpack();  
 
         // reset the bool value of the inventory
         Backpack_Inventory.ItemsInBackpack[_index] = false;
@@ -89,15 +91,38 @@ public class Backpack_Manager : MonoBehaviour
         // play unequip animation 
         _playerRefs.GetComponent<Animator>().Play("Unequipe_0");
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
 
         _playerRefs.GetComponent<Animator>().SetLayerWeight(1, 1f);
 
         // instantiate particle effect
-
+        Instantiate(_cloudParticlePrefab, _playerRefs.swordJoint.transform.position, Quaternion.identity);
 
         // instantiate the pickup on player position
         //Instantiate(Pickup_Prefabs[_index], _playerReferencesObject.transform.position, Quaternion.identity);
-        Instantiate(Pickup_Prefabs[_index], _playerRefs.swordJoint.transform);
+        var spawnedObject = Instantiate(Pickup_Prefabs[_index], _playerRefs.swordJoint.transform.position, Quaternion.identity);
+        spawnedObject.transform.SetParent(_playerRefs.playerHand.transform);
+
+        spawnedObject.transform.localRotation = Quaternion.Euler(60, 0, -30);
+
+        spawnedObject.transform.localPosition = new Vector3(-0.03f, 0.02f, 0.02f);
+        spawnedObject.GetComponentInChildren<Rigidbody>().isKinematic = true;
+
+        spawnedObject.GetComponentInChildren<Interactible_Base>().GetComponent<SphereCollider>().enabled = false;
+
+        _playerRefs.attachedObject = spawnedObject;
+
+        var pointerBases = _playerRefs.attachedObject.GetComponentsInChildren<Pointer_Base>();
+        foreach (var pBase in pointerBases)
+        {
+            if (pBase.TypeOfPointer == PointerType.Pickup)
+            {
+                _playerRefs.PickedUpObject = pBase.TypeOfPickup;
+                StartCoroutine(pBase.GetSparkleRefs(false));
+
+                // assign the _pointerInHands
+                _playerRefs.PointerOfPickUpInHands = pBase;
+            }
+        }
     }
 }

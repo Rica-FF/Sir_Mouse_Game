@@ -46,7 +46,8 @@ public class PlayerReferences : MonoBehaviour
     public PickupType PickedUpObject;
     private Animator _playerAnimator;
     public Pointer_Base _currentActivePointer;
-    private Pointer_Base _pointerOfPickUpInHands;
+    [HideInInspector]
+    public Pointer_Base PointerOfPickUpInHands;
 
 
 
@@ -191,12 +192,12 @@ public class PlayerReferences : MonoBehaviour
         if (_currentActivePointer.TypeOfPointer == PointerType.PickupInfinite)
         {
             _currentActivePointer.PickupInfiniteParentingLogic();
-            _pointerOfPickUpInHands = attachedObject.GetComponentInChildren<Pointer_Base>();   
+            PointerOfPickUpInHands = attachedObject.GetComponentInChildren<Pointer_Base>();   
         }
         else
         {
             _currentActivePointer.PickupParentingLogic();
-            _pointerOfPickUpInHands = _currentActivePointer;
+            PointerOfPickUpInHands = _currentActivePointer;
         }        
 
         // re-establish what possible pointerlords are in the vicinity and which one should be active
@@ -205,8 +206,9 @@ public class PlayerReferences : MonoBehaviour
     }
     private void DetachObjectAnimationEvent()
     {
-        _pointerOfPickUpInHands.DropPickupParentingLogic();
-        _pointerOfPickUpInHands = null;
+        Debug.Log(PointerOfPickUpInHands + " is the pointer");
+        PointerOfPickUpInHands.DropPickupParentingLogic();
+        PointerOfPickUpInHands = null;
     }
     /////////////////////////
 
