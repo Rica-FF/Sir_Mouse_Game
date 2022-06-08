@@ -10,8 +10,11 @@ public class Tapable_Apple : Tapable_Base
     {       
         base.ExtraBehaviour();
 
-        _previousScale = transform.localScale;
+        if (SpawnsAPrefab == false)
+        {
+            _previousScale = transform.localScale;
 
-        transform.localScale = new Vector3(_previousScale.x + 0.05f, _previousScale.y + 0.05f, _previousScale.z + 0.05f);
+            transform.localScale = new Vector3(_previousScale.x + 0.05f, _previousScale.y + 0.05f, _previousScale.z + 0.05f);
+        }
     }
 }

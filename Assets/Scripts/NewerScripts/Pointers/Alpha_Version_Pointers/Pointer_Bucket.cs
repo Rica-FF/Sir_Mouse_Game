@@ -104,13 +104,13 @@ public class Pointer_Bucket : Pointer_Base
 
     private void AddUpwardsForce(GameObject objToAddForceTo)
     {
-        //objToAddForceTo.GetComponent<Rigidbody>().isKinematic = false;
-        //objToAddForceTo.GetComponent<Rigidbody>().AddForce(new Vector3(_sidewaysForce, 200, 0));
+        var rigid = objToAddForceTo.GetComponentInChildren<Rigidbody>();
+        var pxCorrector = rigid.GetComponent<PhysicsCorrector>();
 
-        objToAddForceTo.GetComponentInChildren<Rigidbody>().isKinematic = false;
-        objToAddForceTo.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(_sidewaysForce, 200, 0));
-        // ADD SCRIPT WITH PHYSICS UPDATE !!!
+        StartCoroutine(pxCorrector.StartANDStopPhysicsLogic(2f));
 
+        rigid.AddForce(new Vector3(_sidewaysForce, 200, 0));
+        
         // sideways forcee is to expel object at different angles.
         _sidewaysForce -= 50;
         if (_sidewaysForce <= -151)

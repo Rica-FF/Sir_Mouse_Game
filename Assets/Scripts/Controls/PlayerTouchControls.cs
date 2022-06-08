@@ -8,7 +8,9 @@ using UnityEngine.EventSystems;
 
 public class PlayerTouchControls : MonoBehaviour
 {
-    private LayerMask IgnoreMe;
+    [SerializeField]
+    private LayerMask _ignoreMe;
+
     public GameObject player;
     public GameObject dropPointer;
     NavMeshAgent agent;
@@ -56,14 +58,18 @@ public class PlayerTouchControls : MonoBehaviour
     public bool GettingToDestination;
 
     private AudioSource _audioSource;
-    private bool _clickedOnTapable;
+    public bool _clickedOnTapable;
+
+    private float _timerHoldingFinger;
+    private float _timeHoldingFingerLimit = 0.2f;
+    private bool _hasBeenHoldingFingerDown;
 
 
 
 
     void Start()
     {
-        IgnoreMe = LayerMask.GetMask("UI");
+        _ignoreMe = LayerMask.GetMask("UI", "Ignore Raycast");
         agent = GetComponent<NavMeshAgent>();
         rigidbody = GetComponent<Rigidbody>();
         animator = player.GetComponent<Animator>();
@@ -93,23 +99,28 @@ public class PlayerTouchControls : MonoBehaviour
             StartCoroutine(ZoomDetection());
         }
 
-        MovementLogic();
-        
-        ZoomLogic();
-
+        MovementLogic();    
+        //ZoomLogic();
         SetRunAimation();
 
 
-
-        if (Input.GetMouseButtonUp(0) && _clickedOnTapable == true)
+        // letting go of the mouse + checking for -- having clicked on tap-able
+        if (Input.GetMouseButtonUp(0))
         {
-            StartCoroutine(SetReadyToWalk());
-            walkingEnabled = true;
+            if (_clickedOnTapable == true)
+            {
+                StartCoroutine(SetReadyToWalk());
+                walkingEnabled = true;
 
-            _clickedOnTapable = false;
+                _clickedOnTapable = false;
+            }
+
+            _timerHoldingFinger = 0;
+            _hasBeenHoldingFingerDown = false;
         }
     }
 
+    // dated zoom logic
     private void ZoomLogic()
     {
         //if (Camera.main.orthographicSize > 5 && Camera.main.orthographicSize < 12)
@@ -125,6 +136,8 @@ public class PlayerTouchControls : MonoBehaviour
         //    Camera.main.orthographicSize = 11.5f;
         //}
     }
+
+
     private void MovementLogic()
     {
         if (!Input.GetMouseButton(0) && !clickedOnPointer) // if not left clicked && not pointerClicked
@@ -134,81 +147,18 @@ public class PlayerTouchControls : MonoBehaviour
         }
         else if (Input.GetMouseButton(0) && readyToWalk && walkingEnabled) // if clicked && rdy to walk && walking enabled
         {
-            StartCoroutine(SingleMouseClick(Input.mousePosition));
+            StartCoroutine(SingleMouseClick(Input.mousePosition));  // starting coroutine constantly in update might be bit too much (could be cause for concern for performance, i think)
+
+            // logic for extra boolean, so that movement doesn't stop when hovering over interactions
+            _timerHoldingFinger += Time.deltaTime;
+            if (_timerHoldingFinger >= _timeHoldingFingerLimit && _hasBeenHoldingFingerDown == false)
+            {
+                _hasBeenHoldingFingerDown = true;
+            }
         }
     }
 
 
-    //IEnumerator SingleMouseClick(Vector2 position)
-    //{
-    //    Ray ray = Camera.main.ScreenPointToRay(position); // Ray that represents finger press
-
-    //    yield return new WaitForSeconds(0.1f);
-
-
-    //    RaycastHit hit; // Object hit by ray
-
-    //    if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~IgnoreMe) && !EventSystem.current.IsPointerOverGameObject())
-    //    {
-    //        if (hit.collider.tag == "Player" && player.GetComponent<PlayerReferences>().attachedObject)
-    //        {
-    //            player.GetComponent<PlayerReferences>().DropObject();
-    //        }
-
-    //        if (hit.collider.tag == "Pointer" && !clickedOnPointer) // If pressed on a pointer-object, do action
-    //        {
-    //            clickedOnPointer = true;
-    //            shortTouch = false;
-    //            StartCoroutine(SetClickedOnPointerBool());
-
-    //            yield return new WaitForSeconds(0.1f);
-
-    //            hit.collider.gameObject.GetComponent<DoAction>().DoTheAction();
-
-    //            if (hit.collider.gameObject.GetComponent<DoAction>().specificDestination)
-    //            {
-    //                agent.SetDestination(hit.collider.gameObject.GetComponent<DoAction>().destination);
-    //            }
-
-    //            yield return new WaitForSeconds(0.5f);
-
-    //            if (hit.collider.gameObject.transform.parent.GetComponent<PopUpPointer>())
-    //            {
-    //                hit.collider.gameObject.transform.parent.GetComponent<PopUpPointer>().DisablePointer();
-    //            }
-    //            else if (hit.collider.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>())
-    //            {
-    //                hit.collider.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>().DisablePointer();
-    //            }
-    //            else if (hit.collider.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>())
-    //            {
-    //                hit.collider.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.GetComponent<PopUpPointer>().DisablePointer();
-    //            }
-
-    //        }
-    //        else if (hit.collider.tag == "Soil" && player.GetComponent<PlayerReferences>().attachedObject)
-    //        {
-    //            if (hit.collider.GetComponent<Soil>().playerInArea && (player.GetComponent<PlayerReferences>().attachedObject.name == "Corn" || player.GetComponent<PlayerReferences>().attachedObject.name == "Bucket" && player.GetComponent<PlayerReferences>().attachedObject.GetComponent<Bucket>().isFilled))
-    //            {
-    //                hit.collider.GetComponent<Soil>().UseSoil();
-    //                DoAction("");
-    //            }
-    //            else
-    //            {
-    //                target.SetActive(true);
-    //                agent.SetDestination(hit.point);
-    //                target.transform.position = hit.point;
-    //            }
-    //        }
-    //        else if (!clickedOnPointer && hit.collider.tag != "Player") // If not pressed on a pointer, move to pointed location
-    //        {
-    //            target.SetActive(true);
-    //            agent.SetDestination(hit.point);
-    //            target.transform.position = hit.point;
-    //        }
-    //    }
-
-    //}
 
     IEnumerator SingleMouseClick(Vector2 position)
     {
@@ -218,13 +168,13 @@ public class PlayerTouchControls : MonoBehaviour
 
         RaycastHit hit; // Object hit by ray
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~IgnoreMe) && !EventSystem.current.IsPointerOverGameObject())
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~_ignoreMe) && !EventSystem.current.IsPointerOverGameObject())
         {
-            if (hit.collider.tag == "Player" && player.GetComponent<PlayerReferences>().attachedObject) // PLAYER CLICK
+            if (hit.collider.tag == "Player" && player.GetComponent<PlayerReferences>().attachedObject && _hasBeenHoldingFingerDown == false) // PLAYER CLICK
             {
                 DropPickUpWrap();
             }
-            else if (hit.collider.gameObject.CompareTag("Pointer") && !clickedOnPointer) // POINTER ACTIVATE
+            else if (hit.collider.gameObject.CompareTag("Pointer") && !clickedOnPointer && _hasBeenHoldingFingerDown == false) // POINTER ACTIVATE
             {
                 var pointer = hit.collider.GetComponentInParent<Pointer_Base>();
                 var InteractibleScript = pointer.GetComponentInParent<Interactible_Base>();
@@ -277,7 +227,7 @@ public class PlayerTouchControls : MonoBehaviour
                 }
 
             }
-            else if (hit.collider.gameObject.CompareTag("PointerNext") && !clickedOnPointer)  // SWAP POINTER
+            else if (hit.collider.gameObject.CompareTag("PointerNext") && !clickedOnPointer && _hasBeenHoldingFingerDown == false)  // SWAP POINTER
             {
                 var pointerLord = hit.collider.GetComponentInParent<Pointer_Lord>();
 
@@ -293,7 +243,7 @@ public class PlayerTouchControls : MonoBehaviour
                 //pointer.GetComponentInParent<Interactible_Base>().HidePointerBehaviour();               
 
             }
-            else if (hit.collider.gameObject.layer == 11)  // TAP-ABLE CLICK 
+            else if (hit.collider.gameObject.layer == 11 && _hasBeenHoldingFingerDown == false)  // TAP-ABLE CLICK + check for holding movement
             {
                 _clickedOnTapable = true;
 
@@ -339,7 +289,7 @@ public class PlayerTouchControls : MonoBehaviour
         {
             RaycastHit hit; // Object hit by ray
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~IgnoreMe) && !EventSystem.current.IsPointerOverGameObject())
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~_ignoreMe) && !EventSystem.current.IsPointerOverGameObject())
             {
                 if (hit.collider.tag == "Player" && player.GetComponent<PlayerReferences>().attachedObject)
                 {

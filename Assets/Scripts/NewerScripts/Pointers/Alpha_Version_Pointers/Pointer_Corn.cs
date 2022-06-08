@@ -16,7 +16,7 @@ public class Pointer_Corn : Pointer_Base
     {
         _rigidInteractible = InteractibleParent.GetComponentInChildren<Rigidbody>();
 
-        if (_rigidInteractible.TryGetComponent(out PhysicsCorrector physics))
+        if (_rigidInteractible.TryGetComponent(out PhysicsCorrector physics)) // null
         {
             _physicsScript = physics;
         }
@@ -29,13 +29,7 @@ public class Pointer_Corn : Pointer_Base
     {
         base.PlayEvent();
 
-        _rigidInteractible.isKinematic = false;
-        _rigidInteractible.useGravity = true;
-
-        _rigidInteractible.GetComponent<PhysicsCorrector>().enabled = true;
-        StartCoroutine(_physicsScript.StopPhysicsUpdate(_physicsDuration));
-
-        _rigidInteractible.transform.SetParent(null);
+        StartCoroutine(_physicsScript.StartANDStopPhysicsLogic(_physicsDuration));
 
         float sidewaysForce = 0;
         if (PlayerRefs.transform.localScale.x > 0)

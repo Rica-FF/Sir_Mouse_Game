@@ -130,7 +130,11 @@ public class Pointer_Base : MonoBehaviour
 
         PlayerRefs.attachedObject = InteractibleParent;
 
-        InteractibleRigid.isKinematic = true;
+        // disable the physics
+        if (InteractibleRigid.TryGetComponent(out PhysicsCorrector pxCorrector))
+        {
+            StartCoroutine(pxCorrector.StopPhysicsLogic());
+        }
 
         PlayerRefs.PickedUpObject = pickup;
 

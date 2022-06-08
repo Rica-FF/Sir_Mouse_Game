@@ -38,13 +38,7 @@ public class Pointer_Key : Pointer_Base
     {
         base.PlayEvent();
 
-        _rigidInteractible.isKinematic = false;
-        _rigidInteractible.useGravity = true;
-
-        _rigidInteractible.GetComponent<PhysicsCorrector>().enabled = true;
-        StartCoroutine(_physicsScript.StopPhysicsUpdate(_physicsDuration));
-
-        _rigidInteractible.transform.SetParent(null);
+        StartCoroutine(_physicsScript.StartANDStopPhysicsLogic(_physicsDuration));
 
         float sidewaysForce = 0;
         if (PlayerRefs.transform.localScale.x > 0)

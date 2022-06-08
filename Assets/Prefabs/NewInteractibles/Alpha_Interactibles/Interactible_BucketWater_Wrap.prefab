@@ -1121,8 +1121,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 97468616556675793}
-  - component: {fileID: 97468616556675794}
-  - component: {fileID: 97468616556675795}
   m_Layer: 10
   m_Name: Interactible_BucketWater_Wrap
   m_TagString: Untagged
@@ -1147,35 +1145,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &97468616556675794
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97468616556675796}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.5
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 48
-  m_CollisionDetection: 0
---- !u!65 &97468616556675795
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97468616556675796}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.1681874, z: 0.9680481}
-  m_Center: {x: 0, y: 0.009093642, z: -0.14902401}
 --- !u!1 &97468616587741677
 GameObject:
   m_ObjectHideFlags: 0
@@ -3655,15 +3624,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2851165343783979146, guid: ec17b8b5c385c944e862ac4eeca1000e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ec17b8b5c385c944e862ac4eeca1000e, type: 3}
---- !u!4 &6462847372961808775 stripped
+--- !u!4 &6462847373495707749 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6407182188725971180, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 97468616324950379}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6462847372949034529 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6407182188738887498, guid: ec17b8b5c385c944e862ac4eeca1000e,
+  m_CorrespondingSourceObject: {fileID: 6407182190333591822, guid: ec17b8b5c385c944e862ac4eeca1000e,
     type: 3}
   m_PrefabInstance: {fileID: 97468616324950379}
   m_PrefabAsset: {fileID: 0}
@@ -3673,9 +3636,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 97468616324950379}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &6462847373495707749 stripped
+--- !u!1 &6462847372949034529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6407182188738887498, guid: ec17b8b5c385c944e862ac4eeca1000e,
+    type: 3}
+  m_PrefabInstance: {fileID: 97468616324950379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6462847372961808775 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6407182190333591822, guid: ec17b8b5c385c944e862ac4eeca1000e,
+  m_CorrespondingSourceObject: {fileID: 6407182188725971180, guid: ec17b8b5c385c944e862ac4eeca1000e,
     type: 3}
   m_PrefabInstance: {fileID: 97468616324950379}
   m_PrefabAsset: {fileID: 0}
