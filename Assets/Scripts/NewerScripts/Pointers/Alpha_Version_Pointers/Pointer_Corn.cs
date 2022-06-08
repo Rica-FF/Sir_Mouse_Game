@@ -16,7 +16,7 @@ public class Pointer_Corn : Pointer_Base
     {
         _rigidInteractible = InteractibleParent.GetComponentInChildren<Rigidbody>();
 
-        if (_rigidInteractible.TryGetComponent(out PhysicsCorrector physics)) // null
+        if (_rigidInteractible.TryGetComponent(out PhysicsCorrector physics)) 
         {
             _physicsScript = physics;
         }

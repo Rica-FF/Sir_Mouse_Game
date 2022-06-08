@@ -29,7 +29,7 @@ public class PhysicsCorrector : MonoBehaviour
     private void Start()
     {
         _rigid = GetComponent<Rigidbody>();
-        _interactibleParent = transform.parent.gameObject; // null
+        _interactibleParent = transform.parent.gameObject;
         _interactible = _interactibleParent.GetComponentInChildren<Interactible_Base>().gameObject;
         _sprite = _interactible.transform.GetChild(0).gameObject;
 
@@ -38,10 +38,10 @@ public class PhysicsCorrector : MonoBehaviour
 
     void FixedUpdate()
     {
+        Debug.Log(" updatin this object named == " + _interactibleParent.name);
+
         _interactibleParent.transform.position = transform.position; // null
         _sprite.transform.localEulerAngles = new Vector3(30, 0, transform.localEulerAngles.z);
-
-        Debug.Log(" PHYSICS UPDATE CURRENTLY GOING ON " + _interactibleParent.name);
     }
 
 
@@ -66,12 +66,42 @@ public class PhysicsCorrector : MonoBehaviour
         this.enabled = false;
     }
 
+
+    public IEnumerator StartANDStopPhysicsLogicBucket(float timeActive, float sidewayForce)
+    {
+        // delay needed (otherwise these objects interactibleParents are null due to Start being to slow to catch up)
+        yield return new WaitForSeconds(0.1f);
+
+        _rigid = GetComponent<Rigidbody>();
+
+        _rigid.isKinematic = false;
+        _rigid.useGravity = true;
+        _rigid.transform.SetParent(null);
+
+        _rigid.AddForce(new Vector3(sidewayForce, 200, 0));
+
+        this.enabled = true;
+
+        yield return new WaitForSeconds(timeActive);
+
+        _rigid.isKinematic = true;
+        _rigid.useGravity = false;
+        _rigid.transform.SetParent(_interactibleParent.transform);
+
+        this.enabled = false;
+    }
+
+
+
+
     public IEnumerator StopPhysicsLogic()
     {
         _rigid = GetComponent<Rigidbody>();
 
         _rigid.isKinematic = true;
         _rigid.useGravity = false;
+
+        _interactibleParent = transform.parent.gameObject; 
         _rigid.transform.SetParent(_interactibleParent.transform);
 
         this.enabled = false;

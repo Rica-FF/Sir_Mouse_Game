@@ -32915,6 +32915,7 @@ MonoBehaviour:
   clicked: 0
   zoom: 1
   GettingToDestination: 0
+  _clickedOnTapable: 0
 --- !u!195 &1265884156
 NavMeshAgent:
   m_ObjectHideFlags: 0

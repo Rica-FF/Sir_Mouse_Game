@@ -19,9 +19,8 @@ public class Pointer_Bucket : Pointer_Base
     {
         _interactibleBucket = GetComponentInParent<Interactible_Bucket>();
 
-        // might become wrong animator(waterfall)
+        // might become wrong animator(bucket sprite needs to be above waterfall sprite in hierarchy)
         _bucketAnimator = _interactibleBucket.GetComponentInChildren<Animator>();
-        Debug.Log(_bucketAnimator.name + " got animator bucket");
 
         _sidewaysForce = 150;
     }
@@ -51,11 +50,10 @@ public class Pointer_Bucket : Pointer_Base
             }
 
             // play anim
-            StartCoroutine(PlayAnimation());
-            
+            StartCoroutine(PlayPlayerAnimation());           
             StartCoroutine(ReEquipGear());
 
-            // once that animation is done, play the bucket shake animation (use of enumerator yield return ?)       
+            // bucket shake animation (hardcode yield return seconds)       
             StartCoroutine(StartBucketShake());
         }
 
@@ -72,28 +70,12 @@ public class Pointer_Bucket : Pointer_Base
             // reset side force
             _sidewaysForce = 150;
 
+            int itemNumber = 0;
             // instantiate every item
             foreach (var pickupType in _interactibleBucket.HeldItems)
             {
-                switch (pickupType)
-                {
-                    case PickupType.Corn:
-                        var objCorn = Instantiate(_interactibleBucket.CornPrefab, transform.position, Quaternion.identity);
-                        AddUpwardsForce(objCorn);
-                        break;
-                    case PickupType.Coin:
-                        var objCoin = Instantiate(_interactibleBucket.CoinPrefab, transform.position, Quaternion.identity);
-                        AddUpwardsForce(objCoin);
-                        break;
-                    case PickupType.Puzzle:
-                        var objPuzzle = Instantiate(_interactibleBucket.PuzzlePrefab, transform.position, Quaternion.identity);
-                        AddUpwardsForce(objPuzzle);
-                        break;
-                    case PickupType.Key:
-                        var objKey = Instantiate(_interactibleBucket.KeyPrefab, transform.position, Quaternion.identity);
-                        AddUpwardsForce(objKey);
-                        break;
-                }
+                itemNumber += 1;
+                StartCoroutine(BucketSpawningObjects(pickupType, itemNumber));
             }
 
             // remove the pickups from the bucket
@@ -105,23 +87,47 @@ public class Pointer_Bucket : Pointer_Base
     private void AddUpwardsForce(GameObject objToAddForceTo)
     {
         var rigid = objToAddForceTo.GetComponentInChildren<Rigidbody>();
-        var pxCorrector = rigid.GetComponent<PhysicsCorrector>();
+        var pxCorrector = rigid.GetComponent<PhysicsCorrector>(); 
 
-        StartCoroutine(pxCorrector.StartANDStopPhysicsLogic(2f));
+        StartCoroutine(pxCorrector.StartANDStopPhysicsLogicBucket(2f, _sidewaysForce)); 
 
-        rigid.AddForce(new Vector3(_sidewaysForce, 200, 0));
-        
-        // sideways forcee is to expel object at different angles.
+        // sideways force is to expel object at different angles.
         _sidewaysForce -= 50;
-        if (_sidewaysForce <= -151)
+        if (_sidewaysForce < -150)
         {
             _sidewaysForce = 150;
         }
     }
 
 
+    private IEnumerator BucketSpawningObjects(PickupType pickupType, int numberOfItems)
+    {
+        yield return new WaitForSeconds(0.5f * numberOfItems);
 
-    private IEnumerator PlayAnimation()
+        switch (pickupType)
+        {
+            case PickupType.Corn:
+                var objCorn = Instantiate(_interactibleBucket.CornPrefab, transform.position, Quaternion.identity);
+                AddUpwardsForce(objCorn);
+                break;
+            case PickupType.Coin:
+                var objCoin = Instantiate(_interactibleBucket.CoinPrefab, transform.position, Quaternion.identity);
+                AddUpwardsForce(objCoin);
+                break;
+            case PickupType.Puzzle:
+                var objPuzzle = Instantiate(_interactibleBucket.PuzzlePrefab, transform.position, Quaternion.identity);
+                AddUpwardsForce(objPuzzle);
+                break;
+            case PickupType.Key:
+                var objKey = Instantiate(_interactibleBucket.KeyPrefab, transform.position, Quaternion.identity);
+                AddUpwardsForce(objKey);
+                break;
+        }
+    }
+
+
+
+    private IEnumerator PlayPlayerAnimation()
     {
         yield return new WaitForSeconds(0.2f);
 
