@@ -86,13 +86,15 @@ public class Interactible_Bucket : Interactible_Base
         {
             // set bool
             IsHoldingWater = true;
+            // assign proper sprites in bubble popup (to-do)
+
             // set type
             foreach (var pointerBase in PointerLord.PointerBases)
             {
                 if (pointerBase.TypeOfPickup == PickupType.Bucket && pointerBase.TypeOfPointer == PointerType.Pickup)
                 {
                     pointerBase.TypeOfPickup = PickupType.BucketWater;
-                    PlayerRefs.PickedUpObject = PickupType.BucketWater;
+                    PlayerRefs.PickedUpObject = PickupType.BucketWater; // nullref possible here ? HAPPENS WHEN I USE THE BUKCET TO GET WATER, after the bucket was spawned in from the inventory
                     bucketPointer = pointerBase;
                 }
 
@@ -106,6 +108,8 @@ public class Interactible_Bucket : Interactible_Base
         {
             // set bool
             IsHoldingWater = false;
+            // assign proper sprites in bubble popup (to-do)
+
             // set type
             foreach (var pointerBase in PointerLord.PointerBases)
             {
@@ -120,7 +124,7 @@ public class Interactible_Bucket : Interactible_Base
                 {
                     pointerBase.TypeOfPickup = PickupType.BucketWater;
                 }
-            }
+            }       
         }
 
         // update available pointer

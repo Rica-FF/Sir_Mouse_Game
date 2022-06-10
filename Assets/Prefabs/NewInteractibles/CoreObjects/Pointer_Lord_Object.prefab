@@ -154,13 +154,14 @@ GameObject:
   - component: {fileID: 6407182188738887499}
   - component: {fileID: 6407182188738887501}
   - component: {fileID: 6407182188738887500}
+  - component: {fileID: 3494074869901113346}
   m_Layer: 10
   m_Name: Swap_Trigger_Object
   m_TagString: PointerNext
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6407182188738887499
 Transform:
   m_ObjectHideFlags: 0
@@ -240,6 +241,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &3494074869901113346
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407182188738887498}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d6d8172205a8b5e468382079d6c889d4, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: d6d8172205a8b5e468382079d6c889d4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6407182189308932231
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointerTriggerObjects: []
+  PointerBases: []
   CurrentPointerIndex: 0
   AvailableTriggerObjects: []
   SparkleObjectsAll: []
@@ -511,6 +529,7 @@ MonoBehaviour:
   TypeOfPointer: 0
   TypeOfPickup: 0
   RequiredItemExtraInteraction: 0
+  RequiresUseBeforeEventNone: 0
   RequiresDestination: 0
   DestinationSpot: {fileID: 0}
   OrientationPlayer: 0
@@ -521,7 +540,9 @@ MonoBehaviour:
   InteractibleParent: {fileID: 0}
   InteractibleScript: {fileID: 0}
   InteractibleRigid: {fileID: 0}
+  SpriteObject: {fileID: 0}
   SparkleObjects: []
+  PointerLord: {fileID: 0}
 --- !u!1 &6407182190552235408
 GameObject:
   m_ObjectHideFlags: 0

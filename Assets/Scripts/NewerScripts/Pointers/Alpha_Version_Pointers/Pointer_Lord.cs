@@ -148,6 +148,7 @@ public class Pointer_Lord : MonoBehaviour
             }
         }
 
+
         // 4) if the player has a pickup in their hands, dont show specific pointers
         if (_interactibleScriptOnThisParent.PlayerRefs.PickedUpObject != PickupType.None) 
         {           
@@ -190,13 +191,6 @@ public class Pointer_Lord : MonoBehaviour
                 }
             }
         }
-
-
-        foreach (var obje in AvailableTriggerObjects)
-        {
-            Debug.Log(obje.transform.parent + " these are the pointers");
-        }
-
         
         // 6) checking for soil plantations
         if (_interactibleScriptOnThisParent.TryGetComponent(out Interactible_Soil soilScript))
@@ -206,7 +200,7 @@ public class Pointer_Lord : MonoBehaviour
                 foreach (var pointer in PointerBases)
                 {
                     // checks for all the pickups that cant be planted (coversly i can check for ones that can oly be planted)
-                    if (pointer.RequiredItemExtraInteraction != PickupType.None && pointer.RequiredItemExtraInteraction != PickupType.Bucket)
+                    if (pointer.RequiredItemExtraInteraction != PickupType.None && pointer.RequiredItemExtraInteraction != PickupType.BucketWater)
                     {
                         // remove the trigger
                         _availablePointerIndexLimit -= 1;
@@ -216,7 +210,7 @@ public class Pointer_Lord : MonoBehaviour
                     }
                 }
             }
-            else if (soilScript.PlantedPickup == PickupType.None && _interactibleScriptOnThisParent.PlayerRefs.PickedUpObject == PickupType.Bucket) // is nothings been planted, and i have a bucket, remove every trigger
+            else if (soilScript.PlantedPickup == PickupType.None && _interactibleScriptOnThisParent.PlayerRefs.PickedUpObject == PickupType.BucketWater) // is nothings been planted, and i have a bucket, remove every trigger
             {
                 foreach (var pointer in PointerBases)
                 {
@@ -229,6 +223,30 @@ public class Pointer_Lord : MonoBehaviour
                 }
             }
         }
+
+        // 7) fixing the emptying bucket pointer
+        if (_interactibleScriptOnThisParent.TryGetComponent(out Interactible_Bucket bucketScript))
+        {
+            if (bucketScript.HeldItems.Count == 0)
+            {
+                foreach (var pointer in PointerBases)
+                {
+                    if (pointer.TypeOfPointer == PointerType.Event && pointer.RequiredItemExtraInteraction == PickupType.None) // specifics for the 1 pointer that empties a bucket
+                    {
+                        _availablePointerIndexLimit -= 1;
+
+                        var pointerTrigger = pointer.transform.GetChild(0).gameObject;
+                        AvailableTriggerObjects.Remove(pointerTrigger);
+                    }
+                }
+            }
+        }
+
+
+        //foreach (var obje in AvailableTriggerObjects)
+        //{
+        //    Debug.Log(" eey " + obje.transform.parent + " POINTERS AFTER");
+        //}
 
     }
 

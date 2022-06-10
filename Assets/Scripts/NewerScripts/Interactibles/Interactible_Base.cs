@@ -152,6 +152,8 @@ public class Interactible_Base : MonoBehaviour
     // interactible that will show a pointer when approached
     public void ShowPointerBehaviour()
     {
+        PointerLord.GetComponentInChildren<Animator>().Play("Pointer_Idle2");
+
         // method that will check what pointers are all viable actions the player can do
         PointerLord.UpdateAvailablePointers();
         // if pointer_lord count is >= 2...

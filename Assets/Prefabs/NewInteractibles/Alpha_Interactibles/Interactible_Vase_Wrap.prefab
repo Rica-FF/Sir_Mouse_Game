@@ -28,8 +28,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6127496973019566990}
-  - {fileID: 2866007775464622920}
   - {fileID: 5292547171911815970}
+  - {fileID: 2866007775464622920}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -68,7 +68,7 @@ Transform:
   - {fileID: 2866007776068193931}
   - {fileID: 2866007776195058620}
   m_Father: {fileID: 2866007775382382574}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &2866007775464622927
 MonoBehaviour:
@@ -85,15 +85,18 @@ MonoBehaviour:
   InteractibleType: 1
   _requiredItemType: 0
   ExtraPickupInteractions: 
+  InteractibleHasBeenUsedToActivateEventNone: 0
   OneTimeUse: 1
   HasACooldown: 0
+  PointerStaysActiveAfterUse: 0
   _cooldownLength: 0
   OnCooldown: 0
   UsedSuccesfully: 0
   _audioClipsGeneric: []
   PlayerRefs: {fileID: 0}
-  _pointerLord: {fileID: 2866007776195058610}
+  PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 2866007776728688120}
+  _infinitelyRespawnablePickupPrefab: {fileID: 0}
 --- !u!95 &2866007775464622926
 Animator:
   serializedVersion: 3
@@ -126,6 +129,36 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.21
   m_Center: {x: 0.01, y: 0, z: 0.0000000017267497}
+--- !u!114 &9163972718030625471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866007775945841052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0ec0fd47949dd4f8aacd866c56cbe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfPointer: 0
+  TypeOfPickup: 0
+  RequiredItemExtraInteraction: 0
+  RequiresUseBeforeEventNone: 0
+  RequiresDestination: 0
+  DestinationSpot: {fileID: 0}
+  OrientationPlayer: 0
+  SoundEffects: []
+  PlayerControls: {fileID: 0}
+  PlayerRefs: {fileID: 0}
+  Interactible: {fileID: 0}
+  InteractibleParent: {fileID: 0}
+  InteractibleScript: {fileID: 0}
+  InteractibleRigid: {fileID: 0}
+  SpriteObject: {fileID: 0}
+  SparkleObjects: []
+  PointerLord: {fileID: 0}
+  _spriteObject: {fileID: 2866007776399191045}
 --- !u!1 &2866007776068193930
 GameObject:
   m_ObjectHideFlags: 0
@@ -9970,33 +10003,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
---- !u!114 &9163972718030625471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2866007775945841052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f0ec0fd47949dd4f8aacd866c56cbe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeOfPointer: 0
-  TypeOfPickup: 0
-  RequiredItemExtraInteraction: 0
-  RequiresDestination: 0
-  DestinationSpot: {fileID: 0}
-  OrientationPlayer: 0
-  SoundEffects: []
-  PlayerControls: {fileID: 0}
-  PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
-  InteractibleRigid: {fileID: 0}
-  SparkleObjects: []
-  _spriteObject: {fileID: 2866007776399191045}
 --- !u!1001 &5292547171911682466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10014,7 +10020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 979632a27455af442bd2d8f36eb0ffce, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 979632a27455af442bd2d8f36eb0ffce, type: 3}
       propertyPath: m_LocalScale.y
@@ -10210,18 +10216,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 9163972718030625458}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2866007776195058610 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6407182190333591808, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 9163972718030625458}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c631d131871c7e3488c8d4c639f9329d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2866007776728688120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6407182188738887498, guid: ec17b8b5c385c944e862ac4eeca1000e,

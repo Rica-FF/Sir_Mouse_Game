@@ -15502,9 +15502,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7d573405a00bff5418d554e6c25f59fd, type: 3}
   - {fileID: 8300000, guid: 29e434342aed0f74f980ab0dad3a0405, type: 3}
   - {fileID: 8300000, guid: 24a6f39cac0b1204f91f728ee3c2fe39, type: 3}
+  - {fileID: 8300000, guid: 8e6a0d94ac69326429ebe0863979051d, type: 3}
   mouseControls: 0
   PickedUpObject: 0
   _currentActivePointer: {fileID: 0}
+  PointerOfPickUpInHands: {fileID: 0}
 --- !u!1 &1577937140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1190532416930727279, guid: 75353b3a59062b5488dc8d3c27496bc9,

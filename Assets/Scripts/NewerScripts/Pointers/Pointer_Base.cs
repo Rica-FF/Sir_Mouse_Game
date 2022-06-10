@@ -275,12 +275,12 @@ public class Pointer_Base : MonoBehaviour
 
                 if (pointerBase.InteractibleScript.TryGetComponent(out Interactible_Soil soilScript)) // checking soil
                 {
-                    if (soilScript.PlantedPickup == PickupType.None && TypeOfPickup != PickupType.Bucket)
+                    if (soilScript.PlantedPickup == PickupType.None && TypeOfPickup != PickupType.BucketWater)
                     {
                         SparkleObjects.Add(sparklesObject);
                         PointerLord.SparkleObjectsAll.Add(sparklesObject);
                     }
-                    else if (soilScript.PlantedPickup != PickupType.None && TypeOfPickup == PickupType.Bucket)
+                    else if (soilScript.PlantedPickup != PickupType.None && TypeOfPickup == PickupType.BucketWater)
                     {
                         SparkleObjects.Add(sparklesObject);
                         PointerLord.SparkleObjectsAll.Add(sparklesObject);
@@ -299,6 +299,43 @@ public class Pointer_Base : MonoBehaviour
                 SparkleObjects.Add(sparklesObject);
                 PointerLord.SparkleObjectsAll.Add(sparklesObject);
             }
+
+
+
+            // logic from lord cuzz pointer works fine
+            // 6) checking for soil plantations
+            //if (_interactibleScriptOnThisParent.TryGetComponent(out Interactible_Soil soilScript))
+            //{
+            //    if (soilScript.PlantedPickup != PickupType.None) // if somethings been planted -> remove all event pointers that plant pickups  ---- WRONG
+            //    {
+            //        foreach (var pointer in PointerBases)
+            //        {
+            //            // checks for all the pickups that cant be planted (coversly i can check for ones that can oly be planted)
+            //            if (pointer.RequiredItemExtraInteraction != PickupType.None && pointer.RequiredItemExtraInteraction != PickupType.BucketWater)
+            //            {
+            //                // remove the trigger
+            //                _availablePointerIndexLimit -= 1;
+
+            //                var pointerTrigger = pointer.transform.GetChild(0).gameObject;
+            //                AvailableTriggerObjects.Remove(pointerTrigger);
+            //            }
+            //        }
+            //    }
+            //    else if (soilScript.PlantedPickup == PickupType.None && _interactibleScriptOnThisParent.PlayerRefs.PickedUpObject == PickupType.BucketWater) // is nothings been planted, and i have a bucket, remove every trigger
+            //    {
+            //        foreach (var pointer in PointerBases)
+            //        {
+            //            // remove the trigger
+            //            _availablePointerIndexLimit -= 1;
+
+            //            var pointerTrigger = pointer.transform.GetChild(0).gameObject;
+            //            AvailableTriggerObjects.Remove(pointerTrigger);
+
+            //        }
+            //    }
+            //}
+
+
 
         }
 

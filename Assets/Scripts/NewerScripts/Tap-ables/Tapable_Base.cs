@@ -207,7 +207,7 @@ public class Tapable_Base : MonoBehaviour
     private void SpawnedObjecLogic()
     {
         // might be better to use object pooling here...
-        _spawnedPrefab = Instantiate(PrefabToSpawn, _mouseWorldPosXY, Quaternion.Euler(30, 0, 0));
+        _spawnedPrefab = Instantiate(PrefabToSpawn, ParentTransform.position, Quaternion.Euler(30, 0, 0));
                 
         // list addition
         SpawnedObjects.Add(_spawnedPrefab);

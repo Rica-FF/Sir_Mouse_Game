@@ -65,5 +65,7 @@ public class Interactible_LevelChanger : Interactible_Base
 
         // set the player spawn location
         GameInstance.GetComponent<InstanceOfGame>().playerStartIndex = playerSpawnIndex;
+
+        CrossFadeAnimator.SetTrigger("Fast");
     }
 }

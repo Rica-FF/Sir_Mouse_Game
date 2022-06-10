@@ -174,7 +174,7 @@ Transform:
   - {fileID: 6723944139507069271}
   - {fileID: 8554241018047466436}
   m_Father: {fileID: 6723944139229154565}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &6723944139147043236
 MonoBehaviour:
@@ -191,15 +191,18 @@ MonoBehaviour:
   InteractibleType: 1
   _requiredItemType: 0
   ExtraPickupInteractions: 
+  InteractibleHasBeenUsedToActivateEventNone: 0
   OneTimeUse: 0
   HasACooldown: 1
+  PointerStaysActiveAfterUse: 0
   _cooldownLength: 4
   OnCooldown: 0
   UsedSuccesfully: 0
   _audioClipsGeneric: []
   PlayerRefs: {fileID: 0}
-  _pointerLord: {fileID: 6723944139507069273}
+  PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 6723944137882980115}
+  _infinitelyRespawnablePickupPrefab: {fileID: 0}
 --- !u!95 &6723944139147043237
 Animator:
   serializedVersion: 3
@@ -357,8 +360,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8554241017891275692}
-  - {fileID: 6723944139147043235}
   - {fileID: 3739327919184624073}
+  - {fileID: 6723944139147043235}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -407,6 +410,7 @@ MonoBehaviour:
   TypeOfPointer: 0
   TypeOfPickup: 0
   RequiredItemExtraInteraction: 0
+  RequiresUseBeforeEventNone: 0
   RequiresDestination: 0
   DestinationSpot: {fileID: 0}
   OrientationPlayer: 0
@@ -418,7 +422,9 @@ MonoBehaviour:
   InteractibleParent: {fileID: 0}
   InteractibleScript: {fileID: 0}
   InteractibleRigid: {fileID: 0}
+  SpriteObject: {fileID: 0}
   SparkleObjects: []
+  PointerLord: {fileID: 0}
 --- !u!1 &8554241017414238267
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,27 +781,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 412886203544137817}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6723944139507069273 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6407182190333591808, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 412886203544137817}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c631d131871c7e3488c8d4c639f9329d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &6723944137882980115 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6407182188738887498, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 412886203544137817}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6723944139621938039 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6407182190522942254, guid: ec17b8b5c385c944e862ac4eeca1000e,
+    type: 3}
+  m_PrefabInstance: {fileID: 412886203544137817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6723944137882980115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6407182188738887498, guid: ec17b8b5c385c944e862ac4eeca1000e,
     type: 3}
   m_PrefabInstance: {fileID: 412886203544137817}
   m_PrefabAsset: {fileID: 0}
@@ -1056,7 +1050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 979632a27455af442bd2d8f36eb0ffce, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 979632a27455af442bd2d8f36eb0ffce, type: 3}
       propertyPath: m_LocalScale.y

@@ -99,7 +99,6 @@ public class Backpack_Manager : MonoBehaviour
         Instantiate(_cloudParticlePrefab, _playerRefs.swordJoint.transform.position, Quaternion.identity);
 
         // instantiate the pickup on player position
-        //Instantiate(Pickup_Prefabs[_index], _playerReferencesObject.transform.position, Quaternion.identity);
         var spawnedObject = Instantiate(Pickup_Prefabs[_index], _playerRefs.swordJoint.transform.position, Quaternion.identity);
         spawnedObject.transform.SetParent(_playerRefs.playerHand.transform);
 
@@ -109,6 +108,7 @@ public class Backpack_Manager : MonoBehaviour
         spawnedObject.GetComponentInChildren<Rigidbody>().isKinematic = true;
 
         spawnedObject.GetComponentInChildren<Interactible_Base>().GetComponent<SphereCollider>().enabled = false;
+        spawnedObject.GetComponentInChildren<Interactible_Base>().PlayerRefs = _playerRefs;
 
         _playerRefs.attachedObject = spawnedObject;
 

@@ -57,7 +57,7 @@ public class PlayerTouchControls : MonoBehaviour
     private PlayerReferences _playerRefs;
     public bool GettingToDestination;
 
-    private AudioSource _audioSource;
+    //private AudioSource _audioSource;
     public bool _clickedOnTapable;
 
     private float _timerHoldingFinger;
@@ -74,7 +74,7 @@ public class PlayerTouchControls : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         animator = player.GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
-        _audioSource = GetComponent<AudioSource>();
+        //_audioSource = GetComponent<AudioSource>();
 
         StartCoroutine(GetPlayerReferences());
     }
@@ -186,6 +186,13 @@ public class PlayerTouchControls : MonoBehaviour
                 shortTouch = false;
                 StartCoroutine(SetClickedOnPointerBool());
 
+                // play the pointer animation
+                InteractibleScript.PointerLord.GetComponentInChildren<Animator>().Play("Pointer_Activate");
+                // instantiate a particle 
+
+                // play sound
+                _playerRefs.GetComponent<AudioSource>().PlayOneShot(_playerRefs.playerSounds[9]);
+
                 // set destination if it needs one
                 if (pointer.RequiresDestination == true)
                 {
@@ -196,7 +203,7 @@ public class PlayerTouchControls : MonoBehaviour
 
                 travelTime = distance;
 
-                // calculate wait for seconds on the distance needed to walk
+                // calculate wait for seconds on the distance needed to walk (is a rough estimate)
                 yield return new WaitForSeconds(travelTime / 4f);
 
                 // this is getting overwritten by movement (semi fixed)
@@ -219,7 +226,7 @@ public class PlayerTouchControls : MonoBehaviour
                 pointer.ActivateInteractibleAction();
 
                 // turns the pointer off
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.2f);
 
                 if (InteractibleScript.PointerStaysActiveAfterUse == false)
                 {
@@ -235,6 +242,13 @@ public class PlayerTouchControls : MonoBehaviour
                 clickedOnPointer = true;
                 shortTouch = false;
                 StartCoroutine(SetClickedOnPointerBool());
+
+                // play the pointer animation
+                pointerLord.GetComponentInChildren<Animator>().transform.GetChild(0).GetComponent<Animation>().Play();
+                // instantiate a particle 
+
+                // play sound
+                _playerRefs.GetComponent<AudioSource>().PlayOneShot(_playerRefs.playerSounds[9]);
 
                 // swap the pointer
                 pointerLord.SwapActivePointer();

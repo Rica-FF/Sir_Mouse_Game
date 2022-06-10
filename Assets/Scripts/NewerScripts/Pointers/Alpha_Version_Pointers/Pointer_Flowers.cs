@@ -23,6 +23,9 @@ public class Pointer_Flowers : Pointer_Base
         PlayerRefs.attachedObject.GetComponentInChildren<Interactible_Bucket>().PourWater();
         // grow flower and dance prince
         StartCoroutine(GrowFlowers());
+
+        // update GameStateData
+        GameStateData.OpenWorldBools[0] = true;
     }
 
 
