@@ -178,7 +178,7 @@ public class Interactible_Base : MonoBehaviour
     }
     public void ShowPointerBehaviourInfinitePickup()
     {
-        //_pointerLord  // had some thoughts here..
+        PointerLord.GetComponentInChildren<Animator>().Play("Pointer_Idle2");
 
         // method that will check what pointers are all viable actions the player can do
         PointerLord.UpdateAvailablePointers();

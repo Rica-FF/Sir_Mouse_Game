@@ -16,6 +16,9 @@ public class Interactible_Bucket : Interactible_Base
     private Vector3 _originalScale;
     private Transform _handTransform;
 
+    [SerializeField]
+    private GameObject _pickupHasWaterSprite, _inBagHasWaterSprite;
+
 
     // call from : Fireplace/Soil/Flowers
     public void PourWater()
@@ -87,7 +90,8 @@ public class Interactible_Bucket : Interactible_Base
             // set bool
             IsHoldingWater = true;
             // assign proper sprites in bubble popup (to-do)
-
+            _pickupHasWaterSprite.SetActive(true);
+            _inBagHasWaterSprite.SetActive(true);
             // set type
             foreach (var pointerBase in PointerLord.PointerBases)
             {
@@ -109,7 +113,8 @@ public class Interactible_Bucket : Interactible_Base
             // set bool
             IsHoldingWater = false;
             // assign proper sprites in bubble popup (to-do)
-
+            _pickupHasWaterSprite.SetActive(false);
+            _inBagHasWaterSprite.SetActive(false);
             // set type
             foreach (var pointerBase in PointerLord.PointerBases)
             {

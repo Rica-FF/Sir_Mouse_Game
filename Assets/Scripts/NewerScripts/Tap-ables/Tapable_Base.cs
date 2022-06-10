@@ -16,6 +16,7 @@ public class Tapable_Base : MonoBehaviour
     private Animator _animator;
     private AudioSource _audioSource;
     private Collider _collider;
+    private Animation _animation;
 
     // values for if it spawns objects
     public bool SpawnsAPrefab;
@@ -24,6 +25,12 @@ public class Tapable_Base : MonoBehaviour
 
     public GameObject PrefabToSpawn;
     private GameObject _spawnedPrefab;
+
+    private Vector3 _lastPosition;
+    private float _mouseDistanceTraveledBeforeLetGo;
+
+    [SerializeField]
+    private GameObject _particlePoofPrefab;
 
     // values for following mouse
     private bool _activatedFollowMouse;
@@ -46,6 +53,11 @@ public class Tapable_Base : MonoBehaviour
     public List<GameObject> SpawnedObjects = new List<GameObject>();
     private int SpawnLimit = 5;
 
+    private const string _animPop = "Spawnable_Pop";
+    private const string _animIdle = "Spawnable_Scaler";
+
+    private float _animationPopDuration;
+
 
     private void Start()
     {
@@ -53,6 +65,13 @@ public class Tapable_Base : MonoBehaviour
 
         _animator = GetComponentInChildren<Animator>();
         _collider = GetComponentInChildren<Collider>();
+
+        if (transform.GetChild(0).TryGetComponent(out Animation animation))
+        {
+            _animation = animation;
+            _animation.enabled = false;
+        }
+        _animationPopDuration = _animation.GetClip(_animPop).length;
 
         ParentTransform = transform.parent;
 
@@ -98,19 +117,32 @@ public class Tapable_Base : MonoBehaviour
         // activate physics corrector
         PhysicsCorrector_Spawnable pxCorrector = null;
         Rigidbody rigid = null;
-        if (_spawnedPrefab != null && SpawnedObjectHasPhysics == true)
+        if (_spawnedPrefab != null)
         {
+            // play animation pop
+            _spawnedPrefab.GetComponentInChildren<Animation>().Play(_animPop);
+
             // if there's physics present, calculate an offset so the object falls a litte bit
-            Vector3 direction = -Camera.main.transform.forward;
-            Vector3 calcualtedExtraDistance = direction * 5;
-            _spawnedPrefab.transform.position = _spawnedPrefab.transform.position + calcualtedExtraDistance;
+            if (SpawnedObjectHasPhysics == true)
+            {
+                Vector3 direction = -Camera.main.transform.forward;
+                Vector3 calcualtedExtraDistance = direction * 5;
+                _spawnedPrefab.transform.position = _spawnedPrefab.transform.position + calcualtedExtraDistance;
 
-            pxCorrector = _spawnedPrefab.GetComponent<PhysicsCorrector_Spawnable>();
-            pxCorrector.enabled = true;
+                pxCorrector = _spawnedPrefab.GetComponent<PhysicsCorrector_Spawnable>();
+                pxCorrector.enabled = true;
 
-            rigid = _spawnedPrefab.GetComponent<Rigidbody>();
-            rigid.useGravity = true;
-            rigid.isKinematic = false;
+                rigid = _spawnedPrefab.GetComponent<Rigidbody>();
+                rigid.useGravity = true;
+                rigid.isKinematic = false;
+
+                rigid.AddForce(Camera.main.transform.right * Input.GetAxis("Mouse X") * 10f, ForceMode.Impulse);
+            }
+        }
+        else
+        {
+            _animation.Play("Spawnable_Pop");
+            StartCoroutine(DisableAnimationComponent());
         }
     }
 
@@ -129,6 +161,10 @@ public class Tapable_Base : MonoBehaviour
                 _mouseWorldPositionXYZ = _hit.point;
                 _spawnedPrefab.transform.position = _mouseWorldPositionXYZ;
             }
+
+            var newPosition = Input.mousePosition;
+            _mouseDistanceTraveledBeforeLetGo += (newPosition - _lastPosition).magnitude;
+            _lastPosition = newPosition;            
         }
         else
         {
@@ -165,10 +201,17 @@ public class Tapable_Base : MonoBehaviour
                 this.enabled = true;
             }
 
+            // checks for spawned object and animations
             if (SpawnsAPrefab == true)
-            {              
+            {
                 SpawnedObjecLogic();
             }
+            else
+            {           
+                _animation.enabled = true;
+                _animation.Play(_animIdle);
+            }
+
 
             // extra logic
             ExtraBehaviour();
@@ -203,6 +246,13 @@ public class Tapable_Base : MonoBehaviour
         _collider.enabled = true;
     }
 
+    private IEnumerator DisableAnimationComponent()
+    {     
+        yield return new WaitForSeconds(_animationPopDuration);
+
+        _animation.enabled = false;
+    }
+
 
     private void SpawnedObjecLogic()
     {
@@ -215,6 +265,8 @@ public class Tapable_Base : MonoBehaviour
         // remove the object (limited for performance/memory)
         if (SpawnedObjects.Count >= SpawnLimit)
         {
+            Instantiate(_particlePoofPrefab,SpawnedObjects[0].transform.position, Quaternion.identity);
+
             Destroy(SpawnedObjects[0]);
             SpawnedObjects.RemoveAt(0);
         }
