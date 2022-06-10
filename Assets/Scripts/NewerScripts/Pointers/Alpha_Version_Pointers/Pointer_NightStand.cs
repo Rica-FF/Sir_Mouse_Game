@@ -35,7 +35,7 @@ public class Pointer_NightStand : Pointer_Base
         _confettiObject.SetActive(true);
 
         // play sound
-
+        InteractibleScript.AudioSource.PlayOneShot(SoundEffects[0]);
 
         _keyPickup = PlayerRefs.attachedObject.GetComponentInChildren<Interactible_Base>().transform.parent.gameObject;
         // disable all sparkle objects

@@ -187,7 +187,14 @@ public class PlayerTouchControls : MonoBehaviour
                 StartCoroutine(SetClickedOnPointerBool());
 
                 // play the pointer animation
-                InteractibleScript.PointerLord.GetComponentInChildren<Animator>().Play("Pointer_Activate");
+                if (InteractibleScript.PointerStaysActiveAfterUse == true)
+                {
+                    InteractibleScript.PointerLord.GetComponentInChildren<Animator>().Play("Pointer_Activate_Infinite");
+                }
+                else
+                {
+                    InteractibleScript.PointerLord.GetComponentInChildren<Animator>().Play("Pointer_Activate");
+                }            
                 // instantiate a particle 
 
                 // play sound

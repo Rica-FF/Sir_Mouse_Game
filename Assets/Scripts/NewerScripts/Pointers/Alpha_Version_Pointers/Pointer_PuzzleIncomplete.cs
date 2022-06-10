@@ -30,6 +30,7 @@ public class Pointer_PuzzleIncomplete : Pointer_Base
         PlayerRefs.GetComponent<Animator>().Play("Unequipe_0");
 
         // sound
+        InteractibleScript.AudioSource.PlayOneShot(SoundEffects[0]);
 
         // active full puzzle
         _completePuzzle.SetActive(true);

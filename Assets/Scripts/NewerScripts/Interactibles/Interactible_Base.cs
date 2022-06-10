@@ -29,7 +29,7 @@ public class Interactible_Base : MonoBehaviour
     private AudioClip[] _audioClipsGeneric;
 
     private Animator _animator;
-    private AudioSource _audioSource;
+    public AudioSource AudioSource;
 
     [HideInInspector]
     public PlayerReferences PlayerRefs;
@@ -49,7 +49,7 @@ public class Interactible_Base : MonoBehaviour
 
         if (TryGetComponent(out AudioSource audioSource))
         {
-            _audioSource = audioSource;
+            AudioSource = audioSource;
         }
 
         if (GetComponentInChildren<Pointer_Lord>() != null)
@@ -131,10 +131,10 @@ public class Interactible_Base : MonoBehaviour
     // generic interactible. Just something that moves/plays a sound when you pass it as the player
     private void GenericBehaviour()
     {
-        if (_audioSource != null)
+        if (AudioSource != null)
         {
             var randomSound = UnityEngine.Random.Range(0, _audioClipsGeneric.Length -1);
-            _audioSource.PlayOneShot(_audioClipsGeneric[randomSound]);
+            AudioSource.PlayOneShot(_audioClipsGeneric[randomSound]);
         }
         if (_animator != null)
         {

@@ -25,6 +25,9 @@ public class Pointer_Candles : Pointer_Base
         // background change
         _background.GetComponent<SpriteRenderer>().sprite = _darkBackground;
 
+        // play sound
+        InteractibleScript.AudioSource.PlayOneShot(SoundEffects[0]);
+
         // one use
         InteractibleScript.UsedSuccesfully = true;
     }

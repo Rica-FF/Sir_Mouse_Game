@@ -125,11 +125,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7347597279356267630}
     m_Modifications:
+    - target: {fileID: 1972682319023836497, guid: 5f9706f8e5ceebe42946982cbb44713f,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031522793067506296, guid: 5f9706f8e5ceebe42946982cbb44713f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4961710556577289529, guid: 5f9706f8e5ceebe42946982cbb44713f,
         type: 3}
       propertyPath: _shieldInteractible
       value: 
       objectReference: {fileID: 5094364132127221556}
+    - target: {fileID: 4961710556577289529, guid: 5f9706f8e5ceebe42946982cbb44713f,
+        type: 3}
+      propertyPath: SoundEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961710556577289529, guid: 5f9706f8e5ceebe42946982cbb44713f,
+        type: 3}
+      propertyPath: SoundEffects.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: da41becdc56e75147a49f3b65fe07eed, type: 3}
+    - target: {fileID: 4961710556577289529, guid: 5f9706f8e5ceebe42946982cbb44713f,
+        type: 3}
+      propertyPath: SoundEffects.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 30b5b752f2fc8784bb73f9ebdd388a1a, type: 3}
     - target: {fileID: 4961710557918408680, guid: 5f9706f8e5ceebe42946982cbb44713f,
         type: 3}
       propertyPath: m_RootOrder
@@ -189,6 +214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Interactible_Closet_Wrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961710557918408681, guid: 5f9706f8e5ceebe42946982cbb44713f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f9706f8e5ceebe42946982cbb44713f, type: 3}

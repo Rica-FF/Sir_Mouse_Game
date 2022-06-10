@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,14 +39,20 @@ public class Pointer_TreeBullseye : Pointer_Base
     // kicks apples down
     IEnumerator SimulatePhysics()
     {
-        Debug.Log(_appleRigids.Length + "length");
-
+        float randomForce = 0;
+        float randomTorque = 0;
         foreach (Rigidbody rigid in _appleRigids)
         {
-            yield return new WaitForSeconds(Random.Range(0f, 0.05f));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(0f, 0.05f));
 
             rigid.useGravity = true;
-            rigid.GetComponent<OrthoPhysics>().enabled = true;
+            rigid.isKinematic = false;
+            rigid.GetComponent<PhysicsCorrector_Spawnable>().enabled = true;
+
+            randomForce = UnityEngine.Random.Range(-1f, 1f);
+            randomTorque = UnityEngine.Random.Range(-20,20);
+            rigid.AddForce(Camera.main.transform.right * randomForce, ForceMode.Impulse);
+            rigid.AddTorque(new Vector3(randomTorque,0,0), ForceMode.Impulse);
         }
 
         StartCoroutine(StopPhysics());
@@ -61,14 +68,15 @@ public class Pointer_TreeBullseye : Pointer_Base
         {
             rigid.useGravity = false;
             rigid.isKinematic = true;
-            rigid.GetComponent<OrthoPhysics>().enabled = false;
+            rigid.GetComponent<PhysicsCorrector_Spawnable>().enabled = false;
         }
+
+
+        // empty the list
+        Array.Clear(_appleRigids, 0, _appleRigids.Length);
+
+        // re-grow some more apples
+
+
     }
-
-
-
-    //private void OnEnable()
-    //{
-    //    StartCoroutine(StopPhysics());
-    //}
 }

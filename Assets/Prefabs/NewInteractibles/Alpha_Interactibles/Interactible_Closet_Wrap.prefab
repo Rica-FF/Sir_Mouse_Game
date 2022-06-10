@@ -102,9 +102,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1972682319023836493}
-  - component: {fileID: 1972682319023836499}
-  - component: {fileID: 1972682319023836497}
   - component: {fileID: 1972682319023836495}
+  - component: {fileID: 1972682319023836497}
+  - component: {fileID: 1972682319023836499}
   m_Layer: 0
   m_Name: Interactible_Closet ------ adjustable
   m_TagString: Untagged
@@ -126,21 +126,36 @@ Transform:
   - {fileID: 4961710557117615281}
   - {fileID: 2031522794664318012}
   m_Father: {fileID: 4961710557918408680}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -22.769001, z: 0}
---- !u!65 &1972682319023836499
-BoxCollider:
+--- !u!114 &1972682319023836495
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972682319023836492}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.3732693, y: 0.17612694, z: 3.4707139}
-  m_Center: {x: 0, y: 0, z: -1.59}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2daf95f2733d364a938f45c18c1a2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractibleType: 1
+  _requiredItemType: 0
+  ExtraPickupInteractions: 
+  InteractibleHasBeenUsedToActivateEventNone: 0
+  OneTimeUse: 0
+  HasACooldown: 0
+  PointerStaysActiveAfterUse: 1
+  _cooldownLength: 0
+  OnCooldown: 0
+  UsedSuccesfully: 0
+  _audioClipsGeneric: []
+  AudioSource: {fileID: 0}
+  PlayerRefs: {fileID: 0}
+  PointerLord: {fileID: 0}
+  PointerNextTriggerObject: {fileID: 2031522793067506296}
+  _infinitelyRespawnablePickupPrefab: {fileID: 0}
 --- !u!82 &1972682319023836497
 AudioSource:
   m_ObjectHideFlags: 0
@@ -238,31 +253,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1972682319023836495
-MonoBehaviour:
+--- !u!65 &1972682319023836499
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972682319023836492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2daf95f2733d364a938f45c18c1a2bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InteractibleType: 1
-  _requiredItemType: 0
-  ExtraPickupInteractions: 
-  OneTimeUse: 0
-  HasACooldown: 0
-  PointerStaysActiveAfterUse: 1
-  _cooldownLength: 0
-  OnCooldown: 0
-  UsedSuccesfully: 0
-  _audioClipsGeneric: []
-  PlayerRefs: {fileID: 0}
-  _pointerLord: {fileID: 2031522794664318002}
-  PointerNextTriggerObject: {fileID: 2031522793067506296}
+  serializedVersion: 2
+  m_Size: {x: 3.3732693, y: 0.17612694, z: 3.4707139}
+  m_Center: {x: 0, y: 0, z: -1.59}
 --- !u!1 &1972682319099516293
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +524,7 @@ MonoBehaviour:
   TypeOfPointer: 2
   TypeOfPickup: 0
   RequiredItemExtraInteraction: 0
+  RequiresUseBeforeEventNone: 0
   RequiresDestination: 0
   DestinationSpot: {fileID: 0}
   OrientationPlayer: 0
@@ -533,6 +537,7 @@ MonoBehaviour:
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
+  PointerLord: {fileID: 0}
   _openDoor: {fileID: 1972682319099516293}
   _shieldInteractible: {fileID: 0}
   ShieldSprites:
@@ -603,8 +608,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1972682319023836493}
   - {fileID: 4961710557617786357}
+  - {fileID: 1972682319023836493}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -715,18 +720,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4961710556577289522}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2031522794664318002 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6407182190333591808, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 4961710556577289522}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c631d131871c7e3488c8d4c639f9329d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2031522793067506296 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6407182188738887498, guid: ec17b8b5c385c944e862ac4eeca1000e,
@@ -756,7 +749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 979632a27455af442bd2d8f36eb0ffce, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 979632a27455af442bd2d8f36eb0ffce, type: 3}
       propertyPath: m_LocalScale.x

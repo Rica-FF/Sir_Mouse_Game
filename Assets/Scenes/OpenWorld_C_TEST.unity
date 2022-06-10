@@ -8178,7 +8178,7 @@ Transform:
   m_Children:
   - {fileID: 1416757699}
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &332220981
 MonoBehaviour:
@@ -9236,7 +9236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &370507152 stripped
 Transform:
@@ -20467,7 +20467,7 @@ Transform:
   m_Children:
   - {fileID: 1326036761}
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &813041325 stripped
 Transform:
@@ -26638,7 +26638,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1046613337
 GameObject:
@@ -43902,6 +43902,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Interactible_Tomatoes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090694824087558811, guid: 34758f48898493a48aa92d5d8ffad7c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8556000952656535663, guid: 34758f48898493a48aa92d5d8ffad7c5,
         type: 3}
@@ -61223,7 +61228,7 @@ Transform:
   m_Children:
   - {fileID: 6079087618331654269}
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6079087619159771925
 GameObject:
@@ -62687,7 +62692,7 @@ Transform:
   m_Children:
   - {fileID: 9189518314536846807}
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9189518315321964223
 GameObject:
