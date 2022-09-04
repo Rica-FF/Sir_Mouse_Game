@@ -25,6 +25,11 @@ public class Pointer_Coin : Pointer_Base
         {
             _physicsScript = physics;
         }
+
+        if (WellFunctionality == null && TypeOfPointer == PointerType.Pickup)
+        {
+            WellFunctionality = FindObjectOfType<Interactible_Well>();
+        }
     }
 
 

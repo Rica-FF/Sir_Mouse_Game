@@ -84,6 +84,7 @@ public class Pointer_Bucket : Pointer_Base
     }
 
 
+
     private void AddUpwardsForce(GameObject objToAddForceTo)
     {
         var rigid = objToAddForceTo.GetComponentInChildren<Rigidbody>();
@@ -98,6 +99,8 @@ public class Pointer_Bucket : Pointer_Base
             _sidewaysForce = 150;
         }
     }
+
+
 
 
     private IEnumerator BucketSpawningObjects(PickupType pickupType, int numberOfItems)

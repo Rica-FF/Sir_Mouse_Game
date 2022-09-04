@@ -6,6 +6,8 @@ public class Interactible_Bucket : Interactible_Base
 {
     public List<PickupType> HeldItems = new List<PickupType>();
     public bool IsHoldingWater;
+
+    // add extra prefabs here if they need to be spawned too from the bucket
     public GameObject CornPrefab, PuzzlePrefab, KeyPrefab, CoinPrefab;
 
     [SerializeField]

@@ -17,6 +17,8 @@ public class Tapable_Base : MonoBehaviour
     private AudioSource _audioSource;
     private Collider _collider;
     private Animation _animation;
+    [SerializeField]
+    private string _animationName;
 
     // values for if it spawns objects
     public bool SpawnsAPrefab;
@@ -70,8 +72,9 @@ public class Tapable_Base : MonoBehaviour
         {
             _animation = animation;
             _animation.enabled = false;
+            _animationPopDuration = _animation.GetClip(_animPop).length;
         }
-        _animationPopDuration = _animation.GetClip(_animPop).length;
+        
 
         ParentTransform = transform.parent;
 
@@ -186,42 +189,50 @@ public class Tapable_Base : MonoBehaviour
     {
         if (OneTimeUse == false || OneTimeUse == true && _usedSuccesfully == false)
         {
-            if (_audioSource != null)
+            if (_onCooldown == false)
             {
-                var randomSound = UnityEngine.Random.Range(0, _audioClipsToPlay.Length - 1);
-                _audioSource.PlayOneShot(_audioClipsToPlay[randomSound]);
-            }
-            if (_animator != null)
-            {
-                _animator.SetTrigger("Activate");  // !!! create this trigger in every animator that will be made for tap-ables !!!
-            }
-            if (CanBeMoved == true) // if true, enables update
-            {
-                _activatedFollowMouse = true;
-                this.enabled = true;
-            }
+                if (_audioSource != null)
+                {
+                    var randomSound = UnityEngine.Random.Range(0, _audioClipsToPlay.Length - 1);
+                    _audioSource.PlayOneShot(_audioClipsToPlay[randomSound]);
+                }
 
-            // checks for spawned object and animations
-            if (SpawnsAPrefab == true)
-            {
-                SpawnedObjecLogic();
-            }
-            else
-            {           
-                _animation.enabled = true;
-                _animation.Play(_animIdle);
-            }
+                if (CanBeMoved == true) // if true, enables update
+                {
+                    _activatedFollowMouse = true;
+                    this.enabled = true;
+                }
+                // checks for spawned object and animations
+                if (SpawnsAPrefab == true)
+                {
+                    SpawnedObjecLogic();
+                }
+                else
+                {
+                    if (_animator != null)
+                    {
+                        //_animator.SetTrigger("Activate");  // !!! create this trigger in every animator that will be made for tap-ables !!!
+                        _animator.enabled = true;
+                        _animator.Play(_animationName);
 
+                        StartCoroutine(DeactivateAnimator());
+                    }
+                    else
+                    {
+                        _animation.enabled = true;
+                        _animation.Play(_animIdle);
+                    }
+                }
 
-            // extra logic
-            ExtraBehaviour();
+                // extra logic
+                ExtraBehaviour();
 
-
-            // if cooldown is present
-            if (HasACooldown == true)
-            {
-                StartCoroutine(ActivateCooldown());
-            }
+                // if cooldown is present
+                if (HasACooldown == true)
+                {
+                    StartCoroutine(ActivateCooldown());
+                }
+            } 
         }
     }
 
@@ -252,6 +263,16 @@ public class Tapable_Base : MonoBehaviour
 
         _animation.enabled = false;
     }
+
+    public IEnumerator DeactivateAnimator()
+    {
+        yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length + 0.2f);
+
+        _animator.enabled = false;
+    }
+
+
+
 
 
     private void SpawnedObjecLogic()

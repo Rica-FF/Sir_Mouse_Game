@@ -29,6 +29,9 @@ public class Interactible_Base : MonoBehaviour
     private AudioClip[] _audioClipsGeneric;
 
     private Animator _animator;
+    [SerializeField]
+    private string _animationName;
+
     public AudioSource AudioSource;
 
     [HideInInspector]
@@ -139,7 +142,12 @@ public class Interactible_Base : MonoBehaviour
         if (_animator != null)
         {
             //_animator.SetTrigger("Activate");  // !!! create this trigger !!!
-            _animator.Play("BushWiggle");      // outdated
+            //_animator.Play("BushWiggle");      // outdated
+
+            _animator.enabled = true;
+            _animator.Play(_animationName);
+
+            StartCoroutine(DeactivateAnimator());
         }
 
         // override-able method
@@ -250,6 +258,12 @@ public class Interactible_Base : MonoBehaviour
         yield return new WaitForSeconds(_cooldownLength);
 
         OnCooldown = false;
+    }
+    public IEnumerator DeactivateAnimator()
+    {
+        yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length + 0.2f);
+
+        _animator.enabled = false;
     }
 
 
