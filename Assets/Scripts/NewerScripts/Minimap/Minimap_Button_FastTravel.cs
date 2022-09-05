@@ -17,7 +17,7 @@ public class Minimap_Button_FastTravel : MonoBehaviour
 
     private void Start()
     {
-        GameInstance = FindObjectOfType<InstanceOfGame>().gameObject;
+        GameInstance = FindObjectOfType<GameManager>().gameObject;
 
         PlayerReferenceObject = FindObjectOfType<PlayerReferences>().gameObject;
     }
@@ -62,6 +62,6 @@ public class Minimap_Button_FastTravel : MonoBehaviour
         }
 
         // set the player spawn location
-        GameInstance.GetComponent<InstanceOfGame>().playerStartIndex = playerSpawnIndex;
+        GameInstance.GetComponent<GameManager>().playerStartIndex = playerSpawnIndex;
     }
 }

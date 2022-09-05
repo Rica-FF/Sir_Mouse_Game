@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,11 +11,20 @@ public class SetUpLevel : MonoBehaviour
     [HideInInspector]
     public GameObject player;
     [HideInInspector]
-    private GameObject gameInstance;
     private bool righDirection = true;
 
     public GameObject[] referencedObjects = new GameObject[0];
 
+    private void Awake()
+    {
+        if (GameManager.Instance == null)
+        {
+            GameObject gameManagerPrefab = Resources.Load<GameObject>("Prefabs/GameManager");
+            if (gameManagerPrefab != null) Instantiate(gameManagerPrefab);
+            else Debug.LogError("GameManager Prefab doesn't exist! Did you change its name or changed its path?");
+        }
+    }
+    
     void Start()
     {
         SpawnPlayer();
@@ -22,12 +32,13 @@ public class SetUpLevel : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        gameInstance = GameObject.Find("GameInstance");
-        player = gameInstance.GetComponent<InstanceOfGame>().player;
+        var gameManager = GameManager.Instance;
+  
+        player = gameManager.Player;
         player.SetActive(true);
         player.transform.position = new Vector3(0, 0, 0);
         player.transform.parent = playerRigid.transform;
-        playerRigid.transform.position = playerStarts[gameInstance.GetComponent<InstanceOfGame>().playerStartIndex].transform.position;
+        playerRigid.transform.position = playerStarts[gameManager.playerStartIndex].transform.position;
 
         playerRigid.GetComponent<PlayerTouchControls>().player = player;
         //playerRigid.GetComponent<PlayerTouchControls>().dropPointer = player.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject;
@@ -62,7 +73,7 @@ public class SetUpLevel : MonoBehaviour
 
     public void NextLevel(int _playerStartIndex)
     {
-        player.transform.parent = gameInstance.transform;
+        player.transform.parent = GameManager.Instance.transform;
 
         if(righDirection)
         {
@@ -72,7 +83,7 @@ public class SetUpLevel : MonoBehaviour
         {
             player.transform.localScale = new Vector3(6, 6, 6);
         }
-        gameInstance.GetComponent<InstanceOfGame>().playerStartIndex = _playerStartIndex;
+        GameManager.Instance.playerStartIndex = _playerStartIndex;
     }
 
     public void RightDirection(bool _rightDirection)
