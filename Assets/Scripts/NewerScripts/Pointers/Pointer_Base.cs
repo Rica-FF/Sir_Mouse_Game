@@ -60,6 +60,8 @@ public class Pointer_Base : MonoBehaviour
         InteractableParent = Interactable.transform.parent;
 
         SpriteObject = Interactable.Sprite;
+        if (SpriteObject == null) SpriteObject = Interactable.GetComponentInChildren<SpriteRenderer>().gameObject;
+        
         _spriteOriginalRotation = SpriteObject.transform.rotation;
 
         PointerLord = GetComponentInParent<Pointer_Lord>();
@@ -206,9 +208,9 @@ public class Pointer_Base : MonoBehaviour
         // instantiate a copy image on an overlay canvas    
         _panelUiIcons = FindObjectOfType<BackPack_Minimap_Manager>().transform;
         var canvasToUse = _panelUiIcons.transform.parent;
-        Panel_Pickups_Chugger panelPickups = canvasToUse.GetComponentInChildren<Panel_Pickups_Chugger>();
+    //    Panel_Pickups_Chugger panelPickups = canvasToUse.GetComponentInChildren<Panel_Pickups_Chugger>();
 
-        GameObject uiCopy = Instantiate(panelPickups.PickupImagePrefabs[((int)TypeOfPickup) - 1], panelPickups.transform);
+        GameObject uiCopy = Instantiate(Interactable.Sprite, canvasToUse.transform);
         uiCopy.transform.position = screenPosition;
         _uiImageForBag = uiCopy;
 
@@ -241,7 +243,7 @@ public class Pointer_Base : MonoBehaviour
         // destroy the UI image
         Destroy(_uiImageForBag);
         // destroys the interactible
-        Destroy(InteractableParent);
+        Destroy(InteractableParent.gameObject);
     }
 
 
