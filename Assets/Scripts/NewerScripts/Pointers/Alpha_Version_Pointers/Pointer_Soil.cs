@@ -49,7 +49,7 @@ public class Pointer_Soil : Pointer_Base
                 // uproot the planted pickup
 
                 // reset the bool 
-                InteractibleScript.InteractibleHasBeenUsedToActivateEventNone = false;
+                Interactable.InteractibleHasBeenUsedToActivateEventNone = false;
 
                 // set false sprite
                 switch (_interactibleSoilScript.PlantedPickup)
@@ -111,7 +111,7 @@ public class Pointer_Soil : Pointer_Base
         // destroy the object
         Destroy(_pickedUpPickup.gameObject);
 
-        InteractibleScript.InteractibleHasBeenUsedToActivateEventNone = true;
+        Interactable.InteractibleHasBeenUsedToActivateEventNone = true;
     }
 
 }

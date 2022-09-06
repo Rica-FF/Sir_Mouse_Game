@@ -9,7 +9,7 @@ public class Pointer_Pumpkin : Pointer_Base
 
     private void Start()
     {
-        _pumpkinAnimator = Interactible.transform.GetChild(0).GetComponent<Animator>();  // pumpkin animator 
+        _pumpkinAnimator = Interactable.transform.GetChild(0).GetComponent<Animator>();  // pumpkin animator 
     }
 
     public override void PlayEvent()
@@ -28,7 +28,7 @@ public class Pointer_Pumpkin : Pointer_Base
         // animation activation
         _pumpkinAnimator.enabled = true;
 
-        InteractibleScript.UsedSuccesfully = true;
+        Interactable.UsedSuccesfully = true;
     }
 
 

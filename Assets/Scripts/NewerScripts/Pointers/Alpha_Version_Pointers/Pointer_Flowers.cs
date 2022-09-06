@@ -12,7 +12,7 @@ public class Pointer_Flowers : Pointer_Base
 
     private void Start()
     {
-        _flowerAnimator = Interactible.transform.GetChild(0).GetComponentInChildren<Animator>();
+        _flowerAnimator = Interactable.transform.GetChild(0).GetComponentInChildren<Animator>();
     }
 
     public override void PlayEvent()

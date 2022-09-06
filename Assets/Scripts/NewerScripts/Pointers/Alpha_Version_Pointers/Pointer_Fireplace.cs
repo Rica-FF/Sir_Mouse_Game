@@ -11,7 +11,7 @@ public class Pointer_Fireplace : Pointer_Base
 
     private void Start()
     {
-        _interactibleFireScript = InteractibleParent.GetComponentInChildren<Interactible_Fireplace>();
+        _interactibleFireScript = InteractableParent.GetComponentInChildren<Interactible_Fireplace>();
     }
 
 

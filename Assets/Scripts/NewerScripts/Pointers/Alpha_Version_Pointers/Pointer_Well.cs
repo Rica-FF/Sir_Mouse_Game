@@ -12,8 +12,6 @@ public class Pointer_Well : Pointer_Base
 
     private GameObject _coinParent;
 
-
-
     public override void PlayEvent()
     {
         base.PlayEvent();
@@ -21,16 +19,10 @@ public class Pointer_Well : Pointer_Base
         ThrowCoinInWellWrap();
     }
 
-
-
-
-
     private void ThrowCoinInWellWrap()
     {
         StartCoroutine(ThrowCoinInWell());
     }
-
-
 
     IEnumerator ThrowCoinInWell()
     {
@@ -56,7 +48,7 @@ public class Pointer_Well : Pointer_Base
 
         yield return new WaitForSeconds(1f);
 
-        Interactible.GetComponent<SphereCollider>().enabled = true;
+        Interactable.Collider.enabled = true;
 
         PlayerRefs.GetComponent<Animator>().SetLayerWeight(1, 0f);
 
@@ -71,7 +63,7 @@ public class Pointer_Well : Pointer_Base
 
         // particle effects
         Instantiate(CloudFx, PlayerControls.transform.position + new Vector3(0f, 2f, -2f), Quaternion.identity);
-        Instantiate(CloudFx, Interactible.GetComponent<Collider>().transform.position + new Vector3(0f, 2f, -2f), Quaternion.identity);
+        Instantiate(CloudFx, Interactable.transform.position + new Vector3(0f, 2f, -2f), Quaternion.identity);
 
         // give a new costume
         SetNewCostume();
@@ -81,7 +73,7 @@ public class Pointer_Well : Pointer_Base
 
     private void RespawnCoin()
     {
-        if (Interactible.TryGetComponent(out Interactible_Well wellScript))
+        if (Interactable.TryGetComponent(out Interactible_Well wellScript))
         {
             GenerateRandomSpawn(wellScript);        
         }

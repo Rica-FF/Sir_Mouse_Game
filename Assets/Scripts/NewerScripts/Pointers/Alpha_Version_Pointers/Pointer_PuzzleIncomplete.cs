@@ -30,7 +30,7 @@ public class Pointer_PuzzleIncomplete : Pointer_Base
         PlayerRefs.GetComponent<Animator>().Play("Unequipe_0");
 
         // sound
-        InteractibleScript.AudioSource.PlayOneShot(SoundEffects[0]);
+        Interactable.AudioSource.PlayOneShot(SoundEffects[0]);
 
         // active full puzzle
         _completePuzzle.SetActive(true);
@@ -40,6 +40,6 @@ public class Pointer_PuzzleIncomplete : Pointer_Base
         _princeAnimator.SetTrigger("Dance");
 
         // used succesfully = true
-        InteractibleScript.UsedSuccesfully = true;
+        Interactable.UsedSuccesfully = true;
     }
 }

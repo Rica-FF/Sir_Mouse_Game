@@ -66,7 +66,7 @@ public class Pointer_Closet : Pointer_Base
             _openDoor.SetActive(true);
 
             // play sound open
-            InteractibleScript.AudioSource.PlayOneShot(SoundEffects[0]);
+            Interactable.AudioSource.PlayOneShot(SoundEffects[0]);
 
             // update index
             Debug.Log(ShieldIndex - 1 + " index disabled");
@@ -92,7 +92,7 @@ public class Pointer_Closet : Pointer_Base
             _openDoor.SetActive(false);
 
             // play sound closed
-            InteractibleScript.AudioSource.PlayOneShot(SoundEffects[1]);
+            Interactable.AudioSource.PlayOneShot(SoundEffects[1]);
 
             // disable shield interactible
             _shieldCollider.enabled = false;

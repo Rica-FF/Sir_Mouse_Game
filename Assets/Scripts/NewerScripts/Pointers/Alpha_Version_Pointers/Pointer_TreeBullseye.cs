@@ -15,10 +15,10 @@ public class Pointer_TreeBullseye : Pointer_Base
 
     private void Start()
     {
-        _animator = Interactible.transform.GetChild(0).GetComponent<Animator>();
-        _appleRigids = Interactible.transform.GetChild(1).GetComponentsInChildren<Rigidbody>();
+        _animator = Interactable.transform.GetChild(0).GetComponent<Animator>();
+        _appleRigids = Interactable.transform.GetChild(1).GetComponentsInChildren<Rigidbody>();
 
-        _audioSource = Interactible.GetComponent<AudioSource>();
+        _audioSource = Interactable.GetComponent<AudioSource>();
     }
 
 

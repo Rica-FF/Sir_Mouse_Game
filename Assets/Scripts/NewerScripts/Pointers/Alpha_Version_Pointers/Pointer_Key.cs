@@ -16,7 +16,7 @@ public class Pointer_Key : Pointer_Base
 
     private void Start()
     {
-        _rigidInteractible = InteractibleParent.GetComponentInChildren<Rigidbody>();
+        _rigidInteractible = InteractableParent.GetComponentInChildren<Rigidbody>();
 
         if (_rigidInteractible.TryGetComponent(out PhysicsCorrector physics))
         {
@@ -30,7 +30,7 @@ public class Pointer_Key : Pointer_Base
         base.PickupItemWrap(pickup);
 
         // set sprite to true
-        Interactible.transform.GetChild(0).gameObject.SetActive(true);
+        Interactable.transform.GetChild(0).gameObject.SetActive(true);
     }
 
 

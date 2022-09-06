@@ -104,7 +104,7 @@ public class Pointer_SwordPull : Pointer_Base
                 ReleaseSword();
 
                 // re-enable the pointer
-                InteractibleScript.ShowPointerBehaviour();
+                Interactable.ShowPointerBehaviour();
             }
 
             TurnHeadRed();
@@ -216,7 +216,7 @@ public class Pointer_SwordPull : Pointer_Base
 
         yield return new WaitForSeconds(1.0f);
 
-        InteractibleScript.UsedSuccesfully = true;
+        Interactable.UsedSuccesfully = true;
 
         PlayerRefs.hasGoldenSword = true;
     }

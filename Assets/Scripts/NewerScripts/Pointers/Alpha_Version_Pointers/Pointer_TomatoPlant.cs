@@ -12,7 +12,7 @@ public class Pointer_TomatoPlant : Pointer_Base
 
     private void Start()
     {
-        _tomatoAnimators = Interactible.transform.GetChild(0).GetComponentsInChildren<Animator>();  // tomato animators
+        _tomatoAnimators = Interactable.transform.GetChild(0).GetComponentsInChildren<Animator>();  // tomato animators
     }
 
     public override void PlayEvent()

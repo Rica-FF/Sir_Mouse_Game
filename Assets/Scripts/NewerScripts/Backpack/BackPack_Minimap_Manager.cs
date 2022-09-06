@@ -23,8 +23,7 @@ public class BackPack_Minimap_Manager : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
     }
-
-
+    
     public void MiniMapIconClick()  // MAP CLICK
     {
         if (Panel_Minimap.activeSelf == true)

@@ -40,7 +40,7 @@ public class Pointer_ShieldPickup : Pointer_Base
         // set sprite to false
         SpriteObject.SetActive(false);
         // set trigger to false
-        Interactible.GetComponent<Collider>().enabled = false;
+        Interactable.Collider.enabled = false;
 
         // play sound
     }

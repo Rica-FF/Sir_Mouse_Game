@@ -12,7 +12,7 @@ public class Pointer_Vase : Pointer_Base
 
     private void Start()
     {
-        _particleDestruction = Interactible.GetComponentInChildren<ParticleSystem>(true).gameObject;  // vase destruction particle system
+        _particleDestruction = Interactable.GetComponentInChildren<ParticleSystem>(true).gameObject;  // vase destruction particle system
     }
 
 
@@ -46,6 +46,6 @@ public class Pointer_Vase : Pointer_Base
         //Destroy(destructable);
 
         // only 1 use
-        InteractibleScript.UsedSuccesfully = true;
+        Interactable.UsedSuccesfully = true;
     }
 }

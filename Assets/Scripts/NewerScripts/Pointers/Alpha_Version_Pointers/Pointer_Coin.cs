@@ -19,7 +19,7 @@ public class Pointer_Coin : Pointer_Base
 
     private void Start()
     {
-        _rigidInteractible = InteractibleParent.GetComponentInChildren<Rigidbody>();
+        _rigidInteractible = InteractableParent.GetComponentInChildren<Rigidbody>();
 
         if (_rigidInteractible.TryGetComponent(out PhysicsCorrector physics))
         {

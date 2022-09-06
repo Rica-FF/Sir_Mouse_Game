@@ -17,6 +17,9 @@ public class Interactible_Base : MonoBehaviour
     public bool HasACooldown;
     public bool PointerStaysActiveAfterUse;
 
+    public Collider Collider;
+    public GameObject Sprite;
+    
     [SerializeField]
     private float _cooldownLength;
     [HideInInspector]
@@ -42,6 +45,8 @@ public class Interactible_Base : MonoBehaviour
     public GameObject PointerNextTriggerObject;
     public GameObject _infinitelyRespawnablePickupPrefab;
 
+   
+    
 
     private void Awake()
     {
@@ -131,7 +136,7 @@ public class Interactible_Base : MonoBehaviour
 
 
 
-    // generic interactible. Just something that moves/plays a sound when you pass it as the player
+    // generic interactable. Just something that moves/plays a sound when you pass it as the player
     private void GenericBehaviour()
     {
         if (AudioSource != null)
@@ -157,7 +162,7 @@ public class Interactible_Base : MonoBehaviour
 
 
 
-    // interactible that will show a pointer when approached
+    // interactable that will show a pointer when approached
     public void ShowPointerBehaviour()
     {
         PointerLord.GetComponentInChildren<Animator>().Play("Pointer_Idle2");

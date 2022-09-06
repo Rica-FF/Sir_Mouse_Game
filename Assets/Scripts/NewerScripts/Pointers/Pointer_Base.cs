@@ -27,11 +27,9 @@ public class Pointer_Base : MonoBehaviour
     private AudioSource _playerAudioSource;
 
     [HideInInspector]
-    public GameObject Interactible;
+    public Transform InteractableParent;
     [HideInInspector]
-    public GameObject InteractibleParent;
-    [HideInInspector]
-    public Interactible_Base InteractibleScript;
+    public Interactible_Base Interactable;
     [HideInInspector]
     public Rigidbody InteractibleRigid;
 
@@ -58,18 +56,17 @@ public class Pointer_Base : MonoBehaviour
         PlayerControls = FindObjectOfType<PlayerTouchControls>();
         StartCoroutine(GetPlayerRefs());
 
-        InteractibleScript = GetComponentInParent<Interactible_Base>();
-        Interactible = InteractibleScript.gameObject;
-        InteractibleParent = Interactible.transform.parent.gameObject;
+        Interactable = GetComponentInParent<Interactible_Base>();
+        InteractableParent = Interactable.transform.parent;
 
-        SpriteObject = Interactible.transform.GetChild(0).gameObject;
+        SpriteObject = Interactable.Sprite;
         _spriteOriginalRotation = SpriteObject.transform.rotation;
 
         PointerLord = GetComponentInParent<Pointer_Lord>();
 
-        if (InteractibleParent.GetComponentInChildren<Rigidbody>() != null)
+        if (InteractableParent.GetComponentInChildren<Rigidbody>() != null)
         {
-            InteractibleRigid = InteractibleParent.GetComponentInChildren<Rigidbody>();
+            InteractibleRigid = InteractableParent.GetComponentInChildren<Rigidbody>();
         }
         
         //StartCoroutine(GetSparkleRefs());
@@ -128,7 +125,7 @@ public class Pointer_Base : MonoBehaviour
         // lock the arm after x seconds
         StartCoroutine(SetRigWeights());
 
-        PlayerRefs.attachedObject = InteractibleParent;
+        PlayerRefs.attachedObject = InteractableParent.gameObject;
 
         // disable the physics
         if (InteractibleRigid.TryGetComponent(out PhysicsCorrector pxCorrector))
@@ -154,15 +151,15 @@ public class Pointer_Base : MonoBehaviour
         PlayerRefs.GetComponent<Animator>().SetLayerWeight(1, 1f);
 
         // get the 2 pointer lords (because infinite spawning objects will only have 2)
-        _bothPointerLords = InteractibleParent.GetComponentsInChildren<Pointer_Lord>();
+        _bothPointerLords = InteractableParent.GetComponentsInChildren<Pointer_Lord>();
 
         // if there's only 1 lord...
         if (_bothPointerLords.Length < 2)
         {
             // re-instantiate the corn prefab in corn mountain interactible
-            Instantiate(InteractibleScript._infinitelyRespawnablePickupPrefab, Interactible.transform);
+            Instantiate(Interactable._infinitelyRespawnablePickupPrefab, Interactable.transform);
             // refill array
-            _bothPointerLords = InteractibleParent.GetComponentsInChildren<Pointer_Lord>();
+            _bothPointerLords = InteractableParent.GetComponentsInChildren<Pointer_Lord>();
         }
         // logic to properly get the interactible object again
         foreach (var lord in _bothPointerLords)
@@ -170,7 +167,7 @@ public class Pointer_Base : MonoBehaviour
             lord.UpdatePointerBases();
             foreach (var pointerbase in lord.PointerBases)
             {
-                if (pointerbase.TypeOfPointer == PointerType.Pickup && pointerbase.InteractibleScript.InteractibleType == InteractibleType.ShowsPointer)
+                if (pointerbase.TypeOfPointer == PointerType.Pickup && pointerbase.Interactable.InteractibleType == InteractibleType.ShowsPointer)
                 {
                     _pickupFromInfiniteSupply = pointerbase.GetComponentInParent<Interactible_Base>();
                     _pickupFromInfiniteSupplyObject = _pickupFromInfiniteSupply.transform.parent.gameObject;  
@@ -199,12 +196,12 @@ public class Pointer_Base : MonoBehaviour
         // (play animation on the interactible that flings it into the backpack)
         StartCoroutine(ForceObjectInBag());
         // disable the interactible sprite
-        Interactible.transform.GetChild(0).gameObject.SetActive(false);
+        Interactable.Sprite.SetActive(false);
     }
     IEnumerator ForceObjectInBag() 
     {
         // get the world to screen pos of the interactible
-        Vector2 screenPosition = Camera.main.WorldToScreenPoint(InteractibleParent.transform.position); 
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(InteractableParent.transform.position); 
 
         // instantiate a copy image on an overlay canvas    
         _panelUiIcons = FindObjectOfType<BackPack_Minimap_Manager>().transform;
@@ -244,7 +241,7 @@ public class Pointer_Base : MonoBehaviour
         // destroy the UI image
         Destroy(_uiImageForBag);
         // destroys the interactible
-        Destroy(InteractibleParent);
+        Destroy(InteractableParent);
     }
 
 
@@ -273,7 +270,7 @@ public class Pointer_Base : MonoBehaviour
             {
                 // add extra logic here in case other bools need to be checked for (like water in a bucket)(change bucket to different type of pickup)
 
-                if (pointerBase.InteractibleScript.TryGetComponent(out Interactible_Soil soilScript)) // checking soil
+                if (pointerBase.Interactable.TryGetComponent(out Interactible_Soil soilScript)) // checking soil
                 {
                     if (soilScript.PlantedPickup == PickupType.None && TypeOfPickup != PickupType.BucketWater)
                     {
@@ -364,14 +361,14 @@ public class Pointer_Base : MonoBehaviour
         _pointerBasesInScene = FindObjectsOfType<Pointer_Base>().ToList();
         foreach (var pointerBase in _pointerBasesInScene)
         {
-            // get interactible script -> get parent transform -> getcomponentInChildren(true) of particlesystem  --- POSITION SPARKLES ABOVE THE INTERACTIBLE (to prevent wrong particles from being used)
+            // get interactable script -> get parent transform -> getcomponentInChildren(true) of particlesystem  --- POSITION SPARKLES ABOVE THE INTERACTABLE (to prevent wrong particles from being used)
             GameObject sparklesObject = pointerBase.GetComponentInParent<Interactible_Base>().transform.parent.GetComponentInChildren<ParticleSystem>(true).gameObject;
 
             if (pointerBase.RequiredItemExtraInteraction == TypeOfPickup && pointerOfInterest.SparkleObjects.Contains(sparklesObject) == false) // if extra == this type && if in case the object was alrdy added
             {
                 // add extra logic here in case other bools need to be checked for (like water in a bucket)
 
-                if (pointerBase.InteractibleScript.TryGetComponent(out Interactible_Soil soilScript)) // checking soil
+                if (pointerBase.Interactable.TryGetComponent(out Interactible_Soil soilScript)) // checking soil
                 {
                     if (soilScript.PlantedPickup == PickupType.None)
                     {
@@ -441,8 +438,8 @@ public class Pointer_Base : MonoBehaviour
 
     public void PickupParentingLogic()  
     {
-        InteractibleParent.transform.SetParent(PlayerRefs.playerHand.transform);
-        InteractibleParent.transform.localPosition = new Vector3(-0.03f, 0.02f, 0.02f);
+        InteractableParent.transform.SetParent(PlayerRefs.playerHand.transform);
+        InteractableParent.transform.localPosition = new Vector3(-0.03f, 0.02f, 0.02f);
         InteractibleRigid.isKinematic = true;
 
         // set sprite transform to 0,0,0
@@ -454,17 +451,17 @@ public class Pointer_Base : MonoBehaviour
         // rotation can require specifics, depending on how the pickup sprites are organized
         if (PlayerRefs.PickedUpObject == PickupType.Bucket)
         {
-            InteractibleParent.transform.localRotation = Quaternion.Euler(64, 39, 5);
+            InteractableParent.transform.localRotation = Quaternion.Euler(64, 39, 5);
         }
         else
         {
-            InteractibleParent.transform.localRotation = Quaternion.Euler(60, 0, -30);
+            InteractableParent.transform.localRotation = Quaternion.Euler(60, 0, -30);
         }
 
-        Interactible.transform.localRotation = Quaternion.Euler(0, 0, 0);
-        Interactible.transform.localPosition = new Vector3(0, 0, 0);
+        Interactable.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        Interactable.transform.localPosition = new Vector3(0, 0, 0);
 
-        Interactible.GetComponent<SphereCollider>().enabled = false;
+        Interactable.Collider.enabled = false;
     }
     public void PickupInfiniteParentingLogic()  
     {
@@ -489,11 +486,11 @@ public class Pointer_Base : MonoBehaviour
         _pickupFromInfiniteSupply.transform.localRotation = Quaternion.Euler(0, 0, 0);
         _pickupFromInfiniteSupply.transform.localPosition = new Vector3(0, 0, 0);
 
-        _pickupFromInfiniteSupply.GetComponent<SphereCollider>().enabled = false;
+        _pickupFromInfiniteSupply.Collider.enabled = false;
     }
     public void DropPickupParentingLogic()
     {
-        InteractibleParent.transform.SetParent(null);
+        InteractableParent.transform.SetParent(null);
 
         // play the sound effect thats attached on the player // get audiosource - source.play(sounds[1])
         PlayerRefs.GetComponent<AudioSource>().PlayOneShot(PlayerRefs.playerSounds[1]);
@@ -504,10 +501,10 @@ public class Pointer_Base : MonoBehaviour
             PlayerControls = PlayerRefs.GetComponentInParent<PlayerTouchControls>();
         }
 
-        InteractibleParent.transform.position = new Vector3(PlayerControls.transform.position.x, 0, PlayerControls.transform.position.z);
-        InteractibleParent.transform.localRotation = Quaternion.Euler(0, 0, 0);
-        InteractibleParent.transform.localScale = new Vector3(1f, 1f, 1f);
+        InteractableParent.transform.position = new Vector3(PlayerControls.transform.position.x, 0, PlayerControls.transform.position.z);
+        InteractableParent.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        InteractableParent.transform.localScale = new Vector3(1f, 1f, 1f);
 
-        Interactible.GetComponent<SphereCollider>().enabled = true;
+        Interactable.Collider.enabled = true;
     }
 }
