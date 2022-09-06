@@ -117,15 +117,22 @@ MonoBehaviour:
   OneTimeUse: 0
   HasACooldown: 0
   PointerStaysActiveAfterUse: 0
+  Collider: {fileID: 9118221590605432661}
+  Sprite: {fileID: 9118221590613100377}
   _cooldownLength: 0
   OnCooldown: 0
   UsedSuccesfully: 0
   _audioClipsGeneric: []
+  _animationName: 
+  AudioSource: {fileID: 0}
   PlayerRefs: {fileID: 0}
   PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 2765364621803922903}
   _infinitelyRespawnablePickupPrefab: {fileID: 0}
   LevelIndexToLoad: 4
+  PlayerSpawnIndexNextArea: 0
+  SpawnLookingRight: 0
+  CrossFadeAnimator: {fileID: 0}
 --- !u!95 &9118221590605432666
 Animator:
   serializedVersion: 3

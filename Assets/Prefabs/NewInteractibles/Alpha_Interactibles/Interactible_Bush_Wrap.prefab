@@ -54,6 +54,8 @@ MonoBehaviour:
   OneTimeUse: 0
   HasACooldown: 0
   PointerStaysActiveAfterUse: 0
+  Collider: {fileID: 2391874403598427684}
+  Sprite: {fileID: 7474183443103640968}
   _cooldownLength: 0
   OnCooldown: 0
   UsedSuccesfully: 0
@@ -64,6 +66,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2b12ce16dd8bc8446824edc7f2c744df, type: 3}
   - {fileID: 8300000, guid: 3032887c361442348ab16d480c78a7e3, type: 3}
   - {fileID: 8300000, guid: 67a03d35b009d5847bdbad0576c076d6, type: 3}
+  _animationName: 
+  AudioSource: {fileID: 0}
   PlayerRefs: {fileID: 0}
   PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 0}

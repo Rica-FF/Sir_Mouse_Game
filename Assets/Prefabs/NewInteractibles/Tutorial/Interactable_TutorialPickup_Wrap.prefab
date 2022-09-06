@@ -217,9 +217,8 @@ MonoBehaviour:
   SoundEffects: []
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
@@ -596,6 +595,8 @@ MonoBehaviour:
   OneTimeUse: 0
   HasACooldown: 0
   PointerStaysActiveAfterUse: 0
+  Collider: {fileID: 8929788963569866819}
+  Sprite: {fileID: 8929788963562330191}
   _cooldownLength: 0
   OnCooldown: 0
   UsedSuccesfully: 0

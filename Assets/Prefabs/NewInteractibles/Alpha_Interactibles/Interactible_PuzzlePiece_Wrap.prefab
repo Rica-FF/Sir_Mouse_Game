@@ -272,6 +272,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactible_PuzzlePiece----adjustable
       objectReference: {fileID: 0}
+    - target: {fileID: 6199618616297205657, guid: 50f4e28c456912243a42b8e73f088a28,
+        type: 3}
+      propertyPath: Sprite
+      value: 
+      objectReference: {fileID: 4582350008269183487}
+    - target: {fileID: 6199618616297205657, guid: 50f4e28c456912243a42b8e73f088a28,
+        type: 3}
+      propertyPath: Collider
+      value: 
+      objectReference: {fileID: 2340523079546790612}
     - target: {fileID: 7510079456087908771, guid: 50f4e28c456912243a42b8e73f088a28,
         type: 3}
       propertyPath: m_IsActive
@@ -282,6 +292,18 @@ PrefabInstance:
 --- !u!4 &2340523079546790617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4633766185962492792, guid: 50f4e28c456912243a42b8e73f088a28,
+    type: 3}
+  m_PrefabInstance: {fileID: 6932522640468849057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &2340523079546790612 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 4633766185962492789, guid: 50f4e28c456912243a42b8e73f088a28,
+    type: 3}
+  m_PrefabInstance: {fileID: 6932522640468849057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4582350008269183487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6891215040118728798, guid: 50f4e28c456912243a42b8e73f088a28,
     type: 3}
   m_PrefabInstance: {fileID: 6932522640468849057}
   m_PrefabAsset: {fileID: 0}

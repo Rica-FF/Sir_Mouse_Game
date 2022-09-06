@@ -185,9 +185,8 @@ MonoBehaviour:
   SoundEffects: []
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
@@ -804,10 +803,14 @@ MonoBehaviour:
   OneTimeUse: 0
   HasACooldown: 0
   PointerStaysActiveAfterUse: 0
+  Collider: {fileID: 7470148232973074907}
+  Sprite: {fileID: 7470148232962654679}
   _cooldownLength: 0
   OnCooldown: 0
   UsedSuccesfully: 0
   _audioClipsGeneric: []
+  _animationName: 
+  AudioSource: {fileID: 0}
   PlayerRefs: {fileID: 0}
   PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 4558116147547136857}
@@ -1014,9 +1017,8 @@ MonoBehaviour:
   SoundEffects: []
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []

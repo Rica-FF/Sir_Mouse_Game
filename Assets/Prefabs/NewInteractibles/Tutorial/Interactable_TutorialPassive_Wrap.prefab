@@ -88,6 +88,8 @@ MonoBehaviour:
   OneTimeUse: 0
   HasACooldown: 1
   PointerStaysActiveAfterUse: 0
+  Collider: {fileID: 3306754003986168063}
+  Sprite: {fileID: 3306754003994228979}
   _cooldownLength: 4
   OnCooldown: 0
   UsedSuccesfully: 0

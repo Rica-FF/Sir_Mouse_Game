@@ -135,9 +135,8 @@ MonoBehaviour:
   SoundEffects: []
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
@@ -678,6 +677,8 @@ MonoBehaviour:
   OneTimeUse: 0
   HasACooldown: 0
   PointerStaysActiveAfterUse: 0
+  Collider: {fileID: 1890998124752871674}
+  Sprite: {fileID: 378488280107289214}
   _cooldownLength: 0
   OnCooldown: 0
   UsedSuccesfully: 0
@@ -1348,9 +1349,8 @@ MonoBehaviour:
   SoundEffects: []
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
@@ -1602,9 +1602,8 @@ MonoBehaviour:
   SoundEffects: []
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
@@ -1938,38 +1937,8 @@ MonoBehaviour:
   SoundEffects: []
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
-  InteractibleRigid: {fileID: 0}
-  SpriteObject: {fileID: 0}
-  SparkleObjects: []
-  PointerLord: {fileID: 0}
---- !u!114 &1890998125660601863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4815700984333974823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d2257cf1f1b2f4894454df2b629f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeOfPointer: 1
-  TypeOfPickup: 2
-  RequiredItemExtraInteraction: 0
-  RequiresUseBeforeEventNone: 0
-  RequiresDestination: 1
-  DestinationSpot: {fileID: 1890998125388787373}
-  OrientationPlayer: 0
-  SoundEffects: []
-  PlayerControls: {fileID: 0}
-  PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
@@ -2110,9 +2079,8 @@ MonoBehaviour:
   SoundEffects: []
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
@@ -2171,9 +2139,8 @@ MonoBehaviour:
   SoundEffects: []
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
@@ -3225,6 +3192,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1890998125660601863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815700984333974823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d2257cf1f1b2f4894454df2b629f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeOfPointer: 1
+  TypeOfPickup: 2
+  RequiredItemExtraInteraction: 0
+  RequiresUseBeforeEventNone: 0
+  RequiresDestination: 1
+  DestinationSpot: {fileID: 1890998125388787373}
+  OrientationPlayer: 0
+  SoundEffects: []
+  PlayerControls: {fileID: 0}
+  PlayerRefs: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
+  InteractibleRigid: {fileID: 0}
+  SpriteObject: {fileID: 0}
+  SparkleObjects: []
+  PointerLord: {fileID: 0}
 --- !u!1 &4823318176387812467
 GameObject:
   m_ObjectHideFlags: 0
@@ -3280,9 +3275,8 @@ MonoBehaviour:
   SoundEffects: []
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
@@ -4322,21 +4316,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2851165343783979146, guid: ec17b8b5c385c944e862ac4eeca1000e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ec17b8b5c385c944e862ac4eeca1000e, type: 3}
---- !u!4 &4815700983943638901 stripped
+--- !u!4 &4815700984487935751 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6407182188732240252, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1890998125660601865}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4815700984333974823 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6407182190522942254, guid: ec17b8b5c385c944e862ac4eeca1000e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1890998125660601865}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4815700983936991555 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6407182188738887498, guid: ec17b8b5c385c944e862ac4eeca1000e,
+  m_CorrespondingSourceObject: {fileID: 6407182190333591822, guid: ec17b8b5c385c944e862ac4eeca1000e,
     type: 3}
   m_PrefabInstance: {fileID: 1890998125660601865}
   m_PrefabAsset: {fileID: 0}
@@ -4346,9 +4328,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1890998125660601865}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4815700984487935751 stripped
+--- !u!1 &4815700983936991555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6407182188738887498, guid: ec17b8b5c385c944e862ac4eeca1000e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1890998125660601865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4815700984333974823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6407182190522942254, guid: ec17b8b5c385c944e862ac4eeca1000e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1890998125660601865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4815700983943638901 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6407182190333591822, guid: ec17b8b5c385c944e862ac4eeca1000e,
+  m_CorrespondingSourceObject: {fileID: 6407182188732240252, guid: ec17b8b5c385c944e862ac4eeca1000e,
     type: 3}
   m_PrefabInstance: {fileID: 1890998125660601865}
   m_PrefabAsset: {fileID: 0}

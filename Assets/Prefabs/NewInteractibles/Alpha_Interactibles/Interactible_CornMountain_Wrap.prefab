@@ -211,10 +211,14 @@ MonoBehaviour:
   OneTimeUse: 0
   HasACooldown: 0
   PointerStaysActiveAfterUse: 0
+  Collider: {fileID: 3373931700569013983}
+  Sprite: {fileID: 3373931700559511248}
   _cooldownLength: 0
   OnCooldown: 0
   UsedSuccesfully: 0
   _audioClipsGeneric: []
+  _animationName: 
+  AudioSource: {fileID: 0}
   PlayerRefs: {fileID: 0}
   PointerLord: {fileID: 0}
   PointerNextTriggerObject: {fileID: 8518698609141865566}

@@ -119,10 +119,13 @@ MonoBehaviour:
   OneTimeUse: 1
   HasACooldown: 0
   PointerStaysActiveAfterUse: 0
+  Collider: {fileID: 262349950750803194}
+  Sprite: {fileID: 262349950758208758}
   _cooldownLength: 0
   OnCooldown: 0
   UsedSuccesfully: 0
   _audioClipsGeneric: []
+  _animationName: 
   AudioSource: {fileID: 0}
   PlayerRefs: {fileID: 0}
   PointerLord: {fileID: 0}
@@ -397,9 +400,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 21ab3a534acf0ea498ed6e296a82a909, type: 3}
   PlayerControls: {fileID: 0}
   PlayerRefs: {fileID: 0}
-  Interactible: {fileID: 0}
-  InteractibleParent: {fileID: 0}
-  InteractibleScript: {fileID: 0}
+  InteractableParent: {fileID: 0}
+  Interactable: {fileID: 0}
   InteractibleRigid: {fileID: 0}
   SpriteObject: {fileID: 0}
   SparkleObjects: []
