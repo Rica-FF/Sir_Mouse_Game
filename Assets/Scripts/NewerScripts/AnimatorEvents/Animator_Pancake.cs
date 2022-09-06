@@ -9,15 +9,11 @@ public class Animator_Pancake : MonoBehaviour
     [SerializeField]
     private GameObject Pan;
 
-    private void Start()
-    {
-        Hand = GetComponentInParent<Interactible_Base>().PlayerRefs.playerHand;
-    }
-
 
 
     private void ParentPanToMouse()
     {
+        Hand = transform.parent.GetComponentInChildren<Interactible_Base>().PlayerRefs.playerHand;
         Pan.transform.SetParent(Hand.transform);
     }
 

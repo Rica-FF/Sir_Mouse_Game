@@ -30,12 +30,52 @@ public class Pointer_Pancake : Pointer_Base
     [SerializeField]
     private Animator _pancakeAnimator;
 
+    [SerializeField]
+    private GameObject _initialPancakeSprite;
+
     public float ThresholdYDistanceCatchable, ThresholdYDistanceFailed;
 
+    [SerializeField]
+    private Transform _lane0, _lane1, _lane2;
+    private Transform _lane0Player, _lane1Player, _lane2Player;
+    private float _currentActiveLane;
 
+    private float _beginValue = 0;
+
+    private bool _hasTouched;
+    
+    private bool _finishedStep1, _finishedStep2, _finishedStep3;
+
+
+
+
+    private void Start()
+    {
+        _lane0Player = _lane0.GetChild(0);
+        _lane1Player = _lane1.GetChild(0);
+        _lane2Player = _lane2.GetChild(0);
+
+        _currentActiveLane = 1;
+
+        _hasTouched = false;
+
+        // disable this script, so Update() does not run
+        this.enabled = false;      
+    }
+
+
+    public override void PlayEvent()
+    {
+        base.PlayEvent();
+
+        StartCoroutine(GetPancaking());
+    }
 
     private IEnumerator GetPancaking()
     {
+        // disable walking
+        PlayerControls.walkingEnabled = false;
+
         // play sir mouse unequip animation (A.play(Unequip_Backpack))
         PlayerRefs.PlayerAnimator.Play("Unequip_Backpack");
 
@@ -55,30 +95,9 @@ public class Pointer_Pancake : Pointer_Base
 
 
 
-    private void Start()
-    {
-        // disable this script, so that update() does not run
-        this.enabled = false;
-    }
-
-
-    public override void PlayEvent()
-    {
-        base.PlayEvent();
-
-        StartCoroutine(GetPancaking());
-    }
-
-
-
     private void StartMinigame()
     {
-        PlayerControls.walkingEnabled = false;
         this.enabled = true;     
-    }
-    private void MoveSideways()
-    {
-        
     }
     private void EndMinigame()
     {
@@ -91,7 +110,22 @@ public class Pointer_Pancake : Pointer_Base
     private void Update()
     {
         // 1) swipe upwards requirement
-        // 2) animate pancake going up of screen
+        if (PlayerRefs.mouseControls)
+        {
+            if (_finishedStep1 == false)
+            {
+                PancakeFlipInput();
+            }
+            else if (_finishedStep2 == false)
+            {
+                PancakeToSpace();
+            }
+            else if (_finishedStep3 == false)
+            {
+                MovementInput();
+            }
+        }
+        // 2) translate pancake going up of screen
         // 2.5) perhaps distance camera a bit (is to see if current view is fine or not)
 
         // 3) be able to swipe left or right to move sir mouse
@@ -110,55 +144,90 @@ public class Pointer_Pancake : Pointer_Base
         // 9.5) Pancakes have a bool IsFinished, once they die or get caught this bool is set to true
 
         // 10) once all pancake are finished (bool), EndMinigame()
+    }
 
 
 
-        //if (_pullingSword)
-        //{
-        //    if (PlayerRefs.mouseControls)
-        //    {
-        //        if (Input.GetMouseButton(0))
-        //        {
-        //            if (_start)
-        //            {
-        //                _beginValue = Input.mousePosition.y;
-        //                _start = false;
-        //            }
-        //        }
-        //        else if (Input.GetMouseButtonUp(0))
-        //        {
-        //            if (Input.mousePosition.y > _beginValue + 100)
-        //            {
-        //                Pull();
-        //                _beginValue = 0;
-        //            }
-        //            _start = true;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        if (Input.touchCount == 1)
-        //        {
-        //            if (_start)
-        //            {
-        //                _beginValue = Input.GetTouch(0).position.y;
-        //                _start = false;
-        //            }
-        //            if (Input.GetTouch(0).phase == TouchPhase.Ended)
-        //            {
-        //                if (Input.GetTouch(0).position.y > _beginValue + 100)
-        //                {
-        //                    Pull();
-        //                    _beginValue = 0;
-        //                }
-        //            }
-        //        }
-        //        else if (Input.touchCount == 0)
-        //        {
-        //            _start = true;
-        //        }
-        //    }
-        //}
+
+
+    private void PancakeFlipInput()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            if (_hasTouched == false)
+            {
+                _beginValue = Input.mousePosition.y;
+                _hasTouched = true;
+            }
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            if (Input.mousePosition.y > _beginValue + 50)
+            {
+                _finishedStep1 = true;
+                Debug.Log("Up swipe");
+                _beginValue = 0;
+            }
+            _hasTouched = false;
+        }
+    }
+    private void PancakeToSpace()
+    {
+        _initialPancakeSprite.transform.SetParent(null);
+        _initialPancakeSprite.transform.Translate(Vector3.up, Space.Self);
+
+        Debug.Log("pancake to spaaaaace");
+
+        if (_initialPancakeSprite.transform.position.y >= 5)
+        {
+            _initialPancakeSprite.SetActive(false);
+            _finishedStep2 = true;
+        }
+    }
+    private void MovementInput()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            if (_hasTouched == false)
+            {
+                _beginValue = Input.mousePosition.x;
+                _hasTouched = true;
+            }
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            if (Input.mousePosition.x > _beginValue + 100 && _currentActiveLane <= 1)
+            {
+                SirMouseRight();
+
+                Debug.Log("Right swipe");
+                _currentActiveLane += 1;
+                _beginValue = 0;
+            }
+            else if (Input.mousePosition.x < _beginValue - 100 && _currentActiveLane >= 1)
+            {
+                SirMouseLeft();
+
+                Debug.Log("Left swipe");
+                _currentActiveLane -= 1;
+                _beginValue = 0;
+            }
+            _hasTouched = false;
+        }
+    }
+
+
+
+
+    private void SirMouseLeft()
+    {
+        // swiftly moves the player left
+        PlayerControls.transform.Translate(Vector3.left * 50 * Time.deltaTime, Space.Self);
+    }
+    private void SirMouseRight()
+    {
+        // swiftly moves the player right
+        PlayerControls.transform.Translate(Vector3.right * 50 * Time.deltaTime, Space.Self);
     }
 
 
