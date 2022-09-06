@@ -7,6 +7,8 @@ public class Pointer_Pancake : Pointer_Base
     /*
      * sir mouse walks towards destination
      * 
+     * walk to destination
+     * unequip sword animation
      * animate the pan going to sir mouse hand.
      * parent pan to hand
      * 
@@ -25,13 +27,30 @@ public class Pointer_Pancake : Pointer_Base
      * 
      */
 
-    private void GetPancaking()
-    {
-        // access the animator that moves pan sprite, as well as the jug, play its animation
-        // parent the pan to sir mouse hand (animation event)
-        // once the animation is completely done...
+    [SerializeField]
+    private Animator _pancakeAnimator;
 
-        // show upwarda arrow
+    public float ThresholdYDistanceCatchable, ThresholdYDistanceFailed;
+
+
+
+    private IEnumerator GetPancaking()
+    {
+        // play sir mouse unequip animation (A.play(Unequip_Backpack))
+        PlayerRefs.PlayerAnimator.Play("Unequip_Backpack");
+
+        yield return new WaitForSeconds(0.5f);
+
+        // access the animator that moves pan sprite, as well as the jug, play its animation
+        _pancakeAnimator.Play("PourMilkInPan");
+
+        // parent the pan to sir mouse hand (animation event)
+
+        yield return new WaitForSeconds(1f);
+
+        // once the animation is completely done...
+        // show upwards arrow (starts minigame)
+        StartMinigame();
     }
 
 
@@ -47,21 +66,52 @@ public class Pointer_Pancake : Pointer_Base
     {
         base.PlayEvent();
 
+        StartCoroutine(GetPancaking());
+    }
 
+
+
+    private void StartMinigame()
+    {
+        PlayerControls.walkingEnabled = false;
+        this.enabled = true;     
+    }
+    private void MoveSideways()
+    {
+        
+    }
+    private void EndMinigame()
+    {
+        this.enabled = false;
+        PlayerControls.walkingEnabled = true;
     }
 
 
 
     private void Update()
     {
-        //if (_walking)
-        //{
-        //    if (PlayerControls.curSpeed < 0.01f)
-        //    {
-        //        StartCoroutine(GrabSword());
-        //        _walking = false;
-        //    }
-        //}
+        // 1) swipe upwards requirement
+        // 2) animate pancake going up of screen
+        // 2.5) perhaps distance camera a bit (is to see if current view is fine or not)
+
+        // 3) be able to swipe left or right to move sir mouse
+        // 4) you cannot move out of bounds (only 3 lanes: 0 = left, 1 = middle, 2 = right)
+
+        // 5) spawn pancakes at intervals at the top. they have lane integer assigned to them
+
+        // 6) said pancakes fall down (translate)
+
+        // 7) when they fall down, if they're below a certain height, they can get caught by sir mouse (bool value on pancake)
+        // 8) if mouse and pancake are in the same lane, and the pancake can be caught ----> CatchPancake()
+        // 8.5)  - play pancake flip animation, pan animation, mouse animation
+        //       - pancake flies up again (coded translate)
+
+        // 9) if pancakes fall below another certain height ----> KillPancake()
+        // 9.5) Pancakes have a bool IsFinished, once they die or get caught this bool is set to true
+
+        // 10) once all pancake are finished (bool), EndMinigame()
+
+
 
         //if (_pullingSword)
         //{

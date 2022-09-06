@@ -44,7 +44,8 @@ public class PlayerReferences : MonoBehaviour
     ////////////
 
     public PickupType PickedUpObject;
-    private Animator _playerAnimator;
+    [HideInInspector]
+    public Animator PlayerAnimator;
     public Pointer_Base _currentActivePointer;
     [HideInInspector]
     public Pointer_Base PointerOfPickUpInHands;
@@ -53,7 +54,7 @@ public class PlayerReferences : MonoBehaviour
 
     private void Awake()
     {
-        _playerAnimator = GetComponent<Animator>();
+        PlayerAnimator = GetComponent<Animator>();
     }
 
 
@@ -165,7 +166,7 @@ public class PlayerReferences : MonoBehaviour
     }
     public void DropObjectNew()
     {
-        _playerAnimator.SetTrigger("DropCoin");
+        PlayerAnimator.SetTrigger("DropCoin");
         StartCoroutine(DetachObject());
     }
     IEnumerator DetachObject()
