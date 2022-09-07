@@ -418,6 +418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pancake_Object (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
       propertyPath: m_RootOrder
@@ -475,6 +480,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
+      propertyPath: MyFallingSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
       propertyPath: _pointerPancake
       value: 
       objectReference: {fileID: 6024090059858664881}
@@ -483,6 +493,12 @@ PrefabInstance:
 --- !u!4 &40972526 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
+    type: 3}
+  m_PrefabInstance: {fileID: 40972525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &40972527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
     type: 3}
   m_PrefabInstance: {fileID: 40972525}
   m_PrefabAsset: {fileID: 0}
@@ -2539,6 +2555,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pancake_Object (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
       propertyPath: m_RootOrder
@@ -2596,6 +2617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
+      propertyPath: MyFallingSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
       propertyPath: _pointerPancake
       value: 
       objectReference: {fileID: 6024090059858664881}
@@ -2604,6 +2630,12 @@ PrefabInstance:
 --- !u!4 &224374052 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
+    type: 3}
+  m_PrefabInstance: {fileID: 224374051}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &224374053 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
     type: 3}
   m_PrefabInstance: {fileID: 224374051}
   m_PrefabAsset: {fileID: 0}
@@ -7789,6 +7821,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pancake_Object (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
       propertyPath: m_RootOrder
@@ -7846,6 +7883,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
+      propertyPath: MyFallingSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
       propertyPath: _pointerPancake
       value: 
       objectReference: {fileID: 6024090059858664881}
@@ -7854,6 +7896,12 @@ PrefabInstance:
 --- !u!4 &594669424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
+    type: 3}
+  m_PrefabInstance: {fileID: 594669423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &594669425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
     type: 3}
   m_PrefabInstance: {fileID: 594669423}
   m_PrefabAsset: {fileID: 0}
@@ -10530,6 +10578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pancake_Object (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
       propertyPath: m_RootOrder
@@ -10587,6 +10640,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
+      propertyPath: MyFallingSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
       propertyPath: _pointerPancake
       value: 
       objectReference: {fileID: 6024090059858664881}
@@ -10595,6 +10653,12 @@ PrefabInstance:
 --- !u!4 &893207918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
+    type: 3}
+  m_PrefabInstance: {fileID: 893207917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &893207919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
     type: 3}
   m_PrefabInstance: {fileID: 893207917}
   m_PrefabAsset: {fileID: 0}
@@ -22449,6 +22513,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pancake_Object (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
       propertyPath: m_RootOrder
@@ -22506,6 +22575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
+      propertyPath: MyFallingSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
       propertyPath: _pointerPancake
       value: 
       objectReference: {fileID: 6024090059858664881}
@@ -22514,6 +22588,12 @@ PrefabInstance:
 --- !u!4 &1796201789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
+    type: 3}
+  m_PrefabInstance: {fileID: 1796201788}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1796201790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
     type: 3}
   m_PrefabInstance: {fileID: 1796201788}
   m_PrefabAsset: {fileID: 0}
@@ -27350,6 +27430,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pancake_Object
       objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 826958034483244201, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
       propertyPath: m_RootOrder
@@ -27407,11 +27492,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
         type: 3}
+      propertyPath: MyFallingSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 826958034483244202, guid: 1654320a5ccc49044ad98cf061a8db00,
+        type: 3}
       propertyPath: _pointerPancake
       value: 
       objectReference: {fileID: 6024090059858664881}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1654320a5ccc49044ad98cf061a8db00, type: 3}
+--- !u!1 &826958033025245417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826958034483244200, guid: 1654320a5ccc49044ad98cf061a8db00,
+    type: 3}
+  m_PrefabInstance: {fileID: 826958033025245416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &873024764762319515
 GameObject:
   m_ObjectHideFlags: 0
@@ -31974,11 +32070,19 @@ MonoBehaviour:
   PointerLord: {fileID: 0}
   _pancakeAnimator: {fileID: 66992491}
   _initialPancakeSprite: {fileID: 8998247795453837219}
-  ThresholdYDistanceCatchable: -50
-  ThresholdYDistanceFailed: -60
+  ThresholdYDistanceCatchable: 1.2
+  ThresholdYDistanceFailed: 0.1
   _lane0: {fileID: 133811756}
   _lane1: {fileID: 1961618339}
   _lane2: {fileID: 588872218}
+  CurrentActiveLane: 0
+  _inactivePancakeObjects:
+  - {fileID: 826958033025245417}
+  - {fileID: 224374053}
+  - {fileID: 1796201790}
+  - {fileID: 893207919}
+  - {fileID: 594669425}
+  - {fileID: 40972527}
 --- !u!1 &6024090060099171084
 GameObject:
   m_ObjectHideFlags: 0

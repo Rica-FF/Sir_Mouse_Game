@@ -19,27 +19,59 @@ public class PancakeMinigame : MonoBehaviour
         // fall downwards
         transform.Translate(Vector3.down * MyFallingSpeed * Time.deltaTime, Space.Self);
 
+        PancakeHeightChecks();
+    }
+
+
+
+    private void PancakeHeightChecks()
+    {
+        PlayerLaneValue = _pointerPancake.CurrentActiveLane;
 
         if (transform.position.y <= _pointerPancake.ThresholdYDistanceFailed) // if I hit the floor...
         {
-            IsFinished = true;
-            Catchable = false;
-
-            this.enabled = false;
+            KillPancake();
+        }
+        else if (Catchable == true && MyLaneValue == PlayerLaneValue) // if i'm catch-able and the player is in my lane...
+        {
+            CaughtPancake();
         }
         else if (transform.position.y <= _pointerPancake.ThresholdYDistanceCatchable) // if I'm at the height where i can get caught...
         {
             Catchable = true;
         }
 
-
-        
-        if (Catchable == true && MyLaneValue == PlayerLaneValue) // if i'm catch-able and the player is in my lane...
-        {
-            Success = true;
-            IsFinished = true;
-
-            this.enabled = false;
-        }
+ 
     }
+
+    private void CaughtPancake()
+    {
+        Success = true;
+        IsFinished = true;
+
+        Debug.Log("GREAT SUCCESS");
+
+        transform.Translate(Vector3.up * 20 * Time.deltaTime, Space.Self);
+
+        Invoke("DisablePancake", 2);
+    }
+    private void KillPancake()
+    {
+        IsFinished = true;
+        Catchable = false;
+
+        Debug.Log("whiffed");
+
+        this.enabled = false;
+    }
+
+    private void DisablePancake()
+    {
+        this.enabled = false;
+
+        this.gameObject.SetActive(false);
+    }
+
+
+
 }
