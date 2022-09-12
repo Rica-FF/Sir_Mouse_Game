@@ -14,12 +14,29 @@ public class PancakeMinigame : MonoBehaviour
 
     public bool Catchable, Success, IsFinished;
 
+    [SerializeField]
+    private Animation _pancakeSpriteAnimation;
+
     void Update()
     {
-        // fall downwards
-        transform.Translate(Vector3.down * MyFallingSpeed * Time.deltaTime, Space.Self);
+        PancakeMovement();
 
         PancakeHeightChecks();
+    }
+
+
+    private void PancakeMovement()
+    {
+        if (Success == true)
+        {
+            // fly upwards
+            transform.Translate(new Vector3(-0.2f,1,0) * 20 * Time.deltaTime, Space.Self);
+        }
+        else
+        {
+            // fall downwards
+            transform.Translate(Vector3.down * MyFallingSpeed * Time.deltaTime, Space.Self);
+        }
     }
 
 
@@ -50,8 +67,10 @@ public class PancakeMinigame : MonoBehaviour
         IsFinished = true;
 
         Debug.Log("GREAT SUCCESS");
+        _pancakeSpriteAnimation.Play("PancakeSpin");
 
-        transform.Translate(Vector3.up * 20 * Time.deltaTime, Space.Self);
+        transform.Translate(Vector3.up * 5 * Time.deltaTime, Space.Self);
+
 
         Invoke("DisablePancake", 2);
     }

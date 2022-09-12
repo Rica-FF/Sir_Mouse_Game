@@ -7,12 +7,6 @@ public class Pointer_Pancake : Pointer_Base
 {
     /*
      * sir mouse walks towards destination
-     * 
-     * walk to destination
-     * unequip sword animation
-     * animate the pan going to sir mouse hand.
-     * parent pan to hand
-     * 
      * -- get first pancake ready (animate milk being poured into pan)
      * -- swipe up to flip the pancake, pancake dissappears top of screen
      * -- pancakes start falling down 3 columns at intervals
@@ -21,11 +15,6 @@ public class Pointer_Pancake : Pointer_Base
      * 
      * 
      * -- when event is done, show animation of plate and pancakes landing on table (size correlates to succes of minigame)
-     * 
-     * -- sir mouse can now move again
-     * 
-     * 
-     * 
      */
 
     [SerializeField]
@@ -36,6 +25,8 @@ public class Pointer_Pancake : Pointer_Base
 
     public float ThresholdYDistanceCatchable, ThresholdYDistanceFailed;
 
+    private GameObject _playerVisuals;
+
     [SerializeField]
     private Transform _lane0, _lane1, _lane2;
     private Transform _lane0Player, _lane1Player, _lane2Player;
@@ -45,7 +36,7 @@ public class Pointer_Pancake : Pointer_Base
 
     private bool _hasTouched;
     
-    private bool _finishedStep1, _finishedStep2, _finishedStep3;
+    private bool _finishedStep1, _finishedStep2, _finishedStep3, _finishedStep4;
 
     private bool _movingLeft, _movingRight;
 
@@ -60,7 +51,13 @@ public class Pointer_Pancake : Pointer_Base
 
     private bool _initializedPancakes, _coroutineStarted;
 
+    private bool _foundEndLane;
     private bool _minigameFinished;
+    private bool _startedEndCoroutine;
+    private bool _playingFlipAnim;
+
+    [SerializeField]
+    private GameObject _panSpritesWrap, _pan;
 
 
 
@@ -86,49 +83,7 @@ public class Pointer_Pancake : Pointer_Base
     }
 
 
-    public override void PlayEvent()
-    {
-        base.PlayEvent();
 
-        StartCoroutine(GetPancaking());
-    }
-
-    private IEnumerator GetPancaking()
-    {
-        // disable walking
-        PlayerControls.walkingEnabled = false;
-        PlayerControls.enabled = false;
-        PlayerControls.GetComponent<NavMeshAgent>().enabled = false;
-        PlayerControls.GetComponent<CharacterController>().enabled = false;
-
-        // play sir mouse unequip animation (A.play(Unequip_Backpack))
-        PlayerRefs.PlayerAnimator.Play("Unequip_Backpack");
-
-        yield return new WaitForSeconds(0.5f);
-
-        // access the animator that moves pan sprite, as well as the jug, play its animation
-        _pancakeAnimator.Play("PourMilkInPan");
-
-        // parent the pan to sir mouse hand (animation event)
-
-        yield return new WaitForSeconds(1f);
-
-        // once the animation is completely done...
-        // show upwards arrow (starts minigame)
-        StartMinigame();
-    }
-
-
-
-    private void StartMinigame()
-    {
-        this.enabled = true;     
-    }
-    private void EndMinigame()
-    {
-        this.enabled = false;
-        PlayerControls.walkingEnabled = true;
-    }
 
 
 
@@ -165,10 +120,19 @@ public class Pointer_Pancake : Pointer_Base
                 }
 
             }
+            else if (_finishedStep4 == false)
+            {
+                //-- move back to center
+                MoveToCenter();
+            }
             else
             {
-                // 10) once all pancake are finished (bool), EndMinigame()
-
+                // 10) once all pancakes are finished (bool), EndMinigame()
+                if (_startedEndCoroutine == false)
+                {
+                    StartCoroutine(EndMinigame());
+                    _startedEndCoroutine = true;
+                }               
             }
         }
 
@@ -183,6 +147,80 @@ public class Pointer_Pancake : Pointer_Base
         //       - pancake flies up again (coded translate)
         // 9) if pancakes fall below another certain height ----> KillPancake()
         // 9.5) Pancakes have a bool IsFinished, once they die or get caught this bool is set to true      
+    }
+
+
+    public override void PlayEvent()
+    {
+        base.PlayEvent();
+
+        StartCoroutine(GetPancaking());
+    }
+
+    private IEnumerator GetPancaking()
+    {
+        PlayerControls.walkingEnabled = false;
+        _playerVisuals = PlayerControls.GetComponentInChildren<Animator>().gameObject;
+
+        // play sir mouse unequip animation (A.play(Unequip_Backpack))
+        PlayerRefs.PlayerAnimator.Play("Unequip_Backpack");
+
+        yield return new WaitForSeconds(0.5f);
+
+        // access the animator that moves pan sprite, as well as the jug, play its animation
+        _pancakeAnimator.Play("PourMilkInPan");
+
+        // parent the pan to sir mouse hand (animation event)
+
+        yield return new WaitForSeconds(1f);
+
+        // once the animation is completely done...
+        // show upwards arrow (starts minigame)
+        StartMinigame();
+    }
+
+
+
+    private void StartMinigame()
+    {
+        this.enabled = true;
+    }
+    private IEnumerator EndMinigame()
+    {
+        yield return new WaitForSeconds(0);
+
+        Debug.Log("ending");
+
+        _pan.transform.SetParent(_panSpritesWrap.transform);
+        _initialPancakeSprite.transform.SetParent(_pan.transform);
+
+
+        _initialPancakeSprite.GetComponent<Animation>().enabled = false;
+        _playingFlipAnim = false;
+        _initialPancakeSprite.transform.position = Vector3.zero;
+
+        Debug.Log(_initialPancakeSprite.transform.position);
+
+        _initialPancakeSprite.SetActive(true);
+
+        _pancakeAnimator.Play("ResetPan");
+
+        PlayerControls.walkingEnabled = enabled;
+
+
+        // reset bools
+        _finishedStep1 = false;
+        _finishedStep2 = false;
+        _finishedStep3 = false;
+        _finishedStep4 = false;
+        _coroutineStarted = false;
+        _startedEndCoroutine = false;
+        _initializedPancakes = false;
+        _foundEndLane = false;
+        CurrentActiveLane = 1;
+        //
+
+        this.enabled = false;
     }
 
 
@@ -204,7 +242,6 @@ public class Pointer_Pancake : Pointer_Base
             if (Input.mousePosition.y > _beginValue + 50)
             {
                 _finishedStep1 = true;
-                Debug.Log("Up swipe");
                 _beginValue = 0;
             }
             _hasTouched = false;
@@ -215,14 +252,24 @@ public class Pointer_Pancake : Pointer_Base
         _initialPancakeSprite.transform.SetParent(null);
         _initialPancakeSprite.transform.Translate(Vector3.right * Time.deltaTime * 4, Space.Self);
 
-        Debug.Log("pancake to spaaaaace");
+        if (_playingFlipAnim == false)
+        {
+            _initialPancakeSprite.GetComponent<Animation>().enabled = true;
+            _initialPancakeSprite.GetComponent<Animation>().Play();
+            _playingFlipAnim = true;
+        }
 
-        if (_initialPancakeSprite.transform.position.y >= 5)
+
+        if (_initialPancakeSprite.transform.position.y >= 7)
         {
             _initialPancakeSprite.SetActive(false);
+            _initialPancakeSprite.transform.SetParent(_pan.transform);
+            _initialPancakeSprite.transform.position = Vector3.zero;
+
             _finishedStep2 = true;
         }
     }
+
 
     private void MovementInput()
     {
@@ -238,22 +285,17 @@ public class Pointer_Pancake : Pointer_Base
         {
             if (Input.mousePosition.x > _beginValue + 100 && CurrentActiveLane <= 1 && _movingRight == false && _movingLeft == false)
             {
-                //SirMouseRight();
                 _moveSpeed = 10;
                 _movingRight = true;
 
-                Debug.Log("Right swipe");
                 CurrentActiveLane += 1;
                 _beginValue = 0;
             }
             else if (Input.mousePosition.x < _beginValue - 100 && CurrentActiveLane >= 1 && _movingRight == false && _movingLeft == false)
             {
-                //SirMouseLeft();
                 _moveSpeed = 10;
                 _movingLeft = true;
                 
-
-                Debug.Log("Left swipe");
                 CurrentActiveLane -= 1;
                 _beginValue = 0;
             }
@@ -264,11 +306,13 @@ public class Pointer_Pancake : Pointer_Base
     {
         if (_movingLeft == true)
         {
-            PlayerControls.transform.Translate(Vector3.left * _moveSpeed * Time.deltaTime, Space.Self);
+            //PlayerControls.transform.Translate(Vector3.left * _moveSpeed * Time.deltaTime, Space.Self);
+            _playerVisuals.transform.Translate(Vector3.left * _moveSpeed * Time.deltaTime, Space.World);
         }
         else if (_movingRight == true)
         {
-            PlayerControls.transform.Translate(Vector3.right * _moveSpeed * Time.deltaTime, Space.Self);
+            //PlayerControls.transform.Translate(Vector3.right * _moveSpeed * Time.deltaTime, Space.Self);
+            _playerVisuals.transform.Translate(Vector3.right * _moveSpeed * Time.deltaTime, Space.World);
         }
 
 
@@ -293,8 +337,72 @@ public class Pointer_Pancake : Pointer_Base
                 _movingLeft = false;
                 _movingRight = false;
                 _isSlowingDown = false;
+            }
+        }
+    }
+    private void MoveToCenter()
+    {
+        Debug.Log("moving to centre");
 
-                Debug.Log("DONEEE");
+        // if im left,  ------ move right
+        // else if im right, - move left
+        if (_foundEndLane == false)
+        {
+            if (CurrentActiveLane == 0)
+            {
+                _movingRight = true;
+            }
+            else if (CurrentActiveLane == 2)
+            {
+                _movingLeft = true;
+            }
+
+            _foundEndLane = true;
+            _moveSpeed = 10;
+        }
+
+
+
+        if (_movingLeft == true)
+        {
+            _playerVisuals.transform.Translate(Vector3.left * _moveSpeed * Time.deltaTime, Space.World);
+        }
+        else if (_movingRight == true)
+        {
+            _playerVisuals.transform.Translate(Vector3.right * _moveSpeed * Time.deltaTime, Space.World);
+        }
+        else
+        {
+            _finishedStep4 = true;
+
+            Debug.Log("test 5 doneso fast");
+        }
+
+
+        if (_movingLeft == true || _movingRight == true)
+        {
+            _timer += Time.deltaTime;
+            if (_timer >= 0.25f)
+            {
+                //_timer = 0;
+                _isSlowingDown = true;
+            }
+        }
+        if (_isSlowingDown == true)
+        {
+            _moveSpeed -= +_moveSpeedReducer * Time.deltaTime;
+
+            if (_moveSpeed <= 0)
+            {
+                _moveSpeed = 0;
+                _timer = 0;
+
+                _movingLeft = false;
+                _movingRight = false;
+                _isSlowingDown = false;
+
+                Debug.Log("test 5 doneso");
+                _finishedStep4 = true;
             }
         }
     }
@@ -302,30 +410,47 @@ public class Pointer_Pancake : Pointer_Base
 
 
 
-    private IEnumerator PancakeSpawning()
-    {
-        _coroutineStarted = true;
 
-        foreach (var pancake in _inactivePancakeObjects)
-        {
-            pancake.SetActive(true);
-
-            yield return new WaitForSeconds(2);
-        }
-
-
-        yield return new WaitForSeconds(5);
-        _finishedStep3 = true;
-    }
 
     private void PancakeInitializing()
     {
+        int lastLaneValue = 2;
+
         foreach (var pancake in _inactivePancakeObjects)
         {
-            // assign random lane
-            int randomLane = Random.Range(0, 3);
+            //// assign random lane
+            //int randomLane = Random.Range(0, 3);
+            //var pancakeScript = pancake.GetComponent<PancakeMinigame>();
+            //pancakeScript.MyLaneValue = randomLane;
+
+            // this block of code makes it so the pancake always spawns on lane next to the previous one
+            int CalculatedLaneValue = Random.Range(0, 3);
+            while (CalculatedLaneValue == lastLaneValue)
+            {
+                if (lastLaneValue == 0)
+                {
+                    CalculatedLaneValue = 1;
+                }
+                else if (lastLaneValue == 2)
+                {
+                    CalculatedLaneValue = 1;
+                }
+                else
+                {
+                    CalculatedLaneValue = Random.Range(0, 3);
+                }
+            }
             var pancakeScript = pancake.GetComponent<PancakeMinigame>();
-            pancakeScript.MyLaneValue = randomLane;
+            pancakeScript.MyLaneValue = CalculatedLaneValue;
+
+            pancakeScript.enabled = true;
+            pancakeScript.Catchable = false;
+            pancakeScript.IsFinished = false;
+            pancakeScript.Success = false;
+
+            lastLaneValue = CalculatedLaneValue;
+            // -- end block -- //
+
 
             // move it to correct spawn
             for (int i = 0; i < 3; i++)
@@ -338,5 +463,20 @@ public class Pointer_Pancake : Pointer_Base
         }
 
         _initializedPancakes = true;
+    }
+    private IEnumerator PancakeSpawning()
+    {
+        _coroutineStarted = true;
+
+        foreach (var pancake in _inactivePancakeObjects)
+        {
+            pancake.SetActive(true);
+
+            yield return new WaitForSeconds(1.5f);
+        }
+
+        yield return new WaitForSeconds(3);
+
+        _finishedStep3 = true;
     }
 }

@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class Animator_Pancake : MonoBehaviour
 {
-    private GameObject Hand;
+    private GameObject _hand;
 
     [SerializeField]
-    private GameObject Pan;
+    private GameObject _pan, _pancakeSprite;
 
 
 
     private void ParentPanToMouse()
     {
-        Hand = transform.parent.GetComponentInChildren<Interactible_Base>().PlayerRefs.playerHand;
-        Pan.transform.SetParent(Hand.transform);
+        _hand = transform.parent.GetComponentInChildren<Interactible_Base>().PlayerRefs.playerHand;
+        _pan.transform.SetParent(_hand.transform);
     }
+
+    private void PancakeSpriteActive()
+    {
+        _pancakeSprite.SetActive(true);
+    }
+
+
+    // do this before animation starts, else we get errors
+    //private void UnParentPan()
+    //{
+    //    Pan.transform.SetParent(null);
+    //}
 
 }
