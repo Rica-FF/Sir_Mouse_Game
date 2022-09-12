@@ -1365,6 +1365,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8e6a0d94ac69326429ebe0863979051d, type: 3}
   mouseControls: 0
   PickedUpObject: 0
+  PlayerAnimator: {fileID: 0}
   _currentActivePointer: {fileID: 0}
   PointerOfPickUpInHands: {fileID: 0}
 --- !u!114 &8709861467558878710
@@ -12552,8 +12553,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce8c04a061355a40b14de95f7e7c3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8367350601687277610}
+  Player: {fileID: 8367350601687277610}
   playerStartIndex: 0
+  usesMouseControls: 1
 --- !u!1 &8709861468920213205
 GameObject:
   m_ObjectHideFlags: 0

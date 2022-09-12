@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     
     public int playerStartIndex = 0;
 
+    public bool usesMouseControls;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -22,5 +24,7 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(Instance);
+
+        Player.GetComponent<PlayerReferences>().mouseControls = usesMouseControls;
     }
 }

@@ -11,16 +11,13 @@ public class Animator_Pancake : MonoBehaviour
 
 
 
-    private void ParentPanToMouse()
+    public void ParentPanToHand()
     {
         _hand = transform.parent.GetComponentInChildren<Interactible_Base>().PlayerRefs.playerHand;
+        _pan.transform.SetParent(null);
         _pan.transform.SetParent(_hand.transform);
     }
 
-    private void PancakeSpriteActive()
-    {
-        _pancakeSprite.SetActive(true);
-    }
 
 
     // do this before animation starts, else we get errors
