@@ -30,11 +30,7 @@ public class Pointer_Pancake : Pointer_Base
     [SerializeField]
     private Transform _lane0, _lane1, _lane2;
     public int CurrentActiveLane;
-
-    private float _beginValue = 0;
-
-    private bool _hasTouched;
-    
+  
     private bool _finishedStep1, _finishedStep2, _finishedStep3, _finishedStep4;
 
     private bool _movingLeft, _movingRight;
@@ -65,8 +61,6 @@ public class Pointer_Pancake : Pointer_Base
     private void Start()
     {
         CurrentActiveLane = 1;
-
-        _hasTouched = false;
 
         _moveSpeedReducer = 50f;
         _moveSpeed = 10f;
@@ -243,22 +237,12 @@ public class Pointer_Pancake : Pointer_Base
 
     private void PancakeFlipInput()
     {
-        if (Input.GetMouseButton(0))
+        if (MinigameInputs.InputDetectionMouseUp() == true)
         {
-            if (_hasTouched == false)
-            {
-                _beginValue = Input.mousePosition.y;
-                _hasTouched = true;
-            }
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            if (Input.mousePosition.y > _beginValue + 50)
+            if (MinigameInputs.CheckSwipeUp())
             {
                 _finishedStep1 = true;
-                _beginValue = 0;
             }
-            _hasTouched = false;
         }
     }
     private void PancakeToSpace()
@@ -287,45 +271,32 @@ public class Pointer_Pancake : Pointer_Base
 
     private void MovementInput()
     {
-        if (Input.GetMouseButton(0))
+        if (MinigameInputs.InputDetectionMouseUp() == true)
         {
-            if (_hasTouched == false)
-            {
-                _beginValue = Input.mousePosition.x;
-                _hasTouched = true;
-            }
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            if (Input.mousePosition.x > _beginValue + 100 && CurrentActiveLane <= 1 && _movingRight == false && _movingLeft == false)
-            {
-                _moveSpeed = 10;
-                _movingRight = true;
-
-                CurrentActiveLane += 1;
-                _beginValue = 0;
-            }
-            else if (Input.mousePosition.x < _beginValue - 100 && CurrentActiveLane >= 1 && _movingRight == false && _movingLeft == false)
+            if (MinigameInputs.CheckSwipeLeft() == true && CurrentActiveLane >= 1 && _movingLeft == false && _movingLeft == false)
             {
                 _moveSpeed = 10;
                 _movingLeft = true;
-                
                 CurrentActiveLane -= 1;
-                _beginValue = 0;
             }
-            _hasTouched = false;
+            else if (MinigameInputs.CheckSwipeRight() == true && CurrentActiveLane <= 1 && _movingRight == false && _movingLeft == false)
+            {
+                _moveSpeed = 10;
+                _movingRight = true;
+                CurrentActiveLane += 1;
+            }
         }
     }
+
+
     private void MovementLogic()
     {
         if (_movingLeft == true)
         {
-            //PlayerControls.transform.Translate(Vector3.left * _moveSpeed * Time.deltaTime, Space.Self);
             _playerVisuals.transform.Translate(Vector3.left * _moveSpeed * Time.deltaTime, Space.World);
         }
         else if (_movingRight == true)
         {
-            //PlayerControls.transform.Translate(Vector3.right * _moveSpeed * Time.deltaTime, Space.Self);
             _playerVisuals.transform.Translate(Vector3.right * _moveSpeed * Time.deltaTime, Space.World);
         }
 
@@ -335,11 +306,9 @@ public class Pointer_Pancake : Pointer_Base
             _timer += Time.deltaTime;
             if (_timer >= 0.25f)
             {
-                //_timer = 0;
                 _isSlowingDown = true;
             }
         }
-
         if (_isSlowingDown == true)
         {
             _moveSpeed -= +_moveSpeedReducer * Time.deltaTime;
@@ -357,7 +326,7 @@ public class Pointer_Pancake : Pointer_Base
     private void MoveToCenter()
     {
         // if im left,  ------ move right
-        // else if im right,-- move left
+        // if im right, ------ move left
         if (_foundEndLane == false)
         {
             if (CurrentActiveLane == 0)
