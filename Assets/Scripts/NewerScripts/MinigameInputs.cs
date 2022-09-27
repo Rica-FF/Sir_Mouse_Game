@@ -7,6 +7,17 @@ public static class MinigameInputs
     static Vector2 StartPosition;
     static Vector2 EndPosition;
 
+    static Vector2 CurrentPosition;
+    static Vector2 TempEndPosition;
+
+    static float DistanceMoved;
+
+    public static float SwipeAngle;
+    static float SwipeDistanceRequired = 75;
+
+    public static bool Swiped;
+    public static bool SwipedLeft, SwipedRight, SwipedUp, SwipedDown;
+
 
 
     public static bool InputDetectionMouseUp()
@@ -52,7 +63,7 @@ public static class MinigameInputs
 
 
 
-    /// ------------ Swipe methods --------
+    /// ------------ Swipe methods -------- DATED
     
     public static bool CheckSwipeUp()
     {
@@ -114,25 +125,146 @@ public static class MinigameInputs
 
 
 
+    /////  RE-VAMPED SWIPING METHODS  /////
 
 
-    public static bool SwipeHoldRight()
+
+    // check for this boolean function if you're looking to swipe
+    public static bool SwipeAlternate()
     {
-        // check for input.buttonDown --> gives start position
-        // check for input.button --> wait For x Distance to have been made between StartPosition and CurrentPosition...
-        // once x distance has been made, check the direction of the vector(start,current) and classify it as left/right/up/down
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartPosition = Input.mousePosition;
+            DistanceMoved = 0;
 
-        // if the chosen swipe direction is == required swipe we need...
+            return false;
+        }
+        if (Input.GetMouseButton(0) && Swiped == false)
+        {
+            CurrentPosition = Input.mousePosition;
+            DistanceMoved = Vector2.Distance(CurrentPosition, StartPosition);
 
-        // wait for input.GetMousebuttonUp...
-        // return true once it's up
+            // if distance moved is greater than x -> count as swipe
+            if (DistanceMoved >= SwipeDistanceRequired)
+            {
+                var swipeDirectionNormal = (CurrentPosition - StartPosition).normalized;
+                FindSwipeDirectionNormal(swipeDirectionNormal);
 
+                Swiped = true;
 
-        //if ()
-        //{
+                return true;
+            }
+            return false;
+        }
 
-        //}
+        // if I let go -> re-enable swiping
+        if (Input.GetMouseButtonUp(0))
+        {
+            Swiped = false;
+        }
 
-        return true;
+        return false;
     }
+
+
+
+
+    static void FindSwipeDirectionNormal(Vector2 swipeDir)
+    {
+        ResetSwipeBools();
+
+        // check horizontal VS vertical
+        if (Mathf.Abs(swipeDir.x) > Mathf.Abs(swipeDir.y))
+        {
+            if (swipeDir.x > 0)
+            {
+                // right
+                SwipedRight = true;
+            }
+            else
+            {
+                // left
+                SwipedLeft = true;
+            }
+        }
+        else
+        {
+            if (swipeDir.y > 0)
+            {
+                // up
+                SwipedUp = true;
+            }
+            else
+            {
+                // down
+                SwipedDown = true;
+            }
+        }
+    }
+    static void ResetSwipeBools()
+    {
+        SwipedUp = false;
+        SwipedDown = false;
+        SwipedLeft = false;
+        SwipedRight = false;
+    }
+
+
+    public static void ShowRequiredSwipeDirection(List<GameObject> listOfSwipeVisuals, int listIndex)
+    {
+        listOfSwipeVisuals[listIndex].SetActive(true);
+
+    }
+    public static void HideSwipeDirections(List<GameObject> listOfSwipeVisuals)
+    {
+        for (int i = 0; i < listOfSwipeVisuals.Count; i++)
+        {
+            listOfSwipeVisuals[i].SetActive(false);
+        }     
+    }
+
+
+
+    //static void FindSwipeDirection(float angle)
+    //{
+    //    Debug.Log("angle is " + SwipeAngle);
+
+
+    //    if (angle < -157.5 || angle > 157.5)
+    //    {
+    //        // Left
+    //        Debug.Log("Left");
+    //    }
+    //    else if (angle < -112.5)
+    //    {
+    //        // Down Left
+    //    }
+    //    else if (angle < -67.5)
+    //    {
+    //        // Down
+    //        Debug.Log("Down");
+    //    }
+    //    else if (angle < -22.5)
+    //    {
+    //        // Down Right
+    //    }
+    //    else if (angle < 22.5)
+    //    {
+    //        // Right
+    //        Debug.Log("Right");
+    //    }
+    //    else if (angle < 67.5)
+    //    {
+    //        // Up Right
+    //    }
+    //    else if (angle < 112.5)
+    //    {
+    //        // Up
+    //        Debug.Log("Up");
+    //    }
+    //    else
+    //    {
+    //        // Up Left;
+    //    }
+    //}
 }

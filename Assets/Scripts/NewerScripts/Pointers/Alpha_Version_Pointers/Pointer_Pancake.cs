@@ -56,6 +56,11 @@ public class Pointer_Pancake : Pointer_Base
 
     private GameObject _hand;
 
+    [SerializeField]
+    private List<GameObject> _arrowSwipeVisuals = new List<GameObject>();
+
+    private bool _hasSwipedSideways;
+
 
 
     private void Start()
@@ -138,6 +143,7 @@ public class Pointer_Pancake : Pointer_Base
             {
                 // 3) be able to swipe left or right to move sir mouse
                 // 4) you cannot move out of bounds (only 3 lanes: Left = 0, Middle = 1, Right = 2)
+                
                 MovementInput();
                 MovementLogic();
 
@@ -237,10 +243,21 @@ public class Pointer_Pancake : Pointer_Base
 
     private void PancakeFlipInput()
     {
-        if (MinigameInputs.InputDetectionMouseUp() == true)
+        //if (MinigameInputs.InputDetectionMouseUp() == true)
+        //{
+        //    if (MinigameInputs.CheckSwipeUp())
+        //    {
+        //        _finishedStep1 = true;
+        //    }
+        //}
+
+        // show up arrow
+        MinigameInputs.ShowRequiredSwipeDirection(_arrowSwipeVisuals, 0);
+        if (MinigameInputs.SwipeAlternate())
         {
-            if (MinigameInputs.CheckSwipeUp())
+            if (MinigameInputs.SwipedUp == true)
             {
+                MinigameInputs.HideSwipeDirections(_arrowSwipeVisuals);
                 _finishedStep1 = true;
             }
         }
@@ -271,21 +288,66 @@ public class Pointer_Pancake : Pointer_Base
 
     private void MovementInput()
     {
-        if (MinigameInputs.InputDetectionMouseUp() == true)
+        //if (MinigameInputs.InputDetectionMouseUp() == true)
+        //{
+        //    if (MinigameInputs.CheckSwipeLeft() == true && CurrentActiveLane >= 1 && _movingLeft == false && _movingLeft == false)
+        //    {
+        //        _moveSpeed = 10;
+        //        _movingLeft = true;
+        //        CurrentActiveLane -= 1;
+        //    }
+        //    else if (MinigameInputs.CheckSwipeRight() == true && CurrentActiveLane <= 1 && _movingRight == false && _movingLeft == false)
+        //    {
+        //        _moveSpeed = 10;
+        //        _movingRight = true;
+        //        CurrentActiveLane += 1;
+        //    }
+        //}
+
+        if (_hasSwipedSideways == false)
         {
-            if (MinigameInputs.CheckSwipeLeft() == true && CurrentActiveLane >= 1 && _movingLeft == false && _movingLeft == false)
-            {
-                _moveSpeed = 10;
-                _movingLeft = true;
-                CurrentActiveLane -= 1;
-            }
-            else if (MinigameInputs.CheckSwipeRight() == true && CurrentActiveLane <= 1 && _movingRight == false && _movingLeft == false)
+            MinigameInputs.ShowRequiredSwipeDirection(_arrowSwipeVisuals, 3);
+            _hasSwipedSideways = true;
+        }
+        
+
+        if (MinigameInputs.SwipeAlternate()) // if a swipe has been made...
+        {
+            // check the swipe angle...
+            //  check for the angles we want.. (if they're wrong angles, reset the SwipeAngle bool so we don't check for 0 angle) // MAYBE NOT
+
+            //if (MinigameInputs.CheckSwipLeftN() && CurrentActiveLane >= 1 && _movingLeft == false && _movingLeft == false)
+            //{
+            //    _moveSpeed = 10;
+            //    _movingLeft = true;
+            //    CurrentActiveLane -= 1;
+            //}
+            //else if (MinigameInputs.CheckSwipeRightN() && CurrentActiveLane <= 1 && _movingRight == false && _movingLeft == false)
+            //{
+            //    _moveSpeed = 10;
+            //    _movingRight = true;
+            //    CurrentActiveLane += 1;
+            //}
+
+
+         
+            if (MinigameInputs.SwipedRight && CurrentActiveLane <= 1 && _movingRight == false && _movingLeft == false)
             {
                 _moveSpeed = 10;
                 _movingRight = true;
                 CurrentActiveLane += 1;
+
+                MinigameInputs.HideSwipeDirections(_arrowSwipeVisuals);
             }
-        }
+            else if (MinigameInputs.SwipedLeft && CurrentActiveLane >= 1 && _movingLeft == false && _movingLeft == false)
+            {
+                _moveSpeed = 10;
+                _movingLeft = true;
+                CurrentActiveLane -= 1;
+
+                MinigameInputs.HideSwipeDirections(_arrowSwipeVisuals);
+            }
+        } 
     }
 
 
