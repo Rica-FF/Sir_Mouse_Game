@@ -16,10 +16,10 @@ public static class GameStateData
         {
             case "OpenWorld_C_TEST":
                 return OpenWorldBools;
-                break;
+            case "Prototype_testing_sandbox":
+                return OpenWorldBools;
             default:
                 return null;
-                break;
         }
     }
 

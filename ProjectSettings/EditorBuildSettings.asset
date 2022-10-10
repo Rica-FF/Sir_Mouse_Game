@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScreen.unity
     guid: 396e6e3e80c84e640a422757fd8de1d1
+  - enabled: 1
+    path: Assets/Scenes/PLAY_TESTING/Prototype_testing_sandbox.unity
+    guid: 2262222317a467b4b83c11935e38df4f
+  - enabled: 1
+    path: Assets/Scenes/PLAY_TESTING/Prototype_Testing_Snadbox_Fix.unity
+    guid: b5b2cd7db35b528449616e67b0bc11e1
   m_configObjects: {}

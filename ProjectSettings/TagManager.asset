@@ -20,6 +20,7 @@ TagManager:
   - StirringArea
   - Ingredients
   - Vegetable
+  - PuzzleGame
   layers:
   - Default
   - TransparentFX
@@ -34,8 +35,8 @@ TagManager:
   - PopupBubble
   - Tap-able
   - Floor
-  - 
-  - 
+  - PuzzlePieceGame
+  - Board
   - 
   - 
   - 
