@@ -86,7 +86,7 @@ public class Pointer_Pancake : Pointer_Base
     private IEnumerator GetPancaking()
     {
         PlayerControls.walkingEnabled = false;
-        _playerVisuals = PlayerControls.GetComponentInChildren<Animator>().gameObject;
+        _playerVisuals = PlayerControls.GetComponentInChildren<PlayerReferences>().gameObject;
 
         // play sir mouse unequip animation (A.play(Unequip_Backpack))
         PlayerRefs.PlayerAnimator.Play("Unequip_Backpack");
@@ -353,6 +353,8 @@ public class Pointer_Pancake : Pointer_Base
 
     private void MovementLogic()
     {
+        Debug.Log(_playerVisuals.name + " are the player visuals");
+
         if (_movingLeft == true)
         {
             _playerVisuals.transform.Translate(Vector3.left * _moveSpeed * Time.deltaTime, Space.World);
